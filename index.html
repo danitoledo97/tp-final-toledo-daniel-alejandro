@@ -1,44 +1,271 @@
-3<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<title>MultiMediAr</title>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>Inicio</li>
-				<li>Tecnologías</li>
-					<li>Web3</li>	
-					<li>IA Generativa</li>
-					<li>Robótica</li>
-					<li>Holografía</li>
-					<li>Efectos Especiales</li>
-					<li>Animación</li>
-					<li>Impresión 3D</li>	
-				<li>Educación</li>
-				<li>Economía Naranja</li>
-					<li>Países</li>
-				<li>Eventos</li>
-					<li>Conferencias</li>
-					<li>Multimedia</li>
-					<li>Teatral</li>
-					<li>Academicos</li>
-					<li>Estatales</li>
-				<li>Cronolúdico</li>
-			</ul>
-		</nav>
-	</header>
-	<h1>MultiMediAr</h1>
-	<p>Este sitio web trata acerca de la escena local argentina y un breve relevamiento internacional, las últimas tendencias y avances tecnológicos con respecto a las artes multimediales y al diseño multimedia.</p>
-	<h2>Postpademia</h2>
-	<p>Durante la pandemia del covid 19 la humanidad tuvo que adoptar medidas reestrictivas para sobrellevarlo y el arte se vio afectado. Surgieron propuestas virtuales como nunca antes en lo que va del siglo XXI y hoy día si bien se ha recuperado la presencialidad, existe una hibridación entre la misma y la virtualidad, es decir una convivencia entre ambas experiencias, lo cual lleva a una experimentación artística mas interesante ampliando las posibilidades de consumo cultural y democratizando el acceso a la difusión de obras para artistas de nicho.</p>
-	<h2>Obras y Productos</h2>
-	<p>Si bien la disputa entre que es una obra y que es un producto existe desde hace tiempo, podríamos decir que ambos surgen de la creatividad humana, involucran habilidades técnicas y creativas para su concreción aunque difieren en cuanto a su objetivo final. Un producto depende del mercado, es decir de la ofreta y la demanda para su éxito mientras que una obra del reconocimiento institucional e intelectual. No obstante los artistas creadores de obras a menudo utilizan estrategias de campaña en mercadotecnia para darse a conocer, a la obra y al lugar donde se expone a menos que sea virtual con la posibilidad de monetizar la entrada.</p>
-	<h2>Arte y diseño</h2>
-	<p>Incluso dentro del arte y el diseño, el arte es un término polisémico, es decir que posee múltiples significados, lo que esta claro es que es un campo de conocimiento, que involucra experiencias sensibles, personales, aprecio intelectual, como un conjunto de herramientas y conocimiento técnico para su concreción. El diseño por el contrario también requiere conocimientos técnicos y creatividad pero sus objetivos pueden diferir. Incluso dentro de una carrera la formación puede variar, teniendo algunas que están mas orientadas al mercado y otras mas al arte. Por lo general para involucrarse al mercado hay que competir dentro de un rubro, destacar, hacer una marca o branding y conseguir clientes o un empleador. Los salarios pueden variar en función al rol, si es local, si se trabaja presencial o virtual, se se factura local o para el exterior, etc. Muchas veces la experiencia puede ser mas importante que la carrera estudiada, por supuesto que esto depende de que profesión exactamente. La universidad puede otorgar bases y herramientas que trascienden el tiempo, no obstante hay que tener en cuenta que gran parte de la experiencia que se adquiera en este tipo de carreras requiere actualización constante y capacidad autodidacta vitalicias.</p>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  </svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="tecnologias/index.html"><span>Internet - Web</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+												<li><a class="dropdown-item" href="tecnologias/robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item">
+         	 					<a class="nav-link" href="economia-naranja/index.html"><span>Economía Naranja</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="eventos/index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="eventos/eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>	
+		<main>
+			<section>
+				<div id="carouselExampleCaptions" class="carousel slide">
+				  	<div class="carousel-indicators">
+				   		<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+				    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+				  	</div>
+				  	<div class="carousel-inner">
+				    	<div class="carousel-item active">
+				      		<img src="img/mma-grok-1.jpg" class="d-block w-100" alt="Primer Imágen generada con grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				    	</div>
+				    </div>
+				    	<div class="carousel-item">
+				      		<img src="img/mma-grok-2.jpg" class="d-block w-100" alt="Segunda imágen generada con grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				    	<div class="carousel-item">
+				      		<img src="img/mma-grok-3.jpg" class="d-block w-100" alt="Tercer imágen generada con grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				    	<div class="carousel-item">
+				       		<img src="img/mma-grok-4.jpg" class="d-block w-100" alt="Cuarta imágen generada con grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				    	<div class="carousel-item">
+				       		<img src="img/mma-grok-5.jpg" class="d-block w-100" alt="Quinta imágen generada con Grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				    	<div class="carousel-item">
+				       		<img src="img/mma-grok-6.jpg" class="d-block w-100" alt="Sexta imágen generada con Grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				    	<div class="carousel-item">
+				       		<img src="img/mma-grok-7.jpg" class="d-block w-100" alt="Séptima imágen generada con Grok">
+				      		<div class="carousel-caption d-none d-md-block">
+				        	<h4>Generada con Grok</h4>
+				      		</div>
+				    	</div>
+				  	</div>
+				  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+				    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    	<span class="visually-hidden">Previous</span>
+				  	</button>
+				  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+				    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    	<span class="visually-hidden">Next</span>
+				 	</button>
+				</div>
+				<h1>MultiMediAr</h1>
+				<p>Multi (Multiemdia) Medi (Mediar) Ar (Argentina) releva la escena local multimediática argentina pasada y presente como asi también las últimas tendencias y avances tecnológicos con respecto a las artes multimediales, el diseño multimedia y la ingeniería multimedia.</p>
+				<p>Este sitio web esta dirigido a jóvenes que se encuentran finalizando la formación media, egresados y padres que noten un interés por el arte, la ciencia y la tecnología a edades tempranas en sus hijos.</p>
+				<p>Multimedia es la integración de distintas carreras artísticas que involucran lenguajes clásicos como cine, tv, radio, etc donde conviven estos mismos para dar lugar a un lenguaje multimediático, es decir la multimedia integra conocimientos de carreras clásicas como audiovisual, programación web y de videojuegos, diseño gráfico, animación, efectos especiales, etc.</p>
+				<p>Otras carreras similares: artes electrónicas, artes digitales, diseño multimedia, producción multimedia, ingeniería multimedia. Lo más importante en realidad es revisar el plan de estudios para observar los contenidos y el enfoque u orientación que tenga, si es mas artística o mas comercial para tomar la mejor decisión posible.</p>
+				<h2>Postpandemia</h2>
+				<p>Durante la pandemia del covid 19 la humanidad tuvo que adoptar medidas reestrictivas para sobrellevarlo y el arte se vio afectado. Surgieron propuestas virtuales como nunca antes en lo que va del siglo XXI y hoy día si bien se ha recuperado la presencialidad, existe una hibridación entre la misma y la virtualidad, es decir una convivencia entre ambas experiencias, lo cual lleva a una experimentación artística mas interesante ampliando las posibilidades de consumo cultural y democratizando el acceso a la difusión de obras para artistas de nicho.</p>
+				<h2>Obras y Productos</h2>
+				<p>Si bien la disputa entre que es una obra y que es un producto existe desde hace tiempo, podríamos decir que ambos surgen de la creatividad humana, involucran habilidades técnicas y creativas para su concreción aunque difieren en cuanto a su objetivo final. Un producto depende del mercado, es decir de la ofreta y la demanda para su éxito mientras que una obra del reconocimiento institucional e intelectual. No obstante los artistas creadores de obras a menudo utilizan estrategias de campaña en mercadotecnia para darse a conocer, a la obra y al lugar donde se expone a menos que sea virtual con la posibilidad de monetizar la entrada.</p>
+				<h2>Sitios web generales</h2>
+				<p>A continuación presento algunos sitios web de interés general que abarcan a todas las temáticas de este sitio:</p>
+				<h3>VADB.ORG | Arte Contemporáneo Latinoamericano</h3>
+				<a href="https://vadb.org/" target="_blank"></a>
+				<p>"VADB es una iniciativa colaborativa especializada en Arte Contemporáneo Latinoamericano, que reúne y vincula información sobre obras, personas, organizaciones, eventos y publicaciones. VADB está basado en un modelo de relaciones de contenidos que organiza tanto prácticas institucionales y no-institucionales basándonos en los conceptos de Escenas Locales."</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+  				<button type="button" class="btn btn-secondary">
+  					<a class="nav-link" href="https://vadb.org/" target="_blank">VADB
+  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  						<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  						<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+  				</button>
+  			</div>
+				<h3>ARTEINFORMADO. Portal sobre arte contemporáneo iberoamericano</h3>
+				<p>"Fundado en 2001, Arteinformado (AI) es un medio digital sin fines de lucro dirigido a profesionales e interesades en el arte que reúne la información más relevante sobre los sistemas del arte en España, Portugal y Latinoamérica y sus conexiones globales."</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+  				<button type="button" class="btn btn-secondary">
+  					<a class="nav-link" href="https://www.arteinformado.com/" target="_blank">Arte Informado
+  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  						<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  						<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+  				</button>
+  			</div>
+				<h3>Arte-Online</h3>
+				<p>"Arte Online S.A. es la primera plataforma digital e interactiva focalizada en la difusión del arte de Argentina."</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+  				<button type="button" class="btn btn-secondary">
+  					<a class="nav-link" href="https://www.arte-online.net/" target="_blank">Arte-Online
+  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  						<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  						<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+  				</button>
+  			</div>
+				<h3>Revista Magenta</h3>
+				<p>"Revista Magenta ofrece difusión, promoción y posicionamiento de artistas."</p>	
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+  				<button type="button" class="btn btn-secondary">
+  					<a class="nav-link" href="https://www.revistamagenta.com/" target="_blank">Revista Magenta
+  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  						<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  						<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+  				</button>
+  			</div>
+				<h3>Cultureando Pop</h3>
+				<p>"Series, pelis, música y juegos. Todas las novedades sobre el mundo de la Cultura Pop."</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+  				<button type="button" class="btn btn-secondary">
+  					<a class="nav-link" href="https://cultureandopop.com.ar/" target="_blank">Cultureando Pop
+  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  						<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  						<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+  				</button>
+  			</div>
+			</section>
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
 </body>
 </html>
+
+

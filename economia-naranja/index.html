@@ -1,221 +1,399 @@
-3<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<title>MultiMediAr</title>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>Inicio</li>
-				<li>Tecnologías</li>
-					<li>Web3</li>	
-					<li>IA Generativa</li>
-					<li>Robótica</li>
-					<li>Holografía</li>
-					<li>Efectos Especiales</li>
-					<li>Animación</li>
-					<li>Impresión 3D</li>	
-				<li>Educación</li>
-				<li>Economía Naranja</li>
-				<li>Eventos</li>
-				<li>Cronolúdico</li>
-			</ul>
-		</nav>
-	</header>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      	</li>
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Internet</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item">
+         	 					<a class="nav-link" href="economia-naranja/index.html"><span>Economía Naranja</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<section>
 	<h1>MultiMediAr</h1>
 	<h2>Economía Naranja</h2>
-	<p>La economía naranja es un concepto que surgen en América Latina para designar a aquel sector del mercado orientado a industrias creativas actuales que generan un gran valor agragado en la región con gran presencia internacional. Siendo la mas destacada y creciente en los últimos años la industria del videojuego, la cual se ha colocada como la mas importante superando incluso a la del cine y la música.</p>
+	<p>Si bien estamos en la transición de la Cuarta Revolución Industrial que nace desde los 2000, caracterizada por el auge de Inteligencia artificial (IA), Internet de las cosas (IoT), blockchain, impresión 3D, biotecnología, etc. hacia la quinta, caracterizada por la colaboración entre humanos y máquinas inteligentes, priorizando la sostenibilidad, la personalización masiva y un enfoque más ético y humano de la tecnología. Dentro de ella nace en America Latina el concepto de la economía naranja.</p> 
+	<p>También conocida como industria creativa, artística, cultura: La economía naranja es un modelo productivo en el que los bienes y servicios que se comercializan tienen un valor intelectual, debido a que surgen de las ideas y del conocimiento de sus creadores. Explicado de otra forma, son todas las actividades económicas relacionadas con el arte, la cultura, investigación, ciencia, tecnología, entre otras, en las que la creatividad es la principal característica. Por ello, también es conocida como economía creativa.</p>
+	<p>Aunque el nombre de economía naranja surgió en un principio por la asociación que tradicionalmente ha existido entre el color naranja y la creatividad, y su enfoque era, principalmente, hacia la industria cultural y artística, con el paso del tiempo y debido, en parte, a la influencia cada vez mayor de la tecnología, se empezaron a introducir nuevos sectores, como las telecomunicaciones, robótica, programación, creación de contenidos, entre muchos otros. Eso sí, el principal requisito sigue siendo que se trate de ideas capaces de transformarse en bienes o servicios.</p>
+	<p>Según datos ofrecidos por la Unesco -Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura-, la economía creativa representa el 3% del PIB -Producto Interior Bruto- mundial y emplea a más de 30 millones de personas en todo el mundo. Al ser una industria basada en las ideas, se caracteriza por la innovación constante, los productos con características únicas -no elaborados por volumen-, o el uso de las herramientas digitales en sus procesos.</p>
+
+	<h3>Oficios Digitales</h3>
+	<p>Los oficios del arte digital son un tipo particular de trabajo donde convergen múltiples disciplinas como la programación, la escenografía, los videojuegos y el audio. Interactúan con y se integran a un amplio espectro de agentes y espacios públicos y privados de pequeña y mediana escala, también a grandes organizaciones de eventos masivos, desde desarrollos interactivos para eventos, animación 3D para publicidad y cine, operación de video en shows y VFX para videojuegos hasta sonificación sonora.</p>
+	<p>Cada vez más sectores de la economía cultural requieren de servicios basados en la creatividad tecnológica: proyecciones para shows en vivo, videos con inteligencia artificial, diseños interactivos en museos.</p>
+
 	<h3>Emprendimiento</h3>
-	<p>Existen 2 posibilidades principales en Argentina ya sea desde una estructura societaria como las SAS (Sciedades de Acciones Simplificadas).
-	<p>Si bien las siguientes no son SAS, son ejemplos de empresas vinculadas al arte multimedia.</p>
-	<a href="https://www.argentina.gob.ar/justicia/derechofacil/leysimple/sociedad-por-acciones-simplificada-sas" target="_blank">Sociedades de Acciones Simplificadas</a>
-	<a href="https://singularstories.lat/" target="_blank">Singular Stories</a>
-	<p></p>
-	<a href="https://www.etermax.com/es" target="_blank">Etermax</a>
-	<p></p>
-	<a href="https://www.globant.com/es" target="_blank">Globant</a>
-	<p></p>
-	<a href="https://www.pesmotionstudio.com/" target="_blank">Pesmotion Studio</a>
-	<p></p>  
-	<a href="https://www.dryada.com.ar/" target="_blank">Dryada 3D Printer</a>
-	<p></p>	
-	<p>Una estructura cooperativa como una Cooperativa de Trabajo Limitada. 
-	<a href="https://www.argentina.gob.ar/constitucion-de-cooperativas/cooperativas-de-trabajo" target="_blank">Cooperativas de Trabajo Limitadas</a>
-	<p></p>
-	<a href="https://cooperativadedisenio.com/" target="_blank">Cooperativa de Diseño</a>
-	<a href="https://impactodigital.org/" target="_blank">Impacto Digital</a>
-	<p></p>
-	<a href="https://www.facebook.com/paralelo35/?locale=es_LA">Cooperativa Paralelo 35 Multimedia</a>
-	<p></p>
-	<a href="https://www.imagica.com.ar/" target="_blank">Iamágica</a>
-	<p></p>
-	<a href="https://bichorarogames.com/index_es.html" target="_blank">Bicho Raro</a>
-	<p></p>
-	<p>Un colectivo, red o comunicadad artística.</p>
-	<a href="https://www.newtro.xyz/" target="_blank">Newtro Arts</a>
-	<a href="https://amplifydai.com/" target="_blank">Amplify DAI</a>
-	<a href="https://somoslavillana.carrd.co/" target="_blank"></a>
-	<a href="https://www.somoslavillana.com/" target="_blank"></a>
-	<a href="https://www.legado.ar/" target="_blank">Legado</a>	
-	Otra opción aunque aún desrregulada es una DAO Descentralized Autonomous Organization, en español Organización Autónoma Descentralizada.</p>
-	<p>Por ejemplo:</p>
-	<a href="https://altcooperativa.com/">Cooperativa Alternativa Laboral Trans</a>
-	<p>Por ejemplo:</p>
-	<a href="https://www.fwb.help/" target="_blank">FWB o Friends With Benefits</a>
-	<p>Friends With Benefits es una DAO social en crecimiento con más de 3000 miembros comprometidos. Colectivamente, su objetivo es catalizar el poder de Web3 como un fenómeno cultural. Desde su creación en 2020, FWB se ha convertido en un modelo de cómo una DAO puede producir una diversa gama de eventos, colaboraciones y productos que satisfacen las necesidades de su comunidad mientras simultáneamente añaden valor al token $FWB.</p>
-	<p>Tengan en cuenta que al momento de determinar que estructura que opción les es mas conveniente:
-	Si deciden emprender dentro de una estructura societaria necesitarán a la vez conocer cuestiones vinculadas a sindicalismo, cámaras, asociaciones, colegios profesionales, etc.
-	<a href="https://www.sicacine.org.ar/" target="_blank">SICA</a>
-	<p></p>
-	<a href="https://satsaid.com.ar/" target="_blank">SATSAID</a>
-	<p></p>
-	<a href="https://www.sup.org.ar/" target="_blank">SUP</a>
-	<p></p>
-	<a href="https://adva.vg/" target="_blank">ADVA</a>
-	<p></p>
-	<a href="https://cessi.org.ar/" target="_blank">CESSI</a>
-	<p></p>
-	<a href="https://caic-cine.org.ar/" target="_blank">CAIC</a>
-	<p></p>
-	<a href="https://www.trabajadoresdearte.org/sitio/" target="_blank">Trabajadores de Arte</a>
-	<p></p>
-	Si deciden facturar localmente o internacionalmente deben saber que estarán por su cuenta, fuera de cualquier convenio colectivo, deberán fijar una tarifa plana por su trabajo con lo cual pueden consultar a los colegios profesionales por ejemplo o a asociaciones profesionales.
-	</p>
-	<p>Por ejemplo:</p>
-	<a href="https://tarifario.org/" target="_blank"></a>
+	<p>Existen varias posibilidades en Argentina ya sea facturando, conformando o uniéndose a otra entidad:</p>
+
+	<h3>Branding/Marca Personal</h3>
+	<p>El branding en español marca, es una estrategia comercial en la cual una persona se vende a si misma como la mejor para solucionar una necesidad en específico ofreciendo un servicio. Su valor hora y capacidad determinará su reputación para con los clientes.</p>
+	<a href="https://tarifario.org/" target="_blank">Tarifario</a>
 	<p>Tarifario es un sitio web que ofrece tarifas planas de referencia.</p>
-	<p>Hay distintos formatos para exponer una obra, entre ellos, buscar un espacio, presentarse a convocatorias, etc. Exposiciones, muestras, conferencias, corporativas, festivales, ferias, foros, convenciones, itinerancia, giras, en museos, bienales, galerías artísticas, centros culturales, etc de manera presencial como virtual a través de la web con una experiencia semiinmersiva o de manera inmersiva dentro del metaverso y la realidad virtual.</p>
-	<p>Ejemplos</p>
-	<a href="https://artlabpro.net/" target="_blank">Artlab</a>
-	<p></p>
-	<a href="http://www.biopus.ar/" target="_blank">Biopus</a>
-	<p></p>
-	<a href="https://www.espaciobyte.org/" target="_blank">Espacio Bytes</a>
-	<p></p>
-	<a href="https://www.fundaciontelefonica.com.ar/" target="_blank">Fundación Telefónica Movistar Argentina</a>
-	<p></p>
-	<a href="https://www.cceba.org.ar/" target="_blank">Centro Cultural de Espala en Buenos Aires</a>
-	<p></p>
-	<a href="https://caibuenosaires.com/">Centro Audiovisual Inmersivo</a>
-	<p></p>
-	<a href="https://palaciolibertad.gob.ar/" target="_blank">Palacio Libertad</a>
-	<p></p>
-	<a href="https://buenosaires.gob.ar/gobierno/laboratorio-tecnologico-de-la-ciudad" target="_blank">BA Laboratorio Tecnológico</a>
-	<p></p>
-	<a href="https://bienal.buenosaires.gob.ar/que-es" target="_blank">Bienal Arte Joven</a>
-	<p></p>
+	<p>"Tenemos 151 tarifas indexadas para servicios de Diseño audiovisual, Diseño Gráfico, Marketing, Programación."</p>
 	<a href="https://art.art/es" target="_blank">.ART</a>
-	<p>Cuando se trata del posicionamiento de la red, el dominio web es muy importante dado que determina posición en la búsqueda, la indización y la redirección del tráfico orgánico. Por lo tanto .ART es el único dominio exclusivo para un emprendimiento artístico.</p>
+	<p>"ART es la única zona de dominio creada especialmente para la comunidad creativa global."</p>
+	<a href="https://www.canva.com/es_ar/" target="_blank">Canva</a>
+	<p>"Con Canva, es muy fácil crear y compartir diseños profesionales."</p>
+	<a href="https://www.adobe.com/es/express/" target="_blank">Adobe Express</a>
+	<p>"La aplicación para crear cualquier cosa de forma rápida y sencilla."</p>
+	<a href="https://wordpress.com/es/">Wordpress</a>
+	<p>"Todo lo que necesitas para crear tu web y llevarla a lo más alto en un mismo lugar."</p>
 	<a href="https://vgen.co/" target="_blank">Vgen</a>
-	<p>Cuando se trata de comisionar como artista Vgen es una de las plataformas mas grandes.</p> 	
+	<p>"Te ayudamos a exhibir y gestionar tu arte y negocios artísticos mientras te conectamos con una comunidad de artistas, clientes y amigos." Traducido a español.</p> 
+	<a href="https://herlitzkafaria.com/es" target="_blank">Herlitzka & CP</a>
+	<p>"Herlitzka & Co. se dedica a la difusión, comercialización y proyección internacional del arte moderno, conceptual y contemporáneo latinoamericano."</p>		
+	<a href="https://www.decultura.net/" target="_blank">DeCultura.net</a>	
+	<p>"Es una plataforma web para difundir y favorecer la comercialización del arte y la cultura de cada localidad de nuestro país"</p>
+	<a href="https://mica.gob.ar/inicio" target="_blank">Mercado de Industrias Culturales Argentinas (MICA)</a>
+	<p>"El MICA es un programa que funciona como nexo entre los sectores público y privado a través de acciones con productores referentes y/o emergentes de las industrias culturales con el objetivo de visibilizar y potenciar su producción, fortalecer su profesionalismo y capacidad exportadora, generar empleos de calidad y promover su comercialización en nuestro territorio y en el mundo."</p>
+	<a href="https://www.similarsites.com/" target="_blank">Somilar Sites</a>
+	<p>"SimilarSites.com es un innovador motor de recomendaciones que rastrea internet para proporcionarte más contenido del que te gusta. SimilarSites.com elimina el desorden de la web al encontrar sitios similares a los que navegas, basándose en contenido relacionado, estructura web, algoritmos de análisis de enlaces, comportamientos detallados de navegación de los usuarios y una gran comunidad de clasificaciones de usuarios." Traducido a español.</p>
+	<a href="https://linktr.ee/admin/" target="_blank">Linktree</a>
+	<p>"Linktree es una herramienta que te ayuda a compartir todo lo que eres en un simple enlace, haciendo que tu contenido en línea sea más fácil de descubrir, más fácil de administrar y con más probabilidades de convertir. Aquí es donde empezó todo." Traducido a español.</p> 
+	<a href="https://translate.kagi.com/" target="_blank">Kagi Translate</a>
+	<p>"Kagi Translate ofrece traducciones precisas en 248 idiomas utilizando modelos de lenguaje avanzados."</p>
+	<a href="https://www.deepl.com/es/translator" target="_blank">Deepl</a>
+	<p>"DeepL no es un simple traductor. Somos una plataforma de IA lingüística que ayuda a empresas de todo el mundo a comunicarse de forma más eficaz y traspasar idiomas, culturas y mercados."</p>
+	<a href="https://codepen.io/" target="_blank"></a>
+	<p>"CodePen es un entorno de desarrollo social. En esencia, te permite escribir código en el navegador y ver los resultados a medida que lo construyes. Es un editor de código en línea útil y liberador para desarrolladores de cualquier nivel, y particularmente empoderador para las personas que están aprendiendo a programar. Nos centramos principalmente en lenguajes front-end como HTML, CSS, JavaScript y sintaxis de preprocesamiento que se convierten en esas cosas."</p>	
+
+	<h3>Portafolio</h3>
+	<p>Es conveniente ir desarrollando un perfil en redes sociales como LinkedIn para búsqueda laboral, y utilizar redes sociales, un blog o un enlazador como linktree para generarlo, Behance de Adobe permite crear uno, donde se pueda mostrar toda la experiencia adquirida y los trabajos realizados.</p>
+	<p>Algunos ejemplos</p>
+	<a href="https://linktr.ee/martaminujin" target="_blank">Marta Minujín</a>		
+	<a href="https://museomoderno.org/mapadelarte/artistas/minujin-marta/" target="_blank">Marta Minujín (arte visual), no es docente en la UNA</a>
+	<p>"Marta Minujín nació en 1943. En 1963 realizó su primer happening, La Destrucción. En 1966 hizo Simultaneidad en Simultaneidad, parte de Three Countries Happening, con A. Kaprow (New York) y W. Vostell (Berlín). Algunas obras efímeras de participación masiva: El Partenón de Libros (1983), C. Gardel de Fuego (1981), La Torre de Babel con libros de todo el mundo (2011). Realiza bastidores transpsicodélicos, colchones, performances, ventanas, etc."</p>
+	<a href="https://tirigall.net/" target="_blank">Portafolio de Juan Jose Maria Tirigall, docente en la UNA</a>
+	<p>"Artista Electronico Multimedial. Docente investigador de grado y posgrado en la Universidad Nacional de las Artes (UNA). Director del Posgrado de Especializacion en Medios y Tecnologias para la Produccion Pictorica, Departamento de Artes Visuales, Universidad Nacional de las Artes (UNA)."</p>
+	<p>"Me interesa la confluencia entre arte contemporaneo, ciencia y tecnologia. Como docente y artista, colaboro en difundir y promover el uso de software libre y el sistema operativo GNU/Linux."</p>
+	<a href="https://marcelarapallo.com.ar/" target="_blank">Portafolio de Marcela Rapallo, docente en la UNA</a>
+	<p>"Marcela Rapallo es artista, investigadora y educadora, y combina todas estas facetas en proyectos de múltiples grupos y redes de trabajo, cuyos ejes son el dibujo escénico, la animación en tiempo real, y las experiencias interdisciplinarias de creación colectiva. Forma parte del Equipo Trazos, dedicado a la creación de tecnologías de Software Libre. Realiza exposiciones, obras teatrales, performances, proyectos educativos y de mediación, asesorías y capacitaciones en festivales, galerías, centros culturales, fundaciones, programas comunitarios y socioeducativos, y universidades de Latinoamérica y Europa."</p>
+	<a href="https://es.zaramella.com.ar/" target="_blank">Zeramella (animación) no es docente en la UNA</a>
+	<p>"Juan Pablo Zaramella es un director, animador e ilustrador con un fuerte interés en las ideas y la creatividad. A través de una amplia exploración de la técnica del stop motion, realizó más de 10 cortos y 2 series de TV, convirtiéndosela en un referente del mundo de la animación de autor."</p>	
+	<p>Por otro lado dentro del rubro no suelen publicarse avisos vinculados a propuestas laborales artísticas dentro de sistios como LinkedIn, Bumeran, CompuTrabajo, etc, en su lugar hay plataformar específicas como por ejemplo:</p>
+	<a href="https://www.alternativateatral.com/" target="_blank">Alternativa - Comunidad en escena</a>
+	<p>"La escena independiente, las artes escénicas y performáticas viven en Alternativa. Comunidad en escena. Teatro. Danza. Performance. Experiencias."</p>			
+	<a href="https://www.becasting.com.ar/" target="_blank">Becasting</a>
+	<p>"Ofertas de empleo artistas para figurantes, actores, cantantes, modelos, casting para niños, músicos , humoristas."</p>
+
+	<h3>Software</h3>
+	<p>Hay programas o aplicaciones de todo tipo, ya sea desde gratuitas, con períodos de prueba limitados, de pago al 100%, de código abierto (con lo cual se puede conocer como operan y a su vez modificar el código para mejorar sus capacidades). Dentro de lo que es la telefonía se destaca ultimamente Lineage OS, la cual es una alternativa a android sin los servicios de google pero dentro de la que es la computación, es posible encontrar una alternativa a Windows sin con ello renunciar a aplicaciones cotidianas, es posible encontrar en GNU/Linux alguna distribución que se adepte a nuestras necesidades, siendo la mas popular Ubuntu, por supuesto que al ser software comunitario no tienen soporte oficial, en vez tienen una comunidad voluntaria detrás. Cyber Cirujas es una organización que brinda capcitación acerca de como reciclar teléfonos, computadoras, etc que puede ser de utilidad ante presupuestos escasos y necesidades profesionales. Si bien la gran mayoría de los usuarios utilizan Windows en computación y Android en Telefonía por tecnologías de acceso, a diferencia de Apple donde todos sus dispositivos están pensados para funcionar dentro de un ecosistema cerrado pero costoso y sin aplicaciones ni programas grauitos practicamente, eso no significa que no existan alternativas a los mismos y que estos no puedan brindar una experiencia similar sin sacrificar demasiado.</p>
+	<p>La Gcam es la aplicación de cámara utilizada en los teléfonos Nexus y Pixel de Google, la cual sorprende particularmente por los avances de Google en la fotografía computacional, permitiendo obtener muchas veces mejores resultados que con la aplicación de cámara original del fabricante en un hardware de gama media. Se han lanzado versiones no oficiales para distintas marcas. Gcamator es una app que permite instalar un modelos de gcam en ciertos teléfonos sin necesidad de rootearlo.</p>
+	<a href="https://linktr.ee/cybercirujas">Cyber Cirujas</a>
+	<p>"Luchando contra la obsolescencia programada, una compu por vez."</p>
+	<a href="AlternativeTo.net" target="_blank">AlternativeTo</a>
+	<p>"AlternativeTo es un servicio gratuito que te ayuda a encontrar mejores alternativas a los productos que amas y odias." Traducido a español.</p>			
 	<p>Si bien la democratización en el acceso a dispositivos y herramientas multimedia permite que cada vez mas personas puedan generar y crear contenido de manera mas económica no implica que cada vez mas personas se dediquen a ello necesariamente, ya que potencia la labor de aquellas personas que si ejerzan oficios y profesiones artísticos.</p>
-	<h3>Académico</h3>
-	<p>Dentro de las STEAM del inglés (Science, Technology, Engineering, Arts and Mathematics) se suele evitar las artes dado que el mercado esta saturado, no obstante el arte sigue siendo relevante incluso en un mundo aparentemente STEM. Las CTIAM (Ciencias, Tecnología, Ingenierías, Artes y Matemáticas) comprenden carreras y roles artísticos vanguardistas que involucran las artes la ciencia y la tecnología de modo que esta sinergia actualiza a las artes constantemente y les otorga vigencia en términos contemporáneos, como asi también surgen nuevos roles ya sea con fines terapéuticos o de ocio. Dentro de las salidas principales se destacan la creación de contenido, la gestión de comunidades o community managemente, la mercadotecnia o marketing digital, la edición de video, la animación y modelado 2d y 3d, los eventos o instalaciones interactivas, etc.</p>
+	<a href="https://buenosaires.gob.ar/gobierno/laboratorio-tecnologico-de-la-ciudad" target="_blank">BA Laboratorio Tecnológico</a>
+	<p>"El Laboratorio Tecnológico busca democratizar el acceso a las tecnologías para que todos/as los/as vecinos/as puedan conocer, aprender y tener la posibilidad de experimentar con diferentes tipos de herramientas." Ubicado en el centro metropolitano de diseño.</p>	
+
+	<h3>Monotributista, Autónomo, Asociado</h3>
+	<a href="https://www.afip.gob.ar/monotributo/" target="_blank">Monotributo</a>
+	<p>"Un régimen para pequeños contribuyentes, que unifica el pago de IVA y Ganancias con los aportes jubilatorios y la obra social."</p>
+	<a href="https://www.argentina.gob.ar/justicia/derechofacil/leysimple/sociedad-por-acciones-simplificada-sas" target="_blank">Sociedades de Acciones Simplificadas</a>
+	<p>"La Sociedad por Acciones Simplificada es un nuevo tipo de sociedad: se forma más rápido y con trámites más simples."</p>
+	<a href="https://www.argentina.gob.ar/constitucion-de-cooperativas/cooperativas-de-trabajo" target="_blank">Cooperativas de Trabajo Limitadas</a>
+	<p>"El trámite de constitución de cooperativas de trabajo está segmentado según la cantidad de personas asociadas al momento de la fundación ya que esto determinará la conformación del Consejo de Administración"</p>
+	<p>Si deciden facturar localmente o internacionalmente deben saber que estarán por su cuenta, fuera de cualquier convenio colectivo, deberán fijar una tarifa plana por su trabajo con lo cual pueden consultar a un contador, asociaciones profesionales, etc.
+	</p>
+
+	<h4>DAO Descentralized Autonomous Organization, en español Organización Autónoma Descentralizada.</h4>
+	<a href="https://www.fwb.help/" target="_blank">FWB o Friends With Benefits</a>
+	<p>"Friends with Benefits es un nuevo tipo de red social compuesta por creativos y constructores que creen en la promesa de un internet mejor."</p>
+	<p>"Todos poseemos tokens $FWB como una forma de financiar y gobernar colectivamente nuestros esfuerzos comunitarios y ser copropietarios de lo que creamos juntos."</p>
+	
+	<h4>Cooperativas - ONG - OSC - Fundaciones - Asociaciones Civíles - Empresas Recuperadas</h4>
+	<a href="https://www.essapp.coop/" target="_blank">ESSApp</a>
+	<p>"En ESSApp podrás buscar a las organizaciones de la Economía Social y Solidaria: cooperativas,"</p>
+	<a href="https://www.rutacoop.com.ar/" target="_blank">Ruta de las cooperativas</a>
+	<p>"La Ruta Argentina de Cooperativas tiene como objeto valorizar el potencial de un conjunto de experiencias cooperativas profundamente arraigadas en los territorios y la historia local del país."</p>
+	<a href="https://www.idealist.org/es" target="_blank">idealist.org</a>
+	<p>"Idealist es una organización sin fines de lucro con sede en Nueva York. Fue fundada en 1995 con una misión: Trabajando con otros, con generosidad y respeto mutuo, Idealist busca construir un mundo donde todas las personas puedan vivir libre y dignamente. Para ello, invitamos a todas esas personas a imaginar, conectar y actuar."</p>
+
+	<h4>Colectivos - Redes</h4>
+	<a href="https://web.facebook.com/share/g/1DwSSP4rD1/" target="_blank">Clandestina Weekend Nerd</a>
+	<p>"Clandestina funcionó activamente entre 2008 y 2014 y fué un puntapié en la conformación de colectivos artísticos de referencia para las generaciones de artistas más recientes.".
+	<a href="https://www.newtro.xyz/" target="_blank">Newtro Arts</a>
+	<p>"Newtro Arts es una organización de gestores culturales con sede en Argentina que trabaja para promover, educar e incorporar a nuevos artistas y agentes culturales latinoamericanos en la tecnología blockchain. El colectivo de artistas de Newtro está compuesto por artistas que participaron en nuestro taller "Arte y Web3" y que eligen ser parte de nuestro motor colectivo para representar la cultura local dentro del entorno virtual de Web3."</p>
+	<a href="https://amplifydai.com/" target="_blank">Amplify DAI</a>
+	<p>"Amplify Digital Arts Initiative es una iniciativa conjunta del British Council, Artlab y la Fundación Williams. Desde 2018, AMPLIFY D.A.I conecta y empodera a una red activa de artistas que trabajan en los sectores de las artes digitales, el sonido y la narración inmersiva en Canadá, América Latina y el Reino Unido. Aprovechando diferentes culturas y experiencias, AMPLIFY D.A.I fomenta una plataforma para el diálogo sobre equidad de género y compromete recursos para actividades de desarrollo profesional y de capacitación, intercambios de pares y oportunidades de exhibición en festivales, eventos y residencias dinámicas y contemporáneas."</p>
+	<a href="https://somoslavillana.carrd.co/" target="_blank">La Villana</a>
+	<a href="https://www.somoslavillana.com/" target="_blank">La Villana</a>
+	<p>"...un equipo de creación iberoamericano con valores de innovación, diversidad y colaboración. Somos Andrea Meneses y Gabi Cortés, creadoras con experiencia en producción, community building y dirección artística."</p>
+	<a href="https://witargentina.ar/" target="_blank">Women In Tech (WIT) Argentina</a>
+	<p>"Un espacio de encuentro y debate que busca acortar la brecha de géneros en el sector CTIM coordinando iniciativas para obtener un impacto positivo en la inserción de mujeres y diversidades en la industria de la tecnología." En el caso de las artes, el diseño y la ingeniería multimedia es relevante en áreas tecnológicas como la programación web, programación de videojuegos, robótica artística, etc.</p>
+	<a href="https://bitbangclub.com/es/informacion/" target="_blank">Bitbang ONG</a>
+	<p>"BITBANG es una organización sin fines de lucro, creada en 2014, para el impulso y difusión de la animación, videojuegos y arte digital vanguardistas. Somos una plataforma que difunde y promueve propuestas artísticas experimentales, arriesgadas y autorales, y da lugar a voces diversas."</p>
+	<a href="https://animacioncarton.com/quienes-somos/" target="_blank">Colectivo Cartón</a>
+	<p>"COLECTIVO CARTÓN. Integrado por personas vinculadas al mundo de la comunicación y las artes audiovisuales, quienes trabajan en forma voluntaria durante diez meses cubriendo todas las áreas que la puesta en marcha del festival requiere: Relaciones Institucionales, Prensa y Comunicación, Técnica, Programación, etc. El Colectivo Cartón está integrado por: Martín Araneda, Maxi Bearzi, Diego Cabarcos, Mariana Costa, Marisa Fernández Villalba, Leandro Seoane, Agustín Sinibaldi y César Barrangou."</p>
+	<a href="https://www.el-libro.org.ar/fundacion/" target="_blank">Fundación El Libro</a>
+	<p>"Entidad civil sin fines de lucro constituida por la Sociedad Argentina de Escritores, la Cámara Argentina del Libro, la Cámara Argentina de Publicaciones, el Sector de Libros y Revistas de la Cámara Española de Comercio, la Federación Argentina de la Industria Gráfica y Afines, y la Federación Argentina de Librerías, Papelerías y Afines."</p>
+	<a href="http://lodo.com.ar/" target="_blank"></a>
+	<p>"LODO es la construcción permanente y continua de una red de artistas, gestores, instituciones, fondos públicos y privados que fortalece el desarrollo de proyectos emergentes de danza, teatro, performance, site specific, arte contemporáneo y activismo en interacción con contextos culturales específicos."</p>
+
+	<h4>Sindicatos</h4>
+	<a href="https://www.argentina.gob.ar/trabajo/buscador-de-sindicatos">Buscador de sindicatos | Argentina</a>
+	<p>"Buscando por actividad y por asociaciones se encuentran todas las entidades sindicales registradas en la STEySS."</p>	
+	<a href="https://www.trabajadoresdearte.org/" target="_blank">Trabajadores de Arte Contemporáneo</a>
+	<p>"Trabajadores de Arte Contemporáneo es una iniciativa colaborativa para el establecimiento de buenas prácticas laborales y remuneración justa de los trabajadores de arte, tendientes a consolidar y profesionalizar a las escenas locales de América Latina."</p>
+
+	<h3>Espacios</h3>
+	<a href="https://artlabpro.net/" target="_blank">Artlab</a>
+	<p>"Artlab es un laboratorio que explora y emplea las nuevas tecnologías y la creatividad digital para desarrollar proyectos artísticos, estimular nuevas formas de expresión e impulsar el pensamiento crítico desde Latinoamérica para el mundo. Trabajamos con los artistas más relevantes en la intersección de arte, música y tecnología, siempre con espíritu inclusivo y colaborativo."</p>
+	<a href="http://www.biopus.ar/" target="_blank">Biopus</a>
+	<p>"Exploramos el arte electrónico desde múltiples perspectivas. Elige tu camino: Arte – Una bitácora de nuestras exploraciones y proyectos artísticos. (Español)
+	Servicios – Soluciones creativas para nuevas experiencias digitales."</p>
+	<a href="https://www.espaciobyte.org/" target="_blank">Espacio Bytes</a>
+	<p>"Espacio Byte es un museo en línea dedicado al arte digital. Un entorno natural para la exhibición de trabajos artísticos que, creados mediante el uso de tecnología digital, proponen nuevos lenguajes, poéticas y valores estéticos"</p>
+	<a href="https://www.fundaciontelefonica.com.ar/" target="_blank">Fundación Telefónica Movistar Argentina</a>
+	<p>"Presentamos a la sociedad las últimas expresiones de la cultura, con formatos digitales, innovadores y creativos."</p>
+	<a href="https://www.cceba.org.ar/" target="_blank">Centro Cultural de España en Buenos Aires</a>
+	<p>"El CCEBA Centro Cultural de España en Buenos Aires forma parte de la Red de Centros de Cooperación Cultural de la Agencia Española de Cooperación Internacional para el Desarrollo (AECID), uno de los principales instrumentos de la Cooperación Española (CE) para implementar las políticas de cooperación cultural al desarrollo y la aplicación de la Agenda 2030, compromiso y estrategia internacional para alcanzar los Objetivos de Desarrollo Sostenible (ODS)."</p>
+	<a href="https://caibuenosaires.com/">Centro Audiovisual Inmersivo</a>
+	<p>"Un espacio en donde creatividad, arte y tecnología se funden en un entorno único que estimula todos los sentidos. Una experiencia en la que el espectador se convierte en protagonista de la escena y se sumerge en un mundo de imágenes y sonidos envolventes que lo transportan hacia lo impredecible."</p>
+	<a href="https://palaciolibertad.gob.ar/" target="_blank">Palacio Libertad</a>
+	<p>"Edificio emblemático de la Ciudad de Buenos Aires, antiguo Palacio de Correos y Telégrafos, cuenta con más de 100 000 metros cuadrados de superficie y una infraestructura a la altura de los centros culturales más importantes del mundo."</p>
+	<a href="https://auravirtualgallery.com/" target="_blank"></a>
+	<p>"Aura Virtual Gallery es una plataforma de impulso y difusión de artistas representativos del pensamiento y producción contemporáneas. La galería se materializa de manera pop-up en ferias y exhibiciones, trabaja con una programación que amplifica los límites del galerismo tradicional, se interesa por los lazos transdisciplinares, exhibe y asocia proyectos individuales, colectivos, experimentales y de investigación. Asume la diversidad de espacios, formatos y actores de las prácticas artísticas actuales y emergentes. El rol de Aura Virtual Gallery es visibilizar y sostener las nuevas prácticas contemporáneas a partir de muestras y de instancias de mercado como así también a partir de la teoría y la crítica, interactuando con curadores, críticos y coleccionistas que completan la escena."</p>
+	
+	<h3>Educación</h3>
+	<p>Dentro de las STEAM del inglés (Science, Technology, Engineering, Arts and Mathematics) se suele evitar las artes dado que el mercado esta saturado, no obstante el arte sigue siendo relevante incluso en un mundo aparentemente STEM. Las CTIAM (Ciencias, Tecnología, Ingenierías, Artes y Matemáticas) comprenden carreras y roles artísticos vigentes con fines terapéuticos o de ocio. Dentro de las salidas principales se destacan la creación de contenido, la gestión de comunidades o community management aunque invulucra marketing (mercadotecnia en español), la mercadotecnia o marketing digital, la edición de video, la animación y modelado 2d y 3d, los eventos o instalaciones interactivas, etc.</p>
 	<p>La vía académica contempla, desde ayudantías de cátedra para estudiantes avanzados, la docencia y finalmente la investigación. Existen curso de formación profesional, pregrado: tecnicaturas, CCC o Ciclos de Complementación Curricular que permiten adquirir licenciaturas, grado: licenciaturas y posgrados: maestrías, doctorados y posdoctorados, residencias artísticas e incluso programas de intercambio estudiantil. Incluso es posible participar de congresos de la materia para poder tratar las tendencias como asi también seminarios, conferencias. etc.</p>
+	<h3>Especialización</h3>
+	<p>A lo largo de la carrera que elijan mientras abarque la multimedia abarcara un conjunto de lenguajes artísticos amplio, con lo cual van a tender a orientarse y especializarse en una rama en contreto, siempre sucede así. Si bien podrían dedicarse a varias ramas, este tipo de carretas generalista proporcionan una base general, es decir tendrán un conocimiento general de la multimedia, sin embargo al trabajar en equipo, la especificidad del rol se vuelve crucial dado que eso garantiza mayor calidad en la obra y/o producto.</p>
 	<p>Algunos ejemplos</p>
 	<a href="https://presentecontinuo.org/" target="_blank">Presente Continuo</a>
-	<p></p>
-	<a href="https://www.argentinaperformanceart.com/" target="_blank">Argentina Performance Art</a>
-	<p></p>		
-	<h3>Educación</h3>
-	<p></p>	
+	<p>"Presente Continuo Org es una plataforma de debate, formación y producción."</p>
+	<p>"El programa nace desde la convicción de que la transformación representada por la cuarta revolución tecnológica nos está llevando a un lugar donde los marcos conceptuales y las descripciones que heredamos del mundo de ayer ya no sirven para entender el de hoy y proyectar el de mañana."</p>
+	<p>"El objetivo del programa es entender cómo estas tecnologías están cambiando la forma de producir arte y, al mismo tiempo,  cómo las creaciones artísticas pueden ayudarnos a comprender este nuevo mundo que habitamos."</p>
+	<a href="https://www.argentinaperformanceart.com/" target="_blank">Argentina Performance Art (APA)</a>
+	<p>"Esta es la primera plataforma dedicada exclusivamente a la investigación teórica y a la valorización, tanto histórica como contemporánea, de la Performance Art en Argentina y el Sur Global. Se enfoca en artistas de performance argentinas/os y de otros países que desarrollan su obra en Argentina, contribuyendo así a la construcción de un patrimonio histórico interseccional."</p>		
 	<h3>Experiencia</h3>
 	<p>Las pasantías suelen ser una buena oportunidad para estudiantes avanzados, por lo general con la mitad de la carreras culminada que estén interesados en trabajar en relación de dependencia y adquirir experiencia como asi también el voluntariado para organizaciones del tercer sector.</p>
-	<h3>Portafolio</h3>
-	<p>Es conveniente ir desarrollando un perfil en redes sociales como LinkedIn para búsqueda labora, y utilizar redes sociales, un blog o un enlazador como linktree para generarlo, Behance de Adobe permite crear uno, donde se pueda mostrar toda la experiencia adquirida y los trabajos realizados.</p>
-	<p>Algunos ejemplos</p>
-	<a href="https://tirigall.net/" target="_blank">Portafolio de Juan Jose Maria Tirigall, docente en la UNA</a>
-	<a href="https://marcelarapallo.com.ar/" target="_blank">Portafolio de Marcela Rapallo, docente en la UNA</a>
-	<a href="https://es.zaramella.com.ar/" target="_blank">Zeramella (animación) no es docente en la UNA</a>	
-	<p>Por otro lado dentro del rubro no suelen publicarse avisos vinculados a propuestas laborales artísticas dentro de sistios como LinkedIn, Bumeran, CompuTrabajo, etc, en su lugar hay plataformar específicas como por ejemplo:</p>
-	<a href="https://www.alternativateatral.com/">
 	<h3>Gamification</h3>
-	<p>Dentro de la educación existe un concepto reciente conocido como gamification del inglés: "ludificación", el cual consiste en dotar a una plataforma de características lúdicas como las que poseen los videojuegos como las recompensas, las misiones, la experiencia, los desafíos, etc lo cual torna al aprendizaje mas estimulante y dinámico.</p>	
+	<p>Dentro de la educación existe un concepto reciente conocido como gamification del inglés: "ludificación", el cual consiste en dotar a una plataforma de características lúdicas como las que poseen los videojuegos como las recompensas, las misiones, la experiencia, los desafíos, etc lo cual torna al aprendizaje mas estimulante y dinámico. Se puede enseñar una habilidad artística en una plataforma como forma de monetizar.</p>	
 	<a href="https://www.flexflix.ai/" target="_blank">FlexFlix</a>
-	<p></p>
+	<p>"FlexFlix es una plataforma de videos "on demand" para kids & teens con miles de películas edutainment en español, inglés y portugués que promueve el pensamiento flexible y creativo."</p>
+	<a href="https://www.bitdegree.org/" target="_blank">BitDegree</a>
+	<p>"BitDegree es una plataforma gamificada e impulsada por incentivos (Jugar y Ganar) para aprender sobre criptomonedas y el espacio más amplio de Web3. Los jugadores participan en Misiones de BitDegree dedicadas a temas o proyectos, donde resuelven cuestionarios, abordan acciones relacionadas con blockchain y sociales, e investigan temas a partir de piezas de contenido proporcionadas, todo dentro de un límite de tiempo establecido. Mientras el aprendizaje ocurre en segundo plano, los participantes pueden ganar recompensas de aprendizaje en criptomonedas y ganar premios únicos." Traducido a español.</p>
+	<a href="https://learnweb3.io/">LeanrWeb3</a>
+	<p>"LearnWeb3 es el ecosistema educativo líder en Web3. Ofrecemos una amplia gama de cursos educativos, recursos y herramientas diseñados para ayudar a los desarrolladores a aprender y crecer en el espacio Web3." Traducido a español.</p>
 	<a href="https://www.clubarts.ar/" target="_blank">Club Arts (CABA)</a>
-	<p></p>
-	<h2>Financiamiento</h2>
-	<p>Dentro de lo que es el financiamiento existen múltiples formas de obtenerlo y por lo general se utilizan plataforma de mecenazgo colaborativo cuyo impacto del proyecto pueda resultar atractivo para con ellos conforme a estudios de mercado y proyección en términos de ROI (retorno de inversión) o con concocimiento en web 3 mediante tokenización.</p>
+	<p>"CLUB ARTS es una propuesta del Equipo  ROCK SCHOOL. Somos un grupo multidisciplinario de profesionales de las artes (Música, Danza y más). Nos dedicamos a la enseñanza desde hace más de 30 años. Hemos venido creciendo en forma permanente debido a que amamos lo que hacemos. Actualmente contamos con 3 sedes en Ciudad de Buenos Aires."</p>
+	<p>Agrego alguos sitios para buscar, cursos, carreras tanto presenciales como virtuales, privadas como públicas.</p>
+	<a href="https://campusvirtual.cin.edu.ar/" target="_blank">Campus Virtual Universitario Nacional</a>
+	<p>"El Campus Virtual Universitario Nacional es una iniciativa que nace como un acuerdo del conjunto de los rectores que integran el Consejo Interuniversitario Nacional (CIN)."</p>
+	<a href="https://www.estudios.com.ar/" target="_blank">Estudio</a>
+	<p>"Ayudándote a orientar tu camino universitario desde hace más de 26 años en Argentina"</p>
+	<a href="https://www.classcentral.com/" target="_blank">Class Central</a>
+	<p>"Class Central agrupa cursos de muchos proveedores para ayudarte a encontrar los mejores cursos sobre casi cualquier tema, dondequiera que existan." Traducido a español.</p>
+	<a href="https://beta-hub.com/es" target="_blank">Beta Hub</a>
+	<p>"Beta Hub es un espacio impulsado por Mercado Libre para que jóvenes de América Latina accedan a propuestas educativas de calidad, y empiecen a crear su camino en tecnología."</p>
+	<a href="https://www.fundaciontelefonica.com.ar/empleabilidad/" target="_blank">Fundación Telefónica Movistar Argentina</a>
+	<p>"Promovemos iniciativas que mejoran las oportunidades de niños y niñas, con una educación inclusiva, digital, innovadora y de calidad."</p>
+	<p>"Conectamos a las personas con la nueva realidad laboral, dándoles formación y orientación profesional gratuitas."</p>
+	<a href="https://institucional.telecom.com.ar/digitalers" target="_blank">Digitalers</a>
+	<p>"Es un programa de formación gratuita en programación y oficios digitales con el objetivo de promover el desarrollo de talento digital junior para la industria TIC e impulsar la inserción laboral de jóvenes de todo el país."</p>
+	<a href="https://wipartedigital.com/" target="_blank">w.i.p. arte digital - Plataforma de formación en artes digitales</a>
+	<p>"WIP arte digital es un proyecto de difusión y formación en artes digitales y electrónicas que facilita el desarrollo de oficios digitales a partir del uso creativo de las tecnologías."</p>
+	<a href="https://www.educacionit.com/cursos-gratuitos"></a>
+	<p>"Somos un equipo de personas que buscamos la mejor experiencia de aprendizaje en tecnología. Te acompañamos en tu formación de manera personalizada, con grupos reducidos para ayudarte a desarrollar todo tu potencial."</p>
+	<a href="https://www.louderband.com/" target="_blank">Louderband</a>
+	<p>"Únete a la comunidad de música y cursos on demand más grande de Latinoamérica."</p>
+	<a href="https://www.coderhouse.com/ar/" target="_blank">Coderhouse</a>
+	<p>"Somos la plataforma educativa con la mayor cantidad de graduados en empresas líderes."</p>
+	<a href="https://www.soyhenry.com/" target="_blank">Soy Henry</a>
+	<p>"Henry es una academia de educación en tecnología con foco en la empleabilidad. En Henry adquirirás las habilidades tecnológicas más demandadas por el mercado laboral."</p>
+	<a href="https://www.digitalhouse.com/ar" target="_blank">Digital House</a>
+	<p>"Somos una organización edtech que potencia al ecosistema tecnológico empoderando a futuros creadores del mundo digital."</p>
+	<a href="https://somosedison.com/" target="_blank">Edison</a>
+	<p>"En Edison nos asociamos con líderes y referentes de diferentes industrias, para co-crear cursos cortos, aplicables y en vivo."</p>
+	<a href="https://www.instagram.com/fabricadeanimacion/" target="_blank">Fábrica de Animación</a>
+	<p>"Una fábrica que te enseña a descubrir el fascinante mundo de los dibujos animados y también a fabricarlos."</p>
+	<a href="https://4nova.com.ar/" target="_blank">4NOVA | Escuela de Arte</a>
+	<p>"Somos una escuela online dedicada a la enseñanza del dibujo y la animación. En nuestros cursos los estudiantes aprenden con artistas que tienen amplia experiencia tanto en el campo profesional como en el docente. El trato personalizado permite que el estudiante llegue antes a cumplir los objetivos propuestos en cada curso ampliando sus capacidades en un ambiente cordial y de colaboración mutua."</p>
+	<a href="https://www.chicasprogramadoras.club/" target="_blank">Chicas Programadoras Club</a>
+	<p>"Clubes gratuitos para chicas de 13 a 17 años interesadas en aprender todo sobre programación, hacer nuevas amigas y sumergirse en el fantástico mundo de la tecnología. Nuestros clubes se encuentran en distintos puntos del país y están dirigidos por nuestros mentores especializados en el área."</p>
+	<a href="https://www.adaitw.org/" target="_blank">Ada</a>
+	<p>"Somos una organización sin fines de lucro que desde el año 2018 capacita a mujeres en tecnología con el objetivo de reducir la brecha de género y brindar mejores oportunidades a las mujeres y feminidades de América Latina y el mundo."</p>
+
+	<h3>Financiamiento</h3>
+	<p>Dentro de lo que es el financiamiento existen múltiples formas de obtenerlo y por lo general se utilizan plataforma de crowdfunding,  mecenazgo colaborativo por aprecio o cuyo impacto del proyecto pueda resultar atractivo para inversores conforme a estudios de mercado y proyección en términos de ROI (retorno de inversión) o con concocimiento en web 3 mediante tokenización.</p>
 	<p>Por ejemplo</p>	
+	<a href="https://cafecito.app/" target="_blank">Cafecito</a>
+	<p>"Cafecito es una plataforma de crowdfunding que busca unir a creadores de contenido, ONGs o proyectos con gente que quiera aportar a lo que hacen."</p>
+	<a href="https://www.matecito.co/" target="_blank">Matecito</a>
+	<p>"Matecito es una plataforma de financiamiento colectivo que puede ser utilizada por cualquier persona que desee recibir donaciones de una manera sencilla y con la menor comisión."</p>
 	<a href="https://www.bluebits.club/es" target="_blank">Bluebit</a>
-	<p>O apoyo tradicional</p>	
+	<p>"Somos la única (comunidad financiera) que desbloquea oportunidades patrocinando proyectos y generando ingresos a partir de la tokenización de acciones."</p>	
 	<a href="https://orillasnuevas.org/" target="_blank">Orillas Nuevas</a>
-	<p>Bluebits es una plataforma de inversión colectiva especializada en películas y otros proyectos creativos.</p> 
-	<h2>Países que han hecho de su cultura una industria</h2>
-	<p>Si bien todos los países del mundo posee industria cultural, hay algunos que han podido llevarla mas allá de sus fronteras.</p> 
-	<h3>Argentina</h3> 
-	<p>Argentina cuenta con una industria cinematográfica reconocida internacionalmente, con producciones premiadas como "El secreto de sus ojos" y "Relatos salvajes".</p> 
-	<p>En la animación, es pionera en América Latina, siendo el país creador de "Manuelita", "Metegol" (dirigida por Juan José Campanella) y clásicos como "Hijitus", "Patoruzú" y "Patoruzito" y mas recientemente ANIMAR MoCap como el estudio de Motion Capture o captura del movimiento mas grande y pionero en América Latina. También destacan historietas icónicas como "Mafalda", creada por Quino, que ha dejado un impacto cultural significativo a nivel mundial y el Martín Fierro como poema narrativo gauchesco escrito por José Hernandéz.</p> 
-	<p>En los videojuegos han habido éxitos de gran impacto, como "Preguntados", un fenómeno mundial en juegos móviles que combina entretenimiento y conocimiento. Como asi también la generación de un motor de videojuegos porpio GODOT.</p> 
-	<a href="https://preguntados.com/" target="_blank">Preguntados</a>
-	<p>En el mundo editorial, Argentina tiene una tradición significativa con revistas infantiles y juveniles como "Billiken", una de las más longevas del mundo, "Genios", que marcó a generaciones recientes, y "Gaturro", que fusiona historietas con productos multimedia. Además, es el país natal de "Jorge Luis Borges", uno de los escritores más influyentes del siglo XX, cuya obra ha dejado una huella imborrable en la literatura universal como Julio Cortázar, celebre y uno de los mas influyentes de la literatura hispana.</p> 
-	<p>En el ámbito digital, "Taringa!" fue una de las primeras redes sociales populares en Latinoamérica superando a Facebook adquirida por IOVlabs que intentó llevarla a web3 aunque ya quedado rezagada frente a otras redes sociales, mientras que plataformas como "Qubit TV" fue una plataforma enfocada en cine independiente y de autor, lugar que ocupa hoy día Xiclos y en la digitalización del teatro Teatrix.</p>
-	<p>En música, además de un legado tradicional con el tango con Carlos Gardel también conodico como el Zorzal Criollo. En el folklore con Mercedes Sosa, Horacio Guaraní, Atahualpa Yupanqui, mas recientemente Soledad Pastoruti o el chaqueño palavecino. También ha sido cuna de bandas como "Rata Blanca", "Ricardo Iorio" precursores del heavy metal argentino. "Papo" y Sandro considerados precursores del rock argentino, Charlie García, Fito Paez, Alberto Spinetta, como los padres del rock nacional, "Soda Stereo" tuvo un gran éxito en el rock nacional. Rodrigo Bueno en el cuarteto mas recientemente Luck Ra. Damas Gratis como una de las bandas mas influyentes de la cumbia villera y los wachiturros como precursores del RKT. En los últimos años, el país ha ganado un creciente reconocimiento internacional con géneros urbanos como el trap y el reggaetón, liderados por artistas como "Bizarrap", "Duki", "Nicki Nicole", "María Becerra". Además, artistas como "Lali Espósito", "Tini", y "Paulo Londra" han destacado en la escena pop y urbana mundial. Asimismo, han surgido nuevos géneros musicales urbanos como el "Hotcore", impulsado por la innovadora "Taichu", y el "RKT", un género heredero de la cumbia villera, donde destaca el influyente artista "L-Gante".</p>
-	<h3>Brasil</h3> 
-	<p>Brasil se destaca por su industria televisiva y cinematográfica que abordan tanto temáticas locales como universales. En años recientes, ha empezado a consolidar su presencia en plataformas de streaming. Con artistas internacionales como Michelle Tello, Anitta.</p>
-	<h3>Colombia</h3>
-	<p>Colombia ha desplegado su influencia cultural mediante la industria televisiva y el pop latino con exponentes como Shakira, Juanes, Carlos Vives, etc o en el género urbano con exponentes como Maluma, J Balvin, etc.</p>
-	<h3>México</h3> 
-	<p>México ha ganado relevancia internacional en la industria cinematográfica moderna, destacando directores como Guillermo del Toro, Alfonso Cuarón y Alejandro González Iñárritu. También produce series y películas que reflejan su identidad cultural y llegan a una audiencia mundial. Musicalmente es cuna de artistas como Cristian Castro, Luis Miguel, Thalia, Belinda, etc.</p> 
-	<h3>Puerto Rico</h3>
-	<p>Puerto rico ha desplegado su cultura principalmente a través de la música con un éxito rotundo desde los años 2000 con exponentes del Reggaeton como Daddy Yankee (el rey del reggaeton), Wisin & Yandel, Vico C, etc como en el pop latino con exponentes como Ricky Martin, Chayanne y Luis Fonsi, etc.</p>
-	<h3>Estados Unidos</h3> 
-	<p>El caso más notable es el de Estados Unidos, cuya influencia masiva se ha extendido mundialmente gracias a Hollywood, Disney Pixar, Broadway, y los videojuegos.</p> 
-	<p>Producciones emblemáticas como "El Zorro", con su heroísmo clásico, "Los Simpson", una sátira audazmente ingeniosa de la sociedad contemporánea. También, la adorable locura de "Bob Esponja" ha conquistado tanto a niños como a adultos con su humor peculiar y surrealista. Con películas icónicas como "Toy Story" o Los Power Rangers con su fección entre heroismo, tecnología y realidades paralelas, no solo revolucionaron el cine animado, sino que también exploraron temas universales como la amistad y la superación. Además, franquicias como Star Wars y el Universo Cinematográfico de Marvel han redefinido el concepto de sagas mundiales, creando verdaderos fenómenos culturales transmediáticos. Con directores como Steven Spilberg, Scorsece, Stephen King en la literatura. En el ámbito de los videojuegos, títulos legendarios como Call of Duty y Grand Theft Auto han definido estándares técnicos y narrativos, convirtiéndose en fenómenos culturales que trascienden fronteras.</p> 
-	<p>En la música hubieron artistas que han dejado un legado inborrable como el rey del pop Michael Jackson, Elvis Presley el rey del rock, Frank Sinatra, la reina del pop Madonna, Mariah Carey, Lady Gaga, Taylor Swift, Milley Cyrus, etc.</p> 
-	<p>En las redes sociales es sede de varios de los gigantes tecnológicos y servicios mas usados del mundo con Facebook, Instagram y WhatsApp de Mata, YouTube de Alphabet, Snapchat, X (antes Twitter), Twitch de Amazon, Discord, Reddit, Netflix y de algunas de las IAs mas populares como ChatGPT de Open AI, Gemini de Alphabet, Copilot de Microsoft, Grok de X y Google como buscador web, etc.</p>
-	<h3>Canadá</h3>
-	<p>Es un gigante en la industria del videojuego con estudios como Ubisoft Montreal ("Assassin’s Creed", "Far Cry"), BioWare ("Mass Effect", "Dragon Age") y EA Vancouver ("FIFA"). En cine y televisión, ha producido exitosas series animadas como "Caillou", "Las Aventuras de Tintín" (en coproducción), "Los padrinos mágicos" (junto a EE.UU.), y más. En música, artistas como Celine Dion, Drake, Justin Bieber, The Weeknd, Shawn Mendes, Michael Buble han sido influyentes mundialmente. Aunque su influencia se puede ver más a través de colaboraciones con Estados Unidos, Canadá tiene su propio sello en la industria audiovisual con series como "Degrassi: The Next Generation", películas como "La forma del agua" (aunque dirigida por Del Toro, quien es mexicano, fue producida en Canadá).</p>
-	<h3>España</h3>
-	<p>Ha tenido un crecimiento notable en cine, con directores como Pedro Almodóvar, Álex de la Iglesia, y más recientemente, J.A. Bayona.</p>
-	<p>Es un referente en animación, con estudios como Ilion Animation Studios ("Planet 51"), Lightbox Animation y BRB Internacional ("D'Artacán y los Tres Mosqueperros") con series como "Pocoyó".</p>
-	<p>En videojuegos, MercurySteam ha trabajado en franquicias de renombre como "Metroid".</p> 
-	<p>La música española, con fenómenos históricos como Nino Bravo, Jose Velez, Montserrat Caballé, etc y mas actualmente Rosalía en el flamenco moderno y reggaetón o Enrique Iglesias, Paulina Rubio, Juan Magan, también ha alcanzado reconocimiento internacional.</p>
-	<p>Ha tenido un impacto significativo con series como "La Casa de Papel" y "Elite" en Netflix. Y cervantes en la literatura española. Digitalmente han tenido su propia red social, Tuenti denominada El Facebook Español aunque luego se disolvió y paso a formar parte de Telefónica como OMV.</p>
-	<h3>Reino Unido</h3> 
-	<p>El Reino Unido ha sido una potencia cultural con su cine, destacándose franquicias como "James Bond" y "Harry Potter", y producciones televisivas icónicas como "Doctor Who" y "Sherlock" como la influencia de la BBC en la televisión mundial por documentales y series de calidad que exportan cultura británica.</p> 
-	<p>En el teatro con el West End Theatre.</p> 
-	<p>En la literatura destacan Shakespeare con Hamlet, Macbeth, entre otros.</p>
-	<p>En el ámbito musical, el país ha sido cuna de artistas legendarios que han marcado generaciones, como "Queen", "The Beatles", "The Rolling Stones" y "Elton John", "The Pink Floys", "U2", mas recientemente Sam Smith, Adele, Dua Lipa, etc.</p> 
-	<p>En lo infantil con Los Teletubis.</p>
-	<h3>Francia</h3> 
-	<p>Francia ha sido pionera en el cine, con movimientos como la Nouvelle Vague, y continúa produciendo películas y animaciones que destacan por su originalidad y enfoque artístico. Mas recientemente surgio una red social muy popular entre los milenials, BeReal lanzada en 2022.</p> 
-	<h3>Italia</h3> 
-	<p>Italia, con su rica tradición cinematográfica, ha sido reconocida por películas clásicas y contemporáneas que han influido en el cine mundial. Su legado incluye directores icónicos como Federico Fellini y producciones que destacan por su narrativa y estética. En la música se destacan la ópera con cantantes como Luciano Pavaroti, Placido Domingo. Andrea Boceli, etc.</p> 
-	<h3>Alemania</h3>
-	<p>Importante en la industria del cine y la música electrónica. Berlín es un epicentro global del techno. Producciones cinematográficas como El gabinete del Dr. Caligari, Corre, Lola, corre, Das Boot. En la industria del videojuego poseen estudios como Crytek (Far Cry, Crysis).</p>
-	<h3>Suecia</h3>
-	<p>Suecia también ha sido cuna de artistas como ABBA o Roxette hasta aplicaciones multimedia populares como Spotify.</p>
-	<h3>Turquía</h3> 
-	<p>Turquía ha logrado abrirse al mundo con sus "dizys" o dramas turcos, que en la última década se han consolidado como un fenómeno internacional, especialmente en Medio Oriente, Europa y América Latina.</p>
-	<h2>Rusia</h2>
-	<p>Rusia tiene una tradición fuerte en animación desde la era soviética (Soyuzmultfilm, Gorky Film Studio) y sigue siendo un actor importante en el sector. Películas destacadas: Attraction (Притяжение) → Sci-fi con efectos visuales avanzados. Sputnik (Спутник) → Horror sci-fi con gran éxito internacional. The Three Bogatyrs (Три богатыря) → Animación basada en leyendas rusas. Estudios de VFX: Main Road Post → Trabajó en Attraction y Guardians (2017). CGF → Efectos visuales para cine y publicidad.</p> 
-	<p>Es un mercado clave para los videojuegos, con grandes desarrolladores y una comunidad gamer muy activa. Juegos famosos de origen ruso: Tetris → Creado por Alekséi Pázhitnov en 1984. Metro 2033 y Metro: Last Light → Juegos de acción basados en la novela de Dmitry Glukhovsky. Escape from Tarkov → Shooter táctico de gran popularidad. War Thunder → MMO de combates militares. Atomic Heart → Shooter inspirado en BioShock con estética soviética retrofuturista.</p> 
-	<p>Dream Laser y Fibrum son estudios innovadores de RV y RA.</p> 
-	<p>Es sede de algunas de las aplicaciones y redes sociales propias y masivas mas usadas como VKontakte, Odnoklassniki, Telegram, FaceApp (filtros de realidad aumentada), Rossgram (clon de instagram), RuTube (clon de YouTube), LiveJournal. Moi Mir@Mail.ru (correo electrónico), y Yandex (buscador web) en paralélo a los servicios occidentales o su propia IA Gigachat.</p>
-	<h3>China</h3> 
-	<p>China ha consolidado su influencia cultural a través de producciones cinematográficas icónicas, especialmente en el género de artes marciales y C-Dramas o Doromas chinos, con figuras legendarias como Jackie Chan y éxitos internacionales como la remake de "Karate Kid".</p> 
-	<p>Además, el país ha desarrollado plataformas de streaming que distribuyen series y películas a nivel mundial, impulsando su cultura y narrativa en mercados internacionales.</p> 
-	<p>En el ámbito tecnológico, China ha sido pionera con espectáculos de drones.</p>
-	<p>Paralelamente, ha experimentado un auge en la animación y los videojuegos, destacándose por su innovación tecnológica y creatividad, consolidándose como un actor clave en la industria del entretenimiento mundial.</p> 
-	<p>Tienen sus propias redes sociales como TIkTok (versión internacional) de Douyin de Bytedance, QQ, Sina Weibo, WeChat, Kwai, Baidu (buscador web), Foxmail (correo), Youku (streaming), Qq Music (música), Tieba, KuGou, Xiaohongshu, Likee o su propia IA como DeepSeek y Qwen.</p> 
-	<h3>Japón</h3> 
-	<p>Japón ha desplegado su cultura mundialmente a través del anime como Dragon Ball, Naruro, Yu-Gi-Oh!, etc.</p> 
-	<p>Cinematograficamente con directores como Akira Kurosawa y animación de estudios como Studio Ghibli y Toei Animation, el manga y los videojuegos con Nintendo, Sony y franquicias como Final Fantasy, Pokémon y Zelda, estableciendo una industria multimillonaria y un fenómeno cultural que influye tanto en jóvenes como en adultos en todo el mundo.</p> 
-	<p>En la música, el J-pop y el rock japonés han ganado relevancia internacional. Como de los J-dramas o doromas japoneses.</p> 
-	<p>Utilizan redes sociales propias como Ameblo.jp y Bakusai.com, Gree, Mixi, Mobage, Line, etc y plataformas de streaming de anime (Crunchyroll, AnimeLab) paralelamente a los servicios occidentales. Incluso los Kaomojis o emoticonos lindos o adorables, provienen de la cultura kawaii que significa lindo o adorable.</p> 
-	<h3>Corea del Sur</h3> 
-	<p>Desde los años 90, Corea del Sur ha tenido un impacto notable en la industria del entretenimiento mediante el "Hallyu" u "Ola Coreana".</p> 
-	<p>Sus producciones de K-dramas o doramas coreanos, películas con directores como Bong Joon-ho (Parasite), Estación Zombie o Los Juegos del Calamar, y videojuegos con empresas como Nexon, NCSoft, Riot Korea y Bluehole (creadores de "PUBG"), junto con el K-pop con grupos como BTS, Blackpink, EXO o Psy, han alcanzado un reconocimiento mundial sin precedentes. En lo infantil "Garu y Pucca" de los 90.</p> 
-	<p>En las redes sociales tienen su propia industria como Snow (clon de snapchat), KakaoStory, KaraoTalk. Band Naver, Café Naver, Everytime, Café Daum, Coupang, Naver (buscador web), Line en parelélo a los servicios occidentales.</p> 
-	<h3>India</h3> 
-	<p>La India, a través de "Bollywood", cuenta con una de las mayores industrias cinematográficas del mundo. Sus películas, caracterizadas por producciones coloridas, música y narrativas únicas, han ganado un lugar en mercados internacionales.</p> 
-	<p>En animación y cómics, han surgido estudios y personajes populares como Chhota Bheem y Baahubali: The Lost Legends. También poseen sus propias redes sociales como ShareChat, Koo, Line en paralelo a los servicios occidentales occidentales.</p> 
-	<h3>Nigeria</h3> 
-	<p>Nigeria cuenta con "Nollywood", una de las industrias cinematográficas más grandes del mundo en términos de volumen. Sus películas, muchas de las cuales abordan historias locales y universales, han ganado audiencias en África y en comunidades de la diáspora.</p>
+	<p>"“Orillas Nuevas ~ Nouveaux Rivages” es un programa de apoyo a las industrias culturales y creativas (ICC) de Argentina promovido por el Institut français d’Argentine, gracias al excepcional apoyo del Ministerio de Europa y Asuntos Exteriores de Francia. Su implementación se realiza en colaboración con la Fundación Williams y con la participación de la Fundación Medifé."</p>
+
+	<h3>Repositorios - Archivos - Registros - Acervos</h3>
+	<p>Otra de las posibilidades sería dedicarse a la recuperación de archivos multimedia históricos que conforman patrimonio cultural, en formatos analógicos, digitalizarlos, conservarlos y clasificarlos.</p>
+	<a href="https://gotika.com/home-es" target="_blank">Gotika</a>
+	<p>"Es una compañía con más de 20 años de trayectoria, dedicada específicamente a la, restauración, remasterización y preservación de patrimonio audiovisual. Fue pionera en Latinoamérica realizando el primer intermedio y la primera restauración digital. Es una de las contadas compañías en el mundo que pueden proveer restauración y remasterización integrada de altísima calidad de imagen y sonido. Es uno de los pocos laboratorios privados en el mundo con capacidad de escanear desde 4K a 20K para análisis forense y restauración de originales muy dañados. Entre sus servicios se encuentran: Investigación y Arqueología Fílmica, Limpieza, Reparación y Digitalización (Escaneo) Fílmico, Limpieza, Reparación y Digitalización (Escaneo) de Video Cintas, Restauración Fílmica y de Video, Corrección de Color y Restauración de Sonido."</p>
+	<a href="https://www.argentina.gob.ar/cultura" target="_blank">Secretaría de Cultura</a>
+	<p>"Impulsamos políticas públicas para el desarrollo de una cultura nacional que fomente la creación y las expresiones culturales, teniendo a la pluralidad como eje. Fomentamos la producción de las industrias culturales. Propiciamos la conservación y la puesta en valor de nuestro patrimonio cultural."</p>
+	<a href="https://catalogo.bn.gov.ar/F?RN=662600489" target="_blank">Biblioteca Nacional Mariano Moreno</a>
+	<p>"Biblioteca Nacional de la República Argentina, fundada en 1810 por Mariano Moreno."</p>
+	<a href="https://www.argentina.gob.ar/interior/archivo-general-de-la-nacion" target="_blank">Archivo General de la Nación</a>
+	<p>"Iluminando el pasado, sirviendo al presente, construyendo el futuro."</p>
+	<a href="https://www.archivorta.com.ar/" target="_blank">Archivo Prisma</a>
+	<p>"Prisma es la plataforma web que hace posible la democratización del acceso al acervo audiovisual y sonoro del Archivo Histórico de RTA. Tal como establece el artículo 7 del Reglamento de Funcionamiento del Archivo Histórico de RTA, Prisma garantiza el acceso universal por internet del material emitido y/o grabado por Radio Nacional y la Televisión Pública, así como de piezas audiovisuales o sonoras a las que el Archivo ha accedido a través de los convenios de digitalización que RTA mantiene con diversas instituciones públicas de la Argentina."</p>
+	<a href="https://recuperar.org/" target="_blank">Plan de Recuperación de Películas Argentinas</a>
+	<p>"Ante la pérdida de derechos de autor, Laboratorios GOTIKA y DAC (Directores Argentinos Cinematográficos) decidieron asociarse para invertir y crear el Plan Recuperar para rescatar, poner en valor en 4K y conservar cien clásicos contemporáneos: sin costo alguno para el autor."</p>
+	<a href="https://difilm-argentina.com/difilm/" target="_blank">DeFilm</a>
+	<p>"Difilm nació en 1949 como un pequeño archivo de imágenes dedicado a la conservación, restauración y comercialización de material histórico. En la actualidad es una de las empresas más importantes en cuanto a la cantidad, variedad y diversidad de material fílmico y se ha convertido en uno de los bancos de imágenes más prominentes de la Argentina."</p>
+	<a href="https://youtube.com/@difilmargentina?si=aIyBtGRqwD8hQrDw" target="_blank">DiFilm</a>
+	<a href="https://youtube.com/@archivodichiara?si=56BF66EudIiFERaP" target="_blank">Dichiara</a>
+	<a href="https://www.legado.ar/" target="_blank">Legado</a>	
+	<p>"Es un proyecto cultural independiente y autogestivo creado por la artista y curadora Graciela Taquini, inicialmente junto con un equipo interdisciplinario de especialistas Jazmin Adler, Marcela Andino, Toia Bonino, Mariela Cantú, Romina Flores, Fabiana Gallegos, Gabriela Larrañaga, Silvana Spadaccini, Alejandra Torres, Mariela Yeregui, fundado el primero de marzo de 2020. Ampliado en 2024 con la participación de Susana Allegretti, Alejandra Ceriani, Alejandra Cresentino, Clara Garavelli, Florencia Levy, Daniela Muttis, Maia Navas, Ari Nahon, Silvina Szperling."</p>
+	<a href="https://proyectoidis.org/" target="_blank">Proyecto Isdin</a>
+	<p>"La presente investigación propone un recorrido historiográfico del Diseño de Imagen y Sonido, que permita revisar cómo influyen en esta disciplina los cambios que se producen con la digitalización de datos, imágenes y sonidos. Para comprender estos cambios, proponemos formular una historiografía que sea complementaria a las tradicionales historias de los medios, y que esté enfocada en las relaciones que se establecen entre el diseño de sistemas de representación visual y sonora y los medios electrónicos y digitales."</p>
+	<a href="https://ahira.com.ar/" target="_blank">Archivo Histórico de Revistas Argentinas</a>
+	<p>"Ahira. Archivo Histórico de Revistas Argentinas es un proyecto que agrupa a investigadores de letras, historia y ciencias de la comunicación, que estudia la historia de las revistas argentinas en el siglo veinte; las trayectorias de quienes las dirigieron, las escribieron e ilustraron; los debates que atravesaron sus páginas; los cruces y diálogos con el periodismo de masas, la literatura, los programas políticos, los lectores y los escritores. El proyecto es financiado por subsidios de la Universidad de Buenos Aires y de la Agencia Nacional de Promoción Científica y Tecnológica, radicados en el Instituto de Historia Argentina y Americana “Dr. Emilio Ravignani”, Facultad de Filosofía y Letras, Universidad de Buenos Aires."s</p>
+	<a href="https://www.todohistorietas.com.ar/" target="_blank">Todo Historiestas</a>
+	<p>"Esta página es un tributo a Mafalda, a Quino, y a los más importantes personajes e historietistas de la Argentina y el mundo."</p>
+	<a href="https://ilustracionargentina.wordpress.com/" target="_blank">Archivo de Ilustración Argentina</a>
+	<p>"Somos un grupo de docentes de la materia Ilustración, cátedra Daniel Roldán, perteneciente a la Carrera de Diseño Gráfico de la Facultad de Arquitectura, Diseño y Urbanismo, de la Universidad de Buenos Aires (FADU/UBA). La cátedra nació en el 2011, siendo la primera vez que se conformaron estudios de esta disciplina a nivel universitario, por ese motivo debió generar sus propios contenidos. En este contexto comenzamos a investigar acerca de la historia de la ilustración argentina."</p>
+	<a href="https://archivoiiac.untref.edu.ar/" target="_blank">Archivo IIAC (Instituto de Investigación en Arte y Cultura Dr. Norberta Griffa</a>
+	<p>"El Archivo IIAC funciona en el seno del Instituto de Investigaciones en Arte y Cultura “Dr. Norberto Griffa” de la Universidad Nacional de Tres de Febrero. Reúne fondos y colecciones documentales y bibliográficos de artistas, escritores, historiadores del arte e instituciones relacionadas con el arte y la cultura. Tiene como objetivo la guarda, descripción y difusión de sus fondos y aspira a convertirse en una herramienta privilegiada para los investigadores en la producción de conocimiento. Entre los materiales que alberga se encuentran libros, publicaciones periódicas, fotografías, afiches, películas y una gran variedad de documentos. Asimismo, cuenta con un catálogo de biblioteca conformado por diversas colecciones."</p>
+	<a href="https://wepa.unima.org/es/argentine/" target="_blank">Argentina | World Encyclopedia of Puppetry Arts</a>
+	<p>"La evolución del teatro de títeres en Argentina está estrechamente ligada a los flujos migratorios que marcaron la nación argentina desde sus orígenes y a los intercambios culturales y sociales que los acompañaron. Este proceso original nació en el siglo xviii."</p>
+	<a href="https://fundacionluminis.org.ar/tema/arte" target="_blank">Arte Archivos - Fundación Lúminis</a>
+	<p>"Apoyando la educación argentina en la formación docente y la investigación · Biblioteca virtual · Educación y Género · Datos abiertos sobre Educación · RADIO."</p>
+	<a href="https://argentinacompositores.com.ar/archivo/" target="_blank"></a>
+	<p>"El Archivo Histórico de la AAC es un tesoro invaluable que preserva la herencia musical argentina. Desde su fundación en 1915, el archivo ha acumulado una extensa colección de documentos artísticos y administrativos, incluyendo libros de actas, registros de socios, correspondencia, fotografías y programas de conciertos. Además, cuenta con unos 800 registros sonoros y audiovisuales en diversos formatos, totalizando más de 3000 obras argentinas, muchas de ellas únicas. El archivo se complementa con una biblioteca musical, un inventario de 1364 partituras (incluyendo manuscritos autógrafos) y los fondos de tres destacados compositores: Celina Kohan de Scher, Elena Larionow y Jorge Fontenla."</p>
+	<a href="https://iimcv.net.ar/admin.php" target="_blank">IMCV (Instituto de Investigación Musicológica Carlos Vega)</a>
+	<p>"El 14 de abril de 1966 se funda el Instituto de Investigación Musicológica “Carlos Vega” (FACM- UCA). Lleva el nombre del primer musicólogo argentino quien, por voluntad testamentaria, donó el patrimonio que dio origen a dicha creación, el cual incluye sus investigaciones inéditas, epistolario y archivo personal. En la donación mencionada expresaba los objetivos fundacionales que hasta hoy nos guían: “Están egresando de nuestra Facultad los primeros Licenciados en Musicología y esta modernísima especialidad carece todavía de círculos de concentración de actividad. No es difícil que esperen a los nuevos profesionales la dispersión, el desaliento y el abandono de la materia que abrazaron con decisión inaugural y estudiaron con tanto entusiasmo. Un Instituto de Musicología en estas circunstancias tendría, precisamente, el objetivo principal de constituirse en un centro de estudios para docentes y estudiantes de la Facultad y para especialistas y estudiosos”."</p>
+	<a href="https://linktr.ee/museodelcineba" target="_blank">Museo del Cine Pablo Ducrós Hicken</a>
+	<p>"Rescatando historias desde 1971."</p>
+	<a href="https://museomig.org/index.php" target="_blank">Museo Mig | Museo de la Ilustración Gráfica</a>
+	<a href="https://youtube.com/@museomig323?si=09y5627akP4hKOq1" target="_blank">YouTube de Museo Mig</a>
+	<p>"El recientemente creado Museo de la Ilustración Gráfica, que tendrá como sede el señorial edificio ubicado en la esquina de Alte. Brown y Pinzón del barrio de La Boca, abarcará las áreas del Humor Gráfico, la Historieta, la Ilustración y la Animación."</p>
+	<a href="https://museofeministavirtual.com.ar/" target="_blank">Museo Feminista Virtual</a>
+	<p>"Mujeres, lesbianas, travestis, trans y no binaries de la historia del arte"</p>					
+	<a href="https://archive.org/" target="_blank">Internet Archive</a>
+	<p>"Internet Archive es una biblioteca sin fines de lucro con millones de textos, películas, software, música, sitios web y mucho más gratuitos." Traducido a español.</p>
+	</section>	
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
 </body>
 </html>

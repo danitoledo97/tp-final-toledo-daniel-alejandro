@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<title>MultiMediAr</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      	</li>
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Internet</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item">
+         	 					<a class="nav-link" href="../economia-naranja/index.html"><span>Economía Naranja</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<section>
+	<h1>MultiMediAr</h1>
+	<h2>CABA</h2>
+	<a href="https://festivalesba.org/" target="_blank">festivalesba</a>
+	<p>"Festivales y noches culturales"</p>
+	<a href="https://gallery.com.ar/" target="_blank">Gallery</a>
+	<p>"Gallery es un programa de recorridos curados que conecta las galerías de arte y espacios artísticos con sus visitantes. Organizado estratégicamente en diferentes circuitos que atraviesan la ciudad, este gran evento gratuito lleva más de dos décadas potenciando las vibrantes escenas de arte locales."</p>
+	
+	<h2>Eventos 2024</h2>
+	<p>Durante el año 2024 se han producido varios eventos en Argentina de los cuales he podido recopilar los siguientes:</p>
+
+	<h3>Miscelaneos</h3>
+	<a href="https://bitbangclub.com/es/" target="_blank">Bitbang 2024</a>
+	<p>"BITBANG tiene su Festival internacional homónimo, que se realiza anualmente en la ciudad de Buenos Aires, desde 2015. Cada año presentamos a referentes globales y descubrimos nuevos talentos. Propiciamos el desarrollo de la creatividad en la animación, los videojuegos y el arte digital ofreciendo workshops y clases magistrales con los artistas más visionarios."</p>
+	<a href="https://virtuality-latam.com/" target="_blank">Virtulity Latam 2024</a>
+	<p>"Este evento contará con referentes del mundo de las tecnologías inmersivas, inteligencia artificial y metaversos, que se unirán para ofrecer una experiencia única. Presentarán las aplicaciones y tendencias en todos los sectores: arte, cultura, educación, entretenimiento, marketing, industria."</p>
+	<a href="https://buenos-aires.mutek.org/" target="_blank">Mutek Argentina 2024</a>
+	<p>"Desde 2017, MUTEK AR presenta experiencias inmersivas, música futurista, audiovisuales de vanguardia y artistas que marcan el ritmo de los medios tecnológicos en Argentina y el mundo, con una propuesta que lo ha convertido en un festival de innovación de referencia en Argentina y Sudamérica."</p>
+	<a href="https://flashparty.rebelion.digital/index.php/es/" target="_blank">Flash Party Argentina 2024</a>
+	<p>"Flashparty es un evento basado en el modelo “demoparty” que tiene su origen en la sub-cultura de la demoscene."</p>
+	<a href="https://tube.undernet.uy/w/p/d9iFFGXWomEr59ChXaB1Qb" target="_blank">Segundo encuentro federal de Cybercirujas 2024</a>
+	<p>"Luchando contra la obsolescencia programada.
+	Achicando la brecha digital recuperando hardware ocioso."</p>
+	<a href="https://argentina.campus-party.org/" target="_blank">Campus Party Argentina 2024</a>
+	<p>"Campus Party es la mayor experiencia geek del mundo! Nuestro objetivo es crear un entorno cada vez más inmersivo y disruptivo para debatir sobre tecnología, creatividad, innovación y educación."</p>
+	<a href="https://www.workshow.info/" target="_blank">Workshow 2024</a>
+	<p>"Desde 2015 se ha consolidado como un punto de encuentro clave para la industria del entretenimiento y multimedia."</p>
+	<a href="https://faqfestival.com.ar/" target="_blank">Festival de Arte Queer (FAQ) 2024</a>
+	<p>"FAQ es un festival internacional de arte queer con base en la ciudad de Buenos Aires, Argentina; creado por Lisa Kerner y Violeta Uman y producido por Brandon Asociación Civil y Cultural y FAC: Frente de Acciones Culturales."</p>
+	<a href="https://descubrir.buenosaires.gob.ar/home/986-tecweek" target="_blank">Tecweek 2024</a>
+	<p>"un festival de innovación educativa diseñado para inspirar"</p>
+	<a href="https://ferias.educacion.gob.ar" target="_blank">Feria de Arte Ciencias y Tecnología 2024</a>
+	<p>"Los invitamos a descubrir y sorprenderse con los proyectos realizados por estudiantes comprometidos con la indagación escolar sobre focos científico-tecnológicos, matemáticos, humanistas y artísticos. Al recorrer el evento encontrarán trabajos que surgieron de las problemáticas que los niños, jóvenes y adolescentes perciben de su entorno."</p>
+	<a href="https://makerlandmisiones.com.ar/" target="_blank">Makerland 2024</a>
+	<p>"¡Bienvenidos a MAKERLAND, la fiesta tech mas explosiva del año! Tecnología, innovación y pura adrenalina se fusionan en un solo lugar para que te diviertas como nunca. Acá, en Misiones, vamos a hacer que tu creatividad pegue un salto de nivel. Si lo que buscás es acción, ¡este es tu mapa!"</p>
+	<a href="https://www.instagram.com/festival_tormenta/" target="_blank">Festival Tormenta 2024</a>
+	<p>"Tormenta - Festival de Arte Electrónico y Digital es un espacio para exponer y potenciar la producción de nuevas formas y expresiones artísticas en la provincia de Tucumán."</p>
+	<a href="https://finde.gba.gob.ar/" target="_blank">Finde Feria de Industrias Creativas 2024</a>
+	<p>"Feria de Industrias Creativas de la Provincia de Buenos Aires."</p>
+	<a href="https://conurbeat.com.ar" target="_blank">Conurbeat 2024</a>
+	<p>"Conorbeat tiene como objetivo promover y fortalecer la identidad digital bonaerense."</p>
+	<a href="https://comic-con.com.ar/" target="_blank">Argentina Comic On 2024</a>
+	<p>"Celebramos la cultura pop con atracciones para toda la familia. Presentaciones, shows, talleres, paneles, exhibiciones, video juegos, experiencias recreativas, cosplay, juegos, una increíble variedad gastronómica y mucho más!"</p>
+	<a href="https://aahd.net.ar/semanahd-2024-del-20-al-25-de-mayo/" target="_blank">Semana de Humanidades Digitales tercera edición - 2024</a>
+	<p>"un evento en línea, abierto, colaborativo y gratuito sobre Humanidades Digitales. La #SemanaHD es un evento organizado entre la Asociación Argentina de Humanidades Digitales, la Red Colombiana de Humanidades Digitales, la RedHD de México y la CUAIEED, UNAM."</p>
+	<a href="https://webinar.somosedison.com/eventos-gratuitos" target="_blank">Webinars de Somos Edison 2024</a>
+	<p>"En Edison nos asociamos con líderes y referentes de diferentes industrias, para co-crear cursos cortos, aplicables y en vivo."</p>	
+
+	<h3>Arte sonoro</h3>
+	<a href="https://linktr.ee/pleamarorg" target="_blank">Pleamar 2024</a>
+	<p>"Música Electrónica Experimental y Arte Sonoro."</p>	
+
+	<h3>Programación - Desarrollo - Computación - Informática</h3>
+	<a href="https://cac8.sciencesconf.org/?forward-action=index&forward-controller=index&lang=es" target="_blank">Congreso de Arte Computacional 2024</a>
+	<p>"El Congreso de Arte Computacional (CAC) es un encuentro académico multidisciplinario que interroga el arte y las ciencias desde diferentes ángulos."</p>
+	<a href="https://indiedevargentina.com/" target="_blank">Indie Dev 2024</a>
+	<p>"El nuevo evento creado por Press Over, tiene como objetivo ser el primer acercamiento al mundo del desarrollo de videojuegos independiente en Argentina."</p>
+	<a href="https://www.whabbit.club/" target="_blank">Whabbit 2024</a>
+	<p>"WHABBIT es un espacio disruptivo que busca fomentar sinergias entre artistas independientes y las industrias orientadas a la tecnología y la cultura. Con el doble propósito de visibilizar el rol del creador y  ofrecerle herramientas y conocimientos en web3."</p>
+	<a href="https://mediaparty.org/bue-evento-2024" target="_blank">Media Party 2024</a>
+	<p>"Media Party facilita la convergencia entre la industria de los medios y la tecnología de una manera innovadora, internacional y práctica."</p>
+
+	<h3>Videojuegos</h3>
+	<a href="https://tdj.gg/" target="_blank">Temporada de Juegos (TDJ) Fest 2024</a>
+	<p>"es un punto de encuentro para los apasionados del gaming y los Esports, donde todos, desde los fans hasta creadores de contenido y referentes de la industria, se unen para celebrar y vivir la cultura gamer en su máxima expresión."</p>
+	<a href="https://linktr.ee/fija.vj" target="_blank">Foro Independiente de Jusgos Argentinos (FIJA) 2024</a>
+	<p>"Festival Independiente de Juegos Argentinos."</p>
+	<a href="https://expoeva.com/" target="_blank">Expo Eva 2024</a>
+	<p>"EVA es la sigla que identifica a la Exposición de Videojuegos Argentina (EVA). Desde el año 2003, la Asociación de Desarrolladores de Videojuegos de Argentina (ADVA) organiza la EVA en forma ininterrumpida. Se trata de un espacio de encuentro, diálogo, capacitación y desarrollo de negocios, con foco en videojuegos."</p>
+	<a href="https://globalgamejam.org/" target="_blank">Global Game Jam 2024</a>
+	<p>"El GGJ es el evento de creación de juegos más grande del mundo que tiene lugar en todo el planeta, con decenas de miles de participantes (jammers) en cientos de sitios físicos y virtuales en más de cien países alrededor del mundo." Traducido a español.</p>
+	<a href="https://2024.argentinagameshow.com/" target="_blank">Argentina Game Show 2024</a>
+	<p>"AGS Visa es la celebración del mundo de los videojuegos más importante del país, uniendo los mundos del gaming, esports, música y streaming."</p>
+	<a href="https://youtube.com/@_clubargentinodearcades?si=B2Zpm5wwm-2p_R91" target="_blank">Club Argentino de Arcades 2024</a>
+	<p>"Pasado y presente de los video games en nuestro país."</p>
+
+	<h3>Internet - Redes Sociales - Streaming</h3>
+	<a href="https://internetday.com.ar/day/sponsors-2024/" target="_blank">Internet Day 2024</a>
+	<p>"Internet Day es un espacio de intercambio y debate sobre los escenarios de la industria, las nuevas tecnologías, los nuevos modelos de negocios y el marco legal para desarrollarlos."</p>	
+	<a href="https://www.mmaglobal.com/innovateargentina2024" target="_blank">MMA Innovate Argentina 2024</a>
+	<p>"MMA Innovate Argentina 2024 es uno de los eventos de marketing y tecnología más destacados de América Latina."</p>
+	<a href="https://smday.com.ar/" target="_blank">Social Media Day 2024</a>
+	<p>"El Social Media Day es una iniciativa global, representada en Argentina por la consultora Digital Interactivo que propone capítulos locales con el objetivo de dar a conocer las novedades y tendencias de la industria digital."</p>
+	<a href="https://somostent.com/" target="_blank">Tent Content Creator 2024</a>
+	<p>"Tent Creator Summit es la primera conferencia de la industria de los creadores de contenido en Argentina."</p>
+	<a href="https://agenciasdemedios.com.ar/mediaday/" target="_blank">Media Day 2024</a>
+	<p>"Promovemos y estimulamos la relación entre medios, anunciantes y agencias de publicidad dándoles mayor valor agregado."</p>
+	<a href="https://bb-media.com/bb-media-day-argentina-2024-buenos-aires/" target="_blank">BB Media Day 2024</a>
+	<p>"BB Media Day es un evento 100% gratuito enfocado en Servicios de Streaming, TV Paga, Audiencias y Tendencias con el fin de intercambiar información y aprender sobre las mejores estrategias para tener éxito en la industria de Medios y Telecomunicaciones."</p>
+	<a href="https://www.caper.org.ar/la_expo_edicion_anterior.php?accion=verDetalle&id_exposicion_anterior=11" target="_blank">Caper Show 2024</a>
+	<p>"CAPER SHOW es un evento reconocido internacionalmente y convoca cada año a más de 5.000 directivos, profesionales, técnicos, docentes y estudiantes relacionados con la Industria Audiovisual Profesional de Argentina y Latinoamérica. Más del 80% de los visitantes de CAPER SHOW están relacionados con el proceso de compra en sus compañías."</p>
+
+	<h3>Audiovisual</h3>
+	<a href="https://bafici.org/principal-inicio/" target="_blank">Buenos Aires Festival Internacional de Cine Independiente (BACIFI) 2024</a>
+	<p>"El Buenos Aires Festival Internacional de Cine Independiente (BAFICI) es uno de los festivales de cine más importantes y sobre todo especialmente significativos de América Latina, uno cuya programación plantea no pocas sorpresas dentro de un ambiente vibrante y singular."</p>
+	<a href="https://tallerimagen.com.ar/fecimu/premiacion-nacional-fecimu-2024/" target="_blank">Festival de Cine y Multimedia (FECIMU) 2024</a>
+	<p>"FECIMU es el Festival de Cine y Multimedia organizado por la Cooperativa Taller Imagen."</p>
+	<a href="https://rojosangre.quintadimension.com/" target="_blank">Buenos Aires Rojo Sangre (BARS) 2024</a>
+	<p>"Buenos Aires Rojo Sangre es el más antiguo festival de cine fantástico de Latinoamérica."</p>
+	<a href="https://espacioqueer.com.ar/10eq/" target="_blank">Espacio Queer 2024</a>
+	<p>"En Espacio Queer creemos que la sexualidad y la identidad son una construcción constante y un derecho del que debemos gozar libremente y sin señalamientos. Con el cine como arte principal, buscamos exponer perspectivas queer porque muchas de nuestras historias no conocen la luz: que la conozcan es nuestro deseo permanente."</p>
+	<a href="https://www.fan-neuquen.com.ar/" target="_blank">Festival Audiovisual Neuquén (FAN) 2024</a>
+	<p>"El FAN es el Festival Audiovisual Neuquén, un evento organizado por la Municipalidad de Neuquén que propone potenciar el cine y las artes audiovisuales de la Norpatagonia."</p>
+	<a href="https://www.bamvfest.com/" target="_blank">Buenos Aires Music + Video Festival (BAMB) 2024</a>
+	<p>"Buenos Aires Music + Video Festival (BAMV) es el punto de encuentro de la música y el audiovisual."</p>
+	<a href="https://animacioncarton.com/" target="_blank">Festival Carón - Festival Internacional de Cortos de Animación 13 Edición - 2024</a>
+	<p>"El Festival Cartón busca el encuentro de los realizadores con otros realizadores y con el público en general. Busca descubrir nuevas técnicas y nuevas ideas. Busca aprender, enseñar, y compartir."</p>
+	<a href="https://espigas.org.ar/es/actividades/i_congreso_internacional_de_archivos_audiovisuales_de_arte" target="_blank">I Congreso Internacional de Archivos Audiovisuales de Arte 2024</a>
+	<p>"Este Congreso Internacional procura ser una instancia de intercambio y actualización acerca de las discusiones y desafíos en este ámbito. El encuentro busca hacer aportes en los campos de la preservación y la patrimonialización de obras audiovisuales, la archivística, la investigación y creación en artes, la historia y las ciencias sociales, así como al coleccionismo, la gestión de museos y galerías y los desarrollos tecnológicos asociados a los archivos audiovisuales."</p>	
+	<a href="https://www.mardelplatafilmfest.com/39/es/" target="_blank">Festival Internaciona de Cine de Mar del Plata 2024</a>
+	<p>"El Festival Internacional de Cine de Mar del Plata, organizado por el Instituto Nacional de Cine y Artes Audiovisuales (INCAA), promueve la actividad cinematográfica en todas sus formas, y en sus pantallas se exhiben películas de diversos orígenes, temática y estilos. En él conviven la tradición del cine clásico con las nuevas tendencias, las nuevas voces y las nuevas tecnologías."</p>
+	<a href="https://festivalfab.com.ar/" target="_blank">Festival Audiovisual Bariloche FAB 2024</a>
+	<p>"Organizado por la Secretaría de Cultura del Gobierno de la Provincia de Río Negro."</p>
+	<a href="https://www.facebook.com/FIRAFEST?_rdc=1&_rdr#" target="_blank">Festival Internacional de Realización Audiovisual (FIRAFEST) 2024</a>
+	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
+	<a href="https://www.instagram.com/festivalfira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Festival Internacional de Realización Audiovisual (FIRAFEST) 2024</a>
+	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
+	<a href="https://institutocultural.gba.gob.ar/ficpba" target="_blank">Festival Internacional de Cine de la Provincia de Buenos Aires (FICPBA) 2024</a>
+	<p>"FICPBA pone en diálogo la identidad, la soberanía y la diversidad audiovisual bonaerense y tendrá la primera edición del Mercado Internacional de la Industria Audiovisual de la Provincia."</p>
+
+	<h3>Artes Visuales</h3>
+	<a href="https://expografika.com/n/un-poco-de-expografika-2024/" target="_blank">Expografika 2024</a>
+	<p>"Expográfika es la feria de la industria gráfica más importante de nuestro país, la de mayor expansión, alcance y representatividad para el sector."</p>
+	<a href="https://www.exposign.com.ar/" target="_blank">Expo Sign 2024</a>
+	<p>"Es el principal evento del sector, en donde se dan cita los profesionales y protagonistas de la comunicación visual para presentar y conocer novedades, afianzar y generar relaciones en busca de nuevos negocios."</p>
+	<a href="https://www.arteba.org/feria-2024" target="_blank">Fundación Arteba 2024</a>
+	<p>"Fundación arteba promueve la producción y difusión de las artes visuales en Argentina."</p>
+	<a href="https://www.mapa.art/convocatoria" target="_blank">MAPA 2024</a>
+	<p>"MAPA feria de arte busca fomentar el intercambio entre artistas, galeristas, curadores, coleccionistas y nuevas audiencias, generando un espacio de reflexión en torno a las producciones actuales de artes visuales."</p>
+	<a href="https://bada.com.ar/" target="_blank">BADA 2024</a>
+	<p>"BADA ofrece una experiencia única al conectar directamente a los visitantes con los artistas, brindándoles la oportunidad exclusiva de descubrir y comprar arte sin intermediarios."</p>
+	<a href="https://www.instagram.com/estoesunaffair/" target="_blank">Central Affair 2024</a>
+	<p>"15 galerías de arte en un único lugar en el Microcentro porteño."</p>
+	<a href="https://www.el-libro.org.ar/inicio-fel/" target="_blank">Feria del Libro de Buenos Aires 2024</a>
+	<p>"La Feria Internacional del Libro de Buenos Aires tiene una superficie de más de 45.000 metros cuadrados y es la más concurrida en el mundo de habla hispana. Durante sus casi tres semanas de duración la visitan más de un millón de lectores y más de doce mil profesionales del libro."</p>
+	<a href="https://www.el-libro.org.ar/inicio-infantil-juvenil/" target="_blank">Feria del Libro Infantil y Juvenil 2024</a>
+	<p>"La Feria del Libro Infantil y Juvenil es organizada por la Fundación El Libro como un aporte para la formación cultural y educativa de niños y jóvenes, incentivando su relación temprana con los libros en un ambiente de alegría y entretenimiento. Es una de las propuestas más esperadas y convocantes de las vacaciones de invierno."s</p>
+	<a href="https://expopapeleria.com.ar/" target="_blank">Expopapelería 2024</a>
+	<p>"EXPOPAPELERÍA es una de las exposiciones más importantes del rubro a nivel regional, para público altamente especializado en librería, papelería y afines."</p>
+
+	<h3>Espectáculos - Teatrales</h3>
+	<a href="https://fuerzabrutaglobal.com/es/" target="_blank">Fuerza Bruta 2024</a>
+	<p>"Bienvenidos a una sensibilidad colectiva, universal, sin traducción, ni anestesia. Brutalmente feliz. Bienvenidos al espectáculo más feliz del planeta."</p>
+	<a href="https://www.nomadesomos.com/" target="_blank">Nómade 2024</a>
+	<p>"Nómade es una comunidad de músicos y amantes de la música que busca generar una conexión íntima en locaciones únicas."</p>
+	<a href="https://www.halakenart.com" target="_blank">Halaken Art 2024</a>
+	<p>"Experiencias Sensoriales Inmersivas en la Oscuridad."</p>
+	<a href="https://teatrociego.org/" target="_blank">Teatro Oscuro 2024</a>
+	<p>"Somos una compañía de tratro experta en contar historias en absoluta oscuridad."</p>
+	<a href="https://realselfexperience.com/es/" target="_blank">Real Self 2024</a>
+	<p>"REAL SELF es Una Experiencia Inmersiva Humana."</p>
+	<a href="https://blowup-experience.com/" target="_blank">Blow Up Experience - New Sensations 2024</a>
+	<p>"El fenómeno mundial de arte inflable y tecnología."</p>	
+	<p>"Considerado como uno de los últimos segmentos del “Kidulting”, esta tendencia cultural invita a los adultos a embarcarse en actividades asociadas a niños, proporcionando beneficios comprobados para la salud mental."</p>
+	<a href="https://www.lollapaloozaar.com/" target="_blank">Lollapalooza 2024</a>
+	<p>"Lo que vuelve único al LollaAR es la magia que se da durante esos 3 días en el cruce de diferentes expresiones artísticas. Cada nueva edición invida a grandes artistas locales e internacionales para convertir el hipódromo en una fiesta para todos los sentidos, con instalaciones, escultura, arte cinético y arte digital con propuestas de realidad aumentada"</p>
+
+	<h3>Universitarios</h3>
+	<a href="https://linktr.ee/festivae" target="_blank">Festival de Artes Electrónicas 2024</a>
+	<p>"Activando nuestra Universidad pública. 100% autogestión estudiantil."</p>	
+	<a href="https://taller5.ludic.cc/artimanias/2024/">Artimañas 2024</a>
+	<p>"Desde 2011 se realiza el festival Artimañas en donde el conjunto del alumnado de taller de Diseño Multimedial presentan sus trabajos finales de carrera."</p>
+	<a href="https://festivalrender.com/" target="_blank">Festival de cine Render 2024</a>
+	<p>"El Festival de Cine Render es una organización que busca fortalecer y promover la producción audiovisual estudiantil creativa a nivel nacional."</p>
+	<a href="https://stopmotionourfest.com/" target="_blank">Stop Motion Fest (SMOF) 2024</a>
+	<p>"SMOF, es el único festival de cine de animación con foco en stop motion que se realiza actualmente en Sudamérica"</p>
+	<a href="https://sites.google.com/view/enercseproyecta/inicio" target="_blank">Enerc Se Proyecta 2024</a>
+	<p>"Enerc Se Proyecta es la muestra audiovisual estudiantil más grande de Argentina. Es llevada adelante por los estudiantes de la ENERC a nivel federal, con apoyo de la ENERC y el INCAA."</p>
+	<a href="https://mvl.edu.ar/noticia/cuv-asi-fue-la-44-muestra-anual-de-cortos/" target="_blank">Muestra Anual de Cortos 2024</a>
+	<p>Mestra Anual de corto en el Centro Cultural de Munro por parte del Instituto Municipal de Educación Superior de Vicente Lopez - Centro Universitario de Vicente lopez.</p>
+	<a href="https://festivalrec.com.ar/" target="_blank">Festival REC 2024</a>
+	<p>"Organizado por la Facultad de Artes de la UNLP, nuestro Festival busca crear un espacio de difusión e intercambio para la producción audiovisual de estudiantes de Cine y Artes Audiovisuales de todo el país."</p>
+	<a href="https://www.ficuba.com/es/" target="_blank">Festival Internacional de Cine de la UBA (fic. UBA) 2024</a>
+	<p>"El FESTIVAL INTERNACIONAL DE CINE DE LA UBA (FIC.UBA), organizado por la Universidad de Buenos Aires y la Facultad de Arquitectura Diseño y Urbanismo (FADU), a través de la Secretaría de Políticas de Diseño e Innovación Tecnológica, la Secretaría de Relaciones Institucionales, Cultura y Comunicación y la Carrera de Diseño de Imagen y Sonido"</p>
+	<a href="https://playvideoarte.com/" target="_blank">Play Festival de videoarte y cine experimental 2024</a>
+	<p>"Play Festival de videoarte y cine experimental es una exhibición de alcance internacional, que busca expandir las fronteras de los usos  legitimados de la imagen, el sonido y la palabra en el campo audiovisual."</p>
+	<a href="https://ferial.una.edu.ar/" target="_blank">Feria de Artes del Libro de la UNA 2024</a>
+	<p>"FERIAL surge desde la Fundación Universidad Nacional de las Artes y el área editorial de la universidad, Libros UNA, con el fin de difundir y promover los oficios vinculados a la producción del libro impreso."</p>
+	<a href="https://www.instagram.com/faa.audiovisual?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Festival Artístico Audiovisual 2024</a>
+	<p>"Espacio de exhibición y aprendizaje gestionado por estudiantes de Diseño Artístico Audiovisual de la Universidad Nacional de Rio negro."</p>
+	</section>	
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
+</body>
+</html>

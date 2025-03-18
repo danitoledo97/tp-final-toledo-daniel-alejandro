@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<title>MultiMediAr</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      	</li>
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>Internet - Web</span></a></li>
+          							<li><a class="dropdown-item" href="iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item">
+         	 					<a class="nav-link" href="../economia-naranja/index.html"><span>Economía Naranja</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<section>
+	<h1>Tecnologías</h1>
+	
+	<h2>Animación</h2>
+	<p>La animación es un oficio que abarca desde cine, publicidad, videojuegos. En sus inicios el cine consistió en animar objetos, uno de ellos fue el Zootropo, un artefacto con rendijas que mediante un movimiento circular se podía percibir una secuencia de escenas. El dibujo sobre papeles con distintas escenas de una misma secuencia al desplazar los papeles como si fueran un contador de billetes se reproducía una secuencia animada. Esto dio origen en si a la lógica de cuadro a cuadro que luego se traslado a la composición gráfica y computacional.</p>
+	<a href="https://www.pesmotionstudio.com/" target="_blank">Pesmotion Studio</a>
+	<p>"Pesmotion Studio es un colectivo de creativos talentosos que combinan arte y tecnología para dar vida a tus ideas. A través de la experimentación creativa y la colaboración integrada, transformamos tu visión en realidad."</p> 
+	<a href="https://www.animarmocap.com.ar/" target="_blank">ANIMAR MoCap</a>
+	<p>"ANIMAR / MoCap es un estudio en el que funciona uno de los sistemas de captura de movimientos más grande de Latinoamérica. El mismo está integrado por equipamiento de última generación y un grupo de técnicos especializados en operación de cámaras, cascos y software específico para captar los movimientos y acciones de diferentes disciplinas (actuación, deportes, danza, etc.). El material obtenido se transfiere posteriormente a modelos, escenarios y personajes digitales utilizados en cine, tv, videojuegos, etc."</p>
+	<a href="https://youtube.com/@canalpakapaka?si=N98PXpqEho7OoYAz" target="_blank">PAKA PAKA</a>
+	<p>"Paka Paka es el primer canal público de Argentina para niños.  ¡Un espacio que entiende a los chicos como ciudadanos, sujetos de derechos, constructores y pensadores de su realidad, con saberes y modos de ver el mundo que enriquecen la vida en común!"</p>
+	<a href="https://youtube.com/@elreinoinfantil?si=EaO8XuOAde18VwgN" target="_blank">El Reino Infantil</a>
+	<p>"El Reino Infantil es la comunidad digital para niños en español N°1 del mundo. Nuestras historias y canciones fomentan las habilidades clave para la vida, incluyendo la comunicación, la cooperación y la creatividad."</p>
+	<a href="https://youtube.com/@elcanaldeplimplim?si=PGeveK-6HgL9NLi4" target="_blank">El Payaso Plim Plim</a>
+	<p>"Plim Plim es un conjunto de contenidos para un público global, pensado para bebés y niños en edad pre-escolar y con una revolucionaria e innovadora forma de transmitir mensajes positivos que llega al corazón de todos los niños del mundo."</p>
+	<a href="https://youtube.com/@panam?si=L_7r3JC7kTa9CAVG" target="_blank">Panam</a>
+	<p>"Canal Oficial de Panam. Entretenimiento y diversión desde la televisión, los shows y el maravilloso circo. Canciones, baile y juegos para los mas pequeños."</p>
+	<a href="https://youtube.com/@diegotopaok?si=78R_x7SA-NoZVak2" target="_blank">Topa</a>
+	<p>"Hola. Yo soy Topa. Bienvenidos a mi canal de YouTube. Aquí vamos a cantar y bailar un montón, además de jugar y pasarla increíble. Si no querés perderte de nada, ya mismo podés suscribirte  para ver mis nuevos videos."</p>
+	<a href="https://youtube.com/@pinonfijovideosok?si=Vdf7oerQZx61Qdbs" target="_blank">Piñon Fijo</a>
+	<p>"Este es el canal oficial de Piñon Fijo. Aquí encontrarás todos los videos de Piñón Fijo: sus canciones, presentaciones especiales, videos divertidos, saludos y más. ¡No dejes de suscribirte!."</p>
+	<a href="https://linktr.ee/mocoestudio" target="_blank">MOCO Estudio</a>
+	<p>"Estudio de animación liderado por mujeres, especializado en stop motion."</p>
+	<a href="https://ojoraro.com.ar/" target="_blank">Ojo Raro</a>
+	<p>"Ojo Raro es una plataforma abierta, un espacio de reflexión en torno a la imagen animada y sus implicancias culturales. En Ojo Raro producimos animación para adultxs, enfocándonos en contenidos desafiantes y disruptivos, con una mirada cuir y sudaka."</p>
+	<h3>Videojuegos</h3>
+	<p>Los juegos han evolucionado notablemente, pasando de los tradicionales juegos de mesa y de azar a los videojuegos de arcade, consolas, computadoras, dispositivos móviles y, finalmente, las gafas de realidad virtual. Dentro de la industria lúdica existen los audiojuegos o juegos para personas invidentes aunque hay empresas que suelen producirlos inicialmente por cuesitones presupuestarias. Los videojuegos que es su forma masivamente comercializada suelen adquirirse en una tienda como Steam o en la misma del desarrollador. En web 3 los videojuegos obtienen una nueva caraterística y es la de "play to earn" o P2E, o jugar para obtener, el cual es un modelo de negocio donde se recompensa monetariamente mediante NFT a los usuarios por cada misión cumplida, buscando así una estimulación constante como asi también una recompensa real por el valor que este genera al utilizar el producto. Los ciber eran lugares de encuentro en común para acceso a internet y jugar videojuegos. Los videojuegos se comercializaban en cd y dvd compactos hasta la llegada de internet. A medida que avanzo el acceso a la computación y la internet banda ancha, comenzaron a surgir también las LAN Party en los 90, donde las personas usaban sus propias computadoras en un mismo lugar, conectandose en red y continuando ese formato de manera virtual. Dentro de la realización de videojuegos, existe una rama de la programación que se orienta a ella por lo general en lenguajes de c++ y c#, donde se tiene en cuenta las mecánicas, las física, el diseño de los personajes, del mundo, los efectos especiales, sonoros y visuales, la música, la narración, la coherencia del sistema, etc. 
+	Exiten otro tipo de juegos que no se basan en los objetivos lúdicos clásicos como la aventura, la recompensa, la misión, el trabajo grupal, la superación, si no que su objetivo es mas reflexivo y filosófico, es el caso de los game art o juegos artísticos, no suelen encontrarse de manera masiva.
+	</p>
+	<p>Ejemplos argentinos</p>
+	<a href="https://www.etermax.com/es" target="_blank">Etermax</a>
+	<p>"Una comunidad global compuesta por cientos de personas curiosas, creativas y apasionadas, respaldada por cientos de millones que comparten nuestra pasión por hacernos preguntas y encontrar soluciones."</p>
+	<a href="https://www.pixowl.com/" target="_blank">Pixowl</a>
+	<p>"Pixowl, Inc. es una empresa fundada en el 2011 en Buenos Aires, Argentina que se dedica a la creación de videojuegos para celulares cargados de historias y personajes." Actualmente propiedad de Aminoca Brands desde el año 2018.</p>
+	<a href="https://nimblegiant.com/" target="_blank">Nimble Giant</a>
+	<p>"Fundado en 2002, Nimble Giant es uno de los estudios de desarrollo de juegos líderes en Latinoamérica, impulsado por una sola misión: brindar experiencias de videojuegos excelentes a jugadores de todo el mundo. Nuestra visión es mantener el camino para convertirnos en una empresa de desarrollo de juegos de clase mundial." Traducido a español.</p>
+	<a href="https://store.steampowered.com/developer/SaibotStudios/" target="_blank">Saibot Studios</a>
+	<p>"Creadores independientes de videojuegos de Argentina. Dirigido y fundado por Tobías Rusjan en 2011."</p>
+	<a href="https://arcanumgameforge.com/">Arcanum: Game Forge</a>
+	<p>"Estudio independiente de videojuegos situado en Argentina."</p>
+	<a href="https://linktr.ee/shittygames" target="_blank">Shitty Games</a>
+	<p>"Un estudio de desarrollo de videojuegos indigentes que retratan la actualidad argentina y mundial con un poco de humor acido."</p>
+	<a href="https://es.blyts.com/" target="_blank">Blyts</a>
+	<p>"Blyts es una compañía de entretenimiento indie nacida en Argentina en 2008. Desde entonces ha logrado hacerse un lugar entre los más destacados estudios de videojuegos de Sudamérica."</p>
+	<a href="https://www.oniric-factor.com/" target="_blank">Oniric Factor</a>
+	<p>"Estudio de desarrollo de videojuegos independiente."</p>
+	<a href="https://gameeverstudio.com/" target="_blank">Game Ever Studio</a>
+	<p>"Game Ever! es un estudio multimedia líder enfocado en la creación de videojuegos y animación 2D y 3D. Nacimos en 2010 en Buenos Aires. A medida que crecimos, nos hemos consolidado como uno de los estudios más importantes de Argentina, creando contenido para todo el mundo y, al mismo tiempo, desarrollando nuestros propios videojuegos y series independientes, con una excelente calidad gráfica y artística."</p>
+	<a href="https://devuego.lat/bd/festudio/nc-studio" target="_blank">NC Studio</a>
+	<a href="https://www.linkedin.com/company/nc-developers/" target="_blank">LinkedIn de NC Studio</a>
+	<p>"NC es un equipo de indie que se encarga de desarrollar videojuegos para PC. Actualmente se encuentra trabajando con el juego Project Nightmares."</p>
+	<a href="https://bichorarogames.com/index_es.html" target="_blank">Bicho Raro Games</a>
+	<p>"Bicho Raro es el primer estudio argentino de desarrollo de videojuegos fundado por mujeres. Desarrollamos juegos desafiantes vinculados a la educación y a narrativas personales y sociales que emocionen, incluyan, hagan pensar y den qué hablar.</p>
+	<a href="https://godotengine.org/" target="_blank">Godots</a>
+	<p>"El Proyecto Godot es un motor de juegos multiplataforma, libre y de código abierto, lanzado bajo la licencia MIT. Godot ofrece un entorno de desarrollo de juegos integrado que permite a cualquiera crear juegos en 2D y 3D." Traducido a español.</p>	
+	<a href="https://www.youtube.com/@_clubargentinodearcades/videos" target="
+	_blank">Club Argentino de Arcade</a>
+	<p>"Pasado y presente de los video games en nuestro país."</p>
+
+	</section>	
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
+</body>
+</html>
