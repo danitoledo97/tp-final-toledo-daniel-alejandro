@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<title>MultiMediAr</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      	</li>
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+         	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
+         	 					<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
+          							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
+          							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
+          					</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<section>
+	<h1>MultiMediAr</h1>
+	<h2>Economía Naranja</h2>
+	<h3>Emprendimiento</h3>	
+	<h3>Branding/Marca Personal</h3>
+	<p>La marca personal es una estrategia comercial en la cual una persona se vende a si misma como la mejor para solución para satisfacer una necesidad en específico ofreciendo un servicio. Su valor hora y capacidad determinará su reputación para con los clientes. Necesita conocer del mercado para poder fijar una tarifa plana.</p>
+	<a href="https://tarifario.org/" target="_blank">Tarifario</a>
+	<p>Tarifario es un sitio web que ofrece tarifas planas de referencia.</p>
+	<p>"Tenemos 151 tarifas indexadas para servicios de Diseño audiovisual, Diseño Gráfico, Marketing, Programación."</p>
+	<a href="https://art.art/es" target="_blank">.ART</a>
+	<p>"ART es la única zona de dominio creada especialmente para la comunidad creativa global."</p>
+	<a href="https://www.canva.com/es_ar/" target="_blank">Canva</a>
+	<p>"Con Canva, es muy fácil crear y compartir diseños profesionales."</p>
+	<a href="https://www.adobe.com/es/express/" target="_blank">Adobe Express</a>
+	<p>"La aplicación para crear cualquier cosa de forma rápida y sencilla."</p>
+	<a href="https://wordpress.com/es/">Wordpress</a>
+	<p>"Todo lo que necesitas para crear tu web y llevarla a lo más alto en un mismo lugar."</p>
+	<a href="https://vgen.co/" target="_blank">Vgen</a>
+	<p>"Te ayudamos a exhibir y gestionar tu arte y negocios artísticos mientras te conectamos con una comunidad de artistas, clientes y amigos." Traducido con Kagi Translate.</p> 
+	<a href="https://herlitzkafaria.com/es" target="_blank">Herlitzka & CP</a>
+	<p>"Herlitzka & Co. se dedica a la difusión, comercialización y proyección internacional del arte moderno, conceptual y contemporáneo latinoamericano."</p>		
+	<a href="https://www.decultura.net/" target="_blank">DeCultura.net</a>	
+	<p>"Es una plataforma web para difundir y favorecer la comercialización del arte y la cultura de cada localidad de nuestro país"</p>
+	<a href="https://mica.gob.ar/inicio" target="_blank">Mercado de Industrias Culturales Argentinas (MICA)</a>
+	<p>"El MICA es un programa que funciona como nexo entre los sectores público y privado a través de acciones con productores referentes y/o emergentes de las industrias culturales con el objetivo de visibilizar y potenciar su producción, fortalecer su profesionalismo y capacidad exportadora, generar empleos de calidad y promover su comercialización en nuestro territorio y en el mundo."</p>
+	<a href="https://www.similarsites.com/" target="_blank">Somilar Sites</a>
+	<p>"SimilarSites.com es un innovador motor de recomendaciones que rastrea internet para proporcionarte más contenido del que te gusta. SimilarSites.com elimina el desorden de la web al encontrar sitios similares a los que navegas, basándose en contenido relacionado, estructura web, algoritmos de análisis de enlaces, comportamientos detallados de navegación de los usuarios y una gran comunidad de clasificaciones de usuarios." Traducido con Kagi Translate.</p>
+	<a href="https://linktr.ee/admin/" target="_blank">Linktree</a>
+	<p>"Linktree es una herramienta que te ayuda a compartir todo lo que eres en un simple enlace, haciendo que tu contenido en línea sea más fácil de descubrir, más fácil de administrar y con más probabilidades de convertir. Aquí es donde empezó todo." Traducido a español.</p> 
+	<a href="https://translate.kagi.com/" target="_blank">Kagi Translate</a>
+	<p>"Kagi Translate ofrece traducciones precisas en 248 idiomas utilizando modelos de lenguaje avanzados."</p>
+	<a href="https://www.deepl.com/es/translator" target="_blank">Deepl</a>
+	<p>"DeepL no es un simple traductor. Somos una plataforma de IA lingüística que ayuda a empresas de todo el mundo a comunicarse de forma más eficaz y traspasar idiomas, culturas y mercados."</p>
+	<a href="https://codepen.io/" target="_blank"></a>
+	<p>"CodePen es un entorno de desarrollo social. En esencia, te permite escribir código en el navegador y ver los resultados a medida que lo construyes. Es un editor de código en línea útil y liberador para desarrolladores de cualquier nivel, y particularmente empoderador para las personas que están aprendiendo a programar. Nos centramos principalmente en lenguajes front-end como HTML, CSS, JavaScript y sintaxis de preprocesamiento que se convierten en esas cosas."</p>	
+	<h3>Portafolio</h3>
+	<p>Es conveniente ir desarrollando un perfil en redes sociales como LinkedIn para búsqueda laboral, y utilizar redes sociales, un blog o un enlazador como linktree para generarlo, Behance de Adobe permite crear uno, donde se pueda mostrar toda la experiencia adquirida y los trabajos realizados.</p>
+	<p>Algunos ejemplos</p>
+	<a href="https://linktr.ee/martaminujin" target="_blank">Marta Minujín</a>
+	<a href="https://museomoderno.org/mapadelarte/artistas/minujin-marta/" target="_blank">Marta Minujín (arte visual), no es docente en la UNA</a>
+	<p>"Marta Minujín nació en 1943. En 1963 realizó su primer happening, La Destrucción. En 1966 hizo Simultaneidad en Simultaneidad, parte de Three Countries Happening, con A. Kaprow (New York) y W. Vostell (Berlín). Algunas obras efímeras de participación masiva: El Partenón de Libros (1983), C. Gardel de Fuego (1981), La Torre de Babel con libros de todo el mundo (2011). Realiza bastidores transpsicodélicos, colchones, performances, ventanas, etc."</p>
+	<a href="https://tirigall.net/" target="_blank">Portafolio de Juan Jose Maria Tirigall, docente en la UNA</a>
+	<p>"Artista Electronico Multimedial. Docente investigador de grado y posgrado en la Universidad Nacional de las Artes (UNA). Director del Posgrado de Especializacion en Medios y Tecnologias para la Produccion Pictorica, Departamento de Artes Visuales, Universidad Nacional de las Artes (UNA)."</p>
+	<p>"Me interesa la confluencia entre arte contemporaneo, ciencia y tecnologia. Como docente y artista, colaboro en difundir y promover el uso de software libre y el sistema operativo GNU/Linux."</p>
+	<a href="https://marcelarapallo.com.ar/" target="_blank">Portafolio de Marcela Rapallo, docente en la UNA</a>
+	<p>"Marcela Rapallo es artista, investigadora y educadora, y combina todas estas facetas en proyectos de múltiples grupos y redes de trabajo, cuyos ejes son el dibujo escénico, la animación en tiempo real, y las experiencias interdisciplinarias de creación colectiva. Forma parte del Equipo Trazos, dedicado a la creación de tecnologías de Software Libre. Realiza exposiciones, obras teatrales, performances, proyectos educativos y de mediación, asesorías y capacitaciones en festivales, galerías, centros culturales, fundaciones, programas comunitarios y socioeducativos, y universidades de Latinoamérica y Europa."</p>
+	<a href="https://es.zaramella.com.ar/" target="_blank">Zeramella (animación) no es docente en la UNA</a>
+	<p>"Juan Pablo Zaramella es un director, animador e ilustrador con un fuerte interés en las ideas y la creatividad. A través de una amplia exploración de la técnica del stop motion, realizó más de 10 cortos y 2 series de TV, convirtiéndosela en un referente del mundo de la animación de autor."</p>	
+	<p>Por otro lado dentro del rubro no suelen publicarse avisos vinculados a propuestas laborales artísticas dentro de sistios como LinkedIn, Bumeran, CompuTrabajo, etc, en su lugar hay plataformar específicas como por ejemplo:</p>
+	<a href="https://www.alternativateatral.com/" target="_blank">Alternativa - Comunidad en escena</a>
+	<p>"La escena independiente, las artes escénicas y performáticas viven en Alternativa. Comunidad en escena. Teatro. Danza. Performance. Experiencias."</p>	
+	<a href="https://www.becasting.com.ar/" target="_blank">Becasting</a>
+	<p>"Ofertas de empleo artistas para figurantes, actores, cantantes, modelos, casting para niños, músicos , humoristas."</p>
+	<h3>Software</h3>
+	<p>Hay programas o aplicaciones de todo tipo, ya sea desde gratuitas, con períodos de prueba limitados, de pago al 100%, de código abierto (con lo cual se puede conocer como operan y a su vez modificar el código para mejorar sus capacidades). Dentro de lo que es la telefonía se destaca ultimamente Lineage OS, la cual es una alternativa a android sin los servicios de google pero dentro de la que es la computación, es posible encontrar una alternativa a Windows sin con ello renunciar a aplicaciones cotidianas, es posible encontrar en GNU/Linux alguna distribución que se adepte a nuestras necesidades, siendo la mas popular Ubuntu, por supuesto que al ser software comunitario no tienen soporte oficial, en vez tienen una comunidad voluntaria detrás. Cyber Cirujas es una organización que brinda capcitación acerca de como reciclar teléfonos, computadoras, etc que puede ser de utilidad ante presupuestos escasos y necesidades profesionales. Si bien la gran mayoría de los usuarios utilizan Windows en computación y Android en Telefonía por tecnologías de acceso, a diferencia de Apple donde todos sus dispositivos están pensados para funcionar dentro de un ecosistema cerrado pero costoso y sin aplicaciones ni programas grauitos practicamente, eso no significa que no existan alternativas a los mismos y que estos no puedan brindar una experiencia similar sin sacrificar demasiado.</p>
+	<p>La Gcam es la aplicación de cámara utilizada en los teléfonos Nexus y Pixel de Google, la cual sorprende particularmente por los avances de Google en la fotografía computacional, permitiendo obtener muchas veces mejores resultados que con la aplicación de cámara original del fabricante en un hardware de gama media. Se han lanzado versiones no oficiales para distintas marcas. Gcamator es una app que permite instalar modelos de gcam en ciertos teléfonos sin necesidad de rootearlo.</p>
+	<a href="https://linktr.ee/cybercirujas">Cyber Cirujas</a>
+	<p>"Luchando contra la obsolescencia programada, una compu por vez."</p>
+	<a href="AlternativeTo.net" target="_blank">AlternativeTo</a>
+	<p>"AlternativeTo es un servicio gratuito que te ayuda a encontrar mejores alternativas a los productos que amas y odias." Traducido con Kagi Translate.</p>			
+	<p>Si bien la democratización en el acceso a dispositivos y herramientas multimedia permite que cada vez mas personas puedan generar y crear contenido de manera mas económica no implica que cada vez mas personas se dediquen a ello necesariamente, ya que potencia la labor de aquellas personas que si ejerzan oficios y profesiones artísticos.</p>
+	<h3>Financiamiento</h3>
+	<p>Dentro de lo que es el financiamiento existen múltiples formas de obtenerlo y por lo general se utilizan plataforma de crowdfunding,  mecenazgo colaborativo por aprecio o cuyo impacto del proyecto pueda resultar atractivo para inversores conforme a estudios de mercado y proyección en términos de ROI (retorno de inversión) o con concocimiento en web 3 mediante tokenización.</p>
+	<p>Por ejemplo</p>	
+	<a href="https://cafecito.app/" target="_blank">Cafecito</a>
+	<p>"Cafecito es una plataforma de crowdfunding que busca unir a creadores de contenido, ONGs o proyectos con gente que quiera aportar a lo que hacen."</p>
+	<a href="https://www.matecito.co/" target="_blank">Matecito</a>
+	<p>"Matecito es una plataforma de financiamiento colectivo que puede ser utilizada por cualquier persona que desee recibir donaciones de una manera sencilla y con la menor comisión."</p>
+	<a href="https://www.bluebits.club/es" target="_blank">Bluebit</a>
+	<p>"Somos la única (comunidad financiera) que desbloquea oportunidades patrocinando proyectos y generando ingresos a partir de la tokenización de acciones."</p>	
+	<a href="https://orillasnuevas.org/" target="_blank">Orillas Nuevas</a>
+	<p>"“Orillas Nuevas ~ Nouveaux Rivages” es un programa de apoyo a las industrias culturales y creativas (ICC) de Argentina promovido por el Institut français d’Argentine, gracias al excepcional apoyo del Ministerio de Europa y Asuntos Exteriores de Francia. Su implementación se realiza en colaboración con la Fundación Williams y con la participación de la Fundación Medifé."</p>
+	<h3>Monotributista, Autónomo, Asociado</h3>
+	<p>Existen varias posibilidades en Argentina ya sea facturando, conformando o uniéndose a otra entidad:</p>
+	<a href="https://www.afip.gob.ar/monotributo/" target="_blank">Monotributo</a>
+	<p>"Un régimen para pequeños contribuyentes, que unifica el pago de IVA y Ganancias con los aportes jubilatorios y la obra social."</p>
+	<a href="https://www.argentina.gob.ar/justicia/derechofacil/leysimple/sociedad-por-acciones-simplificada-sas" target="_blank">Sociedades de Acciones Simplificadas</a>
+	<p>"La Sociedad por Acciones Simplificada es un nuevo tipo de sociedad: se forma más rápido y con trámites más simples."</p>
+	<a href="https://www.argentina.gob.ar/constitucion-de-cooperativas/cooperativas-de-trabajo" target="_blank">Cooperativas de Trabajo Limitadas</a>
+	<p>"El trámite de constitución de cooperativas de trabajo está segmentado según la cantidad de personas asociadas al momento de la fundación ya que esto determinará la conformación del Consejo de Administración"</p>
+	<p>Si deciden facturar localmente o internacionalmente deben saber que estarán por su cuenta, fuera de cualquier convenio colectivo, deberán fijar una tarifa plana por su trabajo con lo cual pueden consultar a un contador, asociaciones profesionales, etc.
+	</p>
+	<h4>DAO Descentralized Autonomous Organization, en español Organización Autónoma Descentralizada.</h4>
+	<a href="https://www.fwb.help/" target="_blank">FWB o Friends With Benefits</a>
+	<p>"Friends with Benefits es un nuevo tipo de red social compuesta por creativos y constructores que creen en la promesa de un internet mejor."</p>
+	<p>"Todos poseemos tokens $FWB como una forma de financiar y gobernar colectivamente nuestros esfuerzos comunitarios y ser copropietarios de lo que creamos juntos." Traducido con Kagi Translate.</p>
+	<h4>Cooperativas - ONG - OSC - Fundaciones - Asociaciones Civíles - Empresas Recuperadas</h4>
+	<a href="https://www.essapp.coop/" target="_blank">ESSApp</a>
+	<p>"En ESSApp podrás buscar a las organizaciones de la Economía Social y Solidaria: cooperativas,"</p>
+	<a href="https://www.rutacoop.com.ar/" target="_blank">Ruta de las cooperativas</a>
+	<p>"La Ruta Argentina de Cooperativas tiene como objeto valorizar el potencial de un conjunto de experiencias cooperativas profundamente arraigadas en los territorios y la historia local del país."</p>
+	<a href="https://www.idealist.org/es" target="_blank">idealist.org</a>
+	<p>"Idealist es una organización sin fines de lucro con sede en Nueva York. Fue fundada en 1995 con una misión: Trabajando con otros, con generosidad y respeto mutuo, Idealist busca construir un mundo donde todas las personas puedan vivir libre y dignamente. Para ello, invitamos a todas esas personas a imaginar, conectar y actuar."</p>
+	<h4>Colectivos - Redes</h4>
+	<a href="https://web.facebook.com/share/g/1DwSSP4rD1/" target="_blank">Clandestina Weekend Nerd</a>
+	<p>"Clandestina funcionó activamente entre 2008 y 2014 y fué un puntapié en la conformación de colectivos artísticos de referencia para las generaciones de artistas más recientes.".
+	<a href="https://www.newtro.xyz/" target="_blank">Newtro Arts</a>
+	<p>"Newtro Arts es una organización de gestores culturales con sede en Argentina que trabaja para promover, educar e incorporar a nuevos artistas y agentes culturales latinoamericanos en la tecnología blockchain. El colectivo de artistas de Newtro está compuesto por artistas que participaron en nuestro taller "Arte y Web3" y que eligen ser parte de nuestro motor colectivo para representar la cultura local dentro del entorno virtual de Web3."</p>
+	<a href="https://amplifydai.com/" target="_blank">Amplify DAI</a>
+	<p>"Amplify Digital Arts Initiative es una iniciativa conjunta del British Council, Artlab y la Fundación Williams. Desde 2018, AMPLIFY D.A.I conecta y empodera a una red activa de artistas que trabajan en los sectores de las artes digitales, el sonido y la narración inmersiva en Canadá, América Latina y el Reino Unido. Aprovechando diferentes culturas y experiencias, AMPLIFY D.A.I fomenta una plataforma para el diálogo sobre equidad de género y compromete recursos para actividades de desarrollo profesional y de capacitación, intercambios de pares y oportunidades de exhibición en festivales, eventos y residencias dinámicas y contemporáneas." Traducido con Kagi Translate</p>
+	<a href="https://somoslavillana.carrd.co/" target="_blank">La Villana</a>
+	<a href="https://www.somoslavillana.com/" target="_blank">La Villana</a>
+	<p>"...un equipo de creación iberoamericano con valores de innovación, diversidad y colaboración. Somos Andrea Meneses y Gabi Cortés, creadoras con experiencia en producción, community building y dirección artística."</p>
+	<a href="https://witargentina.ar/" target="_blank">Women In Tech (WIT) Argentina</a>
+	<p>"Un espacio de encuentro y debate que busca acortar la brecha de géneros en el sector CTIM coordinando iniciativas para obtener un impacto positivo en la inserción de mujeres y diversidades en la industria de la tecnología." En el caso de las artes, el diseño y la ingeniería multimedia es relevante en áreas tecnológicas como la programación web, programación de videojuegos, robótica artística, etc.</p>
+	<a href="https://bitbangclub.com/es/informacion/" target="_blank">Bitbang ONG</a>
+	<p>"BITBANG es una organización sin fines de lucro, creada en 2014, para el impulso y difusión de la animación, videojuegos y arte digital vanguardistas. Somos una plataforma que difunde y promueve propuestas artísticas experimentales, arriesgadas y autorales, y da lugar a voces diversas."</p>
+	<a href="https://animacioncarton.com/quienes-somos/" target="_blank">Colectivo Cartón</a>
+	<p>"COLECTIVO CARTÓN. Integrado por personas vinculadas al mundo de la comunicación y las artes audiovisuales, quienes trabajan en forma voluntaria durante diez meses cubriendo todas las áreas que la puesta en marcha del festival requiere: Relaciones Institucionales, Prensa y Comunicación, Técnica, Programación, etc. El Colectivo Cartón está integrado por: Martín Araneda, Maxi Bearzi, Diego Cabarcos, Mariana Costa, Marisa Fernández Villalba, Leandro Seoane, Agustín Sinibaldi y César Barrangou."</p>
+	<a href="https://www.el-libro.org.ar/fundacion/" target="_blank">Fundación El Libro</a>
+	<p>"Entidad civil sin fines de lucro constituida por la Sociedad Argentina de Escritores, la Cámara Argentina del Libro, la Cámara Argentina de Publicaciones, el Sector de Libros y Revistas de la Cámara Española de Comercio, la Federación Argentina de la Industria Gráfica y Afines, y la Federación Argentina de Librerías, Papelerías y Afines."</p>
+	<a href="http://lodo.com.ar/" target="_blank"></a>
+	<p>"LODO es la construcción permanente y continua de una red de artistas, gestores, instituciones, fondos públicos y privados que fortalece el desarrollo de proyectos emergentes de danza, teatro, performance, site specific, arte contemporáneo y activismo en interacción con contextos culturales específicos."</p>
+	<h4>Sindicatos</h4>
+	<a href="https://www.argentina.gob.ar/trabajo/buscador-de-sindicatos">Buscador de sindicatos | Argentina</a>
+	<p>"Buscando por actividad y por asociaciones se encuentran todas las entidades sindicales registradas en la STEySS."</p>	
+	<a href="https://www.trabajadoresdearte.org/" target="_blank">Trabajadores de Arte Contemporáneo</a>
+	<p>"Trabajadores de Arte Contemporáneo es una iniciativa colaborativa para el establecimiento de buenas prácticas laborales y remuneración justa de los trabajadores de arte, tendientes a consolidar y profesionalizar a las escenas locales de América Latina."</p>
+	<h3>Espacios</h3>
+	<a href="https://artlabpro.net/" target="_blank">Artlab</a>
+	<p>"Artlab es un laboratorio que explora y emplea las nuevas tecnologías y la creatividad digital para desarrollar proyectos artísticos, estimular nuevas formas de expresión e impulsar el pensamiento crítico desde Latinoamérica para el mundo. Trabajamos con los artistas más relevantes en la intersección de arte, música y tecnología, siempre con espíritu inclusivo y colaborativo."</p>
+	<a href="http://www.biopus.ar/" target="_blank">Biopus</a>
+	<p>"Exploramos el arte electrónico desde múltiples perspectivas. Elige tu camino: Arte – Una bitácora de nuestras exploraciones y proyectos artísticos. (Español)
+	Servicios – Soluciones creativas para nuevas experiencias digitales."</p>
+	<a href="https://www.espaciobyte.org/" target="_blank">Espacio Bytes</a>
+	<p>"Espacio Byte es un museo en línea dedicado al arte digital. Un entorno natural para la exhibición de trabajos artísticos que, creados mediante el uso de tecnología digital, proponen nuevos lenguajes, poéticas y valores estéticos"</p>
+	<a href="https://www.fundaciontelefonica.com.ar/" target="_blank">Fundación Telefónica Movistar Argentina</a>
+	<p>"Presentamos a la sociedad las últimas expresiones de la cultura, con formatos digitales, innovadores y creativos."</p>
+	<a href="https://www.cceba.org.ar/" target="_blank">Centro Cultural de España en Buenos Aires</a>
+	<p>"El CCEBA Centro Cultural de España en Buenos Aires forma parte de la Red de Centros de Cooperación Cultural de la Agencia Española de Cooperación Internacional para el Desarrollo (AECID), uno de los principales instrumentos de la Cooperación Española (CE) para implementar las políticas de cooperación cultural al desarrollo y la aplicación de la Agenda 2030, compromiso y estrategia internacional para alcanzar los Objetivos de Desarrollo Sostenible (ODS)."</p>
+	<a href="https://caibuenosaires.com/">Centro Audiovisual Inmersivo</a>
+	<p>"Un espacio en donde creatividad, arte y tecnología se funden en un entorno único que estimula todos los sentidos. Una experiencia en la que el espectador se convierte en protagonista de la escena y se sumerge en un mundo de imágenes y sonidos envolventes que lo transportan hacia lo impredecible."</p>
+	<a href="https://palaciolibertad.gob.ar/" target="_blank">Palacio Libertad (ex CCK)</a>
+	<p>"Edificio emblemático de la Ciudad de Buenos Aires, antiguo Palacio de Correos y Telégrafos, cuenta con más de 100 000 metros cuadrados de superficie y una infraestructura a la altura de los centros culturales más importantes del mundo."</p>
+	<a href="https://buenosaires.gob.ar/gobierno/laboratorio-tecnologico-de-la-ciudad" target="_blank">BA Laboratorio Tecnológico</a>
+	<p>"El Laboratorio Tecnológico busca democratizar el acceso a las tecnologías para que todos/as los/as vecinos/as puedan conocer, aprender y tener la posibilidad de experimentar con diferentes tipos de herramientas." Ubicado en el centro metropolitano de diseño.</p>	
+	<a href="https://www.tresdefebrero.gov.ar/tecno3f/" target="_blank">Tecno 3f - Laboratorio de impresión 3D</a>
+	<p>"Destinado a empresas, emprendedores y a lugares de formación para el trabajo en impresión aditiva. El laboratorio forma parte del espacio Tecno 3F en Santos Lugares y es una iniciativa pública privada entre la Municipalidad de Tres de Febrero y la empresa Chimak 3D. Además, contamos con tecnologías FDM y SLA."</p>
+	<a href="https://auravirtualgallery.com/" target="_blank"></a>
+	<p>"Aura Virtual Gallery es una plataforma de impulso y difusión de artistas representativos del pensamiento y producción contemporáneas. La galería se materializa de manera pop-up en ferias y exhibiciones, trabaja con una programación que amplifica los límites del galerismo tradicional, se interesa por los lazos transdisciplinares, exhibe y asocia proyectos individuales, colectivos, experimentales y de investigación. Asume la diversidad de espacios, formatos y actores de las prácticas artísticas actuales y emergentes. El rol de Aura Virtual Gallery es visibilizar y sostener las nuevas prácticas contemporáneas a partir de muestras y de instancias de mercado como así también a partir de la teoría y la crítica, interactuando con curadores, críticos y coleccionistas que completan la escena."</p>
+	</section>	
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2024 - 2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<title>MultiMediAr</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Luz
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      	</li>
+      	<li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+  				<div class="container-fluid">
+  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+         	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
+         	 					<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
+          							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
+          							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
+          					</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<section>
+	<h1>MultiMediAr</h1>
+	<h2>Economía Naranja</h2>
+	<h3>Repositorios - Archivos - Registros - Acervos</h3>
+	<p>Otra de las posibilidades sería dedicarse a la recuperación de archivos multimedia históricos que conforman patrimonio cultural, en formatos analógicos, digitalizarlos, conservarlos y clasificarlos.</p>
+	<a href="https://gotika.com/home-es" target="_blank">Gotika</a>
+	<p>"Es una compañía con más de 20 años de trayectoria, dedicada específicamente a la, restauración, remasterización y preservación de patrimonio audiovisual. Fue pionera en Latinoamérica realizando el primer intermedio y la primera restauración digital. Es una de las contadas compañías en el mundo que pueden proveer restauración y remasterización integrada de altísima calidad de imagen y sonido. Es uno de los pocos laboratorios privados en el mundo con capacidad de escanear desde 4K a 20K para análisis forense y restauración de originales muy dañados. Entre sus servicios se encuentran: Investigación y Arqueología Fílmica, Limpieza, Reparación y Digitalización (Escaneo) Fílmico, Limpieza, Reparación y Digitalización (Escaneo) de Video Cintas, Restauración Fílmica y de Video, Corrección de Color y Restauración de Sonido."</p>
+	<a href="https://www.argentina.gob.ar/cultura" target="_blank">Secretaría de Cultura</a>
+	<p>"Impulsamos políticas públicas para el desarrollo de una cultura nacional que fomente la creación y las expresiones culturales, teniendo a la pluralidad como eje. Fomentamos la producción de las industrias culturales. Propiciamos la conservación y la puesta en valor de nuestro patrimonio cultural."</p>
+	<a href="https://catalogo.bn.gov.ar/F?RN=662600489" target="_blank">Biblioteca Nacional Mariano Moreno</a>
+	<p>"Biblioteca Nacional de la República Argentina, fundada en 1810 por Mariano Moreno."</p>
+	<a href="https://www.argentina.gob.ar/interior/archivo-general-de-la-nacion" target="_blank">Archivo General de la Nación</a>
+	<p>"Iluminando el pasado, sirviendo al presente, construyendo el futuro."</p>
+	<a href="https://www.archivorta.com.ar/" target="_blank">Archivo Prisma</a>
+	<p>"Prisma es la plataforma web que hace posible la democratización del acceso al acervo audiovisual y sonoro del Archivo Histórico de RTA. Tal como establece el artículo 7 del Reglamento de Funcionamiento del Archivo Histórico de RTA, Prisma garantiza el acceso universal por internet del material emitido y/o grabado por Radio Nacional y la Televisión Pública, así como de piezas audiovisuales o sonoras a las que el Archivo ha accedido a través de los convenios de digitalización que RTA mantiene con diversas instituciones públicas de la Argentina."</p>
+	<a href="https://recuperar.org/" target="_blank">Plan de Recuperación de Películas Argentinas</a>
+	<p>"Ante la pérdida de derechos de autor, Laboratorios GOTIKA y DAC (Directores Argentinos Cinematográficos) decidieron asociarse para invertir y crear el Plan Recuperar para rescatar, poner en valor en 4K y conservar cien clásicos contemporáneos: sin costo alguno para el autor."</p>
+	<a href="https://difilm-argentina.com/difilm/" target="_blank">DeFilm</a>
+	<p>"Difilm nació en 1949 como un pequeño archivo de imágenes dedicado a la conservación, restauración y comercialización de material histórico. En la actualidad es una de las empresas más importantes en cuanto a la cantidad, variedad y diversidad de material fílmico y se ha convertido en uno de los bancos de imágenes más prominentes de la Argentina."</p>
+	<a href="https://youtube.com/@difilmargentina?si=aIyBtGRqwD8hQrDw" target="_blank">DiFilm</a>
+	<a href="https://youtube.com/@archivodichiara?si=56BF66EudIiFERaP" target="_blank">Dichiara</a>
+	<a href="https://www.legado.ar/" target="_blank">Legado</a>	
+	<p>"Es un proyecto cultural independiente y autogestivo creado por la artista y curadora Graciela Taquini, inicialmente junto con un equipo interdisciplinario de especialistas Jazmin Adler, Marcela Andino, Toia Bonino, Mariela Cantú, Romina Flores, Fabiana Gallegos, Gabriela Larrañaga, Silvana Spadaccini, Alejandra Torres, Mariela Yeregui, fundado el primero de marzo de 2020. Ampliado en 2024 con la participación de Susana Allegretti, Alejandra Ceriani, Alejandra Cresentino, Clara Garavelli, Florencia Levy, Daniela Muttis, Maia Navas, Ari Nahon, Silvina Szperling."</p>
+	<a href="https://proyectoidis.org/" target="_blank">Proyecto Isdin</a>
+	<p>"La presente investigación propone un recorrido historiográfico del Diseño de Imagen y Sonido, que permita revisar cómo influyen en esta disciplina los cambios que se producen con la digitalización de datos, imágenes y sonidos. Para comprender estos cambios, proponemos formular una historiografía que sea complementaria a las tradicionales historias de los medios, y que esté enfocada en las relaciones que se establecen entre el diseño de sistemas de representación visual y sonora y los medios electrónicos y digitales."</p>
+	<a href="https://ahira.com.ar/" target="_blank">Archivo Histórico de Revistas Argentinas</a>
+	<p>"Ahira. Archivo Histórico de Revistas Argentinas es un proyecto que agrupa a investigadores de letras, historia y ciencias de la comunicación, que estudia la historia de las revistas argentinas en el siglo veinte; las trayectorias de quienes las dirigieron, las escribieron e ilustraron; los debates que atravesaron sus páginas; los cruces y diálogos con el periodismo de masas, la literatura, los programas políticos, los lectores y los escritores. El proyecto es financiado por subsidios de la Universidad de Buenos Aires y de la Agencia Nacional de Promoción Científica y Tecnológica, radicados en el Instituto de Historia Argentina y Americana “Dr. Emilio Ravignani”, Facultad de Filosofía y Letras, Universidad de Buenos Aires."s</p>
+	<a href="https://www.todohistorietas.com.ar/" target="_blank">Todo Historiestas</a>
+	<p>"Esta página es un tributo a Mafalda, a Quino, y a los más importantes personajes e historietistas de la Argentina y el mundo."</p>
+	<a href="https://ilustracionargentina.wordpress.com/" target="_blank">Archivo de Ilustración Argentina</a>
+	<p>"Somos un grupo de docentes de la materia Ilustración, cátedra Daniel Roldán, perteneciente a la Carrera de Diseño Gráfico de la Facultad de Arquitectura, Diseño y Urbanismo, de la Universidad de Buenos Aires (FADU/UBA). La cátedra nació en el 2011, siendo la primera vez que se conformaron estudios de esta disciplina a nivel universitario, por ese motivo debió generar sus propios contenidos. En este contexto comenzamos a investigar acerca de la historia de la ilustración argentina."</p>
+	<a href="https://archivoiiac.untref.edu.ar/" target="_blank">Archivo IIAC (Instituto de Investigación en Arte y Cultura Dr. Norberta Griffa</a>
+	<p>"El Archivo IIAC funciona en el seno del Instituto de Investigaciones en Arte y Cultura “Dr. Norberto Griffa” de la Universidad Nacional de Tres de Febrero. Reúne fondos y colecciones documentales y bibliográficos de artistas, escritores, historiadores del arte e instituciones relacionadas con el arte y la cultura. Tiene como objetivo la guarda, descripción y difusión de sus fondos y aspira a convertirse en una herramienta privilegiada para los investigadores en la producción de conocimiento. Entre los materiales que alberga se encuentran libros, publicaciones periódicas, fotografías, afiches, películas y una gran variedad de documentos. Asimismo, cuenta con un catálogo de biblioteca conformado por diversas colecciones."</p>
+	<a href="https://wepa.unima.org/es/argentine/" target="_blank">Argentina | World Encyclopedia of Puppetry Arts</a>
+	<p>"La evolución del teatro de títeres en Argentina está estrechamente ligada a los flujos migratorios que marcaron la nación argentina desde sus orígenes y a los intercambios culturales y sociales que los acompañaron. Este proceso original nació en el siglo xviii."</p>
+	<a href="https://fundacionluminis.org.ar/tema/arte" target="_blank">Arte Archivos - Fundación Lúminis</a>
+	<p>"Apoyando la educación argentina en la formación docente y la investigación · Biblioteca virtual · Educación y Género · Datos abiertos sobre Educación · RADIO."</p>
+	<a href="https://argentinacompositores.com.ar/archivo/" target="_blank"></a>
+	<p>"El Archivo Histórico de la AAC es un tesoro invaluable que preserva la herencia musical argentina. Desde su fundación en 1915, el archivo ha acumulado una extensa colección de documentos artísticos y administrativos, incluyendo libros de actas, registros de socios, correspondencia, fotografías y programas de conciertos. Además, cuenta con unos 800 registros sonoros y audiovisuales en diversos formatos, totalizando más de 3000 obras argentinas, muchas de ellas únicas. El archivo se complementa con una biblioteca musical, un inventario de 1364 partituras (incluyendo manuscritos autógrafos) y los fondos de tres destacados compositores: Celina Kohan de Scher, Elena Larionow y Jorge Fontenla."</p>
+	<a href="https://iimcv.net.ar/admin.php" target="_blank">IMCV (Instituto de Investigación Musicológica Carlos Vega)</a>
+	<p>"El 14 de abril de 1966 se funda el Instituto de Investigación Musicológica “Carlos Vega” (FACM- UCA). Lleva el nombre del primer musicólogo argentino quien, por voluntad testamentaria, donó el patrimonio que dio origen a dicha creación, el cual incluye sus investigaciones inéditas, epistolario y archivo personal. En la donación mencionada expresaba los objetivos fundacionales que hasta hoy nos guían: “Están egresando de nuestra Facultad los primeros Licenciados en Musicología y esta modernísima especialidad carece todavía de círculos de concentración de actividad. No es difícil que esperen a los nuevos profesionales la dispersión, el desaliento y el abandono de la materia que abrazaron con decisión inaugural y estudiaron con tanto entusiasmo. Un Instituto de Musicología en estas circunstancias tendría, precisamente, el objetivo principal de constituirse en un centro de estudios para docentes y estudiantes de la Facultad y para especialistas y estudiosos”."</p>
+	<a href="https://linktr.ee/museodelcineba" target="_blank">Museo del Cine Pablo Ducrós Hicken</a>
+	<p>"Rescatando historias desde 1971."</p>
+	<a href="https://museomig.org/index.php" target="_blank">Museo Mig | Museo de la Ilustración Gráfica</a>
+	<a href="https://youtube.com/@museomig323?si=09y5627akP4hKOq1" target="_blank">YouTube de Museo Mig</a>
+	<p>"El recientemente creado Museo de la Ilustración Gráfica, que tendrá como sede el señorial edificio ubicado en la esquina de Alte. Brown y Pinzón del barrio de La Boca, abarcará las áreas del Humor Gráfico, la Historieta, la Ilustración y la Animación."</p>
+	<a href="https://museofeministavirtual.com.ar/" target="_blank">Museo Feminista Virtual</a>
+	<p>"Mujeres, lesbianas, travestis, trans y no binaries de la historia del arte"</p>
+	<a href="https://archivotrans.ar/index.php" target="_blank">Archivo de la Memoria Trans</a>
+	<p>"El Archivo de la Memoria Trans (AMT) es un espacio para la protección, la construcción y la reivindicación de la memoria trans. María Belén Correa y Claudia Pía Baudracco, ambas mujeres trans activistas, habían imaginado tener un espacio donde reunir a las compañeras sobrevivientes, sus recuerdos y sus imágenes."</p>
+	<a href="https://archive.org/" target="_blank">Internet Archive</a>
+	<p>"Internet Archive es una biblioteca sin fines de lucro con millones de textos, películas, software, música, sitios web y mucho más gratuitos." Traducido con Kagi Translate.</p>
+	</section>	
+		</main>
+		<footer>
+			<div class="card text-center">
+  			<div class="card-body">
+    		<p class="card-text">2024 - 2025 
+    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+			</svg>
+			MultiMediAr</p>
+    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+  			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="js/intercambio.js"></script>	
+</body>
+</html>
