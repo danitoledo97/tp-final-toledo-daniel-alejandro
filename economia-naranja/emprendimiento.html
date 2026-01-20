@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
           						</ul>
         					</li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
@@ -112,157 +83,619 @@
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>Economía Naranja</h2>
-	<h3>Emprendimiento</h3>	
-	<h3>Branding/Marca Personal</h3>
-	<p>La marca personal es una estrategia comercial en la cual una persona se vende a si misma como la mejor para solución para satisfacer una necesidad en específico ofreciendo un servicio. Su valor hora y capacidad determinará su reputación para con los clientes. Necesita conocer del mercado para poder fijar una tarifa plana.</p>
-	<a href="https://tarifario.org/" target="_blank">Tarifario</a>
-	<p>Tarifario es un sitio web que ofrece tarifas planas de referencia.</p>
+  <div class="marco">
+    <img src="img/ideas.jpg" alt="Logo acerca de ideas" class="img-fluid">
+  </div>
+	<h1>Emprendimiento</h1>	
+	<p>Hay varias formas de emprender en Argentina, teniendo en cuenta que si bien el <strong>emprendedorismo</strong> o <strong>entrepreneurship</strong> puede ser arriesgado, muchas veces esa iniciativa resulta ser la clave en la industria del entretenimiento, apostando tal vez por un nicho poco explotado. Por otro lado se estima que a futuro puede haber un <strong>mercado laboral</strong>, compuesto mayormente por <strong>trabajadores inpependientes</strong> o <strong>autogestionados</strong> que por <strong>empleados asalariados</strong> en <strong>relación de dependencia</strong>.</p>
+
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/independiente.jpg" alt="Logo de marca personal" class="img-fluid">
+    </div>
+  </div>
+	<h2>Marca Personal</h2>
+	<p>El <strong>branding personal o marca personal</strong> es una estrategia comercial en la que una persona se posiciona como la mejor opción para satisfacer una necesidad específica a través de un servicio. Su reputación dependerá de la calidad de su trabajo, su experiencia y el valor que aporta a sus clientes. Constituye una forma de trabajo <strong>freelance</strong>.
+  <p>El <strong>freelancing</strong> es flexible en cuanto a horarios y proyectos a tomar según fechas, siendo común dentro de la industria del entretenimiento el tener jornadas intensivas, es decir, que se trabaje mas horas de lo habitual como a su vez el microshifting (horario cortado), pudiendo organizar la rutina personal.</p>
+	<p>Como <strong>emprendedores o entrepreneurs</strong> para establecer tarifas adecuadas y presupuestar, es fundamental conocer el mercado y definir una estrategia de precios que refleje su nivel de especialización y demanda local e internacional como asi también poder definir un <strong>rider técnico</strong> que de cuenta de una propuesta preseupuestaria que contenga todos los elementos necesarios por el artista para llevar a cabo su trabajo como asi también la organización y la programación de eventos.</p>
+	<h4>Tarifario</h4>
 	<p>"Tenemos 151 tarifas indexadas para servicios de Diseño audiovisual, Diseño Gráfico, Marketing, Programación."</p>
-	<a href="https://art.art/es" target="_blank">.ART</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://tarifario.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Recursos Culturales</h3>
+  <p>"Somos un emprendimiento cultural independiente, herramientas y servicios para artistas, emprendedores, gestores y organizaciones del arte y la cultura."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.recursosculturales.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Emprende Cultura</h3>
+  <p>"EMPRENDE CULTURA es una revista digital hecha por y para artistas, gestores, emprendedores, organizaciones y proyectos culturales."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://emprendecultura.net/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div> 
+  <h4>Akultura</h4>
+  <p>"AKULTURA nace como necesidad de apoyar a gestores culturales y artistas a poder desarrollar una agenda cultural en las comunidades que habitan."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://akultura.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/portafolio.jpg" alt="Logo de portafolio" class="img-fluid">
+    </div>
+  </div>
+	<h2>Portafolio</h2>
+	<p>Si bien lo ideal es crear un sitio web propio, por cuestiones presupuestarias es normal iniciar con herramientas gratuitas y desarrollar un <strong>portfolio</strong> profesional es clave para mostrar la experiencia adquirida y los trabajos realizados. Es recomendable crear un perfil en redes como LinkedIn para la búsqueda laboral, hacer <strong>networking o red de contactos</strong> y utilizar rrss, plataformas como Behance de Adobe, o un enlazador como Linktree para organizar y exhibir el contenido de manera efectiva.</p>
+	<h2>Herramientas</h2>
+	<h4>.ART</h4>
 	<p>"ART es la única zona de dominio creada especialmente para la comunidad creativa global."</p>
-	<a href="https://www.canva.com/es_ar/" target="_blank">Canva</a>
-	<p>"Con Canva, es muy fácil crear y compartir diseños profesionales."</p>
-	<a href="https://www.adobe.com/es/express/" target="_blank">Adobe Express</a>
-	<p>"La aplicación para crear cualquier cosa de forma rápida y sencilla."</p>
-	<a href="https://wordpress.com/es/">Wordpress</a>
-	<p>"Todo lo que necesitas para crear tu web y llevarla a lo más alto en un mismo lugar."</p>
-	<a href="https://vgen.co/" target="_blank">Vgen</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://art.art/es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Adobe Behance</h4>
+	<p>"Una plataforma integral para ayudar a empleadores y creadores a navegar el mundo creativo, desde descubrir inspiración hasta conectarse entre sí." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.behance.net/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h4>Adobe Portfolio</h4>
+  <p>Magníficos sitios web de portafolios, gratis con Creative Cloud."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://portfolio.adobe.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Artstation</h4>
+	<p>"ArtStation te ofrece una forma sencilla pero poderosa de mostrar tu portafolio y ser visto por las personas adecuadas en la industria." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.artstation.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Sketchfab</h4>
+	<p>"La plataforma líder para 3D y AR en la web. Gestiona tus activos 3D. Distribuye experiencias 3D y AR. Colabora con otros. Muestra tu trabajo." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://sketchfab.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Dribble</h4>
+	<p>"El destino mundial para el diseño." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://dribbble.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Vgen</h4>
 	<p>"Te ayudamos a exhibir y gestionar tu arte y negocios artísticos mientras te conectamos con una comunidad de artistas, clientes y amigos." Traducido con Kagi Translate.</p> 
-	<a href="https://herlitzkafaria.com/es" target="_blank">Herlitzka & CP</a>
-	<p>"Herlitzka & Co. se dedica a la difusión, comercialización y proyección internacional del arte moderno, conceptual y contemporáneo latinoamericano."</p>		
-	<a href="https://www.decultura.net/" target="_blank">DeCultura.net</a>	
-	<p>"Es una plataforma web para difundir y favorecer la comercialización del arte y la cultura de cada localidad de nuestro país"</p>
-	<a href="https://mica.gob.ar/inicio" target="_blank">Mercado de Industrias Culturales Argentinas (MICA)</a>
-	<p>"El MICA es un programa que funciona como nexo entre los sectores público y privado a través de acciones con productores referentes y/o emergentes de las industrias culturales con el objetivo de visibilizar y potenciar su producción, fortalecer su profesionalismo y capacidad exportadora, generar empleos de calidad y promover su comercialización en nuestro territorio y en el mundo."</p>
-	<a href="https://www.similarsites.com/" target="_blank">Somilar Sites</a>
-	<p>"SimilarSites.com es un innovador motor de recomendaciones que rastrea internet para proporcionarte más contenido del que te gusta. SimilarSites.com elimina el desorden de la web al encontrar sitios similares a los que navegas, basándose en contenido relacionado, estructura web, algoritmos de análisis de enlaces, comportamientos detallados de navegación de los usuarios y una gran comunidad de clasificaciones de usuarios." Traducido con Kagi Translate.</p>
-	<a href="https://linktr.ee/admin/" target="_blank">Linktree</a>
-	<p>"Linktree es una herramienta que te ayuda a compartir todo lo que eres en un simple enlace, haciendo que tu contenido en línea sea más fácil de descubrir, más fácil de administrar y con más probabilidades de convertir. Aquí es donde empezó todo." Traducido a español.</p> 
-	<a href="https://translate.kagi.com/" target="_blank">Kagi Translate</a>
-	<p>"Kagi Translate ofrece traducciones precisas en 248 idiomas utilizando modelos de lenguaje avanzados."</p>
-	<a href="https://www.deepl.com/es/translator" target="_blank">Deepl</a>
-	<p>"DeepL no es un simple traductor. Somos una plataforma de IA lingüística que ayuda a empresas de todo el mundo a comunicarse de forma más eficaz y traspasar idiomas, culturas y mercados."</p>
-	<a href="https://codepen.io/" target="_blank"></a>
-	<p>"CodePen es un entorno de desarrollo social. En esencia, te permite escribir código en el navegador y ver los resultados a medida que lo construyes. Es un editor de código en línea útil y liberador para desarrolladores de cualquier nivel, y particularmente empoderador para las personas que están aprendiendo a programar. Nos centramos principalmente en lenguajes front-end como HTML, CSS, JavaScript y sintaxis de preprocesamiento que se convierten en esas cosas."</p>	
-	<h3>Portafolio</h3>
-	<p>Es conveniente ir desarrollando un perfil en redes sociales como LinkedIn para búsqueda laboral, y utilizar redes sociales, un blog o un enlazador como linktree para generarlo, Behance de Adobe permite crear uno, donde se pueda mostrar toda la experiencia adquirida y los trabajos realizados.</p>
-	<p>Algunos ejemplos</p>
-	<a href="https://linktr.ee/martaminujin" target="_blank">Marta Minujín</a>
-	<a href="https://museomoderno.org/mapadelarte/artistas/minujin-marta/" target="_blank">Marta Minujín (arte visual), no es docente en la UNA</a>
-	<p>"Marta Minujín nació en 1943. En 1963 realizó su primer happening, La Destrucción. En 1966 hizo Simultaneidad en Simultaneidad, parte de Three Countries Happening, con A. Kaprow (New York) y W. Vostell (Berlín). Algunas obras efímeras de participación masiva: El Partenón de Libros (1983), C. Gardel de Fuego (1981), La Torre de Babel con libros de todo el mundo (2011). Realiza bastidores transpsicodélicos, colchones, performances, ventanas, etc."</p>
-	<a href="https://tirigall.net/" target="_blank">Portafolio de Juan Jose Maria Tirigall, docente en la UNA</a>
-	<p>"Artista Electronico Multimedial. Docente investigador de grado y posgrado en la Universidad Nacional de las Artes (UNA). Director del Posgrado de Especializacion en Medios y Tecnologias para la Produccion Pictorica, Departamento de Artes Visuales, Universidad Nacional de las Artes (UNA)."</p>
-	<p>"Me interesa la confluencia entre arte contemporaneo, ciencia y tecnologia. Como docente y artista, colaboro en difundir y promover el uso de software libre y el sistema operativo GNU/Linux."</p>
-	<a href="https://marcelarapallo.com.ar/" target="_blank">Portafolio de Marcela Rapallo, docente en la UNA</a>
-	<p>"Marcela Rapallo es artista, investigadora y educadora, y combina todas estas facetas en proyectos de múltiples grupos y redes de trabajo, cuyos ejes son el dibujo escénico, la animación en tiempo real, y las experiencias interdisciplinarias de creación colectiva. Forma parte del Equipo Trazos, dedicado a la creación de tecnologías de Software Libre. Realiza exposiciones, obras teatrales, performances, proyectos educativos y de mediación, asesorías y capacitaciones en festivales, galerías, centros culturales, fundaciones, programas comunitarios y socioeducativos, y universidades de Latinoamérica y Europa."</p>
-	<a href="https://es.zaramella.com.ar/" target="_blank">Zeramella (animación) no es docente en la UNA</a>
-	<p>"Juan Pablo Zaramella es un director, animador e ilustrador con un fuerte interés en las ideas y la creatividad. A través de una amplia exploración de la técnica del stop motion, realizó más de 10 cortos y 2 series de TV, convirtiéndosela en un referente del mundo de la animación de autor."</p>	
-	<p>Por otro lado dentro del rubro no suelen publicarse avisos vinculados a propuestas laborales artísticas dentro de sistios como LinkedIn, Bumeran, CompuTrabajo, etc, en su lugar hay plataformar específicas como por ejemplo:</p>
-	<a href="https://www.alternativateatral.com/" target="_blank">Alternativa - Comunidad en escena</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://vgen.co/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Flicker</h4>
+	<p>"El mejor lugar para ser un fotógrafo en línea" Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.flickr.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Directorios Argentina Creativa</h4>
+	<p>"Los Directorios Argentina Creativa son una plataforma digital diseñada para conectar al mundo con el talento innovador de las industrias creativas argentinas."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.cancilleria.gob.ar/es/directorios-argentina-creativa" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Registro Federal de Cultura</h4>
+	<p>"El Registro Federal de Cultura es la primera plataforma que unifica, transparenta y democratiza el acceso a las convocatorias de la Secretaría de Cultura de la Nación."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://somos.cultura.gob.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+    </button>
+  </div>
+	<h4>CodePen</h4>
+	<p>"CodePen es un entorno de desarrollo social. En esencia, te permite escribir código en el navegador y ver los resultados a medida que lo construyes." Traducido con Kagi Translate.</p>	
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://codepen.io/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Playbook</h4>
+	<p>"Piensa en Playbook como tu centro creativo: una plataforma de gestión de archivos todo en uno diseñada tanto para creativos individuales como para equipos." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.playbook.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>					
+	<p>Por otro lado dentro del rubro si bien suelen publicarse avisos vinculados a propuestas laborales artísticas dentro de sistios como LinkedIn, Bumeran, CompuTrabajo, etc, en su lugar hay plataformar específicas como por ejemplo:</p>
+	<h4>Alternativa</h4>
 	<p>"La escena independiente, las artes escénicas y performáticas viven en Alternativa. Comunidad en escena. Teatro. Danza. Performance. Experiencias."</p>	
-	<a href="https://www.becasting.com.ar/" target="_blank">Becasting</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.alternativateatral.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Becasting</h4>
 	<p>"Ofertas de empleo artistas para figurantes, actores, cantantes, modelos, casting para niños, músicos , humoristas."</p>
-	<h3>Software</h3>
-	<p>Hay programas o aplicaciones de todo tipo, ya sea desde gratuitas, con períodos de prueba limitados, de pago al 100%, de código abierto (con lo cual se puede conocer como operan y a su vez modificar el código para mejorar sus capacidades). Dentro de lo que es la telefonía se destaca ultimamente Lineage OS, la cual es una alternativa a android sin los servicios de google pero dentro de la que es la computación, es posible encontrar una alternativa a Windows sin con ello renunciar a aplicaciones cotidianas, es posible encontrar en GNU/Linux alguna distribución que se adepte a nuestras necesidades, siendo la mas popular Ubuntu, por supuesto que al ser software comunitario no tienen soporte oficial, en vez tienen una comunidad voluntaria detrás. Cyber Cirujas es una organización que brinda capcitación acerca de como reciclar teléfonos, computadoras, etc que puede ser de utilidad ante presupuestos escasos y necesidades profesionales. Si bien la gran mayoría de los usuarios utilizan Windows en computación y Android en Telefonía por tecnologías de acceso, a diferencia de Apple donde todos sus dispositivos están pensados para funcionar dentro de un ecosistema cerrado pero costoso y sin aplicaciones ni programas grauitos practicamente, eso no significa que no existan alternativas a los mismos y que estos no puedan brindar una experiencia similar sin sacrificar demasiado.</p>
-	<p>La Gcam es la aplicación de cámara utilizada en los teléfonos Nexus y Pixel de Google, la cual sorprende particularmente por los avances de Google en la fotografía computacional, permitiendo obtener muchas veces mejores resultados que con la aplicación de cámara original del fabricante en un hardware de gama media. Se han lanzado versiones no oficiales para distintas marcas. Gcamator es una app que permite instalar modelos de gcam en ciertos teléfonos sin necesidad de rootearlo.</p>
-	<a href="https://linktr.ee/cybercirujas">Cyber Cirujas</a>
-	<p>"Luchando contra la obsolescencia programada, una compu por vez."</p>
-	<a href="AlternativeTo.net" target="_blank">AlternativeTo</a>
-	<p>"AlternativeTo es un servicio gratuito que te ayuda a encontrar mejores alternativas a los productos que amas y odias." Traducido con Kagi Translate.</p>			
-	<p>Si bien la democratización en el acceso a dispositivos y herramientas multimedia permite que cada vez mas personas puedan generar y crear contenido de manera mas económica no implica que cada vez mas personas se dediquen a ello necesariamente, ya que potencia la labor de aquellas personas que si ejerzan oficios y profesiones artísticos.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.becasting.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Backstage</h4>
+	<p>"Backstage conecta proyectos creativos con el mejor talento. Ayudamos a contratar personal para más de 50.000 proyectos creativos al año en cine, televisión, anuncios, contenido de marca, teatro y marketing experiencial." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.backstage.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>WASO</h4>
+	<p>"WASO es tu socio digital, llevamos tu negocio hacia nuevos volúmenes de venta y hacemos que puedas enfocarte en lo que de verdad te gusta, expandiendo tu marca en linea de forma diferenciada."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://somoswaso.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/informatica.jpg" alt="Logo de software" class="img-fluid">
+    </div>
+  </div>
+	<h2>Programas y Aplicaciones</h2>
+	<p>Existe <strong>software</strong> de todo tipo: gratis, con períodos de prueba limitados (<strong>free trial</strong> o <strong>demo</strong>) o ilimitados, de pago completo o de <strong>código abierto</strong>. Estas últimas permiten conocer su funcionamiento interno y modificar el código para mejorar sus capacidades. Por otro lado existen soluciones gratuitas pero con <strong>marca de agua</strong>, es decir con un logo que graba la propiedad intelectual de origen, como las marcas de agua visuales en imágen y video y las de audio en música, pistas sonoras, etc.</p>
+	<p>En el ámbito de la telefonía, una alternativa destacada a Android sin los servicios de Google es LineageOS. En el mundo de la computación, es posible encontrar reemplazos para Windows sin renunciar a aplicaciones de uso cotidiano. Entre las distribuciones de GNU/Linux, la más popular es Ubuntu, aunque existen muchas otras que pueden adaptarse a necesidades específicas. Cabe mencionar que, al tratarse de software comunitario, no cuentan con soporte oficial, sino con el respaldo de comunidades voluntarias.</p>
+	<p>Una iniciativa relevante en este ámbito es Cyber Cirujas, una organización que brinda capacitación sobre reciclaje de teléfonos, computadoras y otros dispositivos, lo que puede ser útil para quienes tienen presupuestos limitados pero necesidades profesionales.</p>
+	<p>Si bien la mayoría de los usuarios utilizan Windows en computadoras y Android en teléfonos debido a su accesibilidad, existen alternativas que pueden ofrecer una experiencia similar sin sacrificar demasiado. En contraste, los dispositivos de Apple operan dentro de un ecosistema cerrado y costoso, con menos opciones de software gratuito.</p>
+	<h4>AlternativeTo</h4>
+	<p>"AlternativeTo es un servicio gratuito que te ayuda a encontrar mejores alternativas a los productos que amas y odias." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="AlternativeTo.net" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h5>GCam y fotografía computacional</h5>
+	<p>GCam es la aplicación de cámara utilizada en los teléfonos Nexus y Pixel de Google. Gracias a los avances en <strong>fotografía computacional</strong>, permite obtener resultados superiores a los de muchas cámaras nativas, incluso en dispositivos de gama media.</p>
+	<p>Existen versiones no oficiales de GCam adaptadas a distintas marcas de teléfonos. Una herramienta útil en este sentido es <strong>Gcamator</strong>, una app que permite instalar versiones compatibles de GCam en ciertos modelos sin necesidad de rootear el dispositivo.</p>			
+	<p>Si bien la democratización en el acceso a dispositivos y herramientas multimedia permite que cada vez más personas generen y creen contenido de manera más económica, esto no significa que más personas se dediquen necesariamente a ello. En cambio, esta accesibilidad potencia el trabajo de quienes ejercen oficios y profesiones artísticas.</p>
+	<h4>Canva</h4>
+	<p>"Con Canva, es muy fácil crear y compartir diseños profesionales."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.canva.com/es_ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+    </button>
+  </div>
+	<h4>Adobe Express</h4>
+	<p>"La aplicación para crear cualquier cosa de forma rápida y sencilla."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.adobe.com/es/express/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/finanzas.jpg" alt="Logo de finanzas" class="img-fluid">
+    </div>
+  </div>
 	<h3>Financiamiento</h3>
-	<p>Dentro de lo que es el financiamiento existen múltiples formas de obtenerlo y por lo general se utilizan plataforma de crowdfunding,  mecenazgo colaborativo por aprecio o cuyo impacto del proyecto pueda resultar atractivo para inversores conforme a estudios de mercado y proyección en términos de ROI (retorno de inversión) o con concocimiento en web 3 mediante tokenización.</p>
-	<p>Por ejemplo</p>	
-	<a href="https://cafecito.app/" target="_blank">Cafecito</a>
+	<p>Existen diversas formas de obtener financiamiento, siendo el crowdfunding y el mecenazgo colaborativo algunas de las más utilizadas. Dependiendo del tipo de proyecto, el respaldo puede provenir del aprecio del público o del atractivo que represente para inversores, según estudios de mercado y proyecciones de retorno de inversión (ROI).</p>
+	<h4>Cafecito</h4>
 	<p>"Cafecito es una plataforma de crowdfunding que busca unir a creadores de contenido, ONGs o proyectos con gente que quiera aportar a lo que hacen."</p>
-	<a href="https://www.matecito.co/" target="_blank">Matecito</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://cafecito.app/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Matecito</h4>
 	<p>"Matecito es una plataforma de financiamiento colectivo que puede ser utilizada por cualquier persona que desee recibir donaciones de una manera sencilla y con la menor comisión."</p>
-	<a href="https://www.bluebits.club/es" target="_blank">Bluebit</a>
-	<p>"Somos la única (comunidad financiera) que desbloquea oportunidades patrocinando proyectos y generando ingresos a partir de la tokenización de acciones."</p>	
-	<a href="https://orillasnuevas.org/" target="_blank">Orillas Nuevas</a>
-	<p>"“Orillas Nuevas ~ Nouveaux Rivages” es un programa de apoyo a las industrias culturales y creativas (ICC) de Argentina promovido por el Institut français d’Argentine, gracias al excepcional apoyo del Ministerio de Europa y Asuntos Exteriores de Francia. Su implementación se realiza en colaboración con la Fundación Williams y con la participación de la Fundación Medifé."</p>
-	<h3>Monotributista, Autónomo, Asociado</h3>
-	<p>Existen varias posibilidades en Argentina ya sea facturando, conformando o uniéndose a otra entidad:</p>
-	<a href="https://www.afip.gob.ar/monotributo/" target="_blank">Monotributo</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.matecito.co/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h4>The Rabbit Hole</h4>
+  <p>"¡Somos #TheRabbitHole! Una incubadora y aceleradora de #videojuegos que viene a impulsar la industria de la región. Además, contamos con un fondo de inversión específico para el sector."</p>  
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://linktr.ee/therabbitholegames" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<p>Asimismo, en el entorno Web3, es posible acceder a financiamiento a través de la tokenización, lo que permite nuevas oportunidades de inversión y participación descentralizada.</p>
+	<h4>Bluebit</h4>
+	<p>"Somos la única (comunidad financiera) que desbloquea oportunidades patrocinando proyectos y generando ingresos a partir de la tokenización de acciones."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.bluebits.club/es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/facturacion.jpg" alt="Logo de Facturación" class="img-fluid">
+    </div>
+  </div>
+	<h3>Facturación</h3>
+	<p>El régimen se divide en Monotributo promovido (el cual no aporta a obra social y casi tampoco al aporte previsional) y social (ya puede tener una obra social y puede conformarse en cooperativas) como promotores de facturación para economías populares al cual podríamos llamar extraoficialmente como "Régimen Popular". El Régimen Simplicado (monotributistas, cuentapropistas) comprende las categorías de la A a la K, y no requieren servicios de contaduría aunque no pueden conformar sociedades comerciales. Y finalmente el Régimen General (respontables inscriptos, autónomos y sociedades) los cuales tributan más y requieren contabilidad, además de que no pueden tener Obra Social y deben solicitar una Prepaga.</p>
+	<h4>Monotributo en ARCA (exAfip)</h4>
 	<p>"Un régimen para pequeños contribuyentes, que unifica el pago de IVA y Ganancias con los aportes jubilatorios y la obra social."</p>
-	<a href="https://www.argentina.gob.ar/justicia/derechofacil/leysimple/sociedad-por-acciones-simplificada-sas" target="_blank">Sociedades de Acciones Simplificadas</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.afip.gob.ar/monotributo/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>SAS</h4>
 	<p>"La Sociedad por Acciones Simplificada es un nuevo tipo de sociedad: se forma más rápido y con trámites más simples."</p>
-	<a href="https://www.argentina.gob.ar/constitucion-de-cooperativas/cooperativas-de-trabajo" target="_blank">Cooperativas de Trabajo Limitadas</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/justicia/derechofacil/leysimple/sociedad-por-acciones-simplificada-sas" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Cooperativas de Trabajo Limitadas</h4>
 	<p>"El trámite de constitución de cooperativas de trabajo está segmentado según la cantidad de personas asociadas al momento de la fundación ya que esto determinará la conformación del Consejo de Administración"</p>
-	<p>Si deciden facturar localmente o internacionalmente deben saber que estarán por su cuenta, fuera de cualquier convenio colectivo, deberán fijar una tarifa plana por su trabajo con lo cual pueden consultar a un contador, asociaciones profesionales, etc.
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/constitucion-de-cooperativas/cooperativas-de-trabajo" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h4>Prestación de servicios al Exterior</h4>
+  <p>"Las exportaciones de servicios son las prestaciones realizadas en el país, sin que medie relación de dependencia y cuya utilización económica se efectúa en el exterior."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.afip.gob.ar/monotributo/exportacion-servicios/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<p>Si deciden facturar localmente o internacionalmente deben saber que estarán por su cuenta, fuera de cualquier convenio colectivo, deberán fijar una tarifa plana por su trabajo con lo cual pueden consultar a un contador, colegios profesionales, etc.
 	</p>
-	<h4>DAO Descentralized Autonomous Organization, en español Organización Autónoma Descentralizada.</h4>
-	<a href="https://www.fwb.help/" target="_blank">FWB o Friends With Benefits</a>
-	<p>"Friends with Benefits es un nuevo tipo de red social compuesta por creativos y constructores que creen en la promesa de un internet mejor."</p>
-	<p>"Todos poseemos tokens $FWB como una forma de financiar y gobernar colectivamente nuestros esfuerzos comunitarios y ser copropietarios de lo que creamos juntos." Traducido con Kagi Translate.</p>
-	<h4>Cooperativas - ONG - OSC - Fundaciones - Asociaciones Civíles - Empresas Recuperadas</h4>
-	<a href="https://www.essapp.coop/" target="_blank">ESSApp</a>
+
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/asociacion.jpg" alt="Logo de asociación" class="img-fluid">
+    </div>
+  </div>
+	<h3>Asociación</h3>	
+	<p>Además de poder ser freelancer, la asociación permite emprender en conjunto, repartiendo roles en función a especialidades, capital, tiempo, etc como asi también podes continuar un proyecto ya iniciado junto a</p>
+	<h3>Organización Autónoma Descentralizada</h3>
+	<p>Una DAO (sigla en inglés de Decentralized Autonomous Organization) es una forma de organización que funciona mediante reglas codificadas en contratos inteligentes (smart contracts) sobre una cadena de bloques (como Ethereum, por ejemplo), lo que permite su gestión sin necesidad de una autoridad central o intermediarios.</p>
+	<ul>
+		<li><strong>Descentralización</strong>: No hay un jefe o una entidad central. Las decisiones se toman colectivamente por los miembros mediante votaciones.</li>
+		<li><strong>Autonomía</strong>: Las reglas están predefinidas en código y se ejecutan automáticamente sin intervención humana, salvo por el voto de los participantes.</li>
+		<li><strong>Gobernanza por fichas (tokens)</strong>: Los participantes suelen tener tokens de gobernanza que les dan derecho a votar sobre propuestas (como inversiones, cambios en las reglas, etc.).</li>
+		<li><strong>Transparencia</strong>: Todo lo que ocurre en la DAO (propuestas, votos, transacciones) es público y verificable en la blockchain.</li>
+		<li><strong>Finanzas compartidas</strong>: El capital (por ejemplo, fondos en criptomonedas) está controlado colectivamente y se gestiona según lo decidan los miembros.</li>
+	</ul>
+	<h4>Club Argentino de Tecnología</h4>
+	<p>"Somos una Organización Autónoma Descentralizada de locos por la innovación que quiere cambiar el mundo, sí, desde Argentina."</p>
+	<p>Si bien CAT no es una DAO artística como tal si es un ejemplo argentino que podría aplicar tecnología al arte.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://clubartec.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h4>Descentraland DAO</h4>
+  <p>"Construido sobre tecnología blockchain, ofrece una próspera economía de activos digitales donde los creadores conservan el 97.5% de sus ganancias, la mayor participación en los ingresos de la industria, con un 2.5% reinvertido en la comunidad a través de la DAO de Decentraland." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center"> 
+      <a class="nav-link" href="https://decentraland.org/dao/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div> 
+  <h4>OLA GG subDAO</h4>
+  <p>"Ola GG es una subDAO de la DAO principal de Yield Guild Games (YGG) que se enfoca en servir a los jugadores de habla hispana de todo el mundo." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://wpp.olagg.io/ola-gg-ygg-sub-dao" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h3>Tercer Sector</h3>
+	<p>Conocido por ser un sector intermedio entre el público (estatal) y el privado (comercial), este sector comprende aquellos sectores de economía social y comunitaria, desde cooperativas, ONG, OSC, Fundaciones, Asociaciones Civíles, Empresas Recuperadas. Donde suele haber mucho trabajo pero no suele ser bien pago dado que esta comprendido dentro de la economía popular.</p>
+	<h4>ESSApp</h4>
 	<p>"En ESSApp podrás buscar a las organizaciones de la Economía Social y Solidaria: cooperativas,"</p>
-	<a href="https://www.rutacoop.com.ar/" target="_blank">Ruta de las cooperativas</a>
-	<p>"La Ruta Argentina de Cooperativas tiene como objeto valorizar el potencial de un conjunto de experiencias cooperativas profundamente arraigadas en los territorios y la historia local del país."</p>
-	<a href="https://www.idealist.org/es" target="_blank">idealist.org</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.essapp.coop/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>idealist.org</h4>
 	<p>"Idealist es una organización sin fines de lucro con sede en Nueva York. Fue fundada en 1995 con una misión: Trabajando con otros, con generosidad y respeto mutuo, Idealist busca construir un mundo donde todas las personas puedan vivir libre y dignamente. Para ello, invitamos a todas esas personas a imaginar, conectar y actuar."</p>
-	<h4>Colectivos - Redes</h4>
-	<a href="https://web.facebook.com/share/g/1DwSSP4rD1/" target="_blank">Clandestina Weekend Nerd</a>
-	<p>"Clandestina funcionó activamente entre 2008 y 2014 y fué un puntapié en la conformación de colectivos artísticos de referencia para las generaciones de artistas más recientes.".
-	<a href="https://www.newtro.xyz/" target="_blank">Newtro Arts</a>
-	<p>"Newtro Arts es una organización de gestores culturales con sede en Argentina que trabaja para promover, educar e incorporar a nuevos artistas y agentes culturales latinoamericanos en la tecnología blockchain. El colectivo de artistas de Newtro está compuesto por artistas que participaron en nuestro taller "Arte y Web3" y que eligen ser parte de nuestro motor colectivo para representar la cultura local dentro del entorno virtual de Web3."</p>
-	<a href="https://amplifydai.com/" target="_blank">Amplify DAI</a>
-	<p>"Amplify Digital Arts Initiative es una iniciativa conjunta del British Council, Artlab y la Fundación Williams. Desde 2018, AMPLIFY D.A.I conecta y empodera a una red activa de artistas que trabajan en los sectores de las artes digitales, el sonido y la narración inmersiva en Canadá, América Latina y el Reino Unido. Aprovechando diferentes culturas y experiencias, AMPLIFY D.A.I fomenta una plataforma para el diálogo sobre equidad de género y compromete recursos para actividades de desarrollo profesional y de capacitación, intercambios de pares y oportunidades de exhibición en festivales, eventos y residencias dinámicas y contemporáneas." Traducido con Kagi Translate</p>
-	<a href="https://somoslavillana.carrd.co/" target="_blank">La Villana</a>
-	<a href="https://www.somoslavillana.com/" target="_blank">La Villana</a>
-	<p>"...un equipo de creación iberoamericano con valores de innovación, diversidad y colaboración. Somos Andrea Meneses y Gabi Cortés, creadoras con experiencia en producción, community building y dirección artística."</p>
-	<a href="https://witargentina.ar/" target="_blank">Women In Tech (WIT) Argentina</a>
-	<p>"Un espacio de encuentro y debate que busca acortar la brecha de géneros en el sector CTIM coordinando iniciativas para obtener un impacto positivo en la inserción de mujeres y diversidades en la industria de la tecnología." En el caso de las artes, el diseño y la ingeniería multimedia es relevante en áreas tecnológicas como la programación web, programación de videojuegos, robótica artística, etc.</p>
-	<a href="https://bitbangclub.com/es/informacion/" target="_blank">Bitbang ONG</a>
-	<p>"BITBANG es una organización sin fines de lucro, creada en 2014, para el impulso y difusión de la animación, videojuegos y arte digital vanguardistas. Somos una plataforma que difunde y promueve propuestas artísticas experimentales, arriesgadas y autorales, y da lugar a voces diversas."</p>
-	<a href="https://animacioncarton.com/quienes-somos/" target="_blank">Colectivo Cartón</a>
-	<p>"COLECTIVO CARTÓN. Integrado por personas vinculadas al mundo de la comunicación y las artes audiovisuales, quienes trabajan en forma voluntaria durante diez meses cubriendo todas las áreas que la puesta en marcha del festival requiere: Relaciones Institucionales, Prensa y Comunicación, Técnica, Programación, etc. El Colectivo Cartón está integrado por: Martín Araneda, Maxi Bearzi, Diego Cabarcos, Mariana Costa, Marisa Fernández Villalba, Leandro Seoane, Agustín Sinibaldi y César Barrangou."</p>
-	<a href="https://www.el-libro.org.ar/fundacion/" target="_blank">Fundación El Libro</a>
-	<p>"Entidad civil sin fines de lucro constituida por la Sociedad Argentina de Escritores, la Cámara Argentina del Libro, la Cámara Argentina de Publicaciones, el Sector de Libros y Revistas de la Cámara Española de Comercio, la Federación Argentina de la Industria Gráfica y Afines, y la Federación Argentina de Librerías, Papelerías y Afines."</p>
-	<a href="http://lodo.com.ar/" target="_blank"></a>
-	<p>"LODO es la construcción permanente y continua de una red de artistas, gestores, instituciones, fondos públicos y privados que fortalece el desarrollo de proyectos emergentes de danza, teatro, performance, site specific, arte contemporáneo y activismo en interacción con contextos culturales específicos."</p>
-	<h4>Sindicatos</h4>
-	<a href="https://www.argentina.gob.ar/trabajo/buscador-de-sindicatos">Buscador de sindicatos | Argentina</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.idealist.org/es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+  <h3>Sindicatos</h3>
+	<p>"Los sindicatos son organizaciones creadas por los trabajadores con el propósito de defender sus derechos laborales y sus intereses económicos y sociales."</p>
+	<h4>Buscador de sindicatos</h4>
 	<p>"Buscando por actividad y por asociaciones se encuentran todas las entidades sindicales registradas en la STEySS."</p>	
-	<a href="https://www.trabajadoresdearte.org/" target="_blank">Trabajadores de Arte Contemporáneo</a>
-	<p>"Trabajadores de Arte Contemporáneo es una iniciativa colaborativa para el establecimiento de buenas prácticas laborales y remuneración justa de los trabajadores de arte, tendientes a consolidar y profesionalizar a las escenas locales de América Latina."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/trabajo/buscador-de-sindicatos" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	 
+	<h3>Colectivos</h3>
+	<p>También conocidos como redes, agrupaciones, corrientes, organizaciones y proyectos artísticos nacionales e internacionales que sostienen emprendimientos culturales con fines de entretenimiento e investigación propios, tanto físicos como digitales.</p>
+	<h4>Clandestina Weekend Nerd</h4>
+	<p>"Clandestina funcionó activamente entre 2008 y 2014 y fué un puntapié en la conformación de colectivos artísticos de referencia para las generaciones de artistas más recientes."
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.facebook.com/groups/mccwn/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+      </a>
+  </div> 
+	<h4>MUTA Multimedia</h4>
+	<p>"MUTA multimedia es un grupo de arte multimedia fundado en febrero de 2020 por el artista transmedia Luciano Saiz. Es objetivo del grupo crear, experimentar y producir obras multimediales híbridas en el cruce de disciplinas como el teatro, la performance, la instalación de realidades extendidas o el cine."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://mutamultimedia.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Newtro Arts</h4>
+	<p>"Newtro Arts es una organización de gestores culturales con sede en Argentina que trabaja para promover, educar e incorporar a nuevos artistas y agentes culturales latinoamericanos en la tecnología blockchain."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.newtro.xyz/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Amplify DAI</h4>
+	<p>"Desde 2018, AMPLIFY D.A.I conecta y empodera a una red activa de artistas que trabajan en los sectores de las artes digitales, el sonido y la narración inmersiva en Canadá, América Latina y el Reino Unido." Traducido con Kagi Translate</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://amplifydai.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>La Villana</h4>
+	<p>"un equipo de creación iberoamericano con valores de innovación, diversidad y colaboración. Somos Andrea Meneses y Gabi Cortés, creadoras con experiencia en producción, community building y dirección artística."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://somoslavillana.carrd.co/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Women in games Argentina</h4>
+	<p>"Bienvenides! Women in Games Argentina es una comunidad de networking de profesionales y aficionadxs de la industria de videojuegos, que nuclea a mujeres, personas trans y no binaries de Argentina."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.womeningamesar.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Bitbang ONG</h4>
+	<p>"BITBANG es una organización sin fines de lucro, creada en 2014, para el impulso y difusión de la animación, videojuegos y arte digital vanguardistas."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://bitbangclub.com/es/informacion/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Fundación Argentina de Videojuegos</h4>
+	<p>"Cooperativa para el fomento de los videojuegos como canal de comunicación, expresión, investigación y educación."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://linktr.ee/fundav" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
 	<h3>Espacios</h3>
-	<a href="https://artlabpro.net/" target="_blank">Artlab</a>
-	<p>"Artlab es un laboratorio que explora y emplea las nuevas tecnologías y la creatividad digital para desarrollar proyectos artísticos, estimular nuevas formas de expresión e impulsar el pensamiento crítico desde Latinoamérica para el mundo. Trabajamos con los artistas más relevantes en la intersección de arte, música y tecnología, siempre con espíritu inclusivo y colaborativo."</p>
-	<a href="http://www.biopus.ar/" target="_blank">Biopus</a>
-	<p>"Exploramos el arte electrónico desde múltiples perspectivas. Elige tu camino: Arte – Una bitácora de nuestras exploraciones y proyectos artísticos. (Español)
-	Servicios – Soluciones creativas para nuevas experiencias digitales."</p>
-	<a href="https://www.espaciobyte.org/" target="_blank">Espacio Bytes</a>
-	<p>"Espacio Byte es un museo en línea dedicado al arte digital. Un entorno natural para la exhibición de trabajos artísticos que, creados mediante el uso de tecnología digital, proponen nuevos lenguajes, poéticas y valores estéticos"</p>
-	<a href="https://www.fundaciontelefonica.com.ar/" target="_blank">Fundación Telefónica Movistar Argentina</a>
-	<p>"Presentamos a la sociedad las últimas expresiones de la cultura, con formatos digitales, innovadores y creativos."</p>
-	<a href="https://www.cceba.org.ar/" target="_blank">Centro Cultural de España en Buenos Aires</a>
-	<p>"El CCEBA Centro Cultural de España en Buenos Aires forma parte de la Red de Centros de Cooperación Cultural de la Agencia Española de Cooperación Internacional para el Desarrollo (AECID), uno de los principales instrumentos de la Cooperación Española (CE) para implementar las políticas de cooperación cultural al desarrollo y la aplicación de la Agenda 2030, compromiso y estrategia internacional para alcanzar los Objetivos de Desarrollo Sostenible (ODS)."</p>
-	<a href="https://caibuenosaires.com/">Centro Audiovisual Inmersivo</a>
-	<p>"Un espacio en donde creatividad, arte y tecnología se funden en un entorno único que estimula todos los sentidos. Una experiencia en la que el espectador se convierte en protagonista de la escena y se sumerge en un mundo de imágenes y sonidos envolventes que lo transportan hacia lo impredecible."</p>
-	<a href="https://palaciolibertad.gob.ar/" target="_blank">Palacio Libertad (ex CCK)</a>
-	<p>"Edificio emblemático de la Ciudad de Buenos Aires, antiguo Palacio de Correos y Telégrafos, cuenta con más de 100 000 metros cuadrados de superficie y una infraestructura a la altura de los centros culturales más importantes del mundo."</p>
-	<a href="https://buenosaires.gob.ar/gobierno/laboratorio-tecnologico-de-la-ciudad" target="_blank">BA Laboratorio Tecnológico</a>
-	<p>"El Laboratorio Tecnológico busca democratizar el acceso a las tecnologías para que todos/as los/as vecinos/as puedan conocer, aprender y tener la posibilidad de experimentar con diferentes tipos de herramientas." Ubicado en el centro metropolitano de diseño.</p>	
-	<a href="https://www.tresdefebrero.gov.ar/tecno3f/" target="_blank">Tecno 3f - Laboratorio de impresión 3D</a>
-	<p>"Destinado a empresas, emprendedores y a lugares de formación para el trabajo en impresión aditiva. El laboratorio forma parte del espacio Tecno 3F en Santos Lugares y es una iniciativa pública privada entre la Municipalidad de Tres de Febrero y la empresa Chimak 3D. Además, contamos con tecnologías FDM y SLA."</p>
-	<a href="https://auravirtualgallery.com/" target="_blank"></a>
-	<p>"Aura Virtual Gallery es una plataforma de impulso y difusión de artistas representativos del pensamiento y producción contemporáneas. La galería se materializa de manera pop-up en ferias y exhibiciones, trabaja con una programación que amplifica los límites del galerismo tradicional, se interesa por los lazos transdisciplinares, exhibe y asocia proyectos individuales, colectivos, experimentales y de investigación. Asume la diversidad de espacios, formatos y actores de las prácticas artísticas actuales y emergentes. El rol de Aura Virtual Gallery es visibilizar y sostener las nuevas prácticas contemporáneas a partir de muestras y de instancias de mercado como así también a partir de la teoría y la crítica, interactuando con curadores, críticos y coleccionistas que completan la escena."</p>
+	<p>Se trata de espacios y plataformas tanto físicos como virtuales para el desarrollo de eventos, proyectos, exhibicones e investigación para emprendimientos culturales de distintos artistas.</p>
+  <h4>Centro Audiovisual Inmersivo</h4>
+  <p>"Un espacio en donde creatividad, arte y tecnología se funden en un entorno único que estimula todos los sentidos. Una experiencia en la que el espectador se convierte en protagonista de la escena y se sumerge en un mundo de imágenes y sonidos envolventes que lo transportan hacia lo impredecible."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://caibuenosaires.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Mugara</h4>
+	<p>"Somos una Fundación cuyo fin es idear, investigar, desarrollar, difundir y producir acciones que vinculan y ponen en diálogo el arte y la tecnología."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.mugara.org.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>IQLab</h4>
+	<p>"Equipo de artistas electrónicos fundado en 2006 en Buenos Aires, Argentina, que descubre y crea con medios electrónicos y nuevas tecnologías."</p>	
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.iqlab.com.ar/index.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
 	</section>	
-		</main>
+	</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -274,6 +707,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>

@@ -1,9 +1,3 @@
-/*!
- * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2024 The Bootstrap Authors
- * Licensed under the Creative Commons Attribution 3.0 Unported License.
- */
-
 (() => {
   'use strict'
 
@@ -39,6 +33,10 @@
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active use')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    
+    // Verificación para evitar errores si los elementos no existen
+    if (!btnToActive || !activeThemeIcon || !themeSwitcherText) return;
+
     const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
@@ -78,3 +76,86 @@
       })
   })
 })()
+
+/*modo oscuro*/
+
+let lastScroll = 0;
+const navbar = document.querySelector(".navbar");
+
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) 
+    {
+      navbar.classList.add("navbar-hidden");
+    } 
+    
+    else 
+    {
+      navbar.classList.remove("navbar-hidden");
+    }
+
+    lastScroll = currentScroll;
+  });
+}
+
+/*barra inteligente*/
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll("article").forEach(article => {
+  observer.observe(article);
+});
+
+/*cubo vértical*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Cambiado getElementById por querySelector
+    const carouselEl = document.querySelector('#carouselExampleCaptions');
+    const fondo = document.querySelector('#fondo-dinamico');
+
+    // Esta condición IF evita el error "Cannot read properties of null" 
+    // cuando no estás en la página del index.
+    if (carouselEl && fondo) {
+        const inner = carouselEl.querySelector('.carousel-inner');
+        const items = carouselEl.querySelectorAll('.carousel-item');
+
+        function moverCilindro() {
+            const activo = carouselEl.querySelector('.carousel-item.active');
+            if (!activo) return;
+
+            const indice = Array.from(items).indexOf(activo);
+            
+            // Cada slide son 51.42 grados (360/7)
+            const grados = indice * (360 / 7);
+            
+            // Rotamos el cilindro completo
+            if (inner) {
+                inner.style.transform = `rotateY(${-grados}deg)`;
+            }
+            
+            // Actualizamos fondo dinámico
+            const imgInside = activo.querySelector('img');
+            if (imgInside) {
+                fondo.style.backgroundImage = `url('${imgInside.src}')`;
+            }
+        }
+
+        // Escuchamos a Bootstrap cuando cambia de slide
+        carouselEl.addEventListener('slid.bs.carousel', moverCilindro);
+
+        // Inicio manual
+        moverCilindro();
+    }
+});
+
+/*Carrusel 3D*/

@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
-          						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
-          						</ul>
-        					</li>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+                      </ul>
+                  </li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
@@ -112,24 +83,218 @@
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>Economía Naranja</h2>
-	<p>Si bien estamos en la transición de la Cuarta Revolución Industrial que nace desde los 2000, caracterizada por el auge de Inteligencia artificial (IA), Internet de las cosas (IoT), blockchain, impresión 3D, biotecnología, etc. hacia la quinta, caracterizada por la colaboración entre humanos y máquinas inteligentes, priorizando la sostenibilidad, la personalización masiva y un enfoque más ético y humano de la tecnología. Dentro de ella nace en America Latina el concepto de la economía naranja.</p> 
-	<p>También conocida como economía/industria creativa, artística, cultural: La economía naranja es un modelo productivo en el que los bienes y servicios que se comercializan tienen un valor intelectual, debido a que surgen de las ideas y del conocimiento de sus creadores. Explicado de otra forma, son todas las actividades económicas relacionadas con el arte, la cultura, investigación, ciencia, tecnología, entre otras, en las que la creatividad es la principal característica. Por ello, también es conocida como economía creativa.</p>
+  <div class="marco">
+    <img src="img/eco-naran-1.jpg" alt="Logo de economía naranja" class="img-fluid">
+  </div>
+	<h1>Panorama</h1>
+	<p>Si bien estamos en la transición de la <strong>Cuarta Revolución Industrial</strong> que nace desde los 2000, caracterizada por el auge de Inteligencia artificial (IA), Internet de las cosas (IoT), la cadena de bloques (blockchain), impresión 3D, biotecnología, etc. hacia la <strong>Quinta Revolución Industrial</strong>, caracterizada por la colaboración entre humanos y máquinas inteligentes, priorizando la sostenibilidad, la personalización masiva y un enfoque más ético y humano de la tecnología nace en America Latina el concepto de la <strong>economía naranja</strong>.</p>   
+	<p>También conocida como economía o industria creativa, artística, cultural: La <strong>economía naranja</strong> es un modelo productivo en el que los bienes y servicios que se comercializan tienen un valor intelectual, debido a que surgen de las ideas y del conocimiento de sus creadores. Explicado de otra forma, son todas las actividades económicas relacionadas con el arte, la cultura, investigación, ciencia, tecnología, entre otras, en las que la creatividad es la principal característica. Por ello, también es conocida como economía creativa.</p>
 	<p>Aunque el nombre de economía naranja surgió en un principio por la asociación que tradicionalmente ha existido entre el color naranja y la creatividad, y su enfoque era, principalmente, hacia la industria cultural y artística, con el paso del tiempo y debido, en parte, a la influencia cada vez mayor de la tecnología, se empezaron a introducir nuevos sectores, como las telecomunicaciones, robótica, programación, creación de contenidos, entre muchos otros. Eso sí, el principal requisito sigue siendo que se trate de ideas capaces de transformarse en bienes o servicios.</p>
-	<p>Según datos ofrecidos por la Unesco -Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura-, la economía creativa representa el 3% del PIB -Producto Interior Bruto- mundial y emplea a más de 30 millones de personas en todo el mundo. Al ser una industria basada en las ideas, se caracteriza por la innovación constante, los productos con características únicas -no elaborados por volumen-, o el uso de las herramientas digitales en sus procesos.</p>
-	</section>	
-		</main>
+  <h2>Datos culturales de Argentina</h2>
+  <h3>Secretaría de Cultura</h3>
+  <p>"Impulsamos políticas públicas para el desarrollo de una cultura nacional que fomente la creación y las expresiones culturales, teniendo a la pluralidad como eje."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/cultura" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>SInCA</h3>
+  <p>"El Sistema de Información Cultural de la Argentina es un programa dependiente de la Dirección de Planificación y Seguimiento de Gestión de la Unidad de Gabinete de Asesores del Ministerio de Cultura de la Nación, que produce, sistematiza y difunde información referida a la actividad cultural."</p>
+  <p>Depende de la Secretaría de Cultura del Ministerio de Capital Humano (exMinisterio de Cultura de la Nación.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.sinca.gob.ar/default.aspx" target="_blank">SInCA
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+    </button>
+  </div>
+  <h2>Arte Contemporáneo Multimedia</h2>
+  <p>Los siguientes sitios permiten el descubrimiento de artistas y diseñadores multimediales, como así también de colectivos y espacios de experimentación, la promoción y difusión de convocatorias a eventos, becas, premios, residencias, etc del arte y diseño multimediales dentro del campo del arte contemporáneo.</p>
+  <h3>VADB</h3>
+  <p>"VADB es una iniciativa colaborativa especializada en Arte Contemporáneo Latinoamericano, que reúne y vincula información sobre obras, personas, organizaciones, eventos y publicaciones. VADB está basado en un modelo de relaciones de contenidos que organiza tanto prácticas institucionales y no-institucionales basándonos en los conceptos de Escenas Locales."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://vadb.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Arte Informado</h3>
+  <p>"Fundado en 2001, Arteinformado (AI) es un medio digital sin fines de lucro dirigido a profesionales e interesades en el arte que reúne la información más relevante sobre los sistemas del arte en España, Portugal y Latinoamérica y sus conexiones globales."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.arteinformado.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Hipermédula</h3>
+  <p>"Hipermedula.org es una plataforma digital de comunicación cultural y artística que se desarrolla como espacio de integración de la producción cultural, e interacción con los diferentes actores, creadores y público de la cultura iberoamericana."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://hipermedula.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Arte Online</h3>
+  <p>"Arte Online es la primera plataforma de difusión en Internet focalizada en las artes plásticas argentina contemporánea que reúne el contenido editorial de los 10 últimos años del escenario artístico en nuestro país."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.arte-online.net/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Revista Acromática</h3>
+  <p>"Acromática es una revista imprescindible para estar al día de todo lo que sucede o va a suceder en el mundo del Arte; amplia agenda cultural, reportajes, críticas, eventos y mucho más…"</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://acromaticarevista.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Revista Magenta</h3>
+  <p>"Recorrido por las exposiciones de arte, ferias y bienales en Argentina y en el exterior."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.revistamagenta.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+    
+  <div class="imgs">
+    <div class="imgs-marco">
+      <img src="img/analisis.jpg" alt="Logo de Análisis Artístico" class="imgs">
+    </div>
+  </div> 
+  <h3>Periodismo, Análisis y Crítica Cultural</h3>
+  <p>El <strong>periodismo artístico</strong>, la <strong>crítica especializada</strong> y el <strong>análisis de obras/productos multimediales</strong> desempeñan un papel fundamental en las artes y el diseño multimediales. A través de la investigación, la opinión y la reseña, estos medios permiten comprender mejor el impacto cultural, técnico y creativo de diversas producciones. Desde los videojuegos hasta series, películas, etc.</p>
+  <h3>Malditos Nerds</h3>
+  <p>"Somos gamers, fanáticos de los videojuegos y la cultura pop y de compartir la experiencia."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.youtube.com/@MalditosNerdsVX" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Only Games</h3>
+  <p>"Todas las novedades del mundo de los videojuegos y la tecnología. Noticias, videos, reviews y todo."</p>  
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://onlygames.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Extra Gamer</h3>
+  <p>"ExtraGamers.com.ar es una web especializada en la industria de los videojuegos. Somos un equipo de periodistas que, por encima de todas las cosas, les gusta disfrutar con los juegos."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.extragamers.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Revista REPLAY</h3>
+  <p>"la revista de la generación de 8 y 16 bits. Retrogaming para retrogamers."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://revistareplay.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Press Over</h3>
+  <p>"Periodismo de videojuegos. Reviews, investigación, noticias, opinión, entrevistas, podcast."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://pressover.news/tag/videojuegos-argentinos/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Cultura Geek</h3>
+  <p>"Cultura Geek es un multimedio argentino, creado por el periodista Augusto Finocchiaro Preci, que comenzó como un programa de radio y luego se expandió también a un sitio de noticias que agrupa todas las novedades de tecnología, videojuegos, cine, series y esports."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://culturageek.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Cultureando Pop</h3>
+  <p>"Series, pelis, música y juegos. Todas las novedades sobre el mundo de la Cultura Pop."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://cultureandopop.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	   </section>	
+		 </main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -141,6 +306,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>

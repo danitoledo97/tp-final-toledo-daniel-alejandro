@@ -22,76 +22,47 @@
     <symbol id="sun-fill" viewBox="0 0 16 16">
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
-  	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
+  </svg>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
           						</ul>
         					</li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
@@ -108,73 +79,309 @@
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
           						<ul class="dropdown-menu">
           							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
-          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Table de Posiciones</span></a></li>
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>Economía Naranja</h2>
-	<h3>Repositorios - Archivos - Registros - Acervos</h3>
-	<p>Otra de las posibilidades sería dedicarse a la recuperación de archivos multimedia históricos que conforman patrimonio cultural, en formatos analógicos, digitalizarlos, conservarlos y clasificarlos.</p>
-	<a href="https://gotika.com/home-es" target="_blank">Gotika</a>
-	<p>"Es una compañía con más de 20 años de trayectoria, dedicada específicamente a la, restauración, remasterización y preservación de patrimonio audiovisual. Fue pionera en Latinoamérica realizando el primer intermedio y la primera restauración digital. Es una de las contadas compañías en el mundo que pueden proveer restauración y remasterización integrada de altísima calidad de imagen y sonido. Es uno de los pocos laboratorios privados en el mundo con capacidad de escanear desde 4K a 20K para análisis forense y restauración de originales muy dañados. Entre sus servicios se encuentran: Investigación y Arqueología Fílmica, Limpieza, Reparación y Digitalización (Escaneo) Fílmico, Limpieza, Reparación y Digitalización (Escaneo) de Video Cintas, Restauración Fílmica y de Video, Corrección de Color y Restauración de Sonido."</p>
-	<a href="https://www.argentina.gob.ar/cultura" target="_blank">Secretaría de Cultura</a>
-	<p>"Impulsamos políticas públicas para el desarrollo de una cultura nacional que fomente la creación y las expresiones culturales, teniendo a la pluralidad como eje. Fomentamos la producción de las industrias culturales. Propiciamos la conservación y la puesta en valor de nuestro patrimonio cultural."</p>
-	<a href="https://catalogo.bn.gov.ar/F?RN=662600489" target="_blank">Biblioteca Nacional Mariano Moreno</a>
+  <div class="marco">
+    <img src="img/acervo.jpg" alt="Logo de Acervos" class="img-fluid">
+  </div>
+	<h1>Acervos</h1>
+	<p>Otra posibilidad profesional es la recuperación y preservación de archivos multimedia históricos que forman parte del patrimonio cultural. Esto implica la digitalización de materiales en formatos analógicos, su conservación y su clasificación para garantizar su acceso y resguardo a largo plazo ya sea como acervo, archivo, registro, repositorio, base de datos públicos como la <strong>Remasterización</strong>.</p>
+  <article>
+  <h2>A4E</h2>
+  <p>"A4E es una iniciativa destinada a producir arte digital, a partir de obras del mundo físico, es una plataforma de trabajo virtual para artistas, investigadores y restauradores donde se producen piezas de altísima resolución vistas en 3D."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.facebook.com/profile.php?id=61564465901402" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg> 
+      </a>
+  </div>
+	<h2>Gotika</h2>
+	<p>"Es una compañía con más de 20 años de trayectoria, dedicada específicamente a la, restauración, remasterización y preservación de patrimonio audiovisual."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://gotika.com/home-es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Biblioteca Nacional Mariano Moreno</h2>
 	<p>"Biblioteca Nacional de la República Argentina, fundada en 1810 por Mariano Moreno."</p>
-	<a href="https://www.argentina.gob.ar/interior/archivo-general-de-la-nacion" target="_blank">Archivo General de la Nación</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://catalogo.bn.gov.ar/F?RN=662600489" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Archivo General de la Nación</h2>
 	<p>"Iluminando el pasado, sirviendo al presente, construyendo el futuro."</p>
-	<a href="https://www.archivorta.com.ar/" target="_blank">Archivo Prisma</a>
-	<p>"Prisma es la plataforma web que hace posible la democratización del acceso al acervo audiovisual y sonoro del Archivo Histórico de RTA. Tal como establece el artículo 7 del Reglamento de Funcionamiento del Archivo Histórico de RTA, Prisma garantiza el acceso universal por internet del material emitido y/o grabado por Radio Nacional y la Televisión Pública, así como de piezas audiovisuales o sonoras a las que el Archivo ha accedido a través de los convenios de digitalización que RTA mantiene con diversas instituciones públicas de la Argentina."</p>
-	<a href="https://recuperar.org/" target="_blank">Plan de Recuperación de Películas Argentinas</a>
-	<p>"Ante la pérdida de derechos de autor, Laboratorios GOTIKA y DAC (Directores Argentinos Cinematográficos) decidieron asociarse para invertir y crear el Plan Recuperar para rescatar, poner en valor en 4K y conservar cien clásicos contemporáneos: sin costo alguno para el autor."</p>
-	<a href="https://difilm-argentina.com/difilm/" target="_blank">DeFilm</a>
-	<p>"Difilm nació en 1949 como un pequeño archivo de imágenes dedicado a la conservación, restauración y comercialización de material histórico. En la actualidad es una de las empresas más importantes en cuanto a la cantidad, variedad y diversidad de material fílmico y se ha convertido en uno de los bancos de imágenes más prominentes de la Argentina."</p>
-	<a href="https://youtube.com/@difilmargentina?si=aIyBtGRqwD8hQrDw" target="_blank">DiFilm</a>
-	<a href="https://youtube.com/@archivodichiara?si=56BF66EudIiFERaP" target="_blank">Dichiara</a>
-	<a href="https://www.legado.ar/" target="_blank">Legado</a>	
-	<p>"Es un proyecto cultural independiente y autogestivo creado por la artista y curadora Graciela Taquini, inicialmente junto con un equipo interdisciplinario de especialistas Jazmin Adler, Marcela Andino, Toia Bonino, Mariela Cantú, Romina Flores, Fabiana Gallegos, Gabriela Larrañaga, Silvana Spadaccini, Alejandra Torres, Mariela Yeregui, fundado el primero de marzo de 2020. Ampliado en 2024 con la participación de Susana Allegretti, Alejandra Ceriani, Alejandra Cresentino, Clara Garavelli, Florencia Levy, Daniela Muttis, Maia Navas, Ari Nahon, Silvina Szperling."</p>
-	<a href="https://proyectoidis.org/" target="_blank">Proyecto Isdin</a>
-	<p>"La presente investigación propone un recorrido historiográfico del Diseño de Imagen y Sonido, que permita revisar cómo influyen en esta disciplina los cambios que se producen con la digitalización de datos, imágenes y sonidos. Para comprender estos cambios, proponemos formular una historiografía que sea complementaria a las tradicionales historias de los medios, y que esté enfocada en las relaciones que se establecen entre el diseño de sistemas de representación visual y sonora y los medios electrónicos y digitales."</p>
-	<a href="https://ahira.com.ar/" target="_blank">Archivo Histórico de Revistas Argentinas</a>
-	<p>"Ahira. Archivo Histórico de Revistas Argentinas es un proyecto que agrupa a investigadores de letras, historia y ciencias de la comunicación, que estudia la historia de las revistas argentinas en el siglo veinte; las trayectorias de quienes las dirigieron, las escribieron e ilustraron; los debates que atravesaron sus páginas; los cruces y diálogos con el periodismo de masas, la literatura, los programas políticos, los lectores y los escritores. El proyecto es financiado por subsidios de la Universidad de Buenos Aires y de la Agencia Nacional de Promoción Científica y Tecnológica, radicados en el Instituto de Historia Argentina y Americana “Dr. Emilio Ravignani”, Facultad de Filosofía y Letras, Universidad de Buenos Aires."s</p>
-	<a href="https://www.todohistorietas.com.ar/" target="_blank">Todo Historiestas</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/interior/archivo-general-de-la-nacion" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Archivo Prisma</h2>
+	<p>"Prisma es la plataforma web que hace posible la democratización del acceso al acervo audiovisual y sonoro del Archivo Histórico de RTA."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.archivorta.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Plan de Recuperación de Películas Argentinas</h2>
+	<p>"Ante la pérdida de derechos de autor, Laboratorios GOTIKA y DAC (Directores Argentinos Cinematográficos) decidieron asociarse para invertir y crear el Plan Recuperar para rescatar, poner en valor en 4K y conservar cien clásicos contemporáneos."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://recuperar.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>DeFilm</h2>
+	<p>"Difilm nació en 1949 como un pequeño archivo de imágenes dedicado a la conservación, restauración y comercialización de material histórico."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://difilm-argentina.com/difilm/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="https://www.youtube.com/@archivodichiara" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Lumiton</h2>
+  <p>"El Archivo Lumiton emprende acciones para la conservación del patrimonio audiovisual, mediante la restauración de archivos fílmicos, digitales y en papel. Cuenta además con una biblioteca especializada en cine disponible para consulta."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://lumiton.ar/proyecto-lumiton/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Archivo de Arte de la ciudad de La Plata</h2>
+  <p>"La creación de un Archivo de Arte de la ciudad de La Plata surge del crecimiento y de la expansión del Centro de Arte durante el último año en el que se ha trabajado en exposiciones, publicaciones y actividades de investigación y de difusión concentradas en visibilizar el trabajo de nuestros artistes, diseñadores y arquitectes."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.centrodearte.unlp.edu.ar/archivo/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Museo del Cine Pablo Ducrós Hicken</h2>
+  <p>"Está dedicado a la preservación, investigación y difusión del patrimonio audiovisual argentino. Cuenta con una sala de proyecciones para 60 personas y una colección dedicada a la historia del cine argentino."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://linktr.ee/museodelcineba" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Legado</h2>	
+	<p>"Es un proyecto cultural independiente y autogestivo creado por la artista y curadora Graciela Taquini, inicialmente junto con un equipo interdisciplinario de especialistas..."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.legado.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Proyecto Isdin</h2>
+	<p>"La presente investigación propone un recorrido historiográfico del Diseño de Imagen y Sonido, que permita revisar cómo influyen en esta disciplina los cambios que se producen con la digitalización de datos, imágenes y sonidos."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://proyectoidis.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Archivo Histórico de Revistas Argentinas</h2>
+	<p>"Ahira. Archivo Histórico de Revistas Argentinas es un proyecto que agrupa a investigadores de letras, historia y ciencias de la comunicación, que estudia la historia de las revistas argentinas en el siglo veinte(...)"</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://ahira.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Todo Historiestas</h2>
 	<p>"Esta página es un tributo a Mafalda, a Quino, y a los más importantes personajes e historietistas de la Argentina y el mundo."</p>
-	<a href="https://ilustracionargentina.wordpress.com/" target="_blank">Archivo de Ilustración Argentina</a>
-	<p>"Somos un grupo de docentes de la materia Ilustración, cátedra Daniel Roldán, perteneciente a la Carrera de Diseño Gráfico de la Facultad de Arquitectura, Diseño y Urbanismo, de la Universidad de Buenos Aires (FADU/UBA). La cátedra nació en el 2011, siendo la primera vez que se conformaron estudios de esta disciplina a nivel universitario, por ese motivo debió generar sus propios contenidos. En este contexto comenzamos a investigar acerca de la historia de la ilustración argentina."</p>
-	<a href="https://archivoiiac.untref.edu.ar/" target="_blank">Archivo IIAC (Instituto de Investigación en Arte y Cultura Dr. Norberta Griffa</a>
-	<p>"El Archivo IIAC funciona en el seno del Instituto de Investigaciones en Arte y Cultura “Dr. Norberto Griffa” de la Universidad Nacional de Tres de Febrero. Reúne fondos y colecciones documentales y bibliográficos de artistas, escritores, historiadores del arte e instituciones relacionadas con el arte y la cultura. Tiene como objetivo la guarda, descripción y difusión de sus fondos y aspira a convertirse en una herramienta privilegiada para los investigadores en la producción de conocimiento. Entre los materiales que alberga se encuentran libros, publicaciones periódicas, fotografías, afiches, películas y una gran variedad de documentos. Asimismo, cuenta con un catálogo de biblioteca conformado por diversas colecciones."</p>
-	<a href="https://wepa.unima.org/es/argentine/" target="_blank">Argentina | World Encyclopedia of Puppetry Arts</a>
-	<p>"La evolución del teatro de títeres en Argentina está estrechamente ligada a los flujos migratorios que marcaron la nación argentina desde sus orígenes y a los intercambios culturales y sociales que los acompañaron. Este proceso original nació en el siglo xviii."</p>
-	<a href="https://fundacionluminis.org.ar/tema/arte" target="_blank">Arte Archivos - Fundación Lúminis</a>
-	<p>"Apoyando la educación argentina en la formación docente y la investigación · Biblioteca virtual · Educación y Género · Datos abiertos sobre Educación · RADIO."</p>
-	<a href="https://argentinacompositores.com.ar/archivo/" target="_blank"></a>
-	<p>"El Archivo Histórico de la AAC es un tesoro invaluable que preserva la herencia musical argentina. Desde su fundación en 1915, el archivo ha acumulado una extensa colección de documentos artísticos y administrativos, incluyendo libros de actas, registros de socios, correspondencia, fotografías y programas de conciertos. Además, cuenta con unos 800 registros sonoros y audiovisuales en diversos formatos, totalizando más de 3000 obras argentinas, muchas de ellas únicas. El archivo se complementa con una biblioteca musical, un inventario de 1364 partituras (incluyendo manuscritos autógrafos) y los fondos de tres destacados compositores: Celina Kohan de Scher, Elena Larionow y Jorge Fontenla."</p>
-	<a href="https://iimcv.net.ar/admin.php" target="_blank">IMCV (Instituto de Investigación Musicológica Carlos Vega)</a>
-	<p>"El 14 de abril de 1966 se funda el Instituto de Investigación Musicológica “Carlos Vega” (FACM- UCA). Lleva el nombre del primer musicólogo argentino quien, por voluntad testamentaria, donó el patrimonio que dio origen a dicha creación, el cual incluye sus investigaciones inéditas, epistolario y archivo personal. En la donación mencionada expresaba los objetivos fundacionales que hasta hoy nos guían: “Están egresando de nuestra Facultad los primeros Licenciados en Musicología y esta modernísima especialidad carece todavía de círculos de concentración de actividad. No es difícil que esperen a los nuevos profesionales la dispersión, el desaliento y el abandono de la materia que abrazaron con decisión inaugural y estudiaron con tanto entusiasmo. Un Instituto de Musicología en estas circunstancias tendría, precisamente, el objetivo principal de constituirse en un centro de estudios para docentes y estudiantes de la Facultad y para especialistas y estudiosos”."</p>
-	<a href="https://linktr.ee/museodelcineba" target="_blank">Museo del Cine Pablo Ducrós Hicken</a>
-	<p>"Rescatando historias desde 1971."</p>
-	<a href="https://museomig.org/index.php" target="_blank">Museo Mig | Museo de la Ilustración Gráfica</a>
-	<a href="https://youtube.com/@museomig323?si=09y5627akP4hKOq1" target="_blank">YouTube de Museo Mig</a>
-	<p>"El recientemente creado Museo de la Ilustración Gráfica, que tendrá como sede el señorial edificio ubicado en la esquina de Alte. Brown y Pinzón del barrio de La Boca, abarcará las áreas del Humor Gráfico, la Historieta, la Ilustración y la Animación."</p>
-	<a href="https://museofeministavirtual.com.ar/" target="_blank">Museo Feminista Virtual</a>
-	<p>"Mujeres, lesbianas, travestis, trans y no binaries de la historia del arte"</p>
-	<a href="https://archivotrans.ar/index.php" target="_blank">Archivo de la Memoria Trans</a>
-	<p>"El Archivo de la Memoria Trans (AMT) es un espacio para la protección, la construcción y la reivindicación de la memoria trans. María Belén Correa y Claudia Pía Baudracco, ambas mujeres trans activistas, habían imaginado tener un espacio donde reunir a las compañeras sobrevivientes, sus recuerdos y sus imágenes."</p>
-	<a href="https://archive.org/" target="_blank">Internet Archive</a>
-	<p>"Internet Archive es una biblioteca sin fines de lucro con millones de textos, películas, software, música, sitios web y mucho más gratuitos." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.todohistorietas.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Archivo de Ilustración Argentina</h2>
+	<p>"Somos un grupo de docentes de la materia Ilustración, cátedra Daniel Roldán, perteneciente a la Carrera de Diseño Gráfico de la Facultad de Arquitectura, Diseño y Urbanismo, de la Universidad de Buenos Aires (FADU/UBA)."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://ilustracionargentina.wordpress.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Archivo IIAA</h2>
+	<p>"El Archivo IIAC funciona en el seno del Instituto de Investigaciones en Arte y Cultura “Dr. Norberto Griffa” de la Universidad Nacional de Tres de Febrero."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://archivoiiac.untref.edu.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Museo Mig</h2>
+  <p>"El recientemente creado Museo de la Ilustración Gráfica, que tendrá como sede el señorial edificio ubicado en la esquina de Alte. Brown y Pinzón del barrio de La Boca, abarcará las áreas del Humor Gráfico, la Historieta, la Ilustración y la Animación."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://museomig.org/index.php" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="https://www.youtube.com/@museomig323" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>AAC</h2>
+	<p>"El Archivo Histórico de la Asociación Argentina de Compositores es un tesoro invaluable que preserva la herencia musical argentina."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://argentinacompositores.com.ar/archivo/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>IMCV</h2>
+	<p>"Lleva el nombre del primer musicólogo argentino quien, por voluntad testamentaria, donó el patrimonio que dio origen a dicha creación, el cual incluye sus investigaciones inéditas, epistolario y archivo personal."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://iimcv.net.ar/admin.php" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>World Encyclopedia of Puppetry Arts</h2>
+  <p>"La evolución del teatro de títeres en Argentina está estrechamente ligada a los flujos migratorios que marcaron la nación argentina desde sus orígenes y a los intercambios culturales y sociales que los acompañaron. Este proceso original nació en el siglo xviii."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://wepa.unima.org/es/argentine/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Arte de la Argentina</h2>
+	<p>"ARTE DE LA ARGENTINA® es una Asociación Civil sin fines de lucro, cuyo objeto principal es relevar, preservar y difundir el patrimonio nacional en materia de artes plásticas, especialmente pintura, escultura, dibujo y grabado de autores argentinos."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.artedelaargentina.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Archivos en uso</h2>
+  <p>"Archivos en uso es un proyecto colectivo impulsado por distintos grupos de trabajo de la Red Conceptualismos del Sur y del “Grupo de Estudios sobre Arte, cultura y política en la Argentina reciente”(...)"</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.archivosenuso.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h2>Archivo Histórico del Software Argentino</h2>
+  <p>"El Archivo Histórico del Software Argentino recopila, digitaliza, cataloga y preserva programas y juegos creados y/o distribuidos en Argentina."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://archivodelsoftware.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h2>Internet Archive</h2>
+	<p>"Internet Archive es una biblioteca sin fines de lucro con millones de textos, películas, software, música, sitios web y más, de acceso gratuito." Traducido con Kagi Translate</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://archive.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+ </article> 
 	</section>	
 		</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -186,6 +393,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>

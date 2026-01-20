@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   </svg>
-  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+      <nav class="navbar navbar-expand-lg fixed-top opacity-100">
           <div class="container-fluid">
-            <img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-            <a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+            <img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+                      <a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
                   </li>
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>audiovisual</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creatova</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
                       </ul>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+                      <a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Introducción</span></a></li>
+                        <li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
                         <li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
                         <li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
                         <li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
@@ -112,65 +83,142 @@
                       </ul>
                   </li>
                 </ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
       </nav> 
     </header> 
 		<main>
 			<section>
-				<h1>Desarrollador</h1>
-				<p><img src="img/mi-foto.png" alt="Foto de perfil del desarrollador" id="miFoto"></p>
-				<p>Buenas, mi nombre es Daniel Alejandro Toledo, nací el 18/06/1997 y vivo en la localidad de Castelar, zona oeste del Gran Buenos Aires, Argentina.</p>
-				<p>Soy estudiante de Artes Multimediales en la Universidad Nacional de las Artes desde el año 2018, trabajo medio tiempo y vendo artículos usados por Mercado Libre y Renova tu Vestidor, me encuentro cursando entre primer año y segundo año.</p>
-				<p>Este sitio fue ideado para la entrega del exámen final para la asignatura de Informática General, turno mañana, año 2024, cátedra: Drelichman pero también es uno de mis proyectos personales que vine pensando hace tiempo y fue la oportunidad ideal para plasmarlo.</p>
-        <p>Personalmente puedo recomendar al Área Transpardamental de Artes Multimediales de la Universidad Nacional de las Artes para estudiar multimedia dentro de las universidades públicas dado que es la única en la que he cursado hasta ahora y la calidad educativa es realmente buena tanto teóricamente como practicamente, los docentes tratan de brindar la mejor enseñanza posible, sumado a que la sede es céntrica con varios medios.</p>
-        <a href="https://multimedia.una.edu.ar/" target="_blank">UNA | Área Transpardamental de Artes Multimediales</a>
-        <p>"La Universidad Nacional de las Artes forma realizadores, profesionales, científicos y docentes en el campo del arte y sus disciplinas afines, con solidez ..."</p> 
-        <p>De paso adjunto un canal de YouTube de una egresada como Licenciada en Artes Multimediales de la misma institución para que les sirva de guía:</p>
-        <h2>Avanturas en Zapatillas</h2> 
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <button type="button" class="btn btn-secondary">
-            <a class="nav-link" href="https://youtube.com/@aventurasenzapatillas" target="_blank">Aventuras en Zapatillas
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-              </svg>
-            </a>
-          </button>
+        <div class="imgs">
+          <div class="imgs-selfie">
+				    <img src="img/mi-foto.png" alt="Foto de perfil del desarrollador" class="img-fluid">
+          </div>
         </div>
-        <p>Canal de YooTube de Aventuras en Zapatillas. Y una agrupación estudiantil reciente en defensa de la UNA que a su vez brinda consejos de cursada muy útiles dentro de la misma:</p>
-        <a href="https://linktr.ee/estetika.una" target="_blank">Estetika UNA</a>
-        <h2>Mi Portafolio</h2>
+        <h1>Daniel Alejandro Toledo</h1>
+				<p>Buenas, nací en 1997 y vivo con mis padres en la zona oeste del Gran Buenos Aires, Argentina. Soy estudiante de <strong>Artes Multimediales</strong> en la <strong>Universidad Nacional de las Artes</strong> y este sitio fue creado para el exámen final de Informática General (turno mañana, año 2024, cátedra Drelichman), pero también representa uno de mis proyectos personales que llevaba tiempo planeando.</p>
+        <h3>Mi Portafolio</h3>
+        <p>Mi portafolio está compuesto por trabajos realizados en la UNA y fuera de ella, junto con cursos extracurriculares de <strong>inglés, programación web y otras áreas</strong>. Desde 2018, tengo presencia en diversas plataformas como <strong>Instagram, YouTube, LinkedIn, GitHub, CadePen y freeCodeCamp</strong>.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <button type="button" class="btn btn-secondary">
             <a class="nav-link" href="https://linktr.ee/danielalejandrotoledo" target="_blank">Mi Portafolio
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
               <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
               <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
               </svg>
             </a>
-          </button>
         </div>
-        <p>Mi portafolio se compone principalmente de mi paso por la UNA y cursos extracurriculares que he realizado de inglés, programación web, desde 2018 con perfiles en Instagram, YouTube, LinkedIn, Cadepen, freecodecamp.</p>
-        <p>Adjunto una obra la cual me pareció muy interesante dada la propuesta planteada, pudiendo reflexionar acerca de la tecnología, las redes sociales, el transhumanismo y el posthumanismo.</p>
-        <h3>Cao Fei: El futuro no es un sueño</h3>
+        <h2>Recomendación académica</h2>
+        <p>Si tienen interés en <strong>estudiar multimedia en una universidad pública</strong>, recomiendo el <strong>Área Transdepartamental de Artes Multimediales de la Universidad Nacional de las Artes</strong>. Es la única institución donde he cursado hasta ahora y considero que <strong>la calidad educativa es excelente</strong>, tanto teórica como práctica. Los docentes se esfuerzan por brindar una enseñanza de alto nivel, y la sede se encuentra en un lugar céntrico con múltiples opciones de transporte.</p>
+        <h3>Recursos</h3>
+        <p>Desde grupos de WhatsApp hasta enlaces a webs útiles para poder estar al tanto de las últimas novedades, realizar consultas, compartir información, conocer otros estudiantes, etc.</p>
+        <h4>Área Transpardamental de Artes Multimediales</h4>
+        <p>"La Universidad Nacional de las Artes forma realizadores, profesionales, científicos y docentes en el campo del arte y sus disciplinas afines, con solidez ..."</p> 
         <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <button type="button" class="btn btn-secondary">
-            <a class="nav-link" href="https://www.malba.org.ar/evento/cao-fei-el-futuro-no-es-un-sueno/" target="_blank">Cao Fei: El futuro no es un sueño
+            <a class="nav-link" href="https://multimedia.una.edu.ar/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
               <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
               <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
               </svg>
             </a>
-          </button>
         </div>
-        <p>"El futuro no es un sueño es la primera exposición individual en América Latina de Cao Fei (Guangzhou, China, 1978), hoy considerada una de las artistas más importantes de su país natal y del circuito internacional contemporáneo. Producida por la Pinacoteca de São Paulo, la muestra está compuesta por nueve proyectos que incluyen una treintena de obras, la mayoría de ellas videoinstalaciones creadas desde principios de la década de 2000 hasta la actualidad, dispuestas en un gran montaje inmersivo."</p>
-			</section>
-		</main>
+        <h4></h4>
+        <h4>Estetika UNA</h4>
+        <p>"ᴘᴏʀ ᴜɴᴀ ᴜɴɪᴠᴇʀsɪᴅᴀᴅ ᴅɪꜰᴇʀᴇɴᴛᴇ"</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://linktr.ee/estetika.una" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+        </div>
+        <h4>Código Abierto</h4>
+        <p>"Agrupación de estudiantes de Artes Multimediales de la UNA."</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://linktr.ee/codigoabierto.atam" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+        </div>
+        <h4>Grilla</h4>
+        <p>Grilla de horarios, pisos y links a Cátedras.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://elusrei.github.io/Grilla-horarios-y-pisos-multi/index.html" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+        </div>
+        <h4>MultiLítica</h4>
+        <p>"Estudiantes de la Universidad Nacional de las Artes, Área transdepartamental de Artes Multimediales uniéndose para opinar, discutir, proponer, exponer, problemáticas dentro de la institución o problemáticas externas que afecten a nuestra facultad."</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://chat.whatsapp.com/IH2JuOnb3H3LFhzqs4l5Hh" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+            </a>
+        </div>
+
+        <h3>Egresados Influencers</h3>
+        <p>Esta es una lista de Egresados de la Licenciatura y la Tecnicatura en Artes Multimediales para poder conocer su trayecto, consejos, rutina y perfiles como egresados.</p>
+        <h4>Aventuras en Zapatillas</h4>
+        <p>"¡Hola! Mi nombre es Tatiana Kumert y soy Licenciada en Artes Multimediales. Mis fuertes son el diseño gráfico, la ilustración y la filmación y edición de contenido audiovisual."</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://linktr.ee/aventurasenzapatillas" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+        </div>
+        <h4>Lucas Jara</h4>
+        <p>"Lucas Jara (J4) es un compositor y productor argentino. Crea canciones electrónicas con influencias de la música progresiva, experimental y sinfónica. Con el pseudónimo "J4" produce AV Live Sets y realiza muestras de instalaciones multimedia con su Estudio de Arte "Bunk"."</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.youtube.com/@LUCASJARABUNK" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+            </a>
+        </div>       
+			</section
+>		</main>
 		<footer>
       <div class="card text-center">
         <div class="card-body">
-        <p class="card-text">2024 - 2025 
+        <p class="card-text">2024 - 2026 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
         <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
       </svg>

@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
-        					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
-          						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
-          						</ul>
-        					</li>
+        					 <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+                      </ul>
+                  </li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
@@ -112,121 +83,434 @@
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>CABA</h2>
-	<a href="https://festivalesba.org/" target="_blank">festivalesba</a>
-	<p>"Festivales y noches culturales"</p>
-	<a href="https://gallery.com.ar/" target="_blank">Gallery</a>
-	<p>"Gallery es un programa de recorridos curados que conecta las galerías de arte y espacios artísticos con sus visitantes. Organizado estratégicamente en diferentes circuitos que atraviesan la ciudad, este gran evento gratuito lleva más de dos décadas potenciando las vibrantes escenas de arte locales."</p>
-	
-	<h2>Eventos 2025</h2>
-	<h3>Miscelaneo</h3>
-	<a href="https://www.fundacionandreani.org.ar/premio-fundacion-andreani-2025-(e568)" target="_blank">Premio Fundación Andreani 2025</a>
-	<p>"El Premio Fundación Andreani cuenta con una trayectoria de más de 15 años y se ha constituido como uno de los más importantes de la escena artística local por su carácter federal y por hacer foco en aquellas expresiones que transitan las intersecciones entre arte, ciencia y tecnología."</p>	
-	<a href="https://www.argentina.gob.ar/noticias/cultura-federal-convocatorias-abiertas" target="_blank">Cultura Federal: convocatorias abiertas 2025</a>
-	<p>"La Secretaría de Cultura de la Nación tiene vigentes convocatorias para financiamiento, formación y perfeccionamiento en música, letras, teatro, artes visuales, promoción de la lectura y mucho más."</p>
-	<a href="https://www.cceba.org.ar/medialab/apoyo-a-la-produccion-arte-contemporaneo-2025">Apoyo a la producción. Arte Contemporáneo 2025 - CCE Buenos Aires</a>
-	<p>"Apoyo a la producción. Arte contemporáneo. Prácticas artísticas y tecnológicas. MediaLab CCEBA 2025 Convocatoria abierta hasta el 18 de abril 2025 a las 13h (hora argentina)"</p>
-	<a href="https://comic-con.com.ar/" target="_blank">Argentina Comic On 2025</a>
+  <div class="marco">
+    <img src="img/eventos-2025.jpg" alt="Logo de Eventos 2025 en Argentina" class="img-fluid">
+  </div>
+  <h1>Eventos 2025</h1>
+	<p>Recopilación de eventos, exhibiciones, muestras, congresos, exposiciones, ciclos, convenciones y conferencias. Pueden desarrollarse durante uno o varios días, semanas, meses o de forma permanente cuando son virtuales. Algunos se realizan anualmente en un mismo sitio, otros son itinerantes y otros no vuelven a celebrarse.</p>
+	<article>
+	<h2>Generales</h2>
+	<p>Eventos que abarcan todo tipo de temáticas.</p>
+	<h3>Argentina Comic Con 2025</h3>
 	<p>"Celebramos la cultura pop con atracciones para toda la familia. Presentaciones, shows, talleres, paneles, exhibiciones, video juegos, experiencias recreativas, cosplay, juegos, una increíble variedad gastronómica y mucho más!"</p>
-	<a href="https://webinar.somosedison.com/eventos-gratuitos" target="_blank">Webinars de Somos Edison 2025</a>
-	<p>"En Edison nos asociamos con líderes y referentes de diferentes industrias, para co-crear cursos cortos, aplicables y en vivo."</p>
-
-	<h3>Programación - Desarrollo - Computación - Informática</h3>
-	<a href="https://flisol.info/FLISOL2025" target="_blank">Festival Latinoamericano de Instalación de Software Libre (FLISOL) 2025</a>
-	<p>"El FLISoL es el evento de difusión de Software Libre más grande en Latinoamérica y está dirigido a todo tipo de público: estudiantes, académicos, empresarios, trabajadores, funcionarios públicos, entusiastas y aun personas que no poseen mucho conocimiento informático."</p>
-	<a href="https://www.mmerge.io/es/merge-buenos-aires-25" target="_blank">Merge Buenos Aires 2025</a>
-	<p>"MERGE es el evento Web3 más disruptivo a nivel global, diseñado para conectar los ecosistemas de América Latina y Europa en un único punto de encuentro. Con dos capítulos anuales — Madrid (7-9 de octubre) para Europa y Buenos Aires (24-26 de marzo) para Latam — MERGE reúne a las mentes y organizaciones más innovadoras del espacio Web3."</p>
-
-	<h3>Videojuegos</h3>
-	<a href="https://globalgamejam.org/" target="_blank">Global Game Jam 2025</a>
-	<p>"El GGJ es el evento de creación de juegos más grande del mundo que tiene lugar en todo el planeta, con decenas de miles de participantes (jammers) en cientos de sitios físicos y virtuales en más de cien países alrededor del mundo." Traducido con Kagi Translate.</p>
-	<a href="https://www.argentinagameshow.com/" target="_blank">Argentina Game Show 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://comic-con.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Villas Argentinas Festival Interdisciplinario Sosteniendo la Unidad 2025</h3>
+	<p>"Es un festival de arte villero que tiene como objetivo juntar y difundir artistas de las villas."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/p/DJU0IBlxjO5/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Hecho en MTZ 2025</h3>
+	<p>"Hecho en MTZ ofrece una experiencia completa con diversos stands de Innovación 4.0; sectores inmersivos; espacios gamer; charlas formativas; shows en vivo; una gran feria gastronómica, donde chefs y nutricionistas revalorizarán los productos locales con recetas saludables; y un domo tecnológico de 360°(...)"</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://lamatanza.gov.ar/noticias/1076/details" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Festival Futuro Imperfecto 2025</h3>
+	<p>"El Festival Futuro Imperfecto reúne a periodistas, artistas, académicos, autorxs, lectorxs, bailarinas, DJs. ¡Hola Comunidad! Preparamos conferencias, diálogos públicos, performances y fiesta."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.revistaanfibia.com/festival_futuro_imperfecto/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Estilo Art 2025</h3>
+	<p>"ESTILO ART es una muestra de arte diferente. Un espacio que busca acercar el arte a todos, conectando a artistas, instituciones culturales y público en general, sin necesidad de tener conocimientos previos."</p>	
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://estiloart.com.ar/expo.php" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Tecnóposis 2025</h3>
+	<p>"Vení a divertirte. Actividades interactivas · Espectáculos en vivo · Talleres y experiencias prácticas · Ciencia y tecnología · Arte · Música · Deportes."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentina.gob.ar/tecnopolis" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Festival Latinoamericano de Arte y Tecnología 2025</h3>
+  <p>"FLAT: Antesala es la edición previa y preparatoria para el gran Festival Latinoamericano de Arte y Tecnología que se realizará en octubre y noviembre de 2026."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://centroeesonoros.org/wp-content/uploads/2025/10/FLAT.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Pleamar 2024</h3>
+  <p>"Somos un colectivo de profesionales impulsados por el deseo de promover el uso de medios tecnológicos en la producción artística. Nuestro mayor objetivo es generar actividades de formación y brindar experiencias inspiradoras que fomenten y fortalezcan el trabajo colaborativo entre profesionales de diferentes comunidades creativas, creando una red de artistas en la región."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.pleamarorg.com/2024.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Videojuegos</h2>
+	<p>Eventos relacionales con el gaming, e-sports, negocios y desarrollo de videojuegos.</p>
+	<h3>Argentina Game Show 2025</h3>
 	<p>"AGS Visa es la celebración del mundo de los videojuegos más importante del país, uniendo los mundos del gaming, esports, música y streaming."</p>
-	<a href="https://youtube.com/@_clubargentinodearcades?si=B2Zpm5wwm-2p_R91" target="_blank">Club Argentino de Arcades 2025</a>
-	<p>"Pasado y presente de los video games en nuestro país."</p>
-
-	<h3>Internet - Redes Sociales - Streaming</h3>
-	<a href="https://internetday.com.ar/day/" target="_blank">Internet Day 2025</a>
-	<p>"Internet Day es un espacio de intercambio y debate sobre los escenarios de la industria, las nuevas tecnologías, los nuevos modelos de negocios y el marco legal para desarrollarlos. Prestigiosos disertantes compartirán sus experiencias con el público y darán a conocer las últimas tendencias de la Industria."</p>	
-	<a href="https://smday.com.ar/cordoba/" target="_blank">Social Media Day 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.argentinagameshow.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Global Game Jam 2025</h3>
+	<p>"El GGJ es el evento de creación de juegos más grande del mundo que tiene lugar en todo el planeta, con decenas de miles de participantes (jammers) en cientos de sitios físicos y virtuales en más de cien países alrededor del mundo." Traducido con Kagi Translate.</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://globalgamejam.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Tucumán Hace Videojuegos 2025</h3>
+	<p>"El evento es organizado por el Instituto de Desarrollo Productivo de Tucumán (IDEP) y la Comunidad de Desarrolladores de Videojuegos de Tucumán (CDVT), y se consolida como el principal punto de encuentro para profesionales, emprendedores y fanáticos del sector en el norte argentino."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.comunicaciontucuman.gob.ar/noticia/economia-produccion/235675/tucuman-hace-videojuegos-2025-festival-potencia-talento-local-abre-oportunidades-industria-gaming" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Exposición de Videojuegos Argentina 2025</h3>
+  <p>"Desde el año 2003, la Asociación de Desarrolladores de Videojuegos de Argentina (ADVA) organiza la EVA en forma ininterrumpida. Se trata de un espacio de encuentro, diálogo, capacitación y desarrollo de negocios, con foco en videojuegos."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://expoeva.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Rosario Expo Gaming 2025</h3>
+  <p>"Videojuegos, Tecnología, Cultura Pop. Gaming, Entretenimiento, Educación & Más"</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://youtu.be/OadNEy7cp7E?si=YZfI6-5y8xfwwWAq" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="https://www.instagram.com/p/DRsLXoFj1ik/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Avellaneda Gamer 2025</h3>
+  <p>"Hasta el 3 de agosto, entre las 12 y las 20 horas, los visitantes podrán disfrutar de una amplia variedad de atracciones: el Estadio Playstation, la clásica zona de fichines, espacios de juego con computadoras y simuladores de carreras, y hasta una propuesta más retro con juegos analógicos que invitan a la interacción cara a cara."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://laciudadavellaneda.com.ar/avellaneda-gamer-2025-vacaciones-de-invierno-con-diversion-asegurada/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Marketing Digital</h2>
+  <p>Eventos que involucran la internet, redes sociales, creación de contenido, streaming, medios, publicidad, anuncios.</p>
+	<h3>Internet Day 2025</h3>
+	<p>"Internet Day es un espacio de intercambio y debate sobre los escenarios de la industria, las nuevas tecnologías, los nuevos modelos de negocios y el marco legal para desarrollarlos."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://internetday.com.ar/day/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Social Media Day 2025</h3>
 	<p>"El Social Media Day es una iniciativa global, representada en Argentina por la consultora Digital Interactivo que propone capítulos locales con el objetivo de dar a conocer las novedades y tendencias de la industria digital."</p>
-
-	<h3>Audiovisual</h3>
-	<a href="https://bafici.org/" target="_blank">Buenos Aires Festival Internacional de Cine Independiente (BACIFI) 2025</a>
-	<p>"El Buenos Aires Festival Internacional de Cine Independiente (BAFICI) es uno de los festivales de cine más importantes y sobre todo especialmente significativos de América Latina, uno cuya programación plantea no pocas sorpresas dentro de un ambiente vibrante y singular."</p>
-	<a href="https://tallerimagen.com.ar/fecimu/" target="_blank">Festival de Cine y Multimedia (FECIMU) 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://smday.com.ar/cordoba/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Merge Buenos Aires 2025</h3>
+  <p>"MERGE es el evento Web3 más disruptivo a nivel global, diseñado para conectar los ecosistemas de América Latina y Europa en un único punto de encuentro."</p> 
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.mmerge.io/es/merge-buenos-aires-25" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>NXT Media Days 2025</h3>
+  <p>"NXT Media Days reúne tres dinámicas series de eventos, cada una enfocada en áreas fundamentales del ecosistema de medios y publicidad en evolución." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://conferences.dataxis.com/nxt-media-days-south-america/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>El Ojo de Iberoamérica 2025</h3>
+	<p>"El Ojo de Iberoamérica es el primer festival internacional con un criterio y una mirada latina de la creatividad, la comunicación y el entretenimiento que cada año impulsa los límites del talento, la creatividad y la comunicación latina."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.elojodeiberoamerica.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Audiovisual</h2>
+	<p>Eventos acerca de producciones cinematográficas nacionales e internacionales, cortos, documentales, animación.</p>
+	<h3>Festival de Cine y Multimedia 2025</h3>
 	<p>"FECIMU es el Festival de Cine y Multimedia organizado por la Cooperativa Taller Imagen."</p>
-	<a href="https://espacioqueer.com.ar/" target="_blank">Espacio Queer 2025</a>
-	<p>"En Espacio Queer creemos que la sexualidad y la identidad son una construcción constante y un derecho del que debemos gozar libremente y sin señalamientos. Con el cine como arte principal, buscamos exponer perspectivas queer porque muchas de nuestras historias no conocen la luz: que la conozcan es nuestro deseo permanente."</p>
-	<a href="https://www.animalatina.com.ar/" target="_blank">Anima Latina - VIII Festival de Cine de Animación Latinoamericano 2025</a>
-	<p>"El festival cuenta con secciones competitivas, concursos, proyecciones especiales, conferencias, talleres, presentaciones de películas, series, publicaciones, actividades para la industria, y más. Para los conversatorios se reunirán a destacados referentes nacionales e internacionales quienes compartirán sus experiencias en el arte e industria de la animación."</p>
-	<a href="https://conferences.dataxis.com/nxt-media-days-south-america/" target="_blank">NXT Media Days 2025</a>
-	<p>"NXT Media Days reúne tres dinámicas series de eventos, cada una enfocada en áreas fundamentales del ecosistema de medios y publicidad en evolución." Traducido a español.</p>
-	<a href="https://www.caper.org.ar/la_expo.php" target="_blank">Caper Show 2025</a>
-	<p>"CAPER SHOW es un evento reconocido internacionalmente y convoca cada año a más de 5.000 directivos, profesionales, técnicos, docentes y estudiantes relacionados con la Industria Audiovisual Profesional de Argentina y Latinoamérica. Más del 80% de los visitantes de CAPER SHOW están relacionados con el proceso de compra en sus compañías."</p>
-	<a href="https://www.facebook.com/FIRAFEST?_rdc=1&_rdr#" target="_blank">Festival Internacional de Realización Audiovisual FIRAFEST 2025</a>
-	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
-	<a href="https://www.instagram.com/festivalfira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Festival Internacional de Realización Audiovisual FIRAFEST 2025</a>
-	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
-	<a href="https://www.epacine.com.ar/epa" target="_blank">Festival Internacional de Cine Independiente de El Palomar (EPA CINE) 2025</a>
-	<p>"EPA CINE -Festival Internacional de Cine Independiente de El Palomar-, organizado por el CINE TEATRO HELIOS en conjunto con TEOREMA PRODUCCIONES, propone descentralizar la difusión cinematográfica y seguir consolidando, edición tras edición, un espacio en el conurbano bonaerense, específicamente en El Palomar y alrededores, para que películas independientes encuentren otro tipo de diálogo y de público."</p>
-	<a href="https://seff.com.ar/" target="_blank">Santiago del Estero Film Festival (SEFF) 2025</a>
-	<p>"Santiago del Estero Film Fest, Internacional de Cine, es un Festival competitivo, de alcance internacional, de cortometrajes y largometrajes, que se desarrolla en Santiago del Estero, Argentina desde 2017."</p>
-
-	<h3>Artes Visuales</h3>
-	<a href="https://expografika.com/n/" target="_blank">Expografika 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://tallerimagen.com.ar/fecimu/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>MUBI Fest 2025</h3>
+	<p>"Cine y cultura, con curaduría."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://mubifest.com/es/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>DomoArte 2025</h3>
+  <p>"DomoArte es un festival itinerante de arte digital inmersivo que transforma los planetarios en espacios de creación y encuentro."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/DQmuRh_jjuR/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Visuales</h2>
+	<p>Eventos acerca de exposiciones y presentaciones de elementos visuales desde diseño gráfico, publicidad, comunicación visual, impresión 3D.</p>
+	<h3>Expografika 2025</h3>
 	<p>"Expográfika es la feria de la industria gráfica más importante de nuestro país, la de mayor expansión, alcance y representatividad para el sector."</p>
-	<a href="https://www.exposign.com.ar/" target="_blank">Expo Sign 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://expografika.com/n/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Expo Sign 2025</h3>
 	<p>"Es el principal evento del sector, en donde se dan cita los profesionales y protagonistas de la comunicación visual para presentar y conocer novedades, afianzar y generar relaciones en busca de nuevos negocios."</p>
-	<a href="https://www.mapa.art/" target="_blank">MAPA 2025</a>
-	<p>"MAPA feria de arte busca fomentar el intercambio entre artistas, galeristas, curadores, coleccionistas y nuevas audiencias, generando un espacio de reflexión en torno a las producciones actuales de artes visuales."</p>
-	<a href="https://bada.com.ar/convocatoria-2025/" target="_blank">BADA 2025</a>
-	<p>"BADA ofrece una experiencia única al conectar directamente a los visitantes con los artistas, brindándoles la oportunidad exclusiva de descubrir y comprar arte sin intermediarios."</p>
-	<a href="https://www.instagram.com/estoesunaffair/" target="_blank">Central Affair 2025</a>
-	<p>"15 galerías de arte en un único lugar en el Microcentro porteño."</p>
-	<a href="https://prensa.ciudaddemendoza.gob.ar/2025/02/03/convocatoria-para-participar-de-la-tercera-edicion-de-la-feria-aire/">Feria de Arte Aire 2025</a>
-	<p>"La Ciudad de Mendoza convoca a grupos de artistas, espacios de arte y/o galerías de arte a la presentación de propuestas para participar de la tercera edición de AIRE"</p>
-	<a href="https://www.el-libro.org.ar/inicio-fel/" target="_blank">Feria del Libro de Buenos Aires 2025</a>
-	<p>"La Feria Internacional del Libro de Buenos Aires tiene una superficie de más de 45.000 metros cuadrados y es la más concurrida en el mundo de habla hispana. Durante sus casi tres semanas de duración la visitan más de un millón de lectores y más de doce mil profesionales del libro."</p>
-	<a href="https://www.instagram.com/p/C_mNipexB-d/?hl=es-la&img_index=8" target="_blank">CONVOCATORIA ABIERTA // SOS 2025</a>
-	<p>"El Galpón Aluminé abre sus puertas en ENERO/ FEBRERO/ MARZO/ ABRIL donde se seleccionarán a 3 (tres) artistas del ámbito nacional e internacional en cada edición. La duración aproximada de cada encuentro será de 15 (quince) días."</p>
-	<a href="https://www.instagram.com/p/DGTXx4JRNSS/" target="_blank">Capital Feria de Arte Latinoamericana</a>
-	<p>Una feria que reúne Galerías, artistas y coleccionistas en un espacio de exhibición e intercambio cultural.</p>
-
-	<h3>Espectáculos - Teatrales</h3>
-	<a href="https://www.nomadesomos.com/" target="_blank">Nómade 2025</a>
-	<p>"Nómade es una comunidad de músicos y amantes de la música que busca generar una conexión íntima en locaciones únicas."</p>
-	<a href="https://www.halakenart.com" target="_blank">Halaken Art 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.exposign.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+  <h2>Sonoro</h2>
+  <p>Eventos principalmente musicales y sonoros.</p>
+  <h3>Pleamar 2025</h3>
+  <p>"Somos un colectivo de profesionales impulsados por el deseo de promover el uso de medios tecnológicos en la producción artística. Nuestro mayor objetivo es generar actividades de formación y brindar experiencias inspiradoras que fomenten y fortalezcan el trabajo colaborativo entre profesionales de diferentes comunidades creativas, creando una red de artistas en la región."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.pleamarorg.com/festival-pleamar-2025.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Escénicos</h2>
+	<p>Eventos en vivo, teatrales, al aire libre.</p>
+	<h3>Halaken Art 2025</h3>
 	<p>"Experiencias Sensoriales Inmersivas en la Oscuridad."</p>
-	<a href="https://teatrociego.org/" target="_blank">Teatro Oscuro 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.halakenart.com" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Teatro Oscuro 2025</h3>
 	<p>"Somos una compañía de tratro experta en contar historias en absoluta oscuridad."</p>
-	<a href="https://blowup-experience.com/" target="_blank">Blow Up Experience - New Sensations 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://teatrociego.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Blow Up Experience 2025</h3>
 	<p>"El fenómeno mundial de arte inflable y tecnología."</p>	
-	<p>"Considerado como uno de los últimos segmentos del “Kidulting”, esta tendencia cultural invita a los adultos a embarcarse en actividades asociadas a niños, proporcionando beneficios comprobados para la salud mental."</p>
-	<a href="https://www.lollapaloozaar.com/" target="_blank">Lollapalooza 2025</a>
-	<p>"Lo que vuelve único al LollaAR es la magia que se da durante esos 3 días en el cruce de diferentes expresiones artísticas. Cada nueva edición invida a grandes artistas locales e internacionales para convertir el hipódromo en una fiesta para todos los sentidos, con instalaciones, escultura, arte cinético y arte digital con propuestas de realidad aumentada"</p>
-	<a href="https://www.amanitafestival.com/es/amanita-experience" target="_blank">Amanita 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://blowup-experience.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Lollapalooza 2025</h3>
+	<p>"Lo que vuelve único al LollaAR es la magia que se da durante esos 3 días en el cruce de diferentes expresiones artísticas."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.lollapaloozaar.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Amanita 2025</h3>
 	<p>"Amanita es una experiencia inmersiva de cuatro días de acampe que combina música, arte, yoga y talleres en un entorno natural."</p>
-	<p>"Un Festival Transformacional es un evento holístico que va más allá de la música y el arte. Es una experiencia en comunidad, con un fuerte enfoque en el crecimiento personal y colectivo."</p>
-
-	<h3>Universitarios</h3>
-	<a href="https://fauna2025.una.edu.ar/" target="_blank">FAUNA Fest 2025</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.amanitafestival.com/es/amanita-experience" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Circo Anima 2025</h3>
+	<p>"35 artistas que realizan destrezas de alta complejidad acrobática con un doble escenario luces y pantallas de última generación tecnológica nunca antes visto en una carpa de Circo, Banda en vivo y música original. Un show para disfrutar en familia."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.facebook.com/circoanima" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+      </a>
+  </div>
+  <h3>El Circo del Dr Calvo 2025</h3>
+  <p>"Una instalación de realidad virtual que mezcla teatro, performance y artes visuales, invitándote a atravesar un universo fantástico donde el público también es protagonista."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/DRf0P56EeSO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Universitarios</h2>
+	<p>Eventos universitarios nacionales e internacionales en Argentina.</p>
+	<h3>FAUNA Fest 2025</h3>
 	<p>"Único festival artístico universitario del país en el que conviven todas las artes en un mismo evento"</p>
-	<a href="https://ferial.una.edu.ar/" target="_blank">Feria de Artes del Libro de la UNA 2025</a>
-	<p>"FERIAL surge desde la Fundación Universidad Nacional de las Artes y el área editorial de la universidad, Libros UNA, con el fin de difundir y promover los oficios vinculados a la producción del libro impreso."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://fauna2025.una.edu.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Multifest 2025</h3>
+  <p>"el evento que organizamos entre estudiantes. Lo armamos entre todes con mucho esfuerzo, para poder disfrutar de una jornada artística en la facu. Va a haber DJs, VJs, bandas y muestra de obras. Todes estudiantes de multi."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/DPsWfpHjOpR/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  <h3>Festival de Artes Electrónicas 2025</h3>
+  <p>"Activando nuestra Universidad pública. 100% autogestión estudiantil."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/DRCxpS9DpkY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  </article>
 	</section>	
 		</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -238,6 +522,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>

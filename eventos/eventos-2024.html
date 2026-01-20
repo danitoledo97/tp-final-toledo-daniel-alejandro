@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
-          						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
-          						</ul>
-        					</li>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+                      </ul>
+                  </li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Introducción</span></a></li>
+          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
@@ -112,212 +83,575 @@
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>CABA</h2>
-	<a href="https://festivalesba.org/" target="_blank">festivalesba</a>
-	<p>"Festivales y noches culturales"</p>
-	<a href="https://gallery.com.ar/" target="_blank">Gallery</a>
-	<p>"Gallery es un programa de recorridos curados que conecta las galerías de arte y espacios artísticos con sus visitantes. Organizado estratégicamente en diferentes circuitos que atraviesan la ciudad, este gran evento gratuito lleva más de dos décadas potenciando las vibrantes escenas de arte locales."</p>
-	
-	<h2>Eventos 2024</h2>
-	<p>Durante el año 2024 se han producido varios eventos en Argentina de los cuales he podido recopilar los siguientes:</p>
-
-	<h3>Miscelaneos</h3>
-	<a href="https://bitbangclub.com/es/" target="_blank">Bitbang 2024</a>
-	<p>"BITBANG tiene su Festival internacional homónimo, que se realiza anualmente en la ciudad de Buenos Aires, desde 2015. Cada año presentamos a referentes globales y descubrimos nuevos talentos. Propiciamos el desarrollo de la creatividad en la animación, los videojuegos y el arte digital ofreciendo workshops y clases magistrales con los artistas más visionarios."</p>
-	<a href="https://virtuality-latam.com/" target="_blank">Virtulity Latam 2024</a>
-	<p>"Este evento contará con referentes del mundo de las tecnologías inmersivas, inteligencia artificial y metaversos, que se unirán para ofrecer una experiencia única. Presentarán las aplicaciones y tendencias en todos los sectores: arte, cultura, educación, entretenimiento, marketing, industria."</p>
-	<a href="https://buenos-aires.mutek.org/" target="_blank">Mutek Argentina 2024</a>
+  <div class="marco">
+    <img src="img/eventos-2024.jpg" alt="Logo de Eventos 2024 en Argentina" class="img-fluid">
+  </div>
+	<h1>Eventos 2024</h1>
+	<p>Recopilación de eventos, exhibiciones, muestras, congresos, exposiciones, ciclos, convenciones y conferencias. Pueden desarrollarse durante uno o varios días, semanas, meses o de forma permanente cuando son virtuales. Algunos se realizan anualmente en un mismo sitio, otros son itinerantes y otros no vuelven a celebrarse.</p>
+  <article>
+	<h2>Generales</h2>
+	<p>Eventos que abarcan todo tipo de temáticas.</p>
+	<h3>Bitbang 2024</h3>
+	<p>"BITBANG tiene su Festival internacional homónimo, que se realiza anualmente en la ciudad de Buenos Aires, desde 2015."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://bitbangclub.com/es/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Virtulity Latam 2024</h3>
+	<p>"Este evento contará con referentes del mundo de las tecnologías inmersivas, inteligencia artificial y metaversos, que se unirán para ofrecer una experiencia única."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://virtuality-latam.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Mutek Argentina 2024</h3>
 	<p>"Desde 2017, MUTEK AR presenta experiencias inmersivas, música futurista, audiovisuales de vanguardia y artistas que marcan el ritmo de los medios tecnológicos en Argentina y el mundo, con una propuesta que lo ha convertido en un festival de innovación de referencia en Argentina y Sudamérica."</p>
-	<a href="https://flashparty.rebelion.digital/index.php/es/" target="_blank">Flash Party Argentina 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://buenos-aires.mutek.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Flash Party Argentina 2024</h3>
 	<p>"Flashparty es un evento basado en el modelo “demoparty” que tiene su origen en la sub-cultura de la demoscene."</p>
-	<a href="https://tube.undernet.uy/w/p/d9iFFGXWomEr59ChXaB1Qb" target="_blank">Segundo encuentro federal de Cybercirujas 2024</a>
-	<p>"Luchando contra la obsolescencia programada.
-	Achicando la brecha digital recuperando hardware ocioso."</p>
-	<a href="https://argentina.campus-party.org/" target="_blank">Campus Party Argentina 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://flashparty.rebelion.digital/index.php/es/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Campus Party Argentina 2024</h3>
 	<p>"Campus Party es la mayor experiencia geek del mundo! Nuestro objetivo es crear un entorno cada vez más inmersivo y disruptivo para debatir sobre tecnología, creatividad, innovación y educación."</p>
-	<a href="https://www.workshow.info/" target="_blank">Workshow 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://argentina.campus-party.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Workshow 2024</h3>
 	<p>"Desde 2015 se ha consolidado como un punto de encuentro clave para la industria del entretenimiento y multimedia."</p>
-	<a href="https://faqfestival.com.ar/" target="_blank">Festival de Arte Queer (FAQ) 2024</a>
-	<p>"FAQ es un festival internacional de arte queer con base en la ciudad de Buenos Aires, Argentina; creado por Lisa Kerner y Violeta Uman y producido por Brandon Asociación Civil y Cultural y FAC: Frente de Acciones Culturales."</p>
-	<a href="https://descubrir.buenosaires.gob.ar/home/986-tecweek" target="_blank">Tecweek 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.workshow.info/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Tecweek 2024</h3>
 	<p>"un festival de innovación educativa diseñado para inspirar"</p>
-	<a href="https://ferias.educacion.gob.ar" target="_blank">Feria de Arte Ciencias y Tecnología 2024</a>
-	<p>"Los invitamos a descubrir y sorprenderse con los proyectos realizados por estudiantes comprometidos con la indagación escolar sobre focos científico-tecnológicos, matemáticos, humanistas y artísticos. Al recorrer el evento encontrarán trabajos que surgieron de las problemáticas que los niños, jóvenes y adolescentes perciben de su entorno."</p>
-	<a href="https://makerlandmisiones.com.ar/" target="_blank">Makerland 2024</a>
-	<p>"¡Bienvenidos a MAKERLAND, la fiesta tech mas explosiva del año! Tecnología, innovación y pura adrenalina se fusionan en un solo lugar para que te diviertas como nunca. Acá, en Misiones, vamos a hacer que tu creatividad pegue un salto de nivel. Si lo que buscás es acción, ¡este es tu mapa!"</p>
-	<a href="https://www.instagram.com/festival_tormenta/" target="_blank">Festival Tormenta 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://descubrir.buenosaires.gob.ar/home/986-tecweek" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Feria de Arte Ciencias y Tecnología 2024</h3>
+	<p>"Los invitamos a descubrir y sorprenderse con los proyectos realizados por estudiantes comprometidos con la indagación escolar sobre focos científico-tecnológicos, matemáticos, humanistas y artísticos."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://ferias.educacion.gob.ars" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Makerland 2024</h3>
+	<p>"¡Bienvenidos a MAKERLAND, la fiesta tech mas explosiva del año! Tecnología, innovación y pura adrenalina se fusionan en un solo lugar para que te diviertas como nunca."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://makerlandmisiones.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Festival Tormenta 2024</h3>
 	<p>"Tormenta - Festival de Arte Electrónico y Digital es un espacio para exponer y potenciar la producción de nuevas formas y expresiones artísticas en la provincia de Tucumán."</p>
-	<a href="https://finde.gba.gob.ar/" target="_blank">Finde Feria de Industrias Creativas 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/festival_tormenta/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Finde Feria de Industrias Creativas 2024</h3>
 	<p>"Feria de Industrias Creativas de la Provincia de Buenos Aires."</p>
-	<a href="https://conurbeat.com.ar" target="_blank">Conurbeat 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://finde.gba.gob.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Conurbeat 2024</h3>
 	<p>"Conorbeat tiene como objetivo promover y fortalecer la identidad digital bonaerense."</p>
-	<a href="https://comic-con.com.ar/" target="_blank">Argentina Comic On 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://conurbeat.com.ar" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Argentina Comic On 2024</h3>
 	<p>"Celebramos la cultura pop con atracciones para toda la familia. Presentaciones, shows, talleres, paneles, exhibiciones, video juegos, experiencias recreativas, cosplay, juegos, una increíble variedad gastronómica y mucho más!"</p>
-	<a href="https://aahd.net.ar/semanahd-2024-del-20-al-25-de-mayo/" target="_blank">Semana de Humanidades Digitales tercera edición - 2024</a>
-	<p>"un evento en línea, abierto, colaborativo y gratuito sobre Humanidades Digitales. La #SemanaHD es un evento organizado entre la Asociación Argentina de Humanidades Digitales, la Red Colombiana de Humanidades Digitales, la RedHD de México y la CUAIEED, UNAM."</p>
-	<a href="https://webinar.somosedison.com/eventos-gratuitos" target="_blank">Webinars de Somos Edison 2024</a>
-	<p>"En Edison nos asociamos con líderes y referentes de diferentes industrias, para co-crear cursos cortos, aplicables y en vivo."</p>
-	<a href="https://bitcoinargentina.org/premio-barte-2024-seleccionados/" target="_blank">Premio B-Arte 2024 - Seleccionados ONG Bitcoin Argentina</a>
-	<p>"Premio B·Arte es el primer concurso creativo interdisciplinario con premios en Bitcoin que invita a toda la comunidad a representar mediante obras y propuestas disruptivas y provocativas el cambio profundo que significa Bitcoin como creación e intercambio de valor."</p>	
-
-	<h3>Arte sonoro</h3>
-	<a href="https://linktr.ee/pleamarorg" target="_blank">Pleamar 2024</a>
-	<p>"Música Electrónica Experimental y Arte Sonoro."</p>	
-
-	<h3>Programación - Desarrollo - Computación - Informática</h3>
-	<a href="https://cac8.sciencesconf.org/?forward-action=index&forward-controller=index&lang=es" target="_blank">Congreso de Arte Computacional 2024</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://comic-con.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Universo Energía: El principio de todo 2024</h3>
+	<p>"«UNIVERSO ENERGÍA. El principio de todo» una mega exposición de Arte, Ciencia y Tecnología desarrollada por la Universidad Nacional de La Plata"</p>	
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/DCXKyLcvM5j/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Sonoro</h2>
+	<p>Eventos principalmente musicales y sonoros.</p>
+  <h3>Pleamar 2024</h3>
+  <p>"Somos un colectivo de profesionales impulsados por el deseo de promover el uso de medios tecnológicos en la producción artística. Nuestro mayor objetivo es generar actividades de formación y brindar experiencias inspiradoras que fomenten y fortalezcan el trabajo colaborativo entre profesionales de diferentes comunidades creativas, creando una red de artistas en la región."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.pleamarorg.com/2024.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+  <h2>Computación Creativa</h2>
+  <p>Eventos donde la computación, el código y la tecnología digital se utilizan como herramientas creativas en el arte, los medios y la cultura contemporánea.</p>
+	<h3>Congreso de Arte Computacional 2024</h3>
 	<p>"El Congreso de Arte Computacional (CAC) es un encuentro académico multidisciplinario que interroga el arte y las ciencias desde diferentes ángulos."</p>
-	<a href="https://indiedevargentina.com/" target="_blank">Indie Dev 2024</a>
-	<p>"El nuevo evento creado por Press Over, tiene como objetivo ser el primer acercamiento al mundo del desarrollo de videojuegos independiente en Argentina."</p>
-	<a href="https://www.whabbit.club/" target="_blank">Whabbit 2024</a>
-	<p>"WHABBIT es un espacio disruptivo que busca fomentar sinergias entre artistas independientes y las industrias orientadas a la tecnología y la cultura. Con el doble propósito de visibilizar el rol del creador y  ofrecerle herramientas y conocimientos en web3."</p>
-	<a href="https://mediaparty.org/bue-evento-2024" target="_blank">Media Party 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://cac8.sciencesconf.org/?forward-action=index&forward-controller=index&lang=es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Whabbit 2024</h3>
+	<p>"WHABBIT es un espacio disruptivo que busca fomentar sinergias entre artistas independientes y las industrias orientadas a la tecnología y la cultura."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.whabbit.club/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Media Party 2024</h3>
 	<p>"Media Party facilita la convergencia entre la industria de los medios y la tecnología de una manera innovadora, internacional y práctica."</p>
-
-	<h3>Videojuegos</h3>
-	<a href="https://tdj.gg/" target="_blank">Temporada de Juegos (TDJ) Fest 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://mediaparty.org/bue-evento-2024" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Videojuegos</h2>
+	<p>Eventos relacionales con el gaming, e-sports, negocios y desarrollo de videojuegos.</p>
+	<h3>Temporada de Juegos Fest 2024</h3>
 	<p>"es un punto de encuentro para los apasionados del gaming y los Esports, donde todos, desde los fans hasta creadores de contenido y referentes de la industria, se unen para celebrar y vivir la cultura gamer en su máxima expresión."</p>
-	<a href="https://linktr.ee/fija.vj" target="_blank">Foro Independiente de Jusgos Argentinos (FIJA) 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://tdj.gg/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Foro Independiente de Juegos Argentinos 2024</h3>
 	<p>"Festival Independiente de Juegos Argentinos."</p>
-	<a href="https://expoeva.com/" target="_blank">Expo Eva 2024</a>
-	<p>"EVA es la sigla que identifica a la Exposición de Videojuegos Argentina (EVA). Desde el año 2003, la Asociación de Desarrolladores de Videojuegos de Argentina (ADVA) organiza la EVA en forma ininterrumpida. Se trata de un espacio de encuentro, diálogo, capacitación y desarrollo de negocios, con foco en videojuegos."</p>
-	<a href="https://globalgamejam.org/" target="_blank">Global Game Jam 2024</a>
-	<p>"El GGJ es el evento de creación de juegos más grande del mundo que tiene lugar en todo el planeta, con decenas de miles de participantes (jammers) en cientos de sitios físicos y virtuales en más de cien países alrededor del mundo." Traducido a español.</p>
-	<a href="https://2024.argentinagameshow.com/" target="_blank">Argentina Game Show 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://linktr.ee/fija.vj" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Exposición de Videojuegos Argentina 2024</h3>
+	<p>"Desde el año 2003, la Asociación de Desarrolladores de Videojuegos de Argentina (ADVA) organiza la EVA en forma ininterrumpida."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.youtube.com/@ADVACHANNEL/videos" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Argentina Game Show 2024</h3>
 	<p>"AGS Visa es la celebración del mundo de los videojuegos más importante del país, uniendo los mundos del gaming, esports, música y streaming."</p>
-	<a href="https://youtube.com/@_clubargentinodearcades?si=B2Zpm5wwm-2p_R91" target="_blank">Club Argentino de Arcades 2024</a>
-	<p>"Pasado y presente de los video games en nuestro país."</p>
-
-	<h3>Internet - Redes Sociales - Streaming</h3>
-	<a href="https://internetday.com.ar/day/sponsors-2024/" target="_blank">Internet Day 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://2024.argentinagameshow.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Global Game Jam 2024</h3>
+	<p>"El GGJ es el evento de creación de juegos más grande del mundo que tiene lugar en todo el planeta, con decenas de miles de participantes (jammers) en cientos de sitios físicos y virtuales en más de cien países alrededor del mundo." Traducido con Kagi Translate.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://globalgamejam.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Indie Dev 2024</h3>
+	<p>"El nuevo evento creado por Press Over, tiene como objetivo ser el primer acercamiento al mundo del desarrollo de videojuegos independiente en Argentina."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://indiedevargentina.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+  <h2>Marketing Digital</h2>
+  <p>Eventos que involucran la internet, redes sociales, creación de contenido, streaming, medios, publicidad, anuncios.</p>
+	<h3>Internet Day 2024</h3>
 	<p>"Internet Day es un espacio de intercambio y debate sobre los escenarios de la industria, las nuevas tecnologías, los nuevos modelos de negocios y el marco legal para desarrollarlos."</p>	
-	<a href="https://www.mmaglobal.com/innovateargentina2024" target="_blank">MMA Innovate Argentina 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://internetday.com.ar/day/sponsors-2024/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>MMA Innovate Argentina 2024</h3>
 	<p>"MMA Innovate Argentina 2024 es uno de los eventos de marketing y tecnología más destacados de América Latina."</p>
-	<a href="https://smday.com.ar/" target="_blank">Social Media Day 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.mmaglobal.com/innovateargentina2024" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Social Media Day 2024</h3>
 	<p>"El Social Media Day es una iniciativa global, representada en Argentina por la consultora Digital Interactivo que propone capítulos locales con el objetivo de dar a conocer las novedades y tendencias de la industria digital."</p>
-	<a href="https://somostent.com/" target="_blank">Tent Content Creator 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://smday.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Tent Content Creator 2024</h3>
 	<p>"Tent Creator Summit es la primera conferencia de la industria de los creadores de contenido en Argentina."</p>
-	<a href="https://agenciasdemedios.com.ar/mediaday/" target="_blank">Media Day 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://somostent.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Media Day 2024</h3>
 	<p>"Promovemos y estimulamos la relación entre medios, anunciantes y agencias de publicidad dándoles mayor valor agregado."</p>
-	<a href="https://bb-media.com/bb-media-day-argentina-2024-buenos-aires/" target="_blank">BB Media Day 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://agenciasdemedios.com.ar/mediaday/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>BB Media Day 2024</h3>
 	<p>"BB Media Day es un evento 100% gratuito enfocado en Servicios de Streaming, TV Paga, Audiencias y Tendencias con el fin de intercambiar información y aprender sobre las mejores estrategias para tener éxito en la industria de Medios y Telecomunicaciones."</p>
-	<a href="https://www.caper.org.ar/la_expo_edicion_anterior.php?accion=verDetalle&id_exposicion_anterior=11" target="_blank">Caper Show 2024</a>
-	<p>"CAPER SHOW es un evento reconocido internacionalmente y convoca cada año a más de 5.000 directivos, profesionales, técnicos, docentes y estudiantes relacionados con la Industria Audiovisual Profesional de Argentina y Latinoamérica. Más del 80% de los visitantes de CAPER SHOW están relacionados con el proceso de compra en sus compañías."</p>
-
-	<h3>Audiovisual</h3>
-	<a href="https://bafici.org/principal-inicio/" target="_blank">Buenos Aires Festival Internacional de Cine Independiente (BACIFI) 2024</a>
-	<p>"El Buenos Aires Festival Internacional de Cine Independiente (BAFICI) es uno de los festivales de cine más importantes y sobre todo especialmente significativos de América Latina, uno cuya programación plantea no pocas sorpresas dentro de un ambiente vibrante y singular."</p>
-	<a href="https://tallerimagen.com.ar/fecimu/premiacion-nacional-fecimu-2024/" target="_blank">Festival de Cine y Multimedia (FECIMU) 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://bb-media.com/bb-media-day-argentina-2024-buenos-aires/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>El Ojo de Iberoamérica 2024</h3>
+	<p>"El Ojo de Iberoamérica es el primer festival internacional con un criterio y una mirada latina de la creatividad, la comunicación y el entretenimiento que cada año impulsa los límites del talento, la creatividad y la comunicación latina."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.elojodeiberoamerica.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Audiovisual</h2>
+	<p>Eventos acerca de producciones cinematográficas nacionales e internacionales, cortos, documentales, animación.</p>
+	<h3>Festival de Cine y Multimedia 2024</h3>
 	<p>"FECIMU es el Festival de Cine y Multimedia organizado por la Cooperativa Taller Imagen."</p>
-	<a href="https://rojosangre.quintadimension.com/" target="_blank">Buenos Aires Rojo Sangre (BARS) 2024</a>
-	<p>"Buenos Aires Rojo Sangre es el más antiguo festival de cine fantástico de Latinoamérica."</p>
-	<a href="https://espacioqueer.com.ar/10eq/" target="_blank">Espacio Queer 2024</a>
-	<p>"En Espacio Queer creemos que la sexualidad y la identidad son una construcción constante y un derecho del que debemos gozar libremente y sin señalamientos. Con el cine como arte principal, buscamos exponer perspectivas queer porque muchas de nuestras historias no conocen la luz: que la conozcan es nuestro deseo permanente."</p>
-	<a href="https://www.fan-neuquen.com.ar/" target="_blank">Festival Audiovisual Neuquén (FAN) 2024</a>
-	<p>"El FAN es el Festival Audiovisual Neuquén, un evento organizado por la Municipalidad de Neuquén que propone potenciar el cine y las artes audiovisuales de la Norpatagonia."</p>
-	<a href="https://www.bamvfest.com/" target="_blank">Buenos Aires Music + Video Festival (BAMB) 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://tallerimagen.com.ar/fecimu/premiacion-nacional-fecimu-2024/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Buenos Aires Music + Video Festival 2024</h3>
 	<p>"Buenos Aires Music + Video Festival (BAMV) es el punto de encuentro de la música y el audiovisual."</p>
-	<a href="https://animacioncarton.com/" target="_blank">Festival Carón - Festival Internacional de Cortos de Animación 13 Edición - 2024</a>
-	<p>"El Festival Cartón busca el encuentro de los realizadores con otros realizadores y con el público en general. Busca descubrir nuevas técnicas y nuevas ideas. Busca aprender, enseñar, y compartir."</p>
-	<a href="https://espigas.org.ar/es/actividades/i_congreso_internacional_de_archivos_audiovisuales_de_arte" target="_blank">I Congreso Internacional de Archivos Audiovisuales de Arte 2024</a>
-	<p>"Este Congreso Internacional procura ser una instancia de intercambio y actualización acerca de las discusiones y desafíos en este ámbito. El encuentro busca hacer aportes en los campos de la preservación y la patrimonialización de obras audiovisuales, la archivística, la investigación y creación en artes, la historia y las ciencias sociales, así como al coleccionismo, la gestión de museos y galerías y los desarrollos tecnológicos asociados a los archivos audiovisuales."</p>	
-	<a href="https://www.mardelplatafilmfest.com/39/es/" target="_blank">Festival Internaciona de Cine de Mar del Plata 2024</a>
-	<p>"El Festival Internacional de Cine de Mar del Plata, organizado por el Instituto Nacional de Cine y Artes Audiovisuales (INCAA), promueve la actividad cinematográfica en todas sus formas, y en sus pantallas se exhiben películas de diversos orígenes, temática y estilos. En él conviven la tradición del cine clásico con las nuevas tendencias, las nuevas voces y las nuevas tecnologías."</p>
-	<a href="https://festivalfab.com.ar/" target="_blank">Festival Audiovisual Bariloche FAB 2024</a>
-	<p>"Organizado por la Secretaría de Cultura del Gobierno de la Provincia de Río Negro."</p>
-	<a href="https://www.facebook.com/FIRAFEST?_rdc=1&_rdr#" target="_blank">Festival Internacional de Realización Audiovisual (FIRAFEST) 2024</a>
-	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
-	<a href="https://www.instagram.com/festivalfira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Festival Internacional de Realización Audiovisual (FIRAFEST) 2024</a>
-	<p>"Es un espacio de encuentro bianual, en dos etapas, abocado al desarrollo artístico, técnico audiovisual y colaborativo. Festival autogestivo."</p>
-	<a href="https://institutocultural.gba.gob.ar/ficpba" target="_blank">Festival Internacional de Cine de la Provincia de Buenos Aires (FICPBA) 2024</a>
-	<p>"FICPBA pone en diálogo la identidad, la soberanía y la diversidad audiovisual bonaerense y tendrá la primera edición del Mercado Internacional de la Industria Audiovisual de la Provincia."</p>
-	<a href="https://www.epacine.com.ar/epa/edicion-2024/" target="_blank">Festival Internacional de Cine Independiente de El Palomar (EPA CINE) 2024</a>
-	<p>"EPA CINE -Festival Internacional de Cine Independiente de El Palomar-, organizado por el CINE TEATRO HELIOS en conjunto con TEOREMA PRODUCCIONES, propone descentralizar la difusión cinematográfica y seguir consolidando, edición tras edición, un espacio en el conurbano bonaerense, específicamente en El Palomar y alrededores, para que películas independientes encuentren otro tipo de diálogo y de público."</p>
-	<a href="https://seff.com.ar/novedades/ganadores-seff-2024/" target="_blank">Santiago del Estero Film Festival (SEFF) 2024</a>
-	<p>"Santiago del Estero Film Fest, Internacional de Cine, es un Festival competitivo, de alcance internacional, de cortometrajes y largometrajes, que se desarrolla en Santiago del Estero, Argentina desde 2017."</p>
-
-	<h3>Artes Visuales</h3>
-	<a href="https://expografika.com/n/un-poco-de-expografika-2024/" target="_blank">Expografika 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.bamvfest.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Congreso Internacional de Archivos Audiovisuales de Arte 2024</h3>
+	<p>"Este Congreso Internacional procura ser una instancia de intercambio y actualización acerca de las discusiones y desafíos en este ámbito."</p>	
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://espigas.org.ar/es/actividades/i_congreso_internacional_de_archivos_audiovisuales_de_arte" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>MUBI Fest 2024</h3>
+	<p>"Cine y cultura, con curaduría."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://youtu.be/b2YW-4k1PRk?si=zmdLyvwubyujOaTb" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Visuales</h2>
+	<p>Eventos acerca de exposiciones y presentaciones de elementos visuales desde diseño gráfico, publicidad, comunicación visual, impresión 3D.</p>
+	<h3>Expografika 2024</h3>
 	<p>"Expográfika es la feria de la industria gráfica más importante de nuestro país, la de mayor expansión, alcance y representatividad para el sector."</p>
-	<a href="https://www.exposign.com.ar/" target="_blank">Expo Sign 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://expografika.com/n/un-poco-de-expografika-2024/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Expo Sign 2024</h3>
 	<p>"Es el principal evento del sector, en donde se dan cita los profesionales y protagonistas de la comunicación visual para presentar y conocer novedades, afianzar y generar relaciones en busca de nuevos negocios."</p>
-	<a href="https://www.arteba.org/feria-2024" target="_blank">Fundación Arteba 2024</a>
-	<p>"Fundación arteba promueve la producción y difusión de las artes visuales en Argentina."</p>
-	<a href="https://www.mapa.art/convocatoria" target="_blank">MAPA 2024</a>
-	<p>"MAPA feria de arte busca fomentar el intercambio entre artistas, galeristas, curadores, coleccionistas y nuevas audiencias, generando un espacio de reflexión en torno a las producciones actuales de artes visuales."</p>
-	<a href="https://bada.com.ar/" target="_blank">BADA 2024</a>
-	<p>"BADA ofrece una experiencia única al conectar directamente a los visitantes con los artistas, brindándoles la oportunidad exclusiva de descubrir y comprar arte sin intermediarios."</p>
-	<a href="https://www.instagram.com/estoesunaffair/" target="_blank">Central Affair 2024</a>
-	<p>"15 galerías de arte en un único lugar en el Microcentro porteño."</p>
-	<a href="https://www.el-libro.org.ar/inicio-fel/" target="_blank">Feria del Libro de Buenos Aires 2024</a>
-	<p>"La Feria Internacional del Libro de Buenos Aires tiene una superficie de más de 45.000 metros cuadrados y es la más concurrida en el mundo de habla hispana. Durante sus casi tres semanas de duración la visitan más de un millón de lectores y más de doce mil profesionales del libro."</p>
-	<a href="https://www.el-libro.org.ar/inicio-infantil-juvenil/" target="_blank">Feria del Libro Infantil y Juvenil 2024</a>
-	<p>"La Feria del Libro Infantil y Juvenil es organizada por la Fundación El Libro como un aporte para la formación cultural y educativa de niños y jóvenes, incentivando su relación temprana con los libros en un ambiente de alegría y entretenimiento. Es una de las propuestas más esperadas y convocantes de las vacaciones de invierno."s</p>
-	<a href="https://expopapeleria.com.ar/" target="_blank">Expopapelería 2024</a>
-	<p>"EXPOPAPELERÍA es una de las exposiciones más importantes del rubro a nivel regional, para público altamente especializado en librería, papelería y afines."</p>
-
-	<h3>Espectáculos - Teatrales</h3>
-	<a href="https://fuerzabrutaglobal.com/es/" target="_blank">Fuerza Bruta 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.exposign.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+  <article>
+	<h2>Escénicos</h2>
+	<p>Eventos en vivo, teatrales, al aire libre.</p>
+	<h3>Fuerza Bruta 2024</h3>
 	<p>"Bienvenidos a una sensibilidad colectiva, universal, sin traducción, ni anestesia. Brutalmente feliz. Bienvenidos al espectáculo más feliz del planeta."</p>
-	<a href="https://www.nomadesomos.com/" target="_blank">Nómade 2024</a>
-	<p>"Nómade es una comunidad de músicos y amantes de la música que busca generar una conexión íntima en locaciones únicas."</p>
-	<a href="https://www.halakenart.com" target="_blank">Halaken Art 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://fuerzabrutaglobal.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Halaken Art 2024</h3>
 	<p>"Experiencias Sensoriales Inmersivas en la Oscuridad."</p>
-	<a href="https://teatrociego.org/" target="_blank">Teatro Oscuro 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.halakenart.com" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Teatro Oscuro 2024</h3>
 	<p>"Somos una compañía de tratro experta en contar historias en absoluta oscuridad."</p>
-	<a href="https://realselfexperience.com/es/" target="_blank">Real Self 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://teatrociego.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Real Self 2024</h3>
 	<p>"REAL SELF es Una Experiencia Inmersiva Humana."</p>
-	<a href="https://blowup-experience.com/" target="_blank">Blow Up Experience - New Sensations 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://realselfexperience.com/es/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Blow Up Experience 2024</h3>
 	<p>"El fenómeno mundial de arte inflable y tecnología."</p>	
-	<p>"Considerado como uno de los últimos segmentos del “Kidulting”, esta tendencia cultural invita a los adultos a embarcarse en actividades asociadas a niños, proporcionando beneficios comprobados para la salud mental."</p>
-	<a href="https://www.lollapaloozaar.com/" target="_blank">Lollapalooza 2024</a>
-	<p>"Lo que vuelve único al LollaAR es la magia que se da durante esos 3 días en el cruce de diferentes expresiones artísticas. Cada nueva edición invida a grandes artistas locales e internacionales para convertir el hipódromo en una fiesta para todos los sentidos, con instalaciones, escultura, arte cinético y arte digital con propuestas de realidad aumentada"</p>
-	<a href="https://www.amanitafestival.com/es/lineup" target="_blank">Amanita 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://blowup-experience.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Lollapalooza 2024</h3>
+	<p>"Lo que vuelve único al LollaAR es la magia que se da durante esos 3 días en el cruce de diferentes expresiones artísticas."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.lollapaloozaar.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Amanita 2024</h3>
 	<p>"Amanita es una experiencia inmersiva de cuatro días de acampe que combina música, arte, yoga y talleres en un entorno natural."</p>
-	<p>"Un Festival Transformacional es un evento holístico que va más allá de la música y el arte. Es una experiencia en comunidad, con un fuerte enfoque en el crecimiento personal y colectivo."</p>
-
-	<h3>Universitarios</h3>
-	<a href="https://multimedia.una.edu.ar/agenda/muestra-anual-atam-24_43067" target="_blank">Muestra Anual ATAM 24</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.amanitafestival.com/es/lineup" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Holi Festival Argentina 2024</h3>
+	<p>"Este festival es una celebración colectiva donde la integración de cuerpo, mente y espíritu se refleja en cada rincón."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.holifestival.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
+	<article>
+  <h2>Universitarios</h2>
+	<p>Eventos universitarios nacionales e internacionales en Argentina.</p>
+	<h3>Muestra Anual ATAM 2024</h3>
 	<p>"En el marco de los festejos por los 20 años del Área Transdepartamental de Artes Multimediales se invita a toda la comunidad a la presentación de obras realizadas durante el presente año en las diferentes cátedras que componen la Licenciatura en Artes Multimediales."</p>
-	<a href="https://linktr.ee/festivae" target="_blank">Festival de Artes Electrónicas 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://multimedia.una.edu.ar/agenda/muestra-anual-atam-24_43067" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Festival de Artes Electrónicas 2024</h3>
 	<p>"Activando nuestra Universidad pública. 100% autogestión estudiantil."</p>
-	<a href="https://taller5.ludic.cc/artimanias/2024/">Artimañas 2024</a>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/reel/C9Fm9CDxIKo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Artimañas 2024</h3>
 	<p>"Desde 2011 se realiza el festival Artimañas en donde el conjunto del alumnado de taller de Diseño Multimedial presentan sus trabajos finales de carrera."</p>
-	<a href="https://festivalrender.com/" target="_blank">Festival de cine Render 2024</a>
-	<p>"El Festival de Cine Render es una organización que busca fortalecer y promover la producción audiovisual estudiantil creativa a nivel nacional."</p>
-	<a href="https://stopmotionourfest.com/" target="_blank">Stop Motion Fest (SMOF) 2024</a>
-	<p>"SMOF, es el único festival de cine de animación con foco en stop motion que se realiza actualmente en Sudamérica"</p>
-	<a href="https://sites.google.com/view/enercseproyecta/inicio" target="_blank">Enerc Se Proyecta 2024</a>
-	<p>"Enerc Se Proyecta es la muestra audiovisual estudiantil más grande de Argentina. Es llevada adelante por los estudiantes de la ENERC a nivel federal, con apoyo de la ENERC y el INCAA."</p>
-	<a href="https://mvl.edu.ar/noticia/cuv-asi-fue-la-44-muestra-anual-de-cortos/" target="_blank">Muestra Anual de Cortos 2024</a>
-	<p>Mestra Anual de corto en el Centro Cultural de Munro por parte del Instituto Municipal de Educación Superior de Vicente Lopez - Centro Universitario de Vicente lopez.</p>
-	<a href="https://festivalrec.com.ar/" target="_blank">Festival REC 2024</a>
-	<p>"Organizado por la Facultad de Artes de la UNLP, nuestro Festival busca crear un espacio de difusión e intercambio para la producción audiovisual de estudiantes de Cine y Artes Audiovisuales de todo el país."</p>
-	<a href="https://www.ficuba.com/es/" target="_blank">Festival Internacional de Cine de la UBA (fic. UBA) 2024</a>
-	<p>"El FESTIVAL INTERNACIONAL DE CINE DE LA UBA (FIC.UBA), organizado por la Universidad de Buenos Aires y la Facultad de Arquitectura Diseño y Urbanismo (FADU), a través de la Secretaría de Políticas de Diseño e Innovación Tecnológica, la Secretaría de Relaciones Institucionales, Cultura y Comunicación y la Carrera de Diseño de Imagen y Sonido"</p>
-	<a href="https://playvideoarte.com/" target="_blank">Play Festival de videoarte y cine experimental 2024</a>
-	<p>"Play Festival de videoarte y cine experimental es una exhibición de alcance internacional, que busca expandir las fronteras de los usos  legitimados de la imagen, el sonido y la palabra en el campo audiovisual."</p>
-	<a href="https://ferial.una.edu.ar/" target="_blank">Feria de Artes del Libro de la UNA 2024</a>
-	<p>"FERIAL surge desde la Fundación Universidad Nacional de las Artes y el área editorial de la universidad, Libros UNA, con el fin de difundir y promover los oficios vinculados a la producción del libro impreso."</p>
-	<a href="https://www.instagram.com/faa.audiovisual?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Festival Artístico Audiovisual 2024</a>
-	<p>"Espacio de exhibición y aprendizaje gestionado por estudiantes de Diseño Artístico Audiovisual de la Universidad Nacional de Rio negro."</p>
-	<a href="https://www.instagram.com/festivalenlaces/?hl=es" target="_blank">Festival Enlaces 2024</a>
-	<p>"ENLACES es un festival de cultura y arte organizado por estudiantes de la Universidad Nacional de Tres de Febrero, y tiene como objetivo generar un espacio para la exhibición, exposición y circulación de propuestas artísticas y culturales de los estudiantes de la Universidad y de artistas emergentes."</p>
-	<a href="https://audiovisuales.una.edu.ar/agenda/arranca-la-segunda-edicion-del-ficu_24827" target="_blank">Festival Internacional de Cine Universitario (FICU) 2024</a>
-	<p></p> 
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://taller5.ludic.cc/artimanias/2024/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Universo energía. El principio de todo 2024</h3>
+	<p>"una muestra de arte, ciencia y tecnología que busca generar un espacio formativo para el aprendizaje, la reflexión y el debate sobre el presente y futuro de la energía."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.centrodearte.unlp.edu.ar/universo-energia-el-principio-de-todo-exposicion-de-arte-ciencia-y-tecnologia/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  </article>
 	</section>	
 		</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -329,6 +663,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>

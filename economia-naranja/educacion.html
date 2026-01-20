@@ -23,75 +23,46 @@
       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
   	</svg>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      	<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      	<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Luz
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      	</li>
-      	<li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
   <div id="contenedor" class="shadow-lg bg-body-tertiary">
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary, navbar fixed-top bg-body-tertiary, shadow-lg p-3 mb-5 bg-body-tertiary, opacity-100">
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
   				<div class="container-fluid">
-  					<img src="../img/logo-ideogram.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					<a class="navbar-brand" href="../index.html"><span>MultiMediAr</span></a>
+            <a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
     				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       					<span class="navbar-toggler-icon"></span>
     				</button>
     				<div class="collapse navbar-collapse" id="navbarNavDropdown">
       					<ul class="navbar-nav">
       						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>Inicio</span></a>
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías</span></a>
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web3</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/iag.html"><span>IA Generativa</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/robotica.html"><span>Robótica</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/holografia.html"><span>Holografía</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-          							<li><a class="dropdown-item" href="../tecnologias/fx-en-vivo.html"><span>Efectos en Vivo</span></a></li>
+          							<li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
+                        <span>Holografía</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
           						</ul>
         					</li>
         					<li class="nav-item">
-          						<a class="nav-link" href="../series-y-peliculas/index.html"><span>Series y Películas</span></a>
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
         					</li>
         					<li class="nav-item dropdown">
          	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
          	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="index.html"><span>Intruducción</span></a></li>
+          							<li><a class="dropdown-item" href="index.html"><span>Panorama</span></a></li>
           							<li><a class="dropdown-item" href="emprendimiento.html"><span>Emprendimiento</span></a></li>
           							<li><a class="dropdown-item" href="educacion.html"><span>Educación</span></a></li>
           							<li><a class="dropdown-item" href="acervos.html"><span>Acervos</span></a></li>
@@ -112,93 +83,307 @@
           						</ul>
         					</li>
       					</ul>
+                <div id="modo">
+                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
     				</div>
   				</div>
 			</nav> 
 		</header>
 	<main>	
 	<section>
-	<h1>MultiMediAr</h1>
-	<h2>Economía Naranja</h2>
-	<h3>Educación</h3>
-	<p>Las STEAM del inglés (Science, Technology, Engineering, Arts and Mathematics) o en español CTIAM (Ciencias, Tecnología, Ingenierías, Artes y Matemáticas) comprenden carreras y roles artísticos vigentes con fines terapéuticos o de ocio. Dentro de las salidas principales se destacan la creación de contenido, la gestión de comunidades o community management aunque invulucra marketing (mercadotecnia en español), la mercadotecnia o marketing digital, la edición de video, la animación y modelado 2d y 3d, los eventos o instalaciones interactivas, etc.</p>
-	<p>La vía académica contempla, desde ayudantías de cátedra para estudiantes avanzados, la docencia y finalmente la investigación. Existen curso de formación profesional, pregrado: tecnicaturas, CCC o Ciclos de Complementación Curricular que permiten adquirir licenciaturas, grado: licenciaturas y posgrados: maestrías, doctorados y posdoctorados, residencias artísticas e incluso programas de intercambio estudiantil. Incluso es posible participar de congresos de la materia para poder tratar las tendencias como asi también seminarios, conferencias. etc.</p>
-	<h3>Oficios Digitales</h3>
-	<p>Los oficios del arte digital son un tipo particular de trabajo donde convergen múltiples disciplinas como la programación, la escenografía, los videojuegos y el audio. Interactúan con y se integran a un amplio espectro de agentes y espacios públicos y privados de pequeña y mediana escala, también a grandes organizaciones de eventos masivos, desde desarrollos interactivos para eventos, animación 3D para publicidad y cine, operación de video en shows y VFX para videojuegos hasta sonificación sonora.</p>
-	<p>Cada vez más sectores de la economía cultural requieren de servicios basados en la creatividad tecnológica: proyecciones para shows en vivo, videos con inteligencia artificial, diseños interactivos en museos.</p>
-	<h3>Especialización</h3>
-	<p>A lo largo de la carrera que elijan mientras abarque la multimedia abarcara un conjunto de lenguajes artísticos amplio, con lo cual van a tender a orientarse y especializarse en una rama en contreto, siempre sucede así. Si bien podrían dedicarse a varias ramas, este tipo de carretas generalista proporcionan una base general, es decir tendrán un conocimiento general de la multimedia, sin embargo al trabajar en equipo, la especificidad del rol se vuelve crucial dado que eso garantiza mayor calidad en la obra y/o producto.</p>
-	<p>Algunos ejemplos</p>
-	<a href="https://presentecontinuo.org/" target="_blank">Presente Continuo</a>
-	<p>"Presente Continuo Org es una plataforma de debate, formación y producción."</p>
+  <div class="marco">
+    <img src="img/educacion.jpg" alt="Logo de educación" class="img-fluid">
+  </div>
+	<h1>Educación</h1>
+	<p>Las <strong>STEAM</strong>, del inglés <strong>(Science, Technology, Engineering, Arts and Mathematics)</strong> o <strong>CTIAM (Ciencia, Tecnología, Ingeniería, Artes y Matemáticas)</strong>, comprenden carreras y roles artísticos con aplicaciones terapéuticas o recreativas. Entre las principales salidas laborales se destacan la creación de contenido, el marketing digital (en las áreas de marketing de contenido, community management, social media management, y copywriting) y de BTL (enfoque no masivo que prioriza la experiencia del usuario a través de propuestas emocionales y creativas), la edición de video, la animación, el sombreado y el modelado 2D y 3D, así como la producción de eventos e instalaciones interactivas, los efectos especiales, entre otras.</p>
+	<p>La vía académica ofrece diversas posibilidades, desde ayudantías de cátedra para estudiantes avanzados para luego escalar a Jefes de Trabajos Prácticos, Titular Suplente y eventualmente Titular de cátedra (cuando el mismo renuncia o se jobila), desarrollandose en la docencia o a largo plazo en la investigación. Existen cursos de formación profesional, programas de pregrado como tecnicaturas y Ciclos de Complementación Curricular (CCC) que permiten acceder a licenciaturas, además de estudios de grado (licenciaturas) y posgrado (maestrías, doctorados y posdoctorados). También es posible participar en residencias artísticas, programas de intercambio estudiantil, congresos, seminarios y conferencias para mantenerse actualizado sobre las tendencias del sector.</p>
+  <article>
+	<h2>Oficios Digitales</h2>
+	<p>Los oficios del arte digital combinan múltiples disciplinas, como programación, escenografía, desarrollo de videojuegos y producción de audio. Estos campos interactúan con una amplia variedad de agentes y espacios, desde pequeñas y medianas empresas hasta grandes organizaciones de eventos masivos. Entre las áreas de aplicación se encuentran los desarrollos interactivos para eventos, la animación 3D para publicidad y cine, la operación de video en espectáculos en vivo y la producción de efectos visuales (VFX) para videojuegos, así como la sonorización digital.</p>
+	<p>Cada vez más sectores de la economía cultural demandan servicios basados en la creatividad tecnológica, como proyecciones para shows en vivo, videos generados con inteligencia artificial y diseños interactivos en museos.</p>
+	<h2>Polivalencia</h2>
+	<p>Si bien la especialización puede marcar la diferencia frente a la competencia, la polivalencia o el conocimiento generalista permite desempeñar múltiples roles simultaneamente, especialmente en las <strong>StartUps o MiPyMEs</strong> (Micro, Pequeñas y Medianas Empresas), que suelen priorizar este tipo de perfiles debido a su presupuesto limitado. Además, contar con una formación generalista puede favorecer el desarrollo del liderazgo, al facilitar la gestión y dirección de un equipo de producción multimedia.</p>
+	<h2>Especialización</h2>
+	<p>A lo largo de su trayectoria académica y profesional, quienes elijan carreras relacionadas con la multimedia adquirirán un conocimiento amplio de distintos lenguajes artísticos. Sin embargo, con el tiempo, tenderán a especializarse en una rama concreta. Si bien es posible desempeñarse en varias áreas, este tipo de formación generalista proporciona una base integral que permite integrarse en equipos multidisciplinarios. En estos entornos, la especialización en un rol específico resulta clave para garantizar una mayor calidad en las obras y productos desarrollados.</p>
+	<h2>Microcredenciales</h2>
+	<p>Las microcredenciales son certificaciones formativas de corta duración que validan habilidades específicas, técnicas o creativas. En el campo de las artes y del diseño multimedial permiten acreditar competencias puntuales —como animación 3D, edición audiovisual, diseño UX/UI, composición de VFX, captura de movimiento, producción sonora, ilustración digital o creación con IA— sin necesidad de completar una carrera larga.</p>
+	<h2>Aprendizaje vitalicio</h2>
+	<p>Debido al avance de la automatización y la IA generativa es que dentro de la industria creativa, muchos roles pueden ser transformados por completo, lo cual implica un cambio de paradigma con la forma de estudiar. Antes una persona estudiaba y su conocimiento le otorgaba vigencia casi vitalicia con menores actualizaciones. Hoy día y a futuro la capacitación debera ser vitalicia para mantenerse vigente y es por eso que se destacan 3 formatos:</p>
+	<ul>
+		<li><strong>Upskilling</strong>: Es subir el nivel técnico y creativo para mantenerse competitivo en una industria que evoluciona constantemente.
+		<li><strong>Reskilling</strong>: Es aprender un conjunto nuevo de habilidades para cambiar de especialización y adaptarse a las nuevas demandas del sector.
+		<li><strong>Outskilling</strong>: Es preparar a los profesionales para reinventarse en nuevas áreas creativas cuando su rol original disminuye o desaparece.
+	</ul> 
+	<p>En las artes digitales y el diseño multimedial, la obsolescencia no es un proceso programado sino una consecuencia inevitable del avance tecnológico, tan rápido que hace imprescindible la actualización continua mediante microcredenciales, upskilling y reskilling siendo al autodidactismo una iniciativa necesaria.</p>
+	
+	<h3>Presente Continuo</h3>
 	<p>"El programa nace desde la convicción de que la transformación representada por la cuarta revolución tecnológica nos está llevando a un lugar donde los marcos conceptuales y las descripciones que heredamos del mundo de ayer ya no sirven para entender el de hoy y proyectar el de mañana."</p>
-	<p>"El objetivo del programa es entender cómo estas tecnologías están cambiando la forma de producir arte y, al mismo tiempo,  cómo las creaciones artísticas pueden ayudarnos a comprender este nuevo mundo que habitamos."</p>
-	<a href="https://www.argentinaperformanceart.com/" target="_blank">Argentina Performance Art (APA)</a>
-	<p>"Esta es la primera plataforma dedicada exclusivamente a la investigación teórica y a la valorización, tanto histórica como contemporánea, de la Performance Art en Argentina y el Sur Global. Se enfoca en artistas de performance argentinas/os y de otros países que desarrollan su obra en Argentina, contribuyendo así a la construcción de un patrimonio histórico interseccional."</p>		
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://presentecontinuo.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h3>Radartes</h3>
+	<p>"Plataforma de difusión de acceso libre y gratuito sobre convocatorias, premios, becas, residencias, fondos para artistas latinoamericanos."</p>	
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.radartes.org/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
 	<h3>Experiencia</h3>
-	<p>Las pasantías suelen ser una buena oportunidad para estudiantes avanzados, por lo general con la mitad de la carreras culminada que estén interesados en trabajar en relación de dependencia y adquirir experiencia como asi también el voluntariado para organizaciones del tercer sector.</p>
-	<h3>Gamification</h3>
-	<p>Dentro de la educación existe un concepto reciente conocido como gamification del inglés: "ludificación", el cual consiste en dotar a una plataforma de características lúdicas como las que poseen los videojuegos como las recompensas, las misiones, la experiencia, los desafíos, etc lo cual torna al aprendizaje mas estimulante y dinámico. Se puede enseñar una habilidad artística en una plataforma como forma de monetizar. Hay virtualidad académica para carreras pero no pueden exceder cierta distancia teniendo en cuenta que la rendición de exámenes parciales y exámenes finales debe hacerse presencial como asi también la presentación de ciertos Trabajos Prácticos que séan instalacionistas. Hay virtualidad laboral que puede requerir estar domiciliado a una distancia relativa dado que puede ser requerida su labor presencial</p>	
-	<p>A continuación hay 2 sitios con orientación vocacional y experiencias de estudiantes y graduados con respecto a carreras en general pero puede servir con respecto a multimedia.</p>
-	<a href="https://orienten.me/" target="_blank">Orienten.me</a>
+	<p>Las pasantías representan una excelente oportunidad para estudiantes avanzados, generalmente aquellos que han completado al menos la mitad de su carrera, y que desean adquirir experiencia laboral en relación de dependencia. Asimismo, el voluntariado en organizaciones del tercer sector puede ser una alternativa enriquecedora para desarrollar habilidades y generar impacto social.</p>
+
+	<h3>Gamificación</h3>
+	<p>En el ámbito educativo, existe un concepto relativamente reciente conocido como <strong>gamification o ludificación</strong>. Este enfoque consiste en incorporar elementos propios de los videojuegos, como recompensas, misiones, niveles de experiencia y desafíos, con el fin de hacer el aprendizaje más dinámico y estimulante promoviendo el funtech, el creativetech y el edtech.</p>
+	<p>Además, la enseñanza de habilidades artísticas a través de plataformas gamificadas puede convertirse en una fuente de monetización. En cuanto a la educación virtual, si bien existen opciones académicas a distancia, en muchos casos es necesario rendir exámenes parciales y finales de manera presencial o domiciliarios, así como presentar ciertos trabajos prácticos que requieran instalaciones físicas.</p>
+	<p>Por otro lado, el trabajo remoto es una posibilidad en diversas industrias, aunque algunas empresas pueden exigir que los empleados residan dentro de una determinada distancia geográfica, en caso de que se requiera su presencia ocasionalmente como internacionalmente.</p>
+
+	<h3>Orientación vocacional y Buscadores</h3>
+	<p>Plataformas de orientación vocacional y búsqueda de cursos y carreras que permiten enfocar la vocación hacia la multimedia o hacia un área de la misma y conociendo experiencias de estudiantes y egresados.</p>
+	<h4>Orienten.me</h4>
 	<p>"Orienten.me te invita a resolver tus dudas de la mano de otros estudiantes y egresados, para encontrar tu mejor opción de estudios."</p>
-	<a href="https://www.nosequeestudiar.net/" target="_blank">No se que estudiar</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://orienten.me/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>No se que estudiar</h4>
 	<p>"NoSeQueEstudiar es una herramienta gratuita que te ayuda a decidir tu futuro con información actualizada sobre carreras y sus perspectivas laborales. Nuestro Test Vocacional online te ayuda a explorar tus habilidades y descubrir tu vocación."</p>
-	<p>A continuación recopile algunas de las plataformas para poder cursar virtualmente:</p>
-	<a href="https://www.flexflix.ai/" target="_blank">FlexFlix</a>
-	<p>"FlexFlix es una plataforma de videos "on demand" para kids & teens con miles de películas edutainment en español, inglés y portugués que promueve el pensamiento flexible y creativo."</p>
-	<a href="https://www.bitdegree.org/" target="_blank">BitDegree</a>
-	<p>"BitDegree es una plataforma gamificada e impulsada por incentivos (Jugar y Ganar) para aprender sobre criptomonedas y el espacio más amplio de Web3. Los jugadores participan en Misiones de BitDegree dedicadas a temas o proyectos, donde resuelven cuestionarios, abordan acciones relacionadas con blockchain y sociales, e investigan temas a partir de piezas de contenido proporcionadas, todo dentro de un límite de tiempo establecido. Mientras el aprendizaje ocurre en segundo plano, los participantes pueden ganar recompensas de aprendizaje en criptomonedas y ganar premios únicos." Traducido con Kagi Translate.</p>
-	<a href="https://learnweb3.io/">LeanrWeb3</a>
-	<p>"LearnWeb3 es el ecosistema educativo líder en Web3. Ofrecemos una amplia gama de cursos educativos, recursos y herramientas diseñados para ayudar a los desarrolladores a aprender y crecer en el espacio Web3." Traducido con Kagi Translate.</p>
-	<a href="https://www.clubarts.ar/" target="_blank">Club Arts (CABA)</a>
-	<p>"CLUB ARTS es una propuesta del Equipo  ROCK SCHOOL. Somos un grupo multidisciplinario de profesionales de las artes (Música, Danza y más). Nos dedicamos a la enseñanza desde hace más de 30 años. Hemos venido creciendo en forma permanente debido a que amamos lo que hacemos. Actualmente contamos con 3 sedes en Ciudad de Buenos Aires."</p>
-	<p>Agrego alguos sitios para buscar, cursos, carreras tanto presenciales como virtuales, privadas como públicas.</p>
-	<a href="https://campusvirtual.cin.edu.ar/" target="_blank">Campus Virtual Universitario Nacional</a>
-	<p>"El Campus Virtual Universitario Nacional es una iniciativa que nace como un acuerdo del conjunto de los rectores que integran el Consejo Interuniversitario Nacional (CIN)."</p>
-	<a href="https://www.estudios.com.ar/" target="_blank">Estudio</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.nosequeestudiar.net/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>Re-vista Vocacional</h4>
+	<p>"Desde 1992, Re-vista Vocacional se propone difundir la amplia oferta educativa de nivel superior promoviendo la elección libre y responsable de la carrera profesional."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.revistavocacional.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>Estudios</h4>
 	<p>"Ayudándote a orientar tu camino universitario desde hace más de 26 años en Argentina"</p>
-	<a href="https://www.classcentral.com/" target="_blank">Class Central</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.estudios.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>Campus Virtual Universitario Nacional</h4>
+	<p>"El Campus Virtual Universitario Nacional es una iniciativa que nace como un acuerdo del conjunto de los rectores que integran el Consejo Interuniversitario Nacional (CIN)."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://campusvirtual.cin.edu.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>busco universidad</h4>
+	<p>"Conectamos futuros alumnos con instituciones educativas aportando valor a ambas partes"</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.buscouniversidad.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h4>Universidades Argentinas</h4>
+	<p>"Todas las universidades y títulos oficiales ofrecidos en las 23 provincias y Ciudad Autónoma de Buenos Aires. Encontrá tu carrera. ¿Qué carrera querés estudiar."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.universidadesargentinas.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h3>Cursos</h3>
+	<p>Cursos Cortos e intensivos y otros largos y extensivos, presenciales como virtuales, y un buscardor de cursos con o sin certificación, gratuitos como arancelados.</p>
+	<h4>Class Central</h4>
 	<p>"Class Central agrupa cursos de muchos proveedores para ayudarte a encontrar los mejores cursos sobre casi cualquier tema, dondequiera que existan." Traducido con Kagi Translate.</p>
-	<a href="https://beta-hub.com/es" target="_blank">Beta Hub</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.classcentral.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h3>Niños y adolescentes</h3>
+	<h4>Club Arts</h4>
+	<p>"CLUB ARTS es una propuesta del Equipo ROCK SCHOOL. Somos un grupo multidisciplinario de profesionales de las artes (Música, Danza y más). Nos dedicamos a la enseñanza desde hace más de 30 años. Hemos venido creciendo en forma permanente debido a que amamos lo que hacemos. Actualmente contamos con 3 sedes en Ciudad de Buenos Aires."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.clubarts.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Beta Hub</h4>
 	<p>"Beta Hub es un espacio impulsado por Mercado Libre para que jóvenes de América Latina accedan a propuestas educativas de calidad, y empiecen a crear su camino en tecnología."</p>
-	<a href="https://www.fundaciontelefonica.com.ar/empleabilidad/" target="_blank">Fundación Telefónica Movistar Argentina</a>
-	<p>"Promovemos iniciativas que mejoran las oportunidades de niños y niñas, con una educación inclusiva, digital, innovadora y de calidad."</p>
-	<p>"Conectamos a las personas con la nueva realidad laboral, dándoles formación y orientación profesional gratuitas."</p>
-	<a href="https://institucional.telecom.com.ar/digitalers" target="_blank">Digitalers</a>
-	<p>"Es un programa de formación gratuita en programación y oficios digitales con el objetivo de promover el desarrollo de talento digital junior para la industria TIC e impulsar la inserción laboral de jóvenes de todo el país."</p>
-	<a href="https://wipartedigital.com/" target="_blank">w.i.p. arte digital - Plataforma de formación en artes digitales</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://beta-hub.com/es" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>FlexFlix</h4>
+	<p>"FlexFlix es una plataforma de videos "on demand" para kids & teens con miles de películas edutainment en español, inglés y portugués que promueve el pensamiento flexible y creativo."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.flexflix.ai/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>TUMO Buenos Aires</h4>
+	<p>"¡Te damos la bienvenida a Tumo Buenos Aires! El lugar donde el futuro de la tecnología y el diseño se vuelven realidad. Tumo es un centro de tecnologías creativas, no arancelado, destinado a jóvenes entre 12 a 18 años."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://tumo.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Kodland</h4>
+	<p>"Nosotros proveemos un ambiente propicio para que los estudiantes dominen ciertas habilidades digitales, las cuales los ayudarán a navegar en la nueva realidad y a realizar sus propias creaciones digitales"</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.kodland.org/es/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+
+	<h3>Adultos</h3>
+	<h4>w.i.p</h4>
 	<p>"WIP arte digital es un proyecto de difusión y formación en artes digitales y electrónicas que facilita el desarrollo de oficios digitales a partir del uso creativo de las tecnologías."</p>
-	<a href="https://www.educacionit.com/cursos-gratuitos"></a>
-	<p>"Somos un equipo de personas que buscamos la mejor experiencia de aprendizaje en tecnología. Te acompañamos en tu formación de manera personalizada, con grupos reducidos para ayudarte a desarrollar todo tu potencial."</p>
-	<a href="https://www.louderband.com/" target="_blank">Louderband</a>
-	<p>"Únete a la comunidad de música y cursos on demand más grande de Latinoamérica."</p>
-	<a href="https://www.coderhouse.com/ar/" target="_blank">Coderhouse</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://wipartedigital.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Coderhouse</h4>
 	<p>"Somos la plataforma educativa con la mayor cantidad de graduados en empresas líderes."</p>
-	<a href="https://www.soyhenry.com/" target="_blank">Soy Henry</a>
-	<p>"Henry es una academia de educación en tecnología con foco en la empleabilidad. En Henry adquirirás las habilidades tecnológicas más demandadas por el mercado laboral."</p>
-	<a href="https://www.digitalhouse.com/ar" target="_blank">Digital House</a>
-	<p>"Somos una organización edtech que potencia al ecosistema tecnológico empoderando a futuros creadores del mundo digital."</p>
-	<a href="https://somosedison.com/" target="_blank">Edison</a>
-	<p>"En Edison nos asociamos con líderes y referentes de diferentes industrias, para co-crear cursos cortos, aplicables y en vivo."</p>
-	<a href="https://www.gamedevargentina.com/" target="_blank">Gamedev Argentina</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.coderhouse.com/ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Gamedev Argentina</h4>
 	<p>"En sólo 3 meses, vas a aprender todo lo necesario para hacer tus primeros videojuegos con clases semanales en vivo, ejercicios y ayuda personalizada."</p>
-	<a href="https://www.instagram.com/fabricadeanimacion/" target="_blank">Fábrica de Animación</a>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.gamedevargentina.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+	<h4>Fábrica de Animación</h4>
 	<p>"Una fábrica que te enseña a descubrir el fascinante mundo de los dibujos animados y también a fabricarlos."</p>
-	<a href="https://4nova.com.ar/" target="_blank">4NOVA | Escuela de Arte</a>
-	<p>"Somos una escuela online dedicada a la enseñanza del dibujo y la animación. En nuestros cursos los estudiantes aprenden con artistas que tienen amplia experiencia tanto en el campo profesional como en el docente. El trato personalizado permite que el estudiante llegue antes a cumplir los objetivos propuestos en cada curso ampliando sus capacidades en un ambiente cordial y de colaboración mutua."</p>
-	<a href="https://www.chicasprogramadoras.club/" target="_blank">Chicas Programadoras Club</a>
-	<p>"Clubes gratuitos para chicas de 13 a 17 años interesadas en aprender todo sobre programación, hacer nuevas amigas y sumergirse en el fantástico mundo de la tecnología. Nuestros clubes se encuentran en distintos puntos del país y están dirigidos por nuestros mentores especializados en el área."</p>
-	<a href="https://www.adaitw.org/" target="_blank">Ada</a>
-	<p>"Somos una organización sin fines de lucro que desde el año 2018 capacita a mujeres en tecnología con el objetivo de reducir la brecha de género y brindar mejores oportunidades a las mujeres y feminidades de América Latina y el mundo."</p>
-	<a href="https://www.tresdefebrero.gov.ar/tecno3f/" target="_blank">Tecno3f</a>
-	<p>"Nos orientamos a brindar capacitaciones de programación y pensamiento computacional de manera inclusiva. Buscamos fortalecer tu desarrollo profesional y personal sin importar la edad que tengas, ampliando así tus  conocimientos en el campo de la tecnología con especial foco en la informática."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://www.instagram.com/fabricadeanimacion/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+  </div>
+	<h4>4NOVA</h4>
+	<p>"Somos una escuela online dedicada a la enseñanza del dibujo y la animación. En nuestros cursos los estudiantes aprenden con artistas que tienen amplia experiencia tanto en el campo profesional como en el docente."</p>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://4nova.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
+  <h4>Louderband</h4>
+  <p>"Únete a la comunidad de música y cursos on demand más grande de Latinoamérica."</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a class="nav-link" href="https://4nova.com.ar/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        </svg>
+      </a>
+  </div>
 	</section>	
 		</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2025 
+    		<p class="card-text">2024 - 2026 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
@@ -210,6 +395,6 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="js/intercambio.js"></script>	
+	<script src="../js/intercambio.js"></script>	
 </body>
 </html>
