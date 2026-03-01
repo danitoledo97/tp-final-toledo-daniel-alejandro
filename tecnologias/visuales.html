@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<title>Visuales | Tecnologías Creativas | MultiMediAr</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  	</svg>
+  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+		<header>
+			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
+  				<div class="container-fluid">
+  					<a href="../index.html">
+  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+  					</a>		
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      					<span class="navbar-toggler-icon"></span>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      					<ul class="navbar-nav">
+      						<li class="nav-item">
+          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>Informática</span></a></li>
+          							<li><a class="dropdown-item" href="programacion.html"><span>Programación</span></a></li>
+          							<li><a class="dropdown-item" href="computacion-creativa.html"><span>Computación Creativa</span></a></li>
+          							<li><a class="dropdown-item" href="electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+          							<li><a class="dropdown-item" href="visuales.html"><span>Visuales</span></a></li>
+          							<li><a class="dropdown-item" href="sonoras.html"><span>Sonoras</span></a></li>
+          							<li><a class="dropdown-item" href="audiovisuales.html"><span>Audiovisuales</span></a></li>
+          							<li><a class="dropdown-item" href="performativas.html"><span>Performativas</span></a></li>
+          							<li><a class="dropdown-item" href="animacion.html"><span>Animación</span></a></li>
+          							<li><a class="dropdown-item" href="realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="../entretenimiento/index.html"><span>Entretenimiento</span></a>
+        					</li>
+        					<li class="nav-item dropdown">
+         	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
+         	 					<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
+          							<li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
+          							<li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
+          							<li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
+          					</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2026</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2025.html"><span>2025</span></a></li>
+          						</ul>
+        					</li>
+        					<li class="nav-item dropdown">
+          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+          						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Jugar</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+          						</ul>
+        					</li>
+      					</ul>
+      					<div id="modo">
+						    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+						            id="bd-theme"
+						            type="button"
+						            aria-expanded="false"
+						            data-bs-toggle="dropdown"
+						            aria-label="Toggle theme (auto)">
+						      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+						      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+						    </button>
+						    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+						      <li>
+						        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+						        </button>
+						      </li>
+						      <li>
+						        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+						        </button>
+						      </li>
+						      <li>
+						        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+						        </button>
+						      </li>
+						    </ul>
+						  </div>
+    				</div>
+  				</div>
+			</nav> 
+		</header>
+	<main>	
+	<div class="marco interactive-image-container">
+		<img src="img/visuales.png" alt="Logo de acerca de Tecnologías Visuales Artísticas" class="img-fluid main-img">
+		<div class="lighting-overlay"></div>
+	</div>
+	<h1>Visuales</h1>
+	<p>Las artes visuales y el diseño visual comprenden un conjunto de prácticas creativas orientadas a la producción, experimentación y comunicación mediante imágenes. En la actualidad, estas disciplinas se desarrollan a través de tecnologías digitales como el CG, la ilustración digital, la impresión 3D, el videomapping, el diseño de interfaces, la fotografía digital y la iluminación, entre otras.</p>
+	<article class="container my-5">
+		<h2>Contemporáneas</h2>
+		<p>Las artes visuales contemporáneas exploran la percepción, el movimiento, la luz y la representación a través de distintos dispositivos técnicos y materiales.</p>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-lg-6">
+				<h3>Máquinas de Mirar</h3>
+				<p>Proyecto cultural dedicado a la difusión del pre-cine y los dispositivos ópticos que dieron origen a la animación y al cine. Realiza talleres y actividades que exploran el movimiento, la percepción visual y el juego.</p>	
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.maquinasdemirar.com/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>	
+			<section class="col-12 col-lg-6">
+				<h3>Autómata Maker</h3>
+				<p>Artista argentino que crea autómatas y máquinas cinéticas accionadas manualmente. Su trabajo combina arte, mecánica y movimiento, invitando al espectador a activar y completar la obra.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+						<a class="nav-link" href="https://pablolavezzari.com/" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+								<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+								<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Animatica</h3>
+				<p>Taller artístico argentino enfocado en la creación de dispositivos precinematográficos como zootropos y praxinoscopios. Explora la relación entre luz, movimiento y percepción desde una mirada artesanal y experimental.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.animatica.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>FotoRevista</h3>
+				<p>FotoRevista es una publicación en línea sobre fotografía con sede en Buenos Aires, Argentina, que funciona como comunidad para fotógrafos y entusiastas de la imagen. Ofrece noticias, eventos y concursos mensuales de fotografía abiertos a aficionados como profesionales.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.fotorevista.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+	</article>
+	<article class="container my-5">
+	  <h2>VJing</h2> 
+		<p>Es la creación de experiencias visuales en vivo a través de la programación creativa, incluyendo técnicas como el <strong>videomapping o videomapeo</strong> (proyección sobre superficies tridimensionales que puede incorporar efectos sensoriales similares al cine 4D), pintura de luz, iluminación POI, exhibiciones LED y Glow, y láser, llevadas a cabo por visualistas.</p>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-lg-6">
+				<h3>Projection Mapping Central</h3>
+				<p>Es una comunidad/portal dedicado al projection mapping, técnica de proyección de imágenes sobre superficies (arquitecturas, objetos, espacios) como arte visual. Ofrece recursos, ejemplos, herramientas y referencias para artistas y tecnólogos interesados en proyección creativa.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://projection-mapping.org/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>VJBooking</h3>
+				<p>Plataforma global para visual jockeys (VJs) y artistas visuales, conectando profesionales con proyectos y eventos. Permite visualizar reels, trabajos y perfiles creativos, siendo útil tanto para quienes buscan inspiración como para quienes quieren ofrecer sus servicios visuales en shows, instalaciones o mapping.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.vjbooking.com/network/explore/vj?country=ar" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Buenos Aires Laser</h3>
+				<p>Buenos Aires Laser es una empresa argentina especializada en la creación de espectáculos y shows con tecnología láser como su "Laser Experience", combinando arte, música y tecnología de vanguardia en experiencias visuales impactantes.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.facebook.com/BuenosAiresLaser" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+							<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+						</svg>
+					</a>
+						<a class="nav-link" href="https://www.youtube.com/@BUENOSAIRESLASER" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+							<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Lucas Gutiérrez</h3>
+				<p>Lucas Gutierrez es un artista digital y diseñador industrial argentino radicado en Berlín, cuyo trabajo abarca audiovisuales, performances y proyectos de videoarte centrados en los nuevos paradigmas de la cultura digital.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.youtube.com/@LucasGutierrezCom" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+							<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+	</article>
+	<article class="container my-5">
+		<h2>Arte y Diseño CG</h2>
+		<p>El arte y el diseño <strong>CG (Computer Graphics)</strong> o arte computacional abarcan las prácticas creativas digitales orientadas a la producción de imágenes visuales generadas por computadora, con fines tanto comunicacionales como expresivos.</p>
+		<h3>Ilustración Digital</h3>
+		<p>Creación y desarrollo de historias y novelas gráficas, así como de fanzines, mediante guiones gráficos, personajes, escenarios y estructuras narrativas.</p>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-md-6 col-lg-4">
+				<h4>Webcomic Mutante</h4>
+				<p>Sitio online que reúne historietas digitales gratuitas con obras autoconclusivas y series de cómic argentino.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.eldestapeweb.com/webcomicmutante" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h4>Mactoon</h4>
+				<p>Adriana Canabal es una ilustradora y creadora visual, que combina su formación artística con estudios en política y gestión cultural.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://mactoon.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h4>Fanzine Club</h4>
+				<p>Fanzine Club es un espacio autogestionado dedicado a la distribución y archivo digital de fanzines, creado para apoyar a editores y lectores.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://fanzineclub.com/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>VFX</h3>
+				<p>Los <strong>Visual Effects o efectos visuales</strong> son efectos creados mediante procesos digitales o manipulaciones de imagen.</p>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>Digital Compositing</h3>
+				<p>El <strong>compositado digital</strong> es el proceso final de integrar todas las capas visuales en una sola imagen.</p>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>Barraca TV</h3>
+				<p>Estudio argentino especializado en VFX y CGI que trabaja para publicidad, cine y televisión.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://barraca.tv/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+	</article>
+	<article class="container my-5">
+		<h2>Impresión 3D</h2>
+		<p>La impresión 3D crea objetos tridimensionales a partir de modelos digitales. La 4D incorpora materiales inteligentes que permiten transformaciones en el tiempo, mientras que la 5D implementa técnicas avanzadas que habilitan mayor complejidad estructural o resistencia mediante múltiples ejes.</p>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-lg-6">
+				<h3>Slicer</h3>		
+				<p>Software gratuito para visualización y procesamiento de imágenes y modelos 3D, originalmente usado en entornos médicos y científicos, pero que también se emplea para análisis, segmentación y preparación de modelos tridimensionales en proyectos creativos.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.slicer.org/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Laboratorio de impresión 3D</h3>
+				<p>Espacio público-privado en Santos Lugares, dedicado a fomentar la impresión 3D y tecnologías afines. Ofrece capacidades FDM y SLA para empresas, emprendedores y formación técnica, formando parte de iniciativas de capacitación tecnológica.</p>
+			  <div class="d-grid gap-2 d-md-flex justify-content-center">
+		      <a class="nav-link" href="https://www.tresdefebrero.gov.ar/tecno3f/" target="_blank">
+		        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+		        	<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+		        	<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+		        </svg>
+		      </a>
+			  </div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Dryada 3D Printer</h3>
+				<p>Empresa argentina que une industria, arte y tecnología en impresión 3D y escaneo 3D, ofreciendo servicios avanzados de fabricación aditiva y digitalización tridimensional para proyectos creativos y productivos.</p>	
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.dryada.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-lg-6">
+				<h3>Z-Lab</h3>
+				<p>Estudio de diseño y tecnología creado por diseñadores, orientado a proyectos visuales, gráficos y digitales con enfoque creativo, ideal para trabajos de branding, interfaces o visuales experimentales.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.z-lab.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+	</article>
+	<article class="container my-5">
+		<h2>Holografía</h2>
+		<p>La <strong>holografía</strong> es una técnica de proyección volumétrica que permite la creación de imágenes tridimensionales sin necesidad de aislar al usuario del entorno físico.</p>
+		<div class="row g-4 justify-content-center">
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>Holobaires</h3>
+				<p>Proveedor argentino de sistemas de proyección holográfica 3D para eventos, presentaciones de producto, publicidad y shows, utilizando displays de alta definición para experiencias visuales inmersivas.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://holobaires.com.ar/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>Holograma del Indio Solari 2020</h3>
+				<p>Representación holográfica utilizada en marzo de 2020 en el Estadio Malvinas Argentinas junto a la banda "Los Fundamentalistas del Aire Acondicionado".</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://youtu.be/vBLSTdeZ9L0?si=Yp5FS83p095nHZAZ" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+							<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="col-12 col-md-6 col-lg-4">
+				<h3>Holograma de Soledad Pastorutti 2025</h3>
+				<p>Representación holográfica usada en 2025 para mostrar a Soledad Pastorutti como adolescente durante un concierto cantando “Cantando para papá”.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-center">
+					<a class="nav-link" href="https://www.instagram.com/reel/DIH9RQZOxHv/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+		  				<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</div>
+	</article>
+	</main>
+	<footer>
+		<div class="card text-center">
+			<div class="card-body">
+			<p class="card-text"> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+		</svg>
+		2024-2026 MultiMediAr</p>
+			<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+			<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+			</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+	<script src="../js/intercambio.js"></script>	
+</body>
+</html>

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-	<title>MultiMediAr</title>
+	<title>Jugar | Cronolúdico | MultiMediAr</title>
 </head>
 <body>
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -41,18 +41,15 @@
         					 <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
                       <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Informática</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/programacion.html"><span>Programación</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Web</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/impresion-3d.html"><span>Impresión 3D</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/visual.html"><span>Visual</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/sonoro.html"><span>Sonoro</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/audiovisual.html"><span>Audiovisual</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/visuales.html"><span>Visuales</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/sonoras.html"><span>Sonoras</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/audiovisuales.html"><span>Audiovisuales</span></a></li>
+                        <li><a class="dropdown-item" href="../tecnologias/performativas.html"><span>Performativas</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/efectos.html"><span>Efectos</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/holografia.html">
-                        <span>Holografía</span></a></li>
                         <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
                       </ul>
                   </li>
@@ -71,14 +68,14 @@
         					<li class="nav-item dropdown">
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
-            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2026</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2025.html"><span>2025</span></a></li>
           						</ul>
         					</li>
         					<li class="nav-item dropdown">
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="index.html"><span>Jugar</span></a></li>
           							<li><a class="dropdown-item" href="tabla.html"><span>Tabla de posiciones</span></a></li>
           						</ul>
         					</li>
@@ -119,16 +116,60 @@
 			</nav> 
 		</header>
 	<main>	
-	</section>	
+      <article class="container my-5 pt-4">
+        <h1>Cronolúdico</h1>
+        <p>Cronolúdico es un juego de lógica y azar cuyo objetivo es permanecer en el presente. Inspirado en las películas: "El precio del mañana" y "Al filo del mañana", y en los GameArts como reflexión y descubrimiento.</p>
+        <div class="row justify-content-center mb-4">
+          <section class="col-12 col-md-8">
+           <h2>Reglamento</h2>
+            <ul>
+              <li>Al presionar Iniciar arranca el temporizador regresivo de 30 segundos y el marcador comienza en un valor oculto entre ±7 y ±14.</li>
+              <li>El marcador muestra solo el signo: + es futuro, − es pasado, 0 es el presente.</li>
+              <li>Los botones + y − mueven el marcador de a 1 por click o tap. El tope es ±15.</li>
+              <li>El azar actúa solo cada 3 segundos aproximadamente, cambiando el valor y el signo del marcador sin aviso.</li>
+              <li>El objetivo es llegar exactamente a 0. La victoria es inmediata al tocar 0.</li>
+              <li>El temporizador cambia de color: amarillo a los 25 segundos, naranja a los 20 y rojo en los últimos 10.</li>
+              <li>Al ganar se registra el tiempo restante y la cantidad de rondas jugadas en la sesión. Solo se guarda la mejor victoria por jugador.</li>
+              <li>Si el jugador llega a 0 en el mismo segundo que el temporizador se declara empate, no se registra en la tabla.</li>
+              <li>La derrota ocurre si el temporizador llega a 0 sin haber alcanzado el 0 exacto.</li>
+              <li>Reiniciar limpia la sesión activa sin afectar los registros guardados en la tabla.</li>
+            </ul>
+            <p>⚠️ Evitá presionar los botones de forma muy repetida o por tiempo prolongado. Tomá pausas si sentís cansancio en la mano o los dedos.</p>
+          </section>
+        </div>
+        <div class="row justify-content-center mb-4">
+          <section class="col-12 col-md-6 text-center">
+            <img src="img/logo-crono.png" alt="Imagen del logo de Cronolúdico" id="logoJuego">
+            <div class="input-group input-group-sm mb-3" id="grupoRegistro">
+              <input type="text" id="campoNom" class="form-control" placeholder="Ingresá tu nombre" maxlength="30">
+              <div class="invalid-feedback">Solo letras y números, mínimo 3 y máximo 30 caracteres.</div>
+              <button type="button" id="btnReg" class="btn btn-primary">Registrar</button>
+            </div>
+            <h2 id="temporizador" class="display-1 fw-bold lh-1 mb-1">30</h2>
+            <h3 id="marcador" class="display-3 fw-bold lh-1 mb-2"></h3>
+            <p id="mensajeEstado" class="fw-semibold mb-2"></p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+              <button type="button" id="btnMas" class="btn btn-outline-primary btn-lg" disabled>+</button>
+              <button type="button" id="btnMenos" class="btn btn-outline-primary btn-lg" disabled>−</button>
+            </div>
+            <div class="d-flex justify-content-center gap-3 mb-2">
+              <button type="button" id="btnJugar" class="btn btn-success" disabled>Iniciar</button>
+              <button type="button" id="btnRei" class="btn btn-danger">Reiniciar</button>
+            </div>
+            <p id="divResultado" class="fw-bold fs-5 mb-0"></p>
+          </section>
+        </div>
+      </article>  
+
 		</main>
 		<footer>
 			<div class="card text-center">
   			<div class="card-body">
-    		<p class="card-text">2024 - 2026 
+    		<p class="card-text"> 
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
   			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
 			</svg>
-			MultiMediAr</p>
+			2024-2026 MultiMediAr</p>
     		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
     		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
   			</div>
@@ -136,6 +177,10 @@
 		</footer>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="../js/intercambio.js"></script>	
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+	<script src="../js/intercambio.js"></script>
+  <script src="js/cronoludico.js"></script>	
 </body>
 </html>

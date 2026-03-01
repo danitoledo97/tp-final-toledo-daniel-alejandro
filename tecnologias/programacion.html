@@ -1,58 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-	<title>MultiMediAr</title>
-</head>
-<body>
-	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-  	</svg>
-  <div id="contenedor" class="shadow-lg bg-body-tertiary">
-		<header>
-			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
-  				<div class="container-fluid">
-  					<a href="../index.html">
-  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-  					</a>
-    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      					<span class="navbar-toggler-icon"></span>
-    				</button>
-    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-      					<ul class="navbar-nav">
+	<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+		<title>Programación | Tecnologías Creativas | MultiMediAr</title>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+	    <symbol id="check2" viewBox="0 0 16 16">
+	      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+	    </symbol>
+	    <symbol id="circle-half" viewBox="0 0 16 16">
+	      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+	    </symbol>
+	    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+	      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+	      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+	    </symbol>
+	    <symbol id="sun-fill" viewBox="0 0 16 16">
+	      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+	    </symbol>
+	  	</svg>
+	  <div id="contenedor" class="shadow-lg bg-body-tertiary">
+			<header>
+				<nav class="navbar navbar-expand-lg fixed-top opacity-100">
+	  				<div class="container-fluid">
+	  					<a href="../index.html">
+	  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+	  					</a>
+	    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      					<span class="navbar-toggler-icon"></span>
+	    				</button>
+	    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	      					<ul class="navbar-nav">
       						<li class="nav-item">
           						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
         					</li>
         					<li class="nav-item dropdown">
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
           						<ul class="dropdown-menu">
+          							<li><a class="dropdown-item" href="index.html"><span>Informática</span></a></li>
           							<li><a class="dropdown-item" href="programacion.html"><span>Programación</span></a></li>
-          							<li><a class="dropdown-item" href="index.html"><span>Web</span></a></li>
           							<li><a class="dropdown-item" href="computacion-creativa.html"><span>Computación Creativa</span></a></li>
           							<li><a class="dropdown-item" href="electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
-          							<li><a class="dropdown-item" href="impresion-3d.html"><span>Impresión 3D</span></a></li>
-          							<li><a class="dropdown-item" href="visual.html"><span>Visual</span></a></li>
-          							<li><a class="dropdown-item" href="sonoro.html"><span>Sonoro</span></a></li>
-          							<li><a class="dropdown-item" href="audiovisual.html"><span>Audiovisual</span></a></li>
+          							<li><a class="dropdown-item" href="visuales.html"><span>Visuales</span></a></li>
+          							<li><a class="dropdown-item" href="sonoras.html"><span>Sonoras</span></a></li>
+          							<li><a class="dropdown-item" href="audiovisuales.html"><span>Audiovisuales</span></a></li>
+          							<li><a class="dropdown-item" href="performativas.html"><span>Performativas</span></a></li>
           							<li><a class="dropdown-item" href="animacion.html"><span>Animación</span></a></li>
-          							<li><a class="dropdown-item" href="efectos.html"><span>Efectos</span></a></li>
-          							<li><a class="dropdown-item" href="holografia.html">
-          							<span>Holografía</span></a></li>
           							<li><a class="dropdown-item" href="realidad-extendida.html"><span>Realidad Extendida</span></a></li>
           						</ul>
         					</li>
@@ -71,179 +68,163 @@
         					<li class="nav-item dropdown">
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2025</span></a></li>
-            						<li><a class="dropdown-item" href="../eventos/eventos-2024.html"><span>2024</span></a></li>
+          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2026</span></a></li>
+            						<li><a class="dropdown-item" href="../eventos/eventos-2025.html"><span>2025</span></a></li>
           						</ul>
         					</li>
         					<li class="nav-item dropdown">
           						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
           						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Juego</span></a></li>
+          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Jugar</span></a></li>
           							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
           						</ul>
         					</li>
       					</ul>
-      					<div id="modo">
-						    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-						            id="bd-theme"
-						            type="button"
-						            aria-expanded="false"
-						            data-bs-toggle="dropdown"
-						            aria-label="Toggle theme (auto)">
-						      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-						      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-						    </button>
-						    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
-						      <li>
-						        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-						        </button>
-						      </li>
-						      <li>
-						        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-						        </button>
-						      </li>
-						      <li>
-						        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-						          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-						          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-						        </button>
-						      </li>
-						    </ul>
-						  </div>
-    				</div>
-  				</div>
-			</nav> 
-		</header>
-	<main>	
-	<section>
-	<div class="marco">
-		<img src="img/programacion.png" alt="Logo de computación y programación" class="img-fluid">
-	</div>
-	<h1>Programación</h1> 
-	<p>La programación consiste en la construcción de un programa de código mediante un lenguaje, una sintaxis y un algoritmo finito y ordenado secuencialmente para llevar a cabo una tarea. A continuación nombraré las mas relevantes para las artes y el diseño multimediales.</p> 
-	<article>		
-	<h2>Ramas mas artísticas</h2>
-	<h3>Programación Creativa</h3>
-	<p>La <strong>programación creativa</strong> o <strong>creative coding</strong> es el uso del código como medio expresivo, donde el software funciona como herramienta artística y experimental.</p>	
-	<ul>
-		<li><strong>Enfoque</strong>: Uso del código como medio artístico, expresivo o experimental.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>: Processing, p5.js, OpenFrameworks, TouchDesigner, Max/MSP, Unity, Arduino.</li>
-		<li><strong>Aplicaciones</strong>: Instalaciones interactivas, arte digital, mapeo, visuales generativos, música algorítmica.</li>
-		<li><strong>Claves</strong>: Interdisciplinariedad entre arte, diseño y tecnología</li>
-	</ul>
-	<h4>+CODE</h4>
-	<p>"+CODE Cultura Digital impulsa y promueve la experimentación entre arte, programación creativa y nuevas tecnologías."</p>
-	<div class="d-grid gap-2 d-md-flex justify-content-center">
-			<a class="nav-link" href="https://linktr.ee/pluscodefest" target="_blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-				<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-				<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-				</svg>
-			</a>
-	</div>
-	<h3>Programación en Vivo</h3>
-	<p>También conocida como <strong>live coding</strong> forma parte de la creativa.</p>
-	<ul>
-		<li><strong>Enfoque</strong>: Generar música, visuales o performances en tiempo real escribiendo código frente al público.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>: Sonic Pi, SuperCollider, TidalCycles, Hydra.</li>
-		<li><strong>Aplicaciones</strong>: Conciertos, jam sessions, performances audiovisuales.</li>
-		<li><strong>Claves</strong>: Improvisación, inmediatez, mezcla de arte y tecnología en vivo.</li>
-	</ul>
-	<h4>Colectivo de Live Coders</h4>
-	<p>"Un espacio de intercambio y producción colectiva para abordar, investigar y performar utilizando técnicas y herramientas de livecoding."</p>
-	<div class="d-grid gap-2 d-md-flex justify-content-center">
-			<a class="nav-link" href="https://clic-gba-caba.gitlab.io/" target="_blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-				<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-				<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-				</svg>
-			</a>
-	</div>
-	</article>
-	<article>
-	<h2>Artísticas según el uso</h2>
-	<h3>Programación Web</h3>
-	<p>La programación web posibilita la creación de obras, proyectos y plataformas digitales accesibles desde navegadores, combinando imagen, sonido, texto, animación e interacción. Es una de las principales herramientas de la producción multimedia contemporánea.</p>
-	<ul>
-		<li><strong>Enfoque</strong>: Desarrollo de sitios y aplicaciones que funcionan en navegadores o servidores.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>:HTML, CSS, JavaScript, frameworks (React, Angular, Vue), backend (Node.js, PHP, Python, Java, etc.), bases de datos.</li>
-		<li><strong>Aplicaciones</strong>: Páginas web, e-commerce, plataformas educativas, redes sociales, sistemas de gestión.</li>
-		<li><strong>Claves</strong>: Usabilidad, seguridad, escalabilidad, interfaz y experiencia de usuario (UX/UI).</li>
-	</ul>
-	<h3>Programación de Videojuegos</h3>
-	<p>En el desarrollo de videojuegos, existe una rama específica de la programación que se orienta a la creación de estos productos, utilizando principalmente lenguajes como C (antiguo y para proyectos indie), C++ y C# (derivados del anterior y actuales). En este proceso se toman en cuenta diversos factores como las mecánicas del juego, la física, el diseño de los personajes y los mundos, los efectos especiales (tanto sonoros como visuales), la música, la narración y la coherencia del sistema.</p>
-	<ul>
-		<li><strong>Enfoque</strong>: Creación de juegos digitales para distintas plataformas.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>: Motores como Unity (C#), Unreal Engine (C++/Blueprints), Godot (GDScript), frameworks 2D/3D.</li>
-		<li><strong>Aplicaciones</strong>: Juegos de PC, consola, móvil, VR/AR.</li>
-		<li><strong>Claves</strong>: Mecánicas de juego, narrativa, interactividad, optimización gráfica y de rendimiento.</li>
-	</ul>
-	<p>Por otro lado en Argentina tuvo lugar el origen de un motor de videojuegos bastante popular:</p>
-	<h4>Godot</h4>
-	<p>"El Proyecto Godot es un motor de juegos multiplataforma, libre y de código abierto, lanzado bajo la licencia MIT. Godot ofrece un entorno de desarrollo de juegos integrado que permite a cualquiera crear juegos en 2D y 3D." Traducido con Kagi Translate.</p>
-	<div class="d-grid gap-2 d-md-flex justify-content-center">
-			<a class="nav-link" href="https://godotengine.org/" target="_blank">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-				<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-				<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-				</svg>
-			</a>
-	</div>
-	<h4>Programación en Electrónica Creativa</h4>
-	<p>La programación en electrónica creativa combina computación, electrónica y diseño para crear sistemas físicos interactivos con fines artísticos, expresivos o experimentales. Se vincula estrechamente con la computación física y las prácticas de arte tecnológico.</p>
-	<ul>
-		<li><strong>Enfoque</strong>: Control de hardware y dispositivos físicos mediante software.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>: C/C++ (Arduino, ESP32), Python (MicroPython, Raspberry Pi), VHDL/Verilog, MATLAB.</li>
-		<li><strong>Aplicaciones</strong>: Robots, sensores, dispositivos IoT, domótica, prototipos electrónicos.</li>
-		<li><strong>Claves</strong>: Integración hardware-software, tiempo real, eficiencia energética, interacción con el mundo físico.</li>
-	</ul>
-	</article>
-	<article>
-	<h2>Técnicas</h2>
-	<p>Estas técnicas pueden combinarse entre sí: la programación visual puede ser no-code, low-code o híbrida, según el nivel de control y abstracción que ofrezca la herramienta.</p>
-	<h3>Programación No-Code</h3>
-	<ul>
-	  <li><strong>Enfoque</strong>: Desarrollo de aplicaciones, sitios o flujos interactivos sin escribir código textual, mediante interfaces visuales, componentes predefinidos y reglas configurables.</li>
-	  <li><strong>Lenguajes/Tecnologías</strong>: Wix, Webflow, Bubble, Glide, Adalo, Notion, herramientas de automatización visual.</li>
-	  <li><strong>Aplicaciones</strong>: Sitios web, prototipos rápidos, landing pages, automatización de procesos, productos digitales simples.</li>
-	  <li><strong>Claves</strong>: Accesibilidad, rapidez de desarrollo, bajo umbral técnico, enfoque en diseño y experiencia de usuario.</li>
-	</ul>
-	<h3>Programación Low-Code</h3>
-	<ul>
-	  <li><strong>Enfoque</strong>: Desarrollo de software combinando interfaces visuales con la posibilidad de escribir código cuando se requiere mayor control o personalización.</li>
-	  <li><strong>Lenguajes/Tecnologías</strong>: Power Apps, OutSystems, Mendix, Node-RED, Unity Visual Scripting, Unreal Engine Blueprints, TouchDesigner.</li>
-	  <li><strong>Aplicaciones</strong>: Aplicaciones interactivas, sistemas personalizados, prototipos avanzados, experiencias multimedia complejas.</li>
-	  <li><strong>Claves</strong>: Equilibrio entre facilidad de uso y control técnico, escalabilidad, integración con código tradicional.</li>
-	</ul>
-	<h3>Programación Visual</h3>
-	<ul>
-		<li><strong>Enfoque</strong>: Utiliza interfaces gráficas donde el código se construye arrastrando y conectando bloques o nodos en lugar de escribir texto.</li>
-		<li><strong>Lenguajes/Tecnologías</strong>: Scratch (estándar educativo desde formación media), Blockly, Max/MSP, Pure Data, TouchDesigner, Node-RED, vvvv..</li>
-		<li><strong>Aplicaciones</strong>: Educación y aprendizaje inicial de programación. Prototipado rápido de proyectos interactivos. Procesamiento de audio, video y datos en tiempo real.</li>
-		<li><strong>Claves</strong>: Intuitiva, accesible, fomenta la creatividad y la experimentación sin necesidad de conocimientos avanzados de sintaxis.</li>
-	</ul>
-	</article>
-	</section>	
-		</main>
-		<footer>
-			<div class="card text-center">
-  			<div class="card-body">
-    		<p class="card-text">2024 - 2026 
-    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
-  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
-			</svg>
-			MultiMediAr</p>
-    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
-    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
-  			</div>
+	      					<div id="modo">
+							    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+							            id="bd-theme"
+							            type="button"
+							            aria-expanded="false"
+							            data-bs-toggle="dropdown"
+							            aria-label="Toggle theme (auto)">
+							      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+							      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+							    </button>
+							    <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+							      <li>
+							        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+							          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+							          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+							        </button>
+							      </li>
+							      <li>
+							        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+							          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+							          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+							        </button>
+							      </li>
+							      <li>
+							        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+							          <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+							          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+							        </button>
+							      </li>
+							    </ul>
+							  </div>
+	    				</div>
+	  				</div>
+				</nav> 
+			</header>
+		<main>	
+		<div class="marco interactive-image-container">
+			<img src="img/programacion.png" alt="Logo de computación y programación" class="img-fluid main-img">
+			<div class="lighting-overlay"></div>	
+		</div>
+		<h1>Programación</h1> 
+		<p>La programación es una forma de creación mediante tecnología. A través del código se diseñan comportamientos, interacciones y sistemas que permiten que imágenes, sonidos, objetos y entornos digitales respondan, evolucionen y se transformen. En el campo de las artes y el diseño multimedia, programar no es solo resolver problemas técnicos, sino explorar ideas, procesos y experiencias.</p> 
+		<article class="container my-5">		
+			<h2>Vertientes artísticas</h2>
+			<div class="row g-4 justify-content-center">
+      			<section class="col-12 col-md-6 col-lg-4">
+					<h3>Demoscene</h3>
+					<p>La demoscene es una práctica cultural basada en la creación de programas audiovisuales en tiempo real, mientras que las demoparties son encuentros presenciales donde estas producciones se exhiben y compiten..</p>
+				</section>
+				<section class="col-12 col-md-6 col-lg-4">
+					<h3>Programación Creativa</h3>
+					<p>La programación creativa utiliza el código como un medio de expresión. Prioriza la experimentación, la estética y el proceso creativo.</p>	
+				</section>
+				<section class="col-12 col-md-6 col-lg-4">		
+					<h3>Programación en Vivo</h3>
+					<p>El live coding es una práctica artística donde el código se escribe y modifica en tiempo real como parte de una performance.</p>
+				</section>
 			</div>
-		</footer>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="../js/intercambio.js"></script>	
-</body>
-</html>
+			<div class="row g-4 justify-content-center mt-3">
+				<section class="col-12 col-md-6 col-lg-4">		
+					<h4>Pungas de Villa Martelli</h4>
+					<p>PVM es un colectivo argentino de demoscene fundado en 1996, surgido como grupo de arte digital, experimentación y creatividad algorítmica.</p>
+					<div class="d-grid gap-2 d-md-flex justify-content-center">
+						<a class="nav-link" href="https://pungas.space/" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+								<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+								<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+					</div>
+				</section>
+				<section class="col-12 col-md-6 col-lg-4">
+					<h4>+CODE</h4>
+					<p>+CODE es una organización cultural independiente que impulsa la experimentación entre arte, programación creativa y nuevas tecnologías.</p>
+					<div class="d-grid gap-2 d-md-flex justify-content-center">
+						<a class="nav-link" href="https://linktr.ee/pluscodefest" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+								<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+								<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+					</div>
+				</section>
+				<section class="col-12 col-md-6 col-lg-4">	
+					<h4>Colectivo de Live Coders</h4>
+					<p>CLiC es un espacio colectivo de producción, intercambio y experimentación artística y tecnológica centrado en live coding.</p>
+					<div class="d-grid gap-2 d-md-flex justify-content-center">
+						<a class="nav-link" href="https://clic-gba-caba.gitlab.io/" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+								<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+								<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+					</div>
+				</section>
+			</div>
+		</article>
+		<article class="container my-5">
+			<h2>Campos de Aplicación Creativa</h2>
+			<div class="row g-4 justify-content-center">
+				<section class="col-12 col-lg-6">
+					<h3>Programación Web</h3>
+					<p>La programación web permite crear proyectos interactivos accesibles desde cualquier navegador y dispositivo conectado a internet.</p>
+				</section>
+				<section class="col-12 col-lg-6">
+					<h3>Programación en Electrónica Creativa</h3>
+					<p>La electrónica creativa une programación y dispositivos físicos para crear objetos e instalaciones interactivas.</p>
+				</section>
+				<section class="col-12 col-lg-6">
+					<h3>Programación de Videojuegos</h3>
+					<p>La programación de videojuegos combina narrativa, diseño, interacción y tecnología para crear mundos jugables.</p>
+				</section>
+				<section class="col-12 col-lg-6">
+					<h3>Godot</h3>
+					<p>Es un motor de videojuegos gratuito, abierto y multiplataforma usado para crear juegos 2D y 3D, así como aplicaciones interactivas.</p>
+					<div class="d-grid gap-2 d-md-flex justify-content-center">
+						<a class="nav-link" href="https://godotengine.org/" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+							<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+							<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+							</svg>
+						</a>
+					</div>
+				</section>
+			</div>
+		</article>	
+			</main>
+			<footer>
+				<div class="card text-center">
+	  			<div class="card-body">
+	    		<p class="card-text"> 
+	    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+	  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+				</svg>
+				2024-2026 MultiMediAr</p>
+	    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+	    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+	  			</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+		<script src="../js/intercambio.js"></script>	
+	</body>
+	</html>
