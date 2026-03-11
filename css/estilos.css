@@ -71,6 +71,7 @@ h4, h5
 
 p
 {
+  text-align: justify;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -837,7 +838,7 @@ section .d-grid a
   #modo:hover > .dropdown-menu {display: flex !important;}
 }
 
-@media (max-width: 768px)
+@media (max-width: 539px)
 {
   /*Carrusel más pequeño en mobile con menor profundidad de perspectiva*/
   #carouselExampleCaptions
@@ -867,6 +868,113 @@ section .d-grid a
     opacity: 0.3;
     filter: blur(2px);
   }
+}
+
+/*Tablet portrait: 540px–1024px — iPad mini, iPad Air vertical, Surface Duo*/
+@media (min-width: 540px) and (max-width: 1024px)
+{
+  #contenedor
+  {
+    max-width: 100vw !important;
+  }
+
+  /*Altura fija y overflow hidden para que el cilindro 3D no filtre el fondo entre sus caras*/
+  #carouselExampleCaptions
+  {
+    height: 460px !important;
+    perspective: 1400px;
+    overflow: hidden !important;
+    margin-top: 4rem !important;
+  }
+
+  .carousel-inner
+  {
+    width: 280px;
+    height: 360px;
+  }
+
+  .carousel-item:nth-child(1) {transform: rotateY(0deg)     translateZ(300px);}
+  .carousel-item:nth-child(2) {transform: rotateY(51.4deg)  translateZ(300px);}
+  .carousel-item:nth-child(3) {transform: rotateY(102.8deg) translateZ(300px);}
+  .carousel-item:nth-child(4) {transform: rotateY(154.2deg) translateZ(300px);}
+  .carousel-item:nth-child(5) {transform: rotateY(205.6deg) translateZ(300px);}
+  .carousel-item:nth-child(6) {transform: rotateY(257deg)   translateZ(300px);}
+  .carousel-item:nth-child(7) {transform: rotateY(308.4deg) translateZ(300px);}
+
+  /*Una columna por fila para evitar distribuciones 2+1 o 2+2*/
+  .row > [class*="col-md-"], .row > [class*="col-lg-"]
+  {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  article:has(#tablaPos) {margin-top: 10rem !important; margin-bottom: 10rem !important;}
+
+  #contenedor:has(article #tablaPos)
+  {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contenedor:has(article #tablaPos) main {flex: 1;}
+
+  .imgs-marco {max-width: 600px;}
+  .imgs-selfie {max-width: 400px;}
+  p {padding: 0.7rem;}
+}
+
+/*Tablet landscape: 1025px–1199px — iPad Air horizontal, Surface Pro, Nest Hub*/
+@media (min-width: 1025px) and (max-width: 1199px)
+{
+  #contenedor
+  {
+    max-width: 100vw !important;
+  }
+
+  #carouselExampleCaptions
+  {
+    height: 520px !important;
+    perspective: 1600px;
+    overflow: hidden !important;
+    margin-top: 4rem !important;
+  }
+
+  .carousel-inner
+  {
+    width: 300px;
+    height: 380px;
+  }
+
+  .carousel-item:nth-child(1) {transform: rotateY(0deg)     translateZ(340px);}
+  .carousel-item:nth-child(2) {transform: rotateY(51.4deg)  translateZ(340px);}
+  .carousel-item:nth-child(3) {transform: rotateY(102.8deg) translateZ(340px);}
+  .carousel-item:nth-child(4) {transform: rotateY(154.2deg) translateZ(340px);}
+  .carousel-item:nth-child(5) {transform: rotateY(205.6deg) translateZ(340px);}
+  .carousel-item:nth-child(6) {transform: rotateY(257deg)   translateZ(340px);}
+  .carousel-item:nth-child(7) {transform: rotateY(308.4deg) translateZ(340px);}
+
+  /*Dos columnas parejas al 50% en landscape*/
+  .row > [class*="col-md-"], .row > [class*="col-lg-"]
+  {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  article:has(#tablaPos) {margin-top: 12rem !important; margin-bottom: 12rem !important;}
+
+  #contenedor:has(article #tablaPos)
+  {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contenedor:has(article #tablaPos) main {flex: 1;}
+
+  .imgs-marco {max-width: 680px;}
+  .imgs-selfie {max-width: 480px;}
+  p {padding: 0.5rem;}
 }
 
 @media (min-width: 1200px) and (orientation: landscape)
@@ -899,6 +1007,15 @@ section .d-grid a
   }
 
   .imgs-marco {max-width: 720px;}
+
+  #contenedor:has(article #tablaPos)
+  {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contenedor:has(article #tablaPos) main {flex: 1;}
 }
 
 /*Cronolúdico*/
