@@ -71,7 +71,6 @@ h4, h5
 
 p
 {
-  text-align: justify;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -962,3 +961,8 @@ article:has(#logoJuego)
   opacity: 1 !important;
   transform: none !important;
 }
+/*Margen extra para el article de la tabla de posiciones y para el formulario de contacto
+  :has() apunta por contenido único — misma estrategia que article:has(#logoJuego)*/
+article:has(#tablaPos) {margin-top: 6rem !important; margin-bottom: 6rem !important;}
+
+#form1 {margin: 3rem auto !important;}
