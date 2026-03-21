@@ -126,10 +126,7 @@ function moverCilindro()
     });
   }
 
-  /*Article: animación — IntersectionObserver + GSAP
-    IntersectionObserver detecta cuando el article entra en el viewport (threshold 0.2 = 20% visible)
-    y delega la animación a GSAP para controlar la curva de movimiento — combinación de ambas librerías
-    unobserve detiene la observación una vez animado para no repetir el efecto*/
+  /*Article: animación — IntersectionObserver + GSAP*/
   const observer = new IntersectionObserver(function(entries)
   {
     for (let i = 0; i < entries.length; i++)
@@ -150,17 +147,13 @@ function moverCilindro()
     }
   }, {threshold: 0.2});
 
-  /*GSAP set: establece el estado inicial oculto e inclinado antes de que sean visibles
-    el observer dispara gsap.to para animarlos al entrar en pantalla*/
   for (let i = 0; i < articles.length; i++)
   {
     gsap.set(articles[i], {opacity: 0, rotateX: -6, y: 24, scale: 0.985, transformOrigin: 'top center', transformPerspective: 900});
     observer.observe(articles[i]);
   }
 
-  /*Efecto lux / overlay
-    actualiza las variables CSS --x e --y con la posición del cursor dentro del contenedor
-    el CSS usa esas variables para mover el gradiente radial del overlay de iluminación*/
+  /*Efecto lux / overlay — actualiza --x e --y con la posición del cursor*/
   for (let i = 0; i < contenedoresLux.length; i++)
   {
     contenedoresLux[i].addEventListener('mousemove', function(e)
@@ -171,9 +164,7 @@ function moverCilindro()
     });
   }
 
-  /*Mouse interactivo — rastro de cursor
-    desactiva el rastro cuando el cursor está sobre elementos interactivos
-    crea una partícula div en la posición del cursor que se autodestruye en 400ms*/
+  /*Rastro de cursor*/
   document.addEventListener('mouseover', function(e)
   {if (e.target.closest(interactiveElements)) {isOverLink = true;}});
 
@@ -191,10 +182,7 @@ function moverCilindro()
     setTimeout(function() {trail.remove();}, 400);
   });
 
-  /*Footer y scroll con tope
-    IntersectionObserver para el footer: activa la animación piano y la vibración
-    cuando el footer entra en el viewport por primera vez*/
-  /*footerObserver observa un único elemento — entries[0] es suficiente sin necesidad de for*/
+  /*Footer: animación piano + vibración al entrar en viewport*/
   const footerObserver = new IntersectionObserver(function(entries)
   {
     if (entries[0].isIntersecting)
@@ -207,10 +195,12 @@ function moverCilindro()
 
   footerObserver.observe(footer);
 
-  /*Vibración en desktop — evento wheel al llegar al final de la página*/
+  /*Vibración en desktop — evento wheel*/
   window.addEventListener('wheel', function(e)
   {
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5 && e.deltaY > 0)
+    const doc     = document.documentElement;
+    const alFinal = doc.scrollHeight - doc.scrollTop - doc.clientHeight <= 5;
+    if (alFinal && e.deltaY > 0)
     {
       contenedor.classList.add('vibracion-activa');
       clearTimeout(window.vibeTimer);
@@ -218,45 +208,55 @@ function moverCilindro()
     }
   }, {passive: true});
 
-  /*Vibración en Android — touchmove + touchend al llegar al final de la página
-    wheel no se dispara en táctil, por eso se usa touchmove para detectar el overscroll
-    y touchend para disparar la vibración cuando el dedo se levanta al final del scroll*/
-  var touchStartY = 0;
+  /*Vibración en Android — usa scroll + touchend
+    En Android el evento wheel no se dispara en táctil.
+    document.documentElement.scrollTop es más fiable que window.scrollY durante
+    el scroll inercial nativo de Android, por eso se usa scrollHeight - scrollTop - clientHeight.
+    tocandoPantalla evita falsos positivos del scroll inercial post-touchend.
+    scrollEnFondo previene que la vibración se dispare múltiples veces consecutivas.*/
+  var tocandoPantalla = false;
+  var scrollEnFondo   = false;
 
-  window.addEventListener('touchstart', function(e)
+  function estaAlFinal()
   {
-    touchStartY = e.touches[0].clientY;
-  }, {passive: true});
+    var doc = document.documentElement;
+    return doc.scrollHeight - doc.scrollTop - doc.clientHeight <= 2;
+  }
 
-  window.addEventListener('touchmove', function(e)
+  function activarVibracion()
   {
-    const touchY    = e.touches[0].clientY;
-    const deltaY    = touchStartY - touchY; // positivo = scroll hacia abajo
-    const alFinal   = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
-
-    if (alFinal && deltaY > 0)
+    if (scrollEnFondo) {return;}
+    scrollEnFondo = true;
+    contenedor.classList.add('vibracion-activa');
+    clearTimeout(window.vibeTimerTouch);
+    window.vibeTimerTouch = setTimeout(function()
     {
-      contenedor.classList.add('vibracion-activa');
-      clearTimeout(window.vibeTimerTouch);
-      window.vibeTimerTouch = setTimeout(function()
-      {
-        contenedor.classList.remove('vibracion-activa');
-      }, 200);
-    }
+      contenedor.classList.remove('vibracion-activa');
+      scrollEnFondo = false;
+    }, 200);
+  }
+
+  window.addEventListener('touchstart', function()
+  {
+    tocandoPantalla = true;
+    scrollEnFondo   = false;
   }, {passive: true});
 
   window.addEventListener('touchend', function()
   {
-    const alFinal = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
-    if (alFinal)
+    tocandoPantalla = false;
+    /*Pequeño delay para capturar el final del scroll inercial*/
+    setTimeout(function()
     {
-      contenedor.classList.add('vibracion-activa');
-      clearTimeout(window.vibeTimerTouch);
-      window.vibeTimerTouch = setTimeout(function()
-      {
-        contenedor.classList.remove('vibracion-activa');
-      }, 200);
-    }
+      if (estaAlFinal()) {activarVibracion();}
+    }, 80);
+  }, {passive: true});
+
+  window.addEventListener('scroll', function()
+  {
+    if (!tocandoPantalla) {return;}
+    if (estaAlFinal()) {activarVibracion();}
+    else {scrollEnFondo = false;}
   }, {passive: true});
 
   //Cubo vertical — carousel 3D
@@ -266,7 +266,7 @@ function moverCilindro()
     moverCilindro();
   }
 
-  /*Tema: muestra el tema activo al cargar y agrega listeners a los botones del dropdown — Bootstrap*/
+  /*Tema: muestra el tema activo al cargar y agrega listeners — Bootstrap*/
   showActiveTheme(getPreferredTheme());
 
   const toggles = document.querySelectorAll('[data-bs-theme-value]');
@@ -281,12 +281,7 @@ function moverCilindro()
     });
   }
 
-  /*Imágenes interactivas con hover — Vanilla Tilt en desktop
-    reemplaza el cálculo manual de rotateX/rotateY con mousemove/mouseleave
-    perspective, max y speed replican los valores del efecto parallax 3D original
-    el if verifica que la librería esté cargada y que haya elementos en la página antes de inicializar
-    para agregar tilt a nuevas imágenes: usar clase imgs-marco o imgs-selfie en el contenedor
-    para excluir una imagen del efecto: agregar clase no-tilt al contenedor (ej: imgs-selfie no-tilt)*/
+  /*Imágenes interactivas — Vanilla Tilt en desktop*/
   if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
   {
     VanillaTilt.init(elementosTilt,
@@ -300,64 +295,56 @@ function moverCilindro()
     });
   }
 
-  /*Tilt táctil en Android — equivalente al efecto Vanilla Tilt para touchscreen
-    calcula la posición del toque relativa al centro del elemento y aplica
-    rotateX/rotateY proporcionales, igual que hace Vanilla Tilt con el cursor en desktop
-    touchstart: guarda referencia y aplica perspectiva
-    touchmove: actualiza la rotación en tiempo real según dónde se mueve el dedo
-    touchend: resetea suavemente el transform a la posición neutra*/
+  /*Tilt táctil en Android — replica el patrón exacto del efecto lux:
+    getBoundingClientRect() dentro del handler touchmove para obtener coordenadas
+    frescas relativas al viewport en cada evento, igual que hace el efecto de luz
+    en las imágenes cabecera con mousemove.
+    touch.clientX/Y son coordenadas del viewport — misma referencia que rect.left/top
+    por lo que el cálculo es idéntico al del lux y respeta el punto exacto del toque.*/
   var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
   if (esTactil && elementosTilt.length > 0)
   {
-    for (let i = 0; i < elementosTilt.length; i++)
+    for (var t = 0; t < elementosTilt.length; t++)
     {
       (function(el)
       {
-        var MAX_TILT  = 15;    // grados máximos de inclinación — mismo valor que Vanilla Tilt
-        var SCALE     = 1.02;  // escala al tocar — mismo valor que Vanilla Tilt
-        var DURATION  = '0.1s';
-        var EASE      = 'cubic-bezier(0.23, 1, 0.32, 1)';
-
-        el.style.willChange    = 'transform';
-        el.style.transformStyle = 'preserve-3d';
-
-        el.addEventListener('touchstart', function(e)
-        {
-          // Evita que el scroll de la página interfiera con el tilt
-          el.style.transition = 'transform ' + DURATION + ' ' + EASE;
-        }, {passive: true});
+        var MAX_TILT = 15;
+        var SCALE    = 1.02;
 
         el.addEventListener('touchmove', function(e)
         {
-          var touch = e.touches[0];
+          /*getBoundingClientRect() en cada evento: misma técnica que el efecto lux
+            garantiza coordenadas correctas independientemente del scroll acumulado*/
           var rect  = el.getBoundingClientRect();
+          var touch = e.touches[0];
 
-          // Posición normalizada del toque: -1 a 1 desde el centro del elemento
-          var px = (touch.clientX - rect.left) / rect.width  - 0.5;  // -0.5 a 0.5
-          var py = (touch.clientY - rect.top)  / rect.height - 0.5;  // -0.5 a 0.5
+          /*Normalización idéntica al efecto lux pero centrada en 0:
+            lux usa (clientX - rect.left) / width * 100 para porcentaje CSS
+            tilt usa la misma fórmula pero resta 0.5 para obtener rango -0.5 a +0.5*/
+          var px = (touch.clientX - rect.left)  / rect.width  - 0.5;
+          var py = (touch.clientY - rect.top)   / rect.height - 0.5;
 
-          // Convierte a grados de rotación — mismo cálculo que Vanilla Tilt internamente
-          var rotateY =  px * MAX_TILT * 2;  // positivo = inclina a la derecha
-          var rotateX = -py * MAX_TILT * 2;  // negativo para que el tilt siga la dirección natural
+          /*Conversión a grados — mismo cálculo interno de Vanilla Tilt:
+            toque en borde derecho (px=+0.5) → rotateY positivo → inclina hacia derecha
+            toque en borde superior (py=-0.5) → rotateX positivo → inclina hacia arriba*/
+          var rotY =  px * MAX_TILT * 2;
+          var rotX = -py * MAX_TILT * 2;
 
-          el.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(' + SCALE + ')';
+          el.style.transition = 'transform 0.1s ease';
+          el.style.transform  = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(' + SCALE + ')';
         }, {passive: true});
 
-        el.addEventListener('touchend', function()
+        function resetTilt()
         {
-          // Reset suave al soltar — misma transición que Vanilla Tilt en mouseleave
           el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
           el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        }, {passive: true});
+        }
 
-        el.addEventListener('touchcancel', function()
-        {
-          el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-          el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        }, {passive: true});
+        el.addEventListener('touchend',    resetTilt, {passive: true});
+        el.addEventListener('touchcancel', resetTilt, {passive: true});
 
-      })(elementosTilt[i]);
+      })(elementosTilt[t]);
     }
   }
 
