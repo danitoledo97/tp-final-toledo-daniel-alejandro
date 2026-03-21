@@ -71,7 +71,7 @@ h4, h5
 
 p
 {
-  text-align: justify;
+  text-align: left;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -379,6 +379,20 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
 }
 
 .imgs-selfie img:hover {transform: none;}
+
+/*Tap en imágenes secundarias (mobile) — equivalente táctil del hover de desktop*/
+.imgs-marco:active,
+.imgs-selfie:active
+{
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+.imgs-marco:active img,
+.imgs-selfie:active img
+{
+  transform: scale(1.05);
+}
 
 .vid
 {
@@ -867,6 +881,16 @@ section .d-grid a
   {
     opacity: 0.3;
     filter: blur(2px);
+  }
+
+  /*Fuerza los mismos valores de vibración que desktop en mobile*/
+  @keyframes sacudida-extrema
+  {
+    0%   {transform: translate(0, 0);}
+    25%  {transform: translate(-2px, 2px);}
+    50%  {transform: translate(2px, -2px);}
+    75%  {transform: translate(-2px, -2px);}
+    100% {transform: translate(2px, 2px);}
   }
 }
 

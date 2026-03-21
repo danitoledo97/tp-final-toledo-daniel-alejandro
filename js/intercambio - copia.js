@@ -207,55 +207,15 @@ function moverCilindro()
 
   footerObserver.observe(footer);
 
-  /*Vibración en desktop — evento wheel al llegar al final de la página*/
+  /*Activa la vibración al intentar scrollear más allá del final de la página
+    passive: true mejora el rendimiento al indicar que el evento no llama preventDefault*/
   window.addEventListener('wheel', function(e)
   {
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5 && e.deltaY > 0)
     {
       contenedor.classList.add('vibracion-activa');
       clearTimeout(window.vibeTimer);
-      window.vibeTimer = setTimeout(function() {contenedor.classList.remove('vibracion-activa');}, 200);
-    }
-  }, {passive: true});
-
-  /*Vibración en Android — touchmove + touchend al llegar al final de la página
-    wheel no se dispara en táctil, por eso se usa touchmove para detectar el overscroll
-    y touchend para disparar la vibración cuando el dedo se levanta al final del scroll*/
-  var touchStartY = 0;
-
-  window.addEventListener('touchstart', function(e)
-  {
-    touchStartY = e.touches[0].clientY;
-  }, {passive: true});
-
-  window.addEventListener('touchmove', function(e)
-  {
-    const touchY    = e.touches[0].clientY;
-    const deltaY    = touchStartY - touchY; // positivo = scroll hacia abajo
-    const alFinal   = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
-
-    if (alFinal && deltaY > 0)
-    {
-      contenedor.classList.add('vibracion-activa');
-      clearTimeout(window.vibeTimerTouch);
-      window.vibeTimerTouch = setTimeout(function()
-      {
-        contenedor.classList.remove('vibracion-activa');
-      }, 200);
-    }
-  }, {passive: true});
-
-  window.addEventListener('touchend', function()
-  {
-    const alFinal = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
-    if (alFinal)
-    {
-      contenedor.classList.add('vibracion-activa');
-      clearTimeout(window.vibeTimerTouch);
-      window.vibeTimerTouch = setTimeout(function()
-      {
-        contenedor.classList.remove('vibracion-activa');
-      }, 200);
+      window.vibeTimer = setTimeout(function() {contenedor.classList.remove('vibracion-activa');}, 20);
     }
   }, {passive: true});
 
@@ -281,7 +241,7 @@ function moverCilindro()
     });
   }
 
-  /*Imágenes interactivas con hover — Vanilla Tilt en desktop
+  /*Imágenes interactivas con hover — Vanilla Tilt
     reemplaza el cálculo manual de rotateX/rotateY con mousemove/mouseleave
     perspective, max y speed replican los valores del efecto parallax 3D original
     el if verifica que la librería esté cargada y que haya elementos en la página antes de inicializar
@@ -299,66 +259,4 @@ function moverCilindro()
       easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
     });
   }
-
-  /*Tilt táctil en Android — equivalente al efecto Vanilla Tilt para touchscreen
-    calcula la posición del toque relativa al centro del elemento y aplica
-    rotateX/rotateY proporcionales, igual que hace Vanilla Tilt con el cursor en desktop
-    touchstart: guarda referencia y aplica perspectiva
-    touchmove: actualiza la rotación en tiempo real según dónde se mueve el dedo
-    touchend: resetea suavemente el transform a la posición neutra*/
-  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-
-  if (esTactil && elementosTilt.length > 0)
-  {
-    for (let i = 0; i < elementosTilt.length; i++)
-    {
-      (function(el)
-      {
-        var MAX_TILT  = 15;    // grados máximos de inclinación — mismo valor que Vanilla Tilt
-        var SCALE     = 1.02;  // escala al tocar — mismo valor que Vanilla Tilt
-        var DURATION  = '0.1s';
-        var EASE      = 'cubic-bezier(0.23, 1, 0.32, 1)';
-
-        el.style.willChange    = 'transform';
-        el.style.transformStyle = 'preserve-3d';
-
-        el.addEventListener('touchstart', function(e)
-        {
-          // Evita que el scroll de la página interfiera con el tilt
-          el.style.transition = 'transform ' + DURATION + ' ' + EASE;
-        }, {passive: true});
-
-        el.addEventListener('touchmove', function(e)
-        {
-          var touch = e.touches[0];
-          var rect  = el.getBoundingClientRect();
-
-          // Posición normalizada del toque: -1 a 1 desde el centro del elemento
-          var px = (touch.clientX - rect.left) / rect.width  - 0.5;  // -0.5 a 0.5
-          var py = (touch.clientY - rect.top)  / rect.height - 0.5;  // -0.5 a 0.5
-
-          // Convierte a grados de rotación — mismo cálculo que Vanilla Tilt internamente
-          var rotateY =  px * MAX_TILT * 2;  // positivo = inclina a la derecha
-          var rotateX = -py * MAX_TILT * 2;  // negativo para que el tilt siga la dirección natural
-
-          el.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(' + SCALE + ')';
-        }, {passive: true});
-
-        el.addEventListener('touchend', function()
-        {
-          // Reset suave al soltar — misma transición que Vanilla Tilt en mouseleave
-          el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-          el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        }, {passive: true});
-
-        el.addEventListener('touchcancel', function()
-        {
-          el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-          el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        }, {passive: true});
-
-      })(elementosTilt[i]);
-    }
-  }
-
 })();
