@@ -280,107 +280,54 @@ function initVanillaTilt()
     });
   }
 
-  /*Tilt por giroscopio (DeviceOrientation) en móvil
-    Android: funciona directo en HTTPS sin pedir permiso
-    iOS: requiere permiso explícito del usuario — se maneja más abajo
-    beta  = inclinación adelante/atrás  → rotateX
-    gamma = inclinación izquierda/derecha → rotateY
-    Se calibra al primer evento para usar la posición inicial del teléfono como neutro
-    en lugar de requerir que el teléfono esté perfectamente horizontal*/
-  var esTactil    = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  var tieneGiro   = (typeof DeviceOrientationEvent !== 'undefined');
-  var betaBase    = null;  // posición inicial de beta  (calibración)
-  var gammaBase   = null;  // posición inicial de gamma (calibración)
-  var MAX_TILT    = 15;    // grados máximos — mismo valor que Vanilla Tilt
-  var ESCALA_GIRO = 0.4;   // sensibilidad: cuántos grados de teléfono = 1 grado de tilt
-
-  /*Clamp: limita un valor entre min y max*/
-  function clamp(val, min, max)
+  const toggles = document.querySelectorAll('[data-bs-theme-value]');
+  for (let i = 0; i < toggles.length; i++)
   {
-    return Math.min(Math.max(val, min), max);
+    toggles[i].addEventListener('click', function()
+    {
+      const theme = toggles[i].getAttribute('data-bs-theme-value');
+      setStoredTheme(theme);
+      setTheme(theme);
+      showActiveTheme(theme, true);
+    });
   }
 
-  /*Handler del giroscopio — se ejecuta en cada cambio de orientación del teléfono*/
-  function onDeviceOrientation(e)
+  /*Tilt táctil con Pointer Events — touch-action: none en el CSS libera
+    pointermove del scroll del browser, igual que el efecto lux en su contenedor*/
+  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  var MAX_TILT = 15;
+
+  if (esTactil && elementosTilt.length > 0)
   {
-    if (e.beta === null || e.gamma === null) {return;}
-    if (elementosTilt.length === 0) {return;}
-
-    /*Calibración: el primer evento establece la posición neutra
-      así el efecto funciona desde cualquier ángulo de sujeción del teléfono*/
-    if (betaBase === null)
+    for (var t = 0; t < elementosTilt.length; t++)
     {
-      betaBase  = e.beta;
-      gammaBase = e.gamma;
-      return;
-    }
-
-    /*Delta respecto a la posición inicial calibrada*/
-    var deltaBeta  = e.beta  - betaBase;
-    var deltaGamma = e.gamma - gammaBase;
-
-    /*Convierte los grados del teléfono a grados de tilt — escalado y limitado*/
-    var rotX = clamp(deltaBeta  * ESCALA_GIRO, -MAX_TILT, MAX_TILT);
-    var rotY = clamp(deltaGamma * ESCALA_GIRO, -MAX_TILT, MAX_TILT);
-
-    /*Actualiza las variables CSS en todos los elementos tilt
-      misma técnica que el efecto lux: JS actualiza variables, CSS aplica el transform*/
-    for (var i = 0; i < elementosTilt.length; i++)
-    {
-      elementosTilt[i].style.setProperty('--tilt-x', rotX + 'deg');
-      elementosTilt[i].style.setProperty('--tilt-y', rotY + 'deg');
-    }
-  }
-
-  /*Recalibra la posición neutra al volver a la página
-    evita saltos bruscos si el teléfono cambió de posición mientras la página estaba en segundo plano*/
-  document.addEventListener('visibilitychange', function()
-  {
-    if (!document.hidden)
-    {
-      betaBase  = null;
-      gammaBase = null;
-    }
-  });
-
-  if (esTactil && tieneGiro && elementosTilt.length > 0)
-  {
-    /*iOS 13+: DeviceOrientationEvent.requestPermission() es requerido
-      Se muestra un botón de activación la primera vez
-      Android: window.DeviceOrientationEvent.requestPermission no existe → rama else directa*/
-    if (typeof DeviceOrientationEvent.requestPermission === 'function')
-    {
-      /*iOS: crear botón de permiso visible para el usuario*/
-      var btnPermiso      = document.createElement('button');
-      btnPermiso.textContent = '🌀 Activar efecto 3D';
-      btnPermiso.style.cssText = (
-        'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);' +
-        'z-index:9999;padding:10px 20px;border-radius:2rem;border:none;' +
-        'background:rgba(168,85,247,0.9);color:#fff;font-size:0.9rem;cursor:pointer;'
-      );
-      document.body.appendChild(btnPermiso);
-
-      btnPermiso.addEventListener('click', function()
+      (function(el)
       {
-        DeviceOrientationEvent.requestPermission().then(function(respuesta)
+        el.addEventListener('pointermove', function(e)
         {
-          if (respuesta === 'granted')
-          {
-            window.addEventListener('deviceorientation', onDeviceOrientation);
-          }
-          btnPermiso.remove();
-        }).catch(function() {btnPermiso.remove();});
-      });
-    }
-    else
-    {
-      /*Android: activa directo sin pedir permiso*/
-      window.addEventListener('deviceorientation', onDeviceOrientation);
+          var rect = el.getBoundingClientRect();
+          var px   = (e.clientX - rect.left) / rect.width  - 0.5;
+          var py   = (e.clientY - rect.top)  / rect.height - 0.5;
+          el.style.setProperty('--tilt-x', (-py * MAX_TILT * 2) + 'deg');
+          el.style.setProperty('--tilt-y', ( px * MAX_TILT * 2) + 'deg');
+          el.style.setProperty('--tilt-scale', '1.02');
+        });
+
+        function resetTilt()
+        {
+          el.style.setProperty('--tilt-x', '0deg');
+          el.style.setProperty('--tilt-y', '0deg');
+          el.style.setProperty('--tilt-scale', '1');
+        }
+
+        el.addEventListener('pointerleave',  resetTilt);
+        el.addEventListener('pointerup',     resetTilt);
+        el.addEventListener('pointercancel', resetTilt);
+
+      })(elementosTilt[t]);
     }
   }
 
-  /*Desktop: Vanilla Tilt cargado dinámicamente — no se carga en móvil
-    Eliminar el tag <script> de vanilla-tilt del HTML en las páginas con imágenes secundarias*/
   if (!esTactil && elementosTilt.length > 0)
   {
     var scriptTilt    = document.createElement('script');
@@ -388,5 +335,7 @@ function initVanillaTilt()
     scriptTilt.onload = function() {initVanillaTilt();};
     document.head.appendChild(scriptTilt);
   }
+
+})();
 
 })();
