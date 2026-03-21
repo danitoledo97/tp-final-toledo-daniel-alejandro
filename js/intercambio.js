@@ -96,6 +96,23 @@ function moverCilindro()
   if (imgInside) {fondo.style.backgroundImage = 'url(\'' + imgInside.src + '\')';}
 }
 
+/*Inicializa Vanilla Tilt — se llama solo en desktop después de cargar el script dinámicamente*/
+function initVanillaTilt()
+{
+  if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
+  {
+    VanillaTilt.init(elementosTilt,
+    {
+      max: 15,
+      speed: 600,
+      perspective: 1000,
+      scale: 1.02,
+      transition: true,
+      easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
+    });
+  }
+}
+
 (function()
 {
   'use strict';
@@ -263,32 +280,28 @@ function moverCilindro()
     });
   }
 
-  /*Detección de dispositivo táctil
-    En táctil: no se inicializa Vanilla Tilt para evitar conflictos con el transform del CSS
-    En desktop: Vanilla Tilt maneja el efecto con mousemove normalmente*/
+  /*Vanilla Tilt: carga dinámica solo en desktop
+    En móvil el script nunca se carga — elimina cualquier posibilidad de conflicto
+    con los listeners táctiles y las variables CSS del tilt.
+    En desktop se inyecta el script y se inicializa al cargar.
+    El tag <script> de vanilla-tilt en el HTML debe eliminarse en las páginas
+    que tienen imágenes secundarias — este bloque lo reemplaza completamente.*/
   var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-  if (!esTactil && typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
+  if (!esTactil && elementosTilt.length > 0)
   {
-    /*Desktop: Vanilla Tilt con hover real*/
-    VanillaTilt.init(elementosTilt,
-    {
-      max: 15,
-      speed: 600,
-      perspective: 1000,
-      scale: 1.02,
-      transition: true,
-      easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
-    });
+    /*Desktop: inyecta Vanilla Tilt dinámicamente y lo inicializa al cargar*/
+    var scriptTilt  = document.createElement('script');
+    scriptTilt.src  = 'https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js';
+    scriptTilt.onload = function() {initVanillaTilt();};
+    document.head.appendChild(scriptTilt);
   }
   else if (esTactil && elementosTilt.length > 0)
   {
-    /*Táctil: tilt direccional por touchstart — sin depender de touchmove
-      touchstart siempre se dispara incluso cuando el browser toma el scroll
-      lee la posición del toque en el momento exacto del tap y aplica el tilt
-      correspondiente a ese punto, igual que el efecto lux con getBoundingClientRect()
-      El :active del CSS garantiza el feedback visual inmediato
-      y el JS agrega la dirección del tilt según el punto de contacto*/
+    /*Móvil: tilt direccional por touchstart con variables CSS
+      touchstart siempre se dispara — no es cancelado por el scroll del browser
+      lee la posición exacta del tap con getBoundingClientRect() igual que el efecto lux
+      actualiza --tilt-x y --tilt-y que el :active del CSS usa en su transform*/
     for (var t = 0; t < elementosTilt.length; t++)
     {
       (function(el)
@@ -297,21 +310,14 @@ function moverCilindro()
 
         el.addEventListener('touchstart', function(e)
         {
-          /*getBoundingClientRect() en touchstart: coordenadas frescas del elemento
-            en el viewport en el momento exacto del tap — misma técnica que el lux*/
           var rect  = el.getBoundingClientRect();
           var touch = e.touches[0];
 
           var px = (touch.clientX - rect.left)  / rect.width  - 0.5;
           var py = (touch.clientY - rect.top)   / rect.height - 0.5;
 
-          var rotY =  px * MAX_TILT * 2;
-          var rotX = -py * MAX_TILT * 2;
-
-          /*Actualiza las variables CSS que usa el :active
-            el :active ya aplica el scale, el JS agrega la rotación direccional*/
-          el.style.setProperty('--tilt-x', rotX + 'deg');
-          el.style.setProperty('--tilt-y', rotY + 'deg');
+          el.style.setProperty('--tilt-x', (-py * MAX_TILT * 2) + 'deg');
+          el.style.setProperty('--tilt-y', ( px * MAX_TILT * 2) + 'deg');
           el.style.setProperty('--tilt-scale', '1.03');
         }, {passive: true});
 
