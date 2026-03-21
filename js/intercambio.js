@@ -96,7 +96,7 @@ function moverCilindro()
   if (imgInside) {fondo.style.backgroundImage = 'url(\'' + imgInside.src + '\')';}
 }
 
-/*Inicializa Vanilla Tilt — se llama solo en desktop después de cargar el script dinámicamente*/
+/*Inicializa Vanilla Tilt en desktop*/
 function initVanillaTilt()
 {
   if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
@@ -280,59 +280,113 @@ function initVanillaTilt()
     });
   }
 
-  /*Vanilla Tilt: carga dinámica solo en desktop
-    En móvil el script nunca se carga — elimina cualquier posibilidad de conflicto
-    con los listeners táctiles y las variables CSS del tilt.
-    En desktop se inyecta el script y se inicializa al cargar.
-    El tag <script> de vanilla-tilt en el HTML debe eliminarse en las páginas
-    que tienen imágenes secundarias — este bloque lo reemplaza completamente.*/
-  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  /*Tilt por giroscopio (DeviceOrientation) en móvil
+    Android: funciona directo en HTTPS sin pedir permiso
+    iOS: requiere permiso explícito del usuario — se maneja más abajo
+    beta  = inclinación adelante/atrás  → rotateX
+    gamma = inclinación izquierda/derecha → rotateY
+    Se calibra al primer evento para usar la posición inicial del teléfono como neutro
+    en lugar de requerir que el teléfono esté perfectamente horizontal*/
+  var esTactil    = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  var tieneGiro   = (typeof DeviceOrientationEvent !== 'undefined');
+  var betaBase    = null;  // posición inicial de beta  (calibración)
+  var gammaBase   = null;  // posición inicial de gamma (calibración)
+  var MAX_TILT    = 15;    // grados máximos — mismo valor que Vanilla Tilt
+  var ESCALA_GIRO = 0.4;   // sensibilidad: cuántos grados de teléfono = 1 grado de tilt
 
+  /*Clamp: limita un valor entre min y max*/
+  function clamp(val, min, max)
+  {
+    return Math.min(Math.max(val, min), max);
+  }
+
+  /*Handler del giroscopio — se ejecuta en cada cambio de orientación del teléfono*/
+  function onDeviceOrientation(e)
+  {
+    if (e.beta === null || e.gamma === null) {return;}
+    if (elementosTilt.length === 0) {return;}
+
+    /*Calibración: el primer evento establece la posición neutra
+      así el efecto funciona desde cualquier ángulo de sujeción del teléfono*/
+    if (betaBase === null)
+    {
+      betaBase  = e.beta;
+      gammaBase = e.gamma;
+      return;
+    }
+
+    /*Delta respecto a la posición inicial calibrada*/
+    var deltaBeta  = e.beta  - betaBase;
+    var deltaGamma = e.gamma - gammaBase;
+
+    /*Convierte los grados del teléfono a grados de tilt — escalado y limitado*/
+    var rotX = clamp(deltaBeta  * ESCALA_GIRO, -MAX_TILT, MAX_TILT);
+    var rotY = clamp(deltaGamma * ESCALA_GIRO, -MAX_TILT, MAX_TILT);
+
+    /*Actualiza las variables CSS en todos los elementos tilt
+      misma técnica que el efecto lux: JS actualiza variables, CSS aplica el transform*/
+    for (var i = 0; i < elementosTilt.length; i++)
+    {
+      elementosTilt[i].style.setProperty('--tilt-x', rotX + 'deg');
+      elementosTilt[i].style.setProperty('--tilt-y', rotY + 'deg');
+    }
+  }
+
+  /*Recalibra la posición neutra al volver a la página
+    evita saltos bruscos si el teléfono cambió de posición mientras la página estaba en segundo plano*/
+  document.addEventListener('visibilitychange', function()
+  {
+    if (!document.hidden)
+    {
+      betaBase  = null;
+      gammaBase = null;
+    }
+  });
+
+  if (esTactil && tieneGiro && elementosTilt.length > 0)
+  {
+    /*iOS 13+: DeviceOrientationEvent.requestPermission() es requerido
+      Se muestra un botón de activación la primera vez
+      Android: window.DeviceOrientationEvent.requestPermission no existe → rama else directa*/
+    if (typeof DeviceOrientationEvent.requestPermission === 'function')
+    {
+      /*iOS: crear botón de permiso visible para el usuario*/
+      var btnPermiso      = document.createElement('button');
+      btnPermiso.textContent = '🌀 Activar efecto 3D';
+      btnPermiso.style.cssText = (
+        'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);' +
+        'z-index:9999;padding:10px 20px;border-radius:2rem;border:none;' +
+        'background:rgba(168,85,247,0.9);color:#fff;font-size:0.9rem;cursor:pointer;'
+      );
+      document.body.appendChild(btnPermiso);
+
+      btnPermiso.addEventListener('click', function()
+      {
+        DeviceOrientationEvent.requestPermission().then(function(respuesta)
+        {
+          if (respuesta === 'granted')
+          {
+            window.addEventListener('deviceorientation', onDeviceOrientation);
+          }
+          btnPermiso.remove();
+        }).catch(function() {btnPermiso.remove();});
+      });
+    }
+    else
+    {
+      /*Android: activa directo sin pedir permiso*/
+      window.addEventListener('deviceorientation', onDeviceOrientation);
+    }
+  }
+
+  /*Desktop: Vanilla Tilt cargado dinámicamente — no se carga en móvil
+    Eliminar el tag <script> de vanilla-tilt del HTML en las páginas con imágenes secundarias*/
   if (!esTactil && elementosTilt.length > 0)
   {
-    /*Desktop: inyecta Vanilla Tilt dinámicamente y lo inicializa al cargar*/
-    var scriptTilt  = document.createElement('script');
-    scriptTilt.src  = 'https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js';
+    var scriptTilt    = document.createElement('script');
+    scriptTilt.src    = 'https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js';
     scriptTilt.onload = function() {initVanillaTilt();};
     document.head.appendChild(scriptTilt);
-  }
-  else if (esTactil && elementosTilt.length > 0)
-  {
-    /*Móvil: tilt direccional por touchstart con variables CSS
-      touchstart siempre se dispara — no es cancelado por el scroll del browser
-      lee la posición exacta del tap con getBoundingClientRect() igual que el efecto lux
-      actualiza --tilt-x y --tilt-y que el :active del CSS usa en su transform*/
-    for (var t = 0; t < elementosTilt.length; t++)
-    {
-      (function(el)
-      {
-        var MAX_TILT = 12;
-
-        el.addEventListener('touchstart', function(e)
-        {
-          var rect  = el.getBoundingClientRect();
-          var touch = e.touches[0];
-
-          var px = (touch.clientX - rect.left)  / rect.width  - 0.5;
-          var py = (touch.clientY - rect.top)   / rect.height - 0.5;
-
-          el.style.setProperty('--tilt-x', (-py * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-y', ( px * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-scale', '1.03');
-        }, {passive: true});
-
-        function resetTilt()
-        {
-          el.style.setProperty('--tilt-x', '0deg');
-          el.style.setProperty('--tilt-y', '0deg');
-          el.style.setProperty('--tilt-scale', '1');
-        }
-
-        el.addEventListener('touchend',    resetTilt, {passive: true});
-        el.addEventListener('touchcancel', resetTilt, {passive: true});
-
-      })(elementosTilt[t]);
-    }
   }
 
 })();
