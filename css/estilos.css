@@ -79,7 +79,6 @@ p
 form {padding: 1rem;}
 
 /*Nav*/
-/*Fondo transparente para que se vea el blur del contenedor detrás*/
 nav, nav .navbar, nav .navbar-nav
 {
   background: transparent !important;
@@ -88,7 +87,6 @@ nav, nav .navbar, nav .navbar-nav
   z-index: 1000 !important;
 }
 
-/*Blur que simula profundidad detrás de la barra de navegación*/
 nav {backdrop-filter: blur(6px);}
 
 nav .navbar-nav .nav-link
@@ -131,14 +129,11 @@ nav .dropdown-item:hover
   border: none;
 }
 
-/*Clase aplicada por JS al hacer scroll hacia abajo: oculta la navbar*/
 .navbar-hidden {transform: translateY(-100%);}
 
-/*Oculta la flecha por defecto del dropdown de Bootstrap*/
 .navbar .dropdown-toggle::after {display: none;}
 
 /*Selector de Temas*/
-/*Botón circular que abre el menú de tema claro/oscuro/auto*/
 #modo
 {
   position: relative !important;
@@ -173,7 +168,6 @@ nav .dropdown-item:hover
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/*Dropdown circular con íconos de tema, posicionado debajo del botón*/
 #modo .dropdown-menu
 {
   position: absolute !important;
@@ -194,7 +188,6 @@ nav .dropdown-item:hover
   display: none;
 }
 
-/*Área invisible que evita que el dropdown se cierre al mover el cursor entre el botón y el menú*/
 #modo .dropdown-menu::before
 {
   content: "";
@@ -245,7 +238,7 @@ nav .dropdown-item:hover
 
 #modo .dropdown-menu.show {display: flex !important;}
 
-/*Modo oscuro: Contenido*/
+/*Modo oscuro*/
 [data-bs-theme="dark"] body,
 [data-bs-theme="dark"] #contenedor
 {
@@ -288,7 +281,6 @@ a svg
   transition: transform 0.3s ease, fill 0.3s ease, filter 0.3s ease !important;
 }
 
-/*Efecto glow violeta en SVGs al hacer hover sobre cualquier enlace*/
 a:hover svg
 {
   fill: var(--violeta-electrico) !important;
@@ -328,6 +320,9 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
   width: 100%;
 }
 
+/*imgs-marco e imgs-selfie: variables CSS de tilt táctil inicializadas a neutro
+  --tilt-x, --tilt-y, --tilt-scale son actualizadas por JS en touchmove
+  igual que --x e --y del efecto lux — el browser no lo interpreta como scroll*/
 .imgs-marco
 {
   --tilt-x: 0deg;
@@ -388,7 +383,22 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
 
 .imgs-selfie img:hover {transform: none;}
 
-/*Tap en imágenes secundarias (mobile) — equivalente táctil del hover de desktop*/
+/*Tap en imágenes secundarias (mobile) — fallback táctil siempre activo
+  funciona aunque el browser cancele touchmove por detectar scroll
+  el JS de variables CSS agrega el tilt direccional cuando touchmove llega al elemento*/
+.imgs-marco:active,
+.imgs-selfie:active
+{
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+.imgs-marco:active img,
+.imgs-selfie:active img
+{
+  transform: scale(1.05);
+}
+
 .vid
 {
   width: 100%;
@@ -398,7 +408,6 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
 }
 
 /*Efecto Lux / Overlay*/
-/*Contenedor con cursor crosshair que activa el overlay de iluminación*/
 .interactive-image-container
 {
   position: relative;
@@ -416,8 +425,6 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
   transition: none;
 }
 
-/*Overlay semitransparente que sigue al cursor creando un efecto de foco de luz
-  La posición --x e --y se actualiza por JS en tiempo real*/
 .lighting-overlay
 {
   position: absolute;
@@ -432,14 +439,12 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
   );
 }
 
-/*Solo activa el overlay en dispositivos con hover real (no táctiles)*/
 @media (hover: hover)
 {
   .interactive-image-container:hover .lighting-overlay {opacity: 1;}
 }
 
 /*Article: Animación — GSAP + IntersectionObserver*/
-/*Estado inicial oculto e inclinado — GSAP lo anima al estado visible al entrar en viewport*/
 article
 {
   opacity: 0;
@@ -476,8 +481,6 @@ article:hover
 }
 
 /*Barra de Profundidad*/
-/*Franja fija en la parte superior que aplica blur degradado hacia abajo
-  simula profundidad detrás de la navbar sin afectar el contenido*/
 .blur-depth-container
 {
   position: fixed;
@@ -499,8 +502,6 @@ article:hover
 }
 
 /*Carrusel 3D*/
-/*Cilindro 3D de 7 caras: cada item está rotado y desplazado en Z
-  para formar un prisma circular que gira con JS*/
 #carouselExampleCaptions
 {
   perspective: 2000px;
@@ -537,7 +538,6 @@ article:hover
   border: 2px solid rgba(255,255,255,0.2);
 }
 
-/*Cada cara del cilindro rotada 51.4deg (360/7) respecto a la anterior*/
 .carousel-item:nth-child(1) {transform: rotateY(0deg)     translateZ(400px);}
 .carousel-item:nth-child(2) {transform: rotateY(51.4deg)  translateZ(400px);}
 .carousel-item:nth-child(3) {transform: rotateY(102.8deg) translateZ(400px);}
@@ -546,7 +546,6 @@ article:hover
 .carousel-item:nth-child(6) {transform: rotateY(257deg)   translateZ(400px);}
 .carousel-item:nth-child(7) {transform: rotateY(308.4deg) translateZ(400px);}
 
-/*Items no activos: difuminados y semitransparentes para dar sensación de distancia*/
 .carousel-item:not(.active)
 {
   opacity: 0.4;
@@ -560,7 +559,6 @@ article:hover
   object-fit: cover;
 }
 
-/*Flechas del carrusel reemplazadas con SVG violeta en lugar del ícono Bootstrap por defecto*/
 .carousel-control-prev-icon
 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a855f7' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
@@ -583,8 +581,6 @@ article:hover
 [data-bs-theme="dark"] .carousel-control-next-icon {filter: none !important;}
 
 /*Fondo Dinámico*/
-/*Imagen de fondo fija que cambia con JS según el slide activo del carrusel
-  blur y brillo reducido para que no compita con el contenido*/
 #fondo-dinamico
 {
   position: fixed;
@@ -600,7 +596,6 @@ article:hover
 }
 
 /*Formulario*/
-/*Fuerza tema oscuro en campos de formulario independientemente del tema del sitio*/
 input.form-control,
 textarea.form-control,
 select.form-select
@@ -656,8 +651,6 @@ select.form-select:focus
 }
 
 /*Footer*/
-/*Estado inicial: footer inclinado hacia atrás y oculto
-  la clase piano-visible es aplicada por JS al hacer scroll al final de la página*/
 footer
 {
   opacity: 0;
@@ -763,7 +756,6 @@ footer a.btn.btn-secondary svg
 }
 
 /*Rastro del Cursor*/
-/*Partícula circular violeta que sigue al cursor, creada y animada por JS*/
 .cursor-trail
 {
   position: fixed;
@@ -790,7 +782,6 @@ footer a.btn.btn-secondary svg
 .trail-hidden {display: none !important;}
 
 /*Vibración*/
-/*Animación de sacudida aplicada por JS al footer al llegar al final de la página*/
 .vibracion-activa {animation: sacudida-extrema 0.15s infinite;}
 
 @keyframes sacudida-extrema
@@ -803,8 +794,6 @@ footer a.btn.btn-secondary svg
 }
 
 /*Links en Article y Section*/
-/*Fuerza layout horizontal en contenedores d-grid dentro de articles y sections
-  evita que los links se apilen verticalmente en mobile*/
 article .d-grid,
 section .d-grid
 {
@@ -829,7 +818,6 @@ section .d-grid a
 /*Consulta de medios*/
 @media (min-width: 992px)
 {
-  /*En desktop el dropdown se abre con hover en lugar de click*/
   .navbar .dropdown:hover > .dropdown-menu,
   #modo:hover > .dropdown-menu
   {
@@ -837,7 +825,6 @@ section .d-grid a
     margin-top: 0;
   }
 
-  /*Deshabilita el click en el botón de tema en desktop ya que se usa hover*/
   #bd-theme
   {
     pointer-events: none;
@@ -849,7 +836,6 @@ section .d-grid a
 
 @media (max-width: 539px)
 {
-  /*Carrusel más pequeño en mobile con menor profundidad de perspectiva*/
   #carouselExampleCaptions
   {
     height: 400px !important;
@@ -878,7 +864,6 @@ section .d-grid a
     filter: blur(2px);
   }
 
-  /*Fuerza los mismos valores de vibración que desktop en mobile*/
   @keyframes sacudida-extrema
   {
     0%   {transform: translate(0, 0);}
@@ -889,15 +874,11 @@ section .d-grid a
   }
 }
 
-/*Tablet portrait: 540px–1024px — iPad mini, iPad Air vertical, Surface Duo*/
+/*Tablet portrait: 540px–1024px*/
 @media (min-width: 540px) and (max-width: 1024px)
 {
-  #contenedor
-  {
-    max-width: 100vw !important;
-  }
+  #contenedor {max-width: 100vw !important;}
 
-  /*Altura fija y overflow hidden para que el cilindro 3D no filtre el fondo entre sus caras*/
   #carouselExampleCaptions
   {
     height: 460px !important;
@@ -906,11 +887,7 @@ section .d-grid a
     margin-top: 4rem !important;
   }
 
-  .carousel-inner
-  {
-    width: 280px;
-    height: 360px;
-  }
+  .carousel-inner {width: 280px; height: 360px;}
 
   .carousel-item:nth-child(1) {transform: rotateY(0deg)     translateZ(300px);}
   .carousel-item:nth-child(2) {transform: rotateY(51.4deg)  translateZ(300px);}
@@ -920,7 +897,6 @@ section .d-grid a
   .carousel-item:nth-child(6) {transform: rotateY(257deg)   translateZ(300px);}
   .carousel-item:nth-child(7) {transform: rotateY(308.4deg) translateZ(300px);}
 
-  /*Una columna por fila para evitar distribuciones 2+1 o 2+2*/
   .row > [class*="col-md-"], .row > [class*="col-lg-"]
   {
     flex: 0 0 100% !important;
@@ -943,13 +919,10 @@ section .d-grid a
   p {padding: 0.7rem;}
 }
 
-/*Tablet landscape: 1025px–1199px — iPad Air horizontal, Surface Pro, Nest Hub*/
+/*Tablet landscape: 1025px–1199px*/
 @media (min-width: 1025px) and (max-width: 1199px)
 {
-  #contenedor
-  {
-    max-width: 100vw !important;
-  }
+  #contenedor {max-width: 100vw !important;}
 
   #carouselExampleCaptions
   {
@@ -959,11 +932,7 @@ section .d-grid a
     margin-top: 4rem !important;
   }
 
-  .carousel-inner
-  {
-    width: 300px;
-    height: 380px;
-  }
+  .carousel-inner {width: 300px; height: 380px;}
 
   .carousel-item:nth-child(1) {transform: rotateY(0deg)     translateZ(340px);}
   .carousel-item:nth-child(2) {transform: rotateY(51.4deg)  translateZ(340px);}
@@ -973,7 +942,6 @@ section .d-grid a
   .carousel-item:nth-child(6) {transform: rotateY(257deg)   translateZ(340px);}
   .carousel-item:nth-child(7) {transform: rotateY(308.4deg) translateZ(340px);}
 
-  /*Dos columnas parejas al 50% en landscape*/
   .row > [class*="col-md-"], .row > [class*="col-lg-"]
   {
     flex: 0 0 50% !important;
@@ -998,33 +966,13 @@ section .d-grid a
 
 @media (min-width: 1200px) and (orientation: landscape)
 {
-  #contenedor
-  {
-    width: 100%;
-    max-width: 100vw;
-  }
-
+  #contenedor {width: 100%; max-width: 100vw;}
   .navbar-nav {margin: 0 4rem;}
-
   .container-fluid img {margin: 0 0.5rem;}
-
   p {padding: 0.5rem;}
-
   address a {margin: 0;}
-
-  .carousel-inner img
-  {
-    max-height: 100vh;
-    object-fit: cover;
-  }
-
-  .img-fluid
-  {
-    width: 100%;
-    max-height: 100vh;
-    object-fit: cover;
-  }
-
+  .carousel-inner img {max-height: 100vh; object-fit: cover;}
+  .img-fluid {width: 100%; max-height: 100vh; object-fit: cover;}
   .imgs-marco {max-width: 720px;}
 
   #contenedor:has(article #tablaPos)
@@ -1046,7 +994,6 @@ section .d-grid a
   border-radius: 0 !important;
 }
 
-/*Contenedor tilt del logo: anula los estilos de imgs-selfie para no deformar el logo*/
 .imgs-selfie:has(#logoJuego)
 {
   margin: 0 auto 0.8rem auto !important;
@@ -1057,7 +1004,6 @@ section .d-grid a
 
 #grupoRegistro {max-width: 260px; margin: 0.8rem auto 0.8rem auto !important;}
 
-/*Fondo neutro para el temporizador, diferenciado visualmente del marcador*/
 #temporizador
 {
   background: rgba(31, 42, 51, 0.15);
@@ -1065,7 +1011,6 @@ section .d-grid a
   padding: 0.3rem 1.2rem !important;
 }
 
-/*Fondo violeta para el marcador, distingue claramente el valor del jugador*/
 #marcador
 {
   background: rgba(168, 85, 247, 0.15);
@@ -1081,14 +1026,10 @@ section .d-grid a
   padding: 0 !important;
 }
 
-/*Colores progresivos del temporizador según tiempo restante*/
 #temporizador.timer-amarillo {color: #ffc107 !important;}
 #temporizador.timer-naranja  {color: #fd7e14 !important;}
 #temporizador.timer-rojo     {color: #dc3545 !important;}
 
-/*Neutraliza los efectos visuales del article genérico dentro del juego
-  apunta al article por su contenido único: el id del logo del juego dentro de él
-  :has() requiere Chrome 105+, Safari 15.4+, Firefox 121+ — sin soporte en navegadores anteriores a 2023*/
 article:has(#logoJuego)
 {
   border: none !important;
@@ -1097,8 +1038,7 @@ article:has(#logoJuego)
   opacity: 1 !important;
   transform: none !important;
 }
-/*Margen extra para el article de la tabla de posiciones y para el formulario de contacto
-  :has() apunta por contenido único — misma estrategia que article:has(#logoJuego)*/
+
 article:has(#tablaPos) {margin-top: 6rem !important; margin-bottom: 6rem !important;}
 
 #form1 {margin: 3rem auto !important;}
