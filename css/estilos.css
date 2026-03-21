@@ -338,7 +338,6 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
   transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   will-change: transform;
   z-index: 1;
-  touch-action: none;
 }
 
 .imgs-marco img
@@ -365,7 +364,6 @@ a.nav-link:hover svg, a.btn:hover svg {transform: scale(1.35);}
   transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   will-change: transform;
   z-index: 1;
-  touch-action: none;
 }
 
 .imgs-selfie img

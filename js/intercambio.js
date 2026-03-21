@@ -241,64 +241,22 @@ function moverCilindro()
     });
   }
 
-  /*Imágenes interactivas — tilt sin librerías, CSS + JS puro
-    Desktop: mousemove calcula la posición del cursor relativa al elemento
-    Móvil: pointermove con touch-action:none en el CSS libera el evento del scroll del browser
-    Mismo patrón que el efecto lux: getBoundingClientRect() en cada evento,
-    coordenadas de viewport, actualización directa del transform inline
+  /*Imágenes interactivas con hover — Vanilla Tilt
+    reemplaza el cálculo manual de rotateX/rotateY con mousemove/mouseleave
+    perspective, max y speed replican los valores del efecto parallax 3D original
+    el if verifica que la librería esté cargada y que haya elementos en la página antes de inicializar
     para agregar tilt a nuevas imágenes: usar clase imgs-marco o imgs-selfie en el contenedor
-    para excluir una imagen del efecto: agregar clase no-tilt al contenedor*/
-  var MAX_TILT = 15;
-  var ESCALA   = 1.02;
-  var EASE_IN  = 'transform 0.1s ease';
-  var EASE_OUT = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-
-  function aplicarTilt(el, clientX, clientY)
+    para excluir una imagen del efecto: agregar clase no-tilt al contenedor (ej: imgs-selfie no-tilt)*/
+  if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
   {
-    var rect = el.getBoundingClientRect();
-    var px   = (clientX - rect.left) / rect.width  - 0.5;
-    var py   = (clientY - rect.top)  / rect.height - 0.5;
-    var rotX = -py * MAX_TILT * 2;
-    var rotY =  px * MAX_TILT * 2;
-    el.style.transition = EASE_IN;
-    el.style.transform  = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(' + ESCALA + ')';
-  }
-
-  function resetTilt(el)
-  {
-    el.style.transition = EASE_OUT;
-    el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-  }
-
-  for (var t = 0; t < elementosTilt.length; t++)
-  {
-    (function(el)
+    VanillaTilt.init(elementosTilt,
     {
-      /*Desktop — mousemove y mouseleave*/
-      el.addEventListener('mousemove', function(e)
-      {
-        aplicarTilt(el, e.clientX, e.clientY);
-      });
-
-      el.addEventListener('mouseleave', function()
-      {
-        resetTilt(el);
-      });
-
-      /*Móvil — pointermove con touch-action:none en el CSS
-        evita que el browser reclame el evento para el scroll de página*/
-      el.addEventListener('pointermove', function(e)
-      {
-        if (e.pointerType === 'touch')
-        {
-          aplicarTilt(el, e.clientX, e.clientY);
-        }
-      });
-
-      el.addEventListener('pointerleave',  function() {resetTilt(el);});
-      el.addEventListener('pointerup',     function() {resetTilt(el);});
-      el.addEventListener('pointercancel', function() {resetTilt(el);});
-
-    })(elementosTilt[t]);
+      max: 15,
+      speed: 600,
+      perspective: 1000,
+      scale: 1.02,
+      transition: true,
+      easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
+    });
   }
 })();
