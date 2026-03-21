@@ -57,6 +57,7 @@ function showActiveTheme(theme, focus)
 
   const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href');
 
+  /*Quita la clase active de todos los botones y la pone solo en el seleccionado — Bootstrap*/
   const botonesTheme = document.querySelectorAll('[data-bs-theme-value]');
   for (let i = 0; i < botonesTheme.length; i++)
   {
@@ -73,7 +74,8 @@ function showActiveTheme(theme, focus)
   if (focus) {themeSwitcher.focus();}
 }
 
-/*Rota el cilindro 3D al ángulo correspondiente al slide activo*/
+/*Rota el cilindro 3D al ángulo correspondiente al slide activo
+  y actualiza la imagen de fondo dinámico con la imagen del slide — Bootstrap carousel*/
 function moverCilindro()
 {
   if (!carouselEl || !fondo) {return;}
@@ -96,35 +98,23 @@ function moverCilindro()
   if (imgInside) {fondo.style.backgroundImage = 'url(\'' + imgInside.src + '\')';}
 }
 
-/*Inicializa Vanilla Tilt en desktop*/
-function initVanillaTilt()
-{
-  if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
-  {
-    VanillaTilt.init(elementosTilt,
-    {
-      max: 15,
-      speed: 600,
-      perspective: 1000,
-      scale: 1.02,
-      transition: true,
-      easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
-    });
-  }
-}
-
+/*IIFE: función que se ejecuta sola al cargar, evita contaminar el scope global con sus variables*/
 (function()
 {
   'use strict';
 
+  //Tema: aplica al cargar y escucha cambios del sistema
   setTheme(getPreferredTheme());
 
+  /*Detecta cambios en la preferencia del sistema operativo en tiempo real
+    solo actúa si el usuario no eligió un tema manualmente*/
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function()
   {
     const storedTheme = getStoredTheme();
     if (storedTheme !== 'light' && storedTheme !== 'dark') {setTheme(getPreferredTheme());}
   });
 
+  //Barra inteligente — oculta la navbar al scrollear hacia abajo y la muestra al volver
   if (navbar)
   {
     window.addEventListener('scroll', function()
@@ -136,6 +126,10 @@ function initVanillaTilt()
     });
   }
 
+  /*Article: animación — IntersectionObserver + GSAP
+    IntersectionObserver detecta cuando el article entra en el viewport (threshold 0.2 = 20% visible)
+    y delega la animación a GSAP para controlar la curva de movimiento — combinación de ambas librerías
+    unobserve detiene la observación una vez animado para no repetir el efecto*/
   const observer = new IntersectionObserver(function(entries)
   {
     for (let i = 0; i < entries.length; i++)
@@ -156,13 +150,17 @@ function initVanillaTilt()
     }
   }, {threshold: 0.2});
 
+  /*GSAP set: establece el estado inicial oculto e inclinado antes de que sean visibles
+    el observer dispara gsap.to para animarlos al entrar en pantalla*/
   for (let i = 0; i < articles.length; i++)
   {
     gsap.set(articles[i], {opacity: 0, rotateX: -6, y: 24, scale: 0.985, transformOrigin: 'top center', transformPerspective: 900});
     observer.observe(articles[i]);
   }
 
-  /*Efecto lux / overlay*/
+  /*Efecto lux / overlay
+    actualiza las variables CSS --x e --y con la posición del cursor dentro del contenedor
+    el CSS usa esas variables para mover el gradiente radial del overlay de iluminación*/
   for (let i = 0; i < contenedoresLux.length; i++)
   {
     contenedoresLux[i].addEventListener('mousemove', function(e)
@@ -173,6 +171,9 @@ function initVanillaTilt()
     });
   }
 
+  /*Mouse interactivo — rastro de cursor
+    desactiva el rastro cuando el cursor está sobre elementos interactivos
+    crea una partícula div en la posición del cursor que se autodestruye en 400ms*/
   document.addEventListener('mouseover', function(e)
   {if (e.target.closest(interactiveElements)) {isOverLink = true;}});
 
@@ -190,6 +191,10 @@ function initVanillaTilt()
     setTimeout(function() {trail.remove();}, 400);
   });
 
+  /*Footer y scroll con tope
+    IntersectionObserver para el footer: activa la animación piano y la vibración
+    cuando el footer entra en el viewport por primera vez*/
+  /*footerObserver observa un único elemento — entries[0] es suficiente sin necesidad de for*/
   const footerObserver = new IntersectionObserver(function(entries)
   {
     if (entries[0].isIntersecting)
@@ -202,70 +207,26 @@ function initVanillaTilt()
 
   footerObserver.observe(footer);
 
-  /*Vibración desktop*/
+  /*Activa la vibración al intentar scrollear más allá del final de la página
+    passive: true mejora el rendimiento al indicar que el evento no llama preventDefault*/
   window.addEventListener('wheel', function(e)
   {
-    const doc     = document.documentElement;
-    const alFinal = doc.scrollHeight - doc.scrollTop - doc.clientHeight <= 5;
-    if (alFinal && e.deltaY > 0)
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5 && e.deltaY > 0)
     {
       contenedor.classList.add('vibracion-activa');
       clearTimeout(window.vibeTimer);
-      window.vibeTimer = setTimeout(function() {contenedor.classList.remove('vibracion-activa');}, 200);
+      window.vibeTimer = setTimeout(function() {contenedor.classList.remove('vibracion-activa');}, 20);
     }
   }, {passive: true});
 
-  /*Vibración Android*/
-  var tocandoPantalla = false;
-  var scrollEnFondo   = false;
-
-  function estaAlFinal()
-  {
-    var doc = document.documentElement;
-    return doc.scrollHeight - doc.scrollTop - doc.clientHeight <= 2;
-  }
-
-  function activarVibracion()
-  {
-    if (scrollEnFondo) {return;}
-    scrollEnFondo = true;
-    contenedor.classList.add('vibracion-activa');
-    clearTimeout(window.vibeTimerTouch);
-    window.vibeTimerTouch = setTimeout(function()
-    {
-      contenedor.classList.remove('vibracion-activa');
-      scrollEnFondo = false;
-    }, 200);
-  }
-
-  window.addEventListener('touchstart', function()
-  {
-    tocandoPantalla = true;
-    scrollEnFondo   = false;
-  }, {passive: true});
-
-  window.addEventListener('touchend', function()
-  {
-    tocandoPantalla = false;
-    setTimeout(function()
-    {
-      if (estaAlFinal()) {activarVibracion();}
-    }, 80);
-  }, {passive: true});
-
-  window.addEventListener('scroll', function()
-  {
-    if (!tocandoPantalla) {return;}
-    if (estaAlFinal()) {activarVibracion();}
-    else {scrollEnFondo = false;}
-  }, {passive: true});
-
+  //Cubo vertical — carousel 3D
   if (carouselEl && fondo)
   {
     carouselEl.addEventListener('slid.bs.carousel', moverCilindro);
     moverCilindro();
   }
 
+  /*Tema: muestra el tema activo al cargar y agrega listeners a los botones del dropdown — Bootstrap*/
   showActiveTheme(getPreferredTheme());
 
   const toggles = document.querySelectorAll('[data-bs-theme-value]');
@@ -280,62 +241,64 @@ function initVanillaTilt()
     });
   }
 
-  const toggles = document.querySelectorAll('[data-bs-theme-value]');
-  for (let i = 0; i < toggles.length; i++)
-  {
-    toggles[i].addEventListener('click', function()
-    {
-      const theme = toggles[i].getAttribute('data-bs-theme-value');
-      setStoredTheme(theme);
-      setTheme(theme);
-      showActiveTheme(theme, true);
-    });
-  }
-
-  /*Tilt táctil con Pointer Events — touch-action: none en el CSS libera
-    pointermove del scroll del browser, igual que el efecto lux en su contenedor*/
-  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  /*Imágenes interactivas — tilt sin librerías, CSS + JS puro
+    Desktop: mousemove calcula la posición del cursor relativa al elemento
+    Móvil: pointermove con touch-action:none en el CSS libera el evento del scroll del browser
+    Mismo patrón que el efecto lux: getBoundingClientRect() en cada evento,
+    coordenadas de viewport, actualización directa del transform inline
+    para agregar tilt a nuevas imágenes: usar clase imgs-marco o imgs-selfie en el contenedor
+    para excluir una imagen del efecto: agregar clase no-tilt al contenedor*/
   var MAX_TILT = 15;
+  var ESCALA   = 1.02;
+  var EASE_IN  = 'transform 0.1s ease';
+  var EASE_OUT = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
 
-  if (esTactil && elementosTilt.length > 0)
+  function aplicarTilt(el, clientX, clientY)
   {
-    for (var t = 0; t < elementosTilt.length; t++)
+    var rect = el.getBoundingClientRect();
+    var px   = (clientX - rect.left) / rect.width  - 0.5;
+    var py   = (clientY - rect.top)  / rect.height - 0.5;
+    var rotX = -py * MAX_TILT * 2;
+    var rotY =  px * MAX_TILT * 2;
+    el.style.transition = EASE_IN;
+    el.style.transform  = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(' + ESCALA + ')';
+  }
+
+  function resetTilt(el)
+  {
+    el.style.transition = EASE_OUT;
+    el.style.transform  = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+  }
+
+  for (var t = 0; t < elementosTilt.length; t++)
+  {
+    (function(el)
     {
-      (function(el)
+      /*Desktop — mousemove y mouseleave*/
+      el.addEventListener('mousemove', function(e)
       {
-        el.addEventListener('pointermove', function(e)
-        {
-          var rect = el.getBoundingClientRect();
-          var px   = (e.clientX - rect.left) / rect.width  - 0.5;
-          var py   = (e.clientY - rect.top)  / rect.height - 0.5;
-          el.style.setProperty('--tilt-x', (-py * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-y', ( px * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-scale', '1.02');
-        });
+        aplicarTilt(el, e.clientX, e.clientY);
+      });
 
-        function resetTilt()
+      el.addEventListener('mouseleave', function()
+      {
+        resetTilt(el);
+      });
+
+      /*Móvil — pointermove con touch-action:none en el CSS
+        evita que el browser reclame el evento para el scroll de página*/
+      el.addEventListener('pointermove', function(e)
+      {
+        if (e.pointerType === 'touch')
         {
-          el.style.setProperty('--tilt-x', '0deg');
-          el.style.setProperty('--tilt-y', '0deg');
-          el.style.setProperty('--tilt-scale', '1');
+          aplicarTilt(el, e.clientX, e.clientY);
         }
+      });
 
-        el.addEventListener('pointerleave',  resetTilt);
-        el.addEventListener('pointerup',     resetTilt);
-        el.addEventListener('pointercancel', resetTilt);
+      el.addEventListener('pointerleave',  function() {resetTilt(el);});
+      el.addEventListener('pointerup',     function() {resetTilt(el);});
+      el.addEventListener('pointercancel', function() {resetTilt(el);});
 
-      })(elementosTilt[t]);
-    }
+    })(elementosTilt[t]);
   }
-
-  if (!esTactil && elementosTilt.length > 0)
-  {
-    var scriptTilt    = document.createElement('script');
-    scriptTilt.src    = 'https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js';
-    scriptTilt.onload = function() {initVanillaTilt();};
-    document.head.appendChild(scriptTilt);
-  }
-
-})();
-
 })();
