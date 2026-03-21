@@ -145,7 +145,7 @@ function moverCilindro()
     observer.observe(articles[i]);
   }
 
-  /*Efecto lux / overlay — mousemove actualiza variables CSS --x e --y*/
+  /*Efecto lux / overlay*/
   for (let i = 0; i < contenedoresLux.length; i++)
   {
     contenedoresLux[i].addEventListener('mousemove', function(e)
@@ -185,7 +185,7 @@ function moverCilindro()
 
   footerObserver.observe(footer);
 
-  /*Vibración desktop — wheel*/
+  /*Vibración desktop*/
   window.addEventListener('wheel', function(e)
   {
     const doc     = document.documentElement;
@@ -198,8 +198,7 @@ function moverCilindro()
     }
   }, {passive: true});
 
-  /*Vibración Android — scroll + touchend
-    scrollTop es más fiable que scrollY durante el scroll inercial nativo de Android*/
+  /*Vibración Android*/
   var tocandoPantalla = false;
   var scrollEnFondo   = false;
 
@@ -264,9 +263,14 @@ function moverCilindro()
     });
   }
 
-  /*Vanilla Tilt — solo desktop (hover real)*/
-  if (typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
+  /*Detección de dispositivo táctil
+    En táctil: no se inicializa Vanilla Tilt para evitar conflictos con el transform del CSS
+    En desktop: Vanilla Tilt maneja el efecto con mousemove normalmente*/
+  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+  if (!esTactil && typeof VanillaTilt !== 'undefined' && elementosTilt.length > 0)
   {
+    /*Desktop: Vanilla Tilt con hover real*/
     VanillaTilt.init(elementosTilt,
     {
       max: 15,
@@ -277,38 +281,38 @@ function moverCilindro()
       easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
     });
   }
-
-  /*Tilt táctil — patrón idéntico al efecto lux:
-    touchmove en el elemento (no en window) actualiza variables CSS --tilt-x e --tilt-y
-    el CSS aplica el transform a través de esas variables, igual que el lux con --x e --y
-    De esta manera el browser no interpreta el evento como scroll de página
-    porque el handler no toca el DOM de scroll sino solo variables CSS del elemento*/
-  var esTactil = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-
-  if (esTactil && elementosTilt.length > 0)
+  else if (esTactil && elementosTilt.length > 0)
   {
+    /*Táctil: tilt direccional por touchstart — sin depender de touchmove
+      touchstart siempre se dispara incluso cuando el browser toma el scroll
+      lee la posición del toque en el momento exacto del tap y aplica el tilt
+      correspondiente a ese punto, igual que el efecto lux con getBoundingClientRect()
+      El :active del CSS garantiza el feedback visual inmediato
+      y el JS agrega la dirección del tilt según el punto de contacto*/
     for (var t = 0; t < elementosTilt.length; t++)
     {
       (function(el)
       {
-        var MAX_TILT = 15;
+        var MAX_TILT = 12;
 
-        el.addEventListener('touchmove', function(e)
+        el.addEventListener('touchstart', function(e)
         {
-          /*getBoundingClientRect() en cada evento — misma técnica que el lux
-            touch.clientX/Y son coordenadas de viewport, igual que e.clientX/Y en mousemove*/
+          /*getBoundingClientRect() en touchstart: coordenadas frescas del elemento
+            en el viewport en el momento exacto del tap — misma técnica que el lux*/
           var rect  = el.getBoundingClientRect();
           var touch = e.touches[0];
 
-          /*Normalización idéntica al lux pero centrada:
-            lux: (clientX - rect.left) / width * 100  → porcentaje para CSS gradient
-            tilt: misma fórmula - 0.5                 → rango -0.5 a +0.5 para grados*/
           var px = (touch.clientX - rect.left)  / rect.width  - 0.5;
           var py = (touch.clientY - rect.top)   / rect.height - 0.5;
 
-          el.style.setProperty('--tilt-x', (-py * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-y', ( px * MAX_TILT * 2) + 'deg');
-          el.style.setProperty('--tilt-scale', '1.02');
+          var rotY =  px * MAX_TILT * 2;
+          var rotX = -py * MAX_TILT * 2;
+
+          /*Actualiza las variables CSS que usa el :active
+            el :active ya aplica el scale, el JS agrega la rotación direccional*/
+          el.style.setProperty('--tilt-x', rotX + 'deg');
+          el.style.setProperty('--tilt-y', rotY + 'deg');
+          el.style.setProperty('--tilt-scale', '1.03');
         }, {passive: true});
 
         function resetTilt()
