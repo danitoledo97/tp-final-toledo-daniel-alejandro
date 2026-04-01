@@ -1,902 +1,937 @@
-	<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entretenimiento | MultiMediAr</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-  <link rel="manifest" href="../img/site.webmanifest">
-  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-</head>
-<body>
-	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-  	</svg>
-  <div id="contenedor" class="shadow-lg bg-body-tertiary">
-		<header>
-			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
-  				<div class="container-fluid">
-            <a href="../index.html">
-  					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
-            </a>
-    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      					<span class="navbar-toggler-icon"></span>
-    				</button>
-    				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-      					<ul class="navbar-nav">
-      						<li class="nav-item">
-          						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
-        					</li>
-        						<li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Informática</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/programacion-creativa.html"><span>Programación Creativa</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/visuales.html"><span>Visuales</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/sonoras.html"><span>Sonoras</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/audiovisuales.html"><span>Audiovisuales</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/performativas.html"><span>Performativas</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
-                        <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
-                      </ul>
-                  </li>
-        					<li class="nav-item">
-          						<a class="nav-link" href="index.html"><span>Entretenimiento</span></a>
-        					</li>
-        					<li class="nav-item dropdown">
-         	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
-         	 					<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
-          							<li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
-          							<li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
-          							<li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
-          					</ul>
-        					</li>
-        					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
-          						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../eventos/index.html"><span>2026</span></a></li>
-            						<li><a class="dropdown-item" href="../eventos/eventos-2025.html"><span>2025</span></a></li>
-          						</ul>
-        					</li>
-        					<li class="nav-item dropdown">
-          						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
-          						<ul class="dropdown-menu">
-          							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Jugar</span></a></li>
-          							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
-          						</ul>
-        					</li>
-      					</ul>
-                <div id="modo">
-                <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                        id="bd-theme"
-                        type="button"
-                        aria-expanded="false"
-                        data-bs-toggle="dropdown"
-                        aria-label="Toggle theme (auto)">
-                  <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                      <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                      <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                </ul>
-              </div>
+  	<!DOCTYPE html>
+  <html lang="es">
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entretenimiento | MultiMediAr</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  </head>
+  <body>
+  	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    	</svg>
+    <div id="contenedor" class="shadow-lg bg-body-tertiary">
+  		<header>
+  			<nav class="navbar navbar-expand-lg fixed-top opacity-100">
+    				<div class="container-fluid">
+              <a href="../index.html">
+    					<img src="../img/logo-mma.jpg" alt="Logo del sitio" width="60" height="60" class="d-inline-block align-text-top">
+              </a>
+      				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        					<span class="navbar-toggler-icon"></span>
+      				</button>
+      				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+        					<ul class="navbar-nav">
+        						<li class="nav-item">
+            						<a class="nav-link active" aria-current="page" href="../index.html"><span>MultiMediAr</span></a>
+          					</li>
+          						<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tecnologías Creativas</span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="../tecnologias/index.html"><span>Informática</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/programacion-creativa.html"><span>Programación Creativa</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/computacion-creativa.html"><span>Computación Creativa</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/electronica-creativa.html"><span>Electrónica Creativa</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/visuales.html"><span>Visuales</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/sonoras.html"><span>Sonoras</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/audiovisuales.html"><span>Audiovisuales</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/performativas.html"><span>Performativas</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/animacion.html"><span>Animación</span></a></li>
+                          <li><a class="dropdown-item" href="../tecnologias/realidad-extendida.html"><span>Realidad Extendida</span></a></li>
+                        </ul>
+                    </li>
+          					<li class="nav-item">
+            						<a class="nav-link" href="index.html"><span>Entretenimiento</span></a>
+          					</li>
+          					<li class="nav-item dropdown">
+           	 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Economía Naranja</span></a>
+           	 					<ul class="dropdown-menu">
+            							<li><a class="dropdown-item" href="../economia-naranja/index.html"><span>Panorama</span></a></li>
+            							<li><a class="dropdown-item" href="../economia-naranja/emprendimiento.html"><span>Emprendimiento</span></a></li>
+            							<li><a class="dropdown-item" href="../economia-naranja/educacion.html"><span>Educación</span></a></li>
+            							<li><a class="dropdown-item" href="../economia-naranja/acervos.html"><span>Acervos</span></a></li>
+            					</ul>
+          					</li>
+          					<li class="nav-item dropdown">
+            						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Eventos</span></a>
+            						<ul class="dropdown-menu">
+            							<li><a class="dropdown-item" href="../eventos/index.html"><span>2026</span></a></li>
+              						<li><a class="dropdown-item" href="../eventos/eventos-2025.html"><span>2025</span></a></li>
+            						</ul>
+          					</li>
+          					<li class="nav-item dropdown">
+            						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Cronolúdico</span></a>
+            						<ul class="dropdown-menu">
+            							<li><a class="dropdown-item" href="../cronoludico/index.html"><span>Jugar</span></a></li>
+            							<li><a class="dropdown-item" href="../cronoludico/tabla.html"><span>Tabla de posiciones</span></a></li>
+            						</ul>
+          					</li>
+        					</ul>
+                  <div id="modo">
+                  <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                          id="bd-theme"
+                          type="button"
+                          aria-expanded="false"
+                          data-bs-toggle="dropdown"
+                          aria-label="Toggle theme (auto)">
+                    <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end shadow">
+                    <li>
+                      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+      				</div>
     				</div>
-  				</div>
-			</nav> 
-		</header>
-	<main>	
-  <div class="marco interactive-image-container">
-    <img src="img/entretenimiento.jpg" alt="Logo acerca del Entretenimiento" class="img-fluid main-img">
-    <div class="lighting-overlay"></div>
-  </div>
-	<h1>Entretenimiento</h1>
-	<p>La industria del entretenimiento comprende prácticas culturales, creativas y económicas  dedicadas a la creación, producción, distribución y consumo de contenidos destinados al ocio y la recreación, como el cine, la televisión, la música, los videojuegos, los espectáculos en vivo y los contenidos digitales.</p>	
-  <article class="container my-5">
-	  <h2>Carteleras</h2>
-    <p>Reúne sitios web y plataformas que informan sobre estrenos, funciones, festivales y actividades culturales vinculadas al cine y los espectáculos. Permite conocer qué ver, cuándo y dónde, tanto en salas como en eventos especiales.</p>
-    <div class="row g-4 justify-content-center">
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Cines Argentinos</h3>
-        <p>Cines Argentinos es uno de los sitios web de cine más visitados en Argentina, que ofrece información actualizada sobre cartelera, estrenos, horarios y noticias del cine del país.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.cinesargentinos.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Calendario INCAA</h3>
-        <p>El Instituto Nacional de Cine y Artes Audiovisuales (INCAA) publica un calendario anual que difunde festivales, muestras y semanas de cine en Argentina.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.incaa.gob.ar/carteleras/calendario-de-festivales-y-muestras-nacionales/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Contar</h3>
-        <p>Plataforma pública argentina de streaming que reúne contenidos audiovisuales nacionales, cine, series, documentales y producciones federales de acceso gratuito.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.cont.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Todo Teatro</h3>
-        <p>Reúne información sobre obras, salas, funciones y artistas, ofreciendo una guía actualizada de la cartelera teatral y actividades escénicas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://todoteatrook.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Festivales BA</h3>
-        <p>Siotio oficial del Gobierno de la Ciudad de Buenos Aires que centraliza información sobre festivales, eventos y actividades públicas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://festivalesba.org/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h3>Fever</h3>
-        <p>Plataforma internacional de descubrimiento y venta de experiencias culturales, espectáculos y eventos en vivo.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://feverup.com/es" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
+  			</nav> 
+  		</header>
+  	<main>	
+    <div class="marco interactive-image-container">
+      <img src="img/entretenimiento.jpg" alt="Logo acerca del Entretenimiento" class="img-fluid main-img">
+      <div class="lighting-overlay"></div>
     </div>
-  </article>
-  <h2>Plataformas Argentinas</h2>
-  <p>Agrupa servicios y proyectos de origen nacional dedicados a la exhibición, difusión y producción de contenidos audiovisuales. Refleja la evolución del consumo cultural local y las distintas formas de acceso al entretenimiento digital. En la actualidad, gran parte del contenido a demanda y de streaming se consume a través de plataformas como Netflix, Max, Paramount+, Amazon Prime Video, Disney+ y Crunchyroll, junto a propuestas locales que amplían la oferta en el país.</p> 
-  <article class="container my-5">
-    <h3>Históricas</h3>
-    <div class="row g-4 justify-content-center">
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Gativideo</h4>
-        <p>Gativideo fue una de las empresas pioneras del mercado de alquiler y distribución de cine en Argentina, con una extensa red de videoclubes durante los años 80 y 90.</p>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Popcorn Time</h4>
-        <p>Popcorn Time es una aplicación para organizar el contenido, originalmente diseñada como alternativa gratuita, cuyas versiones antiguas eran ilegales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://popcorntime.app/es" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Qubit</h4>
-        <p>Qubit TV fue una de las primeras plataformas de streaming enfocadas en cine independiente y de autor en Argentina, lanzada en 2011 hasta junio de 2024.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://web.archive.org/web/20260601000000*/qubit.tv" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-          <a class="nav-link" href="https://www.facebook.com/QubitTV/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-            </svg>
-          </a>
-          <a class="nav-link" href="https://www.instagram.com/qubittv/klkjll" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Cine Independiente</h4>
-        <p>Cine Independiente fue una plataforma argentina enfocada al cine independiente y alojaba festivales virtuales hasta 2022.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://cineindependiente.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Vorterix</h4>
-        <p>Vorterix es una plataforma argentina pionera en radio, eventos presenciales y streaming multimedia lanzada en 2012.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.vorterix.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>FWTV</h4>
-        <p>FWTV es una plataforma argentina pionera en WebTV y streaming digital lanzada en 2014.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.fwtv.tv/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
+  	<h1>Entretenimiento</h1>
+  	<p>La industria del entretenimiento comprende prácticas culturales, creativas y económicas  dedicadas a la creación, producción, distribución y consumo de contenidos destinados al ocio y la recreación, como el cine, la televisión, la música, los videojuegos, los espectáculos en vivo y los contenidos digitales.</p>	
+    <div class="imgs">
+      <div class="imgs-marco">
+        <img src="img/carteleras.png" alt="Logo acerca de las carteleras" class="img-fluid">
+      </div>
     </div>
-  </article>
-  <article class="container my-5">
-    <h3>Gratuitas</h3>
-    <div class="row g-4 justify-content-center">
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>CINE.AR</h4>
-        <p>Plataforma estatal dedicada a la difusión del cine argentino, con streaming, estrenos, alquiler online y acceso a producciones nacionales contemporáneas e históricas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://cine.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>BA Filma</h4>
-        <p>Sitio web de la Buenos Aires Film Commission que promueve la producción audiovisual en la provincia, brindando información, apoyo y recursos para rodajes.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://bafilma.gba.gob.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Octubre TV</h4>
-        <p>Canal digital argentino con programación cultural, política y social, enfocado en documentales, cine, entrevistas y producciones independientes.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://octubretv.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Cinemargentino</h4>
-        <p>Sitio web dedicado a la difusión del cine argentino, con noticias, estrenos, fichas técnicas y seguimiento de producciones nacionales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.cinemargentino.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Flixxo</h4>
-        <p>Plataforma argentina de streaming sobre blockchain que permite distribuir contenidos audiovisuales y monetizarlos.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://play.flixxo.com/es/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div> 
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>LPF Play</h4>
-        <p>Ofrece transmisiones en vivo y videos a demanda del fútbol argentino, incluyendo categorías que no siempre tienen cobertura en la televisión tradicional.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.lpfplay.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div> 
-      </section>
-    </div> 
-  </article>
-  <article class="container my-5">
-    <h3>Infantiles</h3>
-    <div class="row g-4 justify-content-center">  
-      <section class="col-12 col-lg-6">
-        <h4>Gaturro</h4>
-        <p>Universo digital y plataforma infantil basada en el personaje creado por Nik, con juegos, contenidos interactivos y experiencias online para niños.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.gaturro.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>PAKA PAKA</h4>
-        <p>Plataforma educativa y creativa del canal Pakapaka orientada a infancias, con juegos, actividades interactivas y contenidos audiovisuales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://inventar.pakapaka.gob.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>El Reino Infantil</h4>
-        <p>Red de contenidos infantiles con alcance internacional, especializada en música, animación y personajes para público preescolar.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.youtube.com/@ElReinoInfantil" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>El Payaso Plim Plim</h4>
-        <p>Plataforma audiovisual infantil centrada en contenidos educativos y musicales para primeras infancias, con presencia en TV y streaming.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://plimplim.tv/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <h3>Universitarias</h3>
-    <div class="row g-4 justify-content-center">  
-      <section class="col-12 col-lg-6">
-        <h4>Mundo U</h4>
-        <p>Plataforma educativa y cultural vinculada a contenidos audiovisuales, formación y divulgación en entornos digitales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.mundou.edu.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>Audiovisuales UNA</h4>
-        <p>Sitio web del área audiovisual de la Universidad Nacional de las Artes, dedicado a la difusión de sus trabajos audiovisuales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://audiovisualesuna.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>UN3</h4>
-        <p>Canal audiovisual de la Universidad Nacional de Tres de Febrero, con programación cultural, documental, experimental y educativa.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://un3.tv/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>ABRA</h4>
-        <p>Asociación que nuclea señales y productoras audiovisuales argentinas, promoviendo contenidos culturales, educativos y federales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.abratv.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <h3>Pagas</h3>
-    <div class="row g-4 justify-content-center">
-      <section class="col-12 col-md-6 col-lg-4"> 
-        <h4>Xiclos</h4>
-        <p>Plataforma dedicada a la difusión de ciclos culturales, charlas, conferencias y contenidos audiovisuales especializados.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://xiclos.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Nave Que Va</h4>
-        <p>Espacio cultural y plataforma de producción artística orientada a eventos, experiencias y proyectos interdisciplinarios.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.navequeva.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>KINOA.TV</h4>
-        <p>Plataforma de exhibición y distribución de cine independiente y de autor, con foco en producciones latinoamericanas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://kinoa.tv/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Selecta</h4>
-        <p>Servicio de streaming curado que ofrece cine independiente, de autor y producciones seleccionadas por criterio editorial.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.selectatv.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Teatrix</h4>
-        <p>Plataforma argentina de streaming teatral que permite ver obras grabadas en alta calidad desde distintos teatros del país.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://teatrix.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>+VIVO</h4>
-        <p>Plataforma enfocada en transmisiones en vivo de eventos culturales, espectáculos y experiencias audiovisuales.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-            <a class="nav-link" href="https://masvivo.tv/" target="_blank">
+    <article class="container my-5">
+  	  <h2>Carteleras</h2>
+      <p>Reúne sitios web y plataformas que informan sobre estrenos, funciones, festivales y actividades culturales vinculadas al cine y los espectáculos. Permite conocer qué ver, cuándo y dónde, tanto en salas como en eventos especiales.</p>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Cines Argentinos</h3>
+          <p>Cines Argentinos es uno de los sitios web de cine más visitados en Argentina, que ofrece información actualizada sobre cartelera, estrenos, horarios y noticias del cine del país.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.cinesargentinos.com.ar/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
               <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
               <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
               </svg>
             </a>
-        </div>
-      </section>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Calendario INCAA</h3>
+          <p>El Instituto Nacional de Cine y Artes Audiovisuales (INCAA) publica un calendario anual que difunde festivales, muestras y semanas de cine en Argentina.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.incaa.gob.ar/carteleras/calendario-de-festivales-y-muestras-nacionales/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Contar</h3>
+          <p>Plataforma pública argentina de streaming que reúne contenidos audiovisuales nacionales, cine, series, documentales y producciones federales de acceso gratuito.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.cont.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Todo Teatro</h3>
+          <p>Reúne información sobre obras, salas, funciones y artistas, ofreciendo una guía actualizada de la cartelera teatral y actividades escénicas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://todoteatrook.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Festivales BA</h3>
+          <p>Siotio oficial del Gobierno de la Ciudad de Buenos Aires que centraliza información sobre festivales, eventos y actividades públicas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://festivalesba.org/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h3>Fever</h3>
+          <p>Plataforma internacional de descubrimiento y venta de experiencias culturales, espectáculos y eventos en vivo.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://feverup.com/es" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <div class="imgs">
+      <div class="imgs-marco">
+        <img src="img/plataformas.png" alt="Logo acerca de plataformas de streaming argentinas" class="img-fluid">
+      </div>
     </div>
-  </article>
-  <h2>Gaming Argentino</h2>
-  <p>El gaming argentino, entendido en sentido amplio como prácticas lúdicas, abarca juegos tradicionales y desarrollos locales hasta comunidades, eventos presenciales, prácticas artísticas y nuevas economías digitales, constituyéndose como un fenómeno cultural, social y tecnológico.</p>
-  <article class="container my-5">
-    <h3>Juegos Tradicionales</h3>
-    <p>Los juegos tradicionales incluyen principalmente juegos de cartas y de mesa transmitidos de forma intergeneracional, que forman parte del patrimonio cultural y social. Se caracterizan por reglas compartidas, componentes físicos y una fuerte dimensión comunitaria, donde el encuentro cara a cara es central.</p>
-    <div class="row g-4 justify-content-center">
-      <section class="col-12 col-md-6">
-        <h4>El Truco Argentino</h4>
-        <p>El Truco argentino es un juego de cartas tradicional del Río de la Plata, basado en la baraja española, que combina estrategia, engaño y comunicación  mediante señas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://trucogame.com/game" target="_blank">trucogame
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-          <a class="nav-link" href="https://trucoargentino.com.ar/" target="_blank">Truco Argentino
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6">
-        <h4>TEG</h4>
-        <p>TEG es un juego de mesa argentino de estrategia y control territorial, creado en 1976 e inspirado en Risk, producido y difundido por la empresa argentina Yetem.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.tegnet.com.ar/es/principal.htm" target="_blank">TEGNET
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-          <a class="nav-link" href="https://yetem.com/aplicaciones/" target="_blank">YETEM
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <h3>Arcade</h3>
-    <div class="row g-4 justify-content-center">  
-      <section class="col-12 col-lg-6">
-        <h4>Fichines</h4>
-        <p>Los fichines son máquinas recreativas diseñadas para espacios públicos, populares especialmente entre los 70s y los 90s. Introdujeron el videojuego como experiencia colectiva, breve e intensiva.</p>
-      </section>
-      <section class="col-12 col-md-6">
-        <h4>Truco-Tron</h4>
-        <p>Trucotron fue una máquina recreativa argentina basada en el Truco, y reconocida como uno de los escasos arcades frecuentemente asociada al <strong>Truco Arcade</strong>.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://play.google.com/store/apps/details?id=com.smilesmaker.trucoarcade&hl=es_AR/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <h3>Consolas</h3>
-    <p>Las consolas son sistemas electrónicos de videojuegos pensados para el uso doméstico, conectados al televisor o a pantallas propias, que permiten experiencias de juego más prolongadas y personalizadas. Su evolución acompañó el crecimiento del videojuego como industria cultural, integrando narrativa, gráficos avanzados y juego individual o multijugador.</p>
-    <div class="row g-4 justify-content-center">  
-      <section class="col-12 col-lg-6">
-        <h4>Videojuel</h4>
-        <p>Videojuel es una consola arcade argentina desarrollada en la década de 1980, orientada al entretenimiento familiar y popular. Integraba múltiples juegos en un único sistema.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://prehistoricgaming.com/videojuel/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>Telematch</h4>
-        <p>Telematch es una consola hogareña distribuida en Argentina durante los años 80, basada en sistemas de videojuegos simples y accesibles conectados al televisor.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://prehistoricgaming.com/telematch-de-panoramic/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <h3>LAN Parties</h3>
-    <p>Las Local Area Network Parties son encuentros presenciales donde jugadores conectan sus computadoras o consolas en red local para jugar videojuegos multijugador. Surgieron en los años 90 y 2000 como fenómeno cultural sentaron las bases del gaming competitivo y los eSports locales, antes de su profesionalización y transmisión online.
-    <div class="row g-4 justify-content-center"> 
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>BairesLAN</h4>
-        <p>BairesLAN fue una de las LAN parties más representativas de la Ciudad de Buenos Aires de los 2000, reuniendo a jugadores, entusiastas y comunidades presencialmente.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://web.archive.org/web/20261101000000*/www.baireslan.com" target="_blank">baireslan.com
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-          <a class="nav-link" href="https://web.archive.org/web/20010501000000*/www.baireslan.com.ar" target="_blank">baireslan.com.ar
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>MáximoLAN</h4>
-        <p>MáximoLAN fue una LAN party realizada en Argentina a mediados de los años 2000, vinculada a la escena local de videojuegos en red y la informática recreativa.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://web.archive.org/web/20260415000000*/www.maximolan.com" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>T4LAN</h4>
-        <p>T4LAN fue una LAN party realizada en Argentina durante la década de 2000, orientada al encuentro presencial de gamers y entusiastas de la informática.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://t4lan.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <div class="row g-4 justify-content-center"> 
-      <h3>Multiplataforma</h3> 
-      <section class="col-12 col-lg-6">
-        <h4>Stores</h4>  
-        <p>En la actualidad, los videojuegos suelen adquirirse a través de Steam (masivos) o itch.io (independientes), Google Play Store (Android), Microsoft Store (Windows), App Store (iOS y macOS), tiendas y repositorios en Linux, consolas y las tiendas de los desarrolladores</p>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>One Up</h4>
-        <p>One Up Puzzle es un videojuego de rompecabezas que propone desafíos lógicos basados en la observación, la deducción y la resolución progresiva de problemas.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.oneuppuzzle.com/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section> 
-    </div>
-  </article>
-  <article class="container my-5">
-    <div class="row g-4 justify-content-center">
-      <h3>Directorios</h3>
-      <section class="col-12 col-lg-6">
-      	<h4>DeVuego LATAM</h4>	
-      	<p>Base de datos iberoamericana de videojuegos que documenta estudios, lanzamientos y estadísticas del sector, incluyendo Argentina.</p>
-      	<div class="d-grid gap-2 d-md-flex justify-content-center">
-      			<a class="nav-link" href="https://devuego.lat/bd/pais/AR#datos" target="_blank">
+    <h2>Plataformas Argentinas</h2>
+    <p>Agrupa servicios y proyectos de origen nacional dedicados a la exhibición, difusión y producción de contenidos audiovisuales. Refleja la evolución del consumo cultural local y las distintas formas de acceso al entretenimiento digital. En la actualidad, gran parte del contenido a demanda y de streaming se consume a través de plataformas como Netflix, Max, Paramount+, Amazon Prime Video, Disney+ y Crunchyroll, junto a propuestas locales que amplían la oferta en el país.</p> 
+    <article class="container my-5">
+      <h3>Históricas</h3>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Gativideo</h4>
+          <p>Gativideo fue una de las empresas pioneras del mercado de alquiler y distribución de cine en Argentina, con una extensa red de videoclubes durante los años 80 y 90.</p>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Popcorn Time</h4>
+          <p>Popcorn Time es una aplicación para organizar el contenido, originalmente diseñada como alternativa gratuita, cuyas versiones antiguas eran ilegales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://popcorntime.app/es" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Qubit</h4>
+          <p>Qubit TV fue una de las primeras plataformas de streaming enfocadas en cine independiente y de autor en Argentina, lanzada en 2011 hasta junio de 2024.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://web.archive.org/web/20260601000000*/qubit.tv" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+            <a class="nav-link" href="https://www.facebook.com/QubitTV/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg>
+            </a>
+            <a class="nav-link" href="https://www.instagram.com/qubittv/klkjll" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Cine Independiente</h4>
+          <p>Cine Independiente fue una plataforma argentina enfocada al cine independiente y alojaba festivales virtuales hasta 2022.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://cineindependiente.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Vorterix</h4>
+          <p>Vorterix es una plataforma argentina pionera en radio, eventos presenciales y streaming multimedia lanzada en 2012.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.vorterix.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>FWTV</h4>
+          <p>FWTV es una plataforma argentina pionera en WebTV y streaming digital lanzada en 2014.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.fwtv.tv/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Gratuitas</h3>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>CINE.AR</h4>
+          <p>Plataforma estatal dedicada a la difusión del cine argentino, con streaming, estrenos, alquiler online y acceso a producciones nacionales contemporáneas e históricas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://cine.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>BA Filma</h4>
+          <p>Sitio web de la Buenos Aires Film Commission que promueve la producción audiovisual en la provincia, brindando información, apoyo y recursos para rodajes.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://bafilma.gba.gob.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Octubre TV</h4>
+          <p>Canal digital argentino con programación cultural, política y social, enfocado en documentales, cine, entrevistas y producciones independientes.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://octubretv.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Cinemargentino</h4>
+          <p>Sitio web dedicado a la difusión del cine argentino, con noticias, estrenos, fichas técnicas y seguimiento de producciones nacionales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.cinemargentino.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Flixxo</h4>
+          <p>Plataforma argentina de streaming sobre blockchain que permite distribuir contenidos audiovisuales y monetizarlos.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://play.flixxo.com/es/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div> 
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>LPF Play</h4>
+          <p>Ofrece transmisiones en vivo y videos a demanda del fútbol argentino, incluyendo categorías que no siempre tienen cobertura en la televisión tradicional.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.lpfplay.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div> 
+        </section>
+      </div> 
+    </article>
+    <article class="container my-5">
+      <h3>Infantiles</h3>
+      <div class="row g-4 justify-content-center">  
+        <section class="col-12 col-lg-6">
+          <h4>Gaturro</h4>
+          <p>Universo digital y plataforma infantil basada en el personaje creado por Nik, con juegos, contenidos interactivos y experiencias online para niños.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.gaturro.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>PAKA PAKA</h4>
+          <p>Plataforma educativa y creativa del canal Pakapaka orientada a infancias, con juegos, actividades interactivas y contenidos audiovisuales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://inventar.pakapaka.gob.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>El Reino Infantil</h4>
+          <p>Red de contenidos infantiles con alcance internacional, especializada en música, animación y personajes para público preescolar.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.youtube.com/@ElReinoInfantil" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>El Payaso Plim Plim</h4>
+          <p>Plataforma audiovisual infantil centrada en contenidos educativos y musicales para primeras infancias, con presencia en TV y streaming.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://plimplim.tv/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Universitarias</h3>
+      <div class="row g-4 justify-content-center">  
+        <section class="col-12 col-lg-6">
+          <h4>Mundo U</h4>
+          <p>Plataforma educativa y cultural vinculada a contenidos audiovisuales, formación y divulgación en entornos digitales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.mundou.edu.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>Audiovisuales UNA</h4>
+          <p>Sitio web del área audiovisual de la Universidad Nacional de las Artes, dedicado a la difusión de sus trabajos audiovisuales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://audiovisualesuna.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>UN3</h4>
+          <p>Canal audiovisual de la Universidad Nacional de Tres de Febrero, con programación cultural, documental, experimental y educativa.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://un3.tv/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>ABRA</h4>
+          <p>Asociación que nuclea señales y productoras audiovisuales argentinas, promoviendo contenidos culturales, educativos y federales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.abratv.com.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Pagas</h3>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4"> 
+          <h4>Xiclos</h4>
+          <p>Plataforma dedicada a la difusión de ciclos culturales, charlas, conferencias y contenidos audiovisuales especializados.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://xiclos.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Nave Que Va</h4>
+          <p>Espacio cultural y plataforma de producción artística orientada a eventos, experiencias y proyectos interdisciplinarios.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.navequeva.com.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>KINOA.TV</h4>
+          <p>Plataforma de exhibición y distribución de cine independiente y de autor, con foco en producciones latinoamericanas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://kinoa.tv/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Selecta</h4>
+          <p>Servicio de streaming curado que ofrece cine independiente, de autor y producciones seleccionadas por criterio editorial.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.selectatv.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Teatrix</h4>
+          <p>Plataforma argentina de streaming teatral que permite ver obras grabadas en alta calidad desde distintos teatros del país.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://teatrix.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>+VIVO</h4>
+          <p>Plataforma enfocada en transmisiones en vivo de eventos culturales, espectáculos y experiencias audiovisuales.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+              <a class="nav-link" href="https://masvivo.tv/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+                </svg>
+              </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h2>Streaming de audio</h2>
+      <p>Desde el radioteatro hasta la radionovela clásicos, la música es hoy en día el producto sonoro mas popular y masivo, sin embargo también existen otros formatos en la actualidad que han cobrado protagonismo y son principalmente consumidos en Spotify, YouTube Music, Apple Music, etc.</p>
+      <div class="row g-4 justify-content-center">  
+        <section class="col-12 col-lg-6">
+          <h3>Audiolibros</h3>
+          <p>Lectura por parte de un locutor acerca de un libro, novela o cualquier formato literario el cual puede ser reproducido oralmente.</p>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h3>Audioficción</h3>
+          <p>La audioficción es un formato narrativo sonoro que construye historias a través de voces, actuación, guión, música y diseño sonoro.</p>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h3>Podcast</h3>
+          <p>Es un formato de audio digital por Internet que surgió en los 2000 y combina la sindicación RSS con archivos descargables o en streaming.</p>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h3>Argentina Podcastera</h3>
+          <p>Plataforma que reúne y difunde podcasts argentinos, organizados por temáticas y regiones.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.argentinapodcastera.com.ar/sudacasts/argentina/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <h2>Gaming Argentino</h2>
+    <p>El gaming argentino, entendido en sentido amplio como prácticas lúdicas, abarca juegos tradicionales y desarrollos locales hasta comunidades, eventos presenciales, prácticas artísticas y nuevas economías digitales, constituyéndose como un fenómeno cultural, social y tecnológico.</p>
+    <article class="container my-5">
+      <h3>Juegos Tradicionales</h3>
+      <p>Los juegos tradicionales incluyen principalmente juegos de cartas y de mesa transmitidos de forma intergeneracional, que forman parte del patrimonio cultural y social. Se caracterizan por reglas compartidas, componentes físicos y una fuerte dimensión comunitaria, donde el encuentro cara a cara es central.</p>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6">
+          <h4>El Truco Argentino</h4>
+          <p>El Truco argentino es un juego de cartas tradicional del Río de la Plata, basado en la baraja española, que combina estrategia, engaño y comunicación  mediante señas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://trucogame.com/game" target="_blank">trucogame
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+            <a class="nav-link" href="https://trucoargentino.com.ar/" target="_blank">Truco Argentino
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6">
+          <h4>TEG</h4>
+          <p>TEG es un juego de mesa argentino de estrategia y control territorial, creado en 1976 e inspirado en Risk, producido y difundido por la empresa argentina Yetem.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.tegnet.com.ar/es/principal.htm" target="_blank">TEGNET
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+            <a class="nav-link" href="https://yetem.com/aplicaciones/" target="_blank">YETEM
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Arcade</h3>
+      <div class="row g-4 justify-content-center">  
+        <section class="col-12 col-lg-6">
+          <h4>Fichines</h4>
+          <p>Los fichines son máquinas recreativas diseñadas para espacios públicos, populares especialmente entre los 70s y los 90s. Introdujeron el videojuego como experiencia colectiva, breve e intensiva.</p>
+        </section>
+        <section class="col-12 col-md-6">
+          <h4>Truco-Tron</h4>
+          <p>Trucotron fue una máquina recreativa argentina basada en el Truco, y reconocida como uno de los escasos arcades frecuentemente asociada al <strong>Truco Arcade</strong>.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://play.google.com/store/apps/details?id=com.smilesmaker.trucoarcade&hl=es_AR/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Consolas</h3>
+      <p>Las consolas son sistemas electrónicos de videojuegos pensados para el uso doméstico, conectados al televisor o a pantallas propias, que permiten experiencias de juego más prolongadas y personalizadas. Su evolución acompañó el crecimiento del videojuego como industria cultural, integrando narrativa, gráficos avanzados y juego individual o multijugador.</p>
+      <div class="row g-4 justify-content-center">  
+        <section class="col-12 col-lg-6">
+          <h4>Videojuel</h4>
+          <p>Videojuel es una consola arcade argentina desarrollada en la década de 1980, orientada al entretenimiento familiar y popular. Integraba múltiples juegos en un único sistema.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://prehistoricgaming.com/videojuel/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>Telematch</h4>
+          <p>Telematch es una consola hogareña distribuida en Argentina durante los años 80, basada en sistemas de videojuegos simples y accesibles conectados al televisor.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://prehistoricgaming.com/telematch-de-panoramic/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Gaming Social</h3>
+      <p>Durante los años 90 y 2000 surgieron fenómenos culturales como los <strong>cibers</strong> (locales comerciales con acceso a internet mediante computadoras instaladas) y las <strong>LAN Parties</strong> (encuentros presenciales donde los jugadores conectaban sus  computadoras o consolas en red local), que sentaron las bases del gaming competitivo antes de su profesionalización (esports) y del gaming social (socialización online local y/o global durante un juego).</p>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>BairesLAN</h4>
+          <p>BairesLAN fue una de las LAN parties más representativas de la Ciudad de Buenos Aires 
+          de los 2000, reuniendo a jugadores, entusiastas y comunidades presencialmente.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://web.archive.org/web/20010330055234/http://www.baireslan.com/" target="_blank">baireslan.com
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+            <a class="nav-link" href="https://web.archive.org/web/20040226154828/http://baireslan.com.ar/" target="_blank">baireslan.com.ar
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>MáximoLAN</h4>
+          <p>MáximoLAN fue una LAN party realizada en Argentina a mediados de los años 2000, 
+          vinculada a la escena local de videojuegos en red y la informática recreativa.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://web.archive.org/web/20200920014947/http://maximolan.org/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>T4LAN</h4>
+          <p>T4LAN fue una LAN party realizada en Argentina durante la década de 2000, orientada 
+          al encuentro presencial de gamers y entusiastas de la informática.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://t4lan.com.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Cerolag</h4>
+          <p>Cerolag fue una comunidad gamer argentina activa principalmente en los 2000, enfocada 
+          en juego online competitivo y servidores de baja latencia.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.facebook.com/psicofxpcom/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <div class="row g-4 justify-content-center"> 
+        <h3>Multiplataforma</h3> 
+        <section class="col-12 col-lg-6">
+          <h4>Stores</h4>  
+          <p>En la actualidad, los videojuegos suelen adquirirse a través de Steam (masivos) o itch.io (independientes), Google Play Store (Android), Microsoft Store (Windows), App Store (iOS y macOS), tiendas y repositorios en Linux, consolas y las tiendas de los desarrolladores</p>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>One Up</h4>
+          <p>One Up Puzzle es un videojuego de rompecabezas que propone desafíos lógicos basados en la observación, la deducción y la resolución progresiva de problemas.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.oneuppuzzle.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section> 
+      </div>
+    </article>
+    <article class="container my-5">
+      <div class="row g-4 justify-content-center">
+        <h3>Directorios</h3>
+        <section class="col-12 col-lg-6">
+        	<h4>DeVuego LATAM</h4>	
+        	<p>Base de datos iberoamericana de videojuegos que documenta estudios, lanzamientos y estadísticas del sector, incluyendo Argentina.</p>
+        	<div class="d-grid gap-2 d-md-flex justify-content-center">
+        			<a class="nav-link" href="https://devuego.lat/bd/pais/AR#datos" target="_blank">
+        				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+        				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+        				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+        				</svg>
+        			</a>
+        	</div>
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>Videojuegos Argentinos</h4>  
+          <p>Sitio web dedicado a la difusión, documentación y visibilización de la industria de videojuegos desarrollados en Argentina.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://videojuegosargentinos.com.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <div class="row g-4 justify-content-center">
+        <h3>Clasificaciones</h3>
+        <section class="col-12 col-md-6 col-lg-4">  
+        	<h4>Masivos</h4>
+          <p>Agrupa estudios y proyectos orientados a públicos amplios, con producciones de alto alcance, mecánicas accesibles y foco en el entretenimiento comercial.</p>
+        	<h5>Collider Craftworks</h5>
+        	<p>Estudio de desarrollo de videojuegos enfocado en experiencias interactivas y diseño técnico-artístico.</p>	
+        	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      			<a class="nav-link" href="https://www.collidercraftworks.com/" target="_blank">
       				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
       				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
       				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
       				</svg>
       			</a>
-      	</div>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>Videojuegos Argentinos</h4>  
-        <p>Sitio web dedicado a la difusión, documentación y visibilización de la industria de videojuegos desarrollados en Argentina.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://videojuegosargentinos.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <div class="row g-4 justify-content-center">
-      <h3>Clasificaciones</h3>
-      <section class="col-12 col-md-6 col-lg-4">  
-      	<h4>Masivos</h4>
-        <p>Agrupa estudios y proyectos orientados a públicos amplios, con producciones de alto alcance, mecánicas accesibles y foco en el entretenimiento comercial.</p>
-      	<h5>Collider Craftworks</h5>
-      	<p>Estudio de desarrollo de videojuegos enfocado en experiencias interactivas y diseño técnico-artístico.</p>	
-      	<div class="d-grid gap-2 d-md-flex justify-content-center">
-    			<a class="nav-link" href="https://www.collidercraftworks.com/" target="_blank">
-    				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-    				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-    				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-    				</svg>
-    			</a>
-      	</div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-      	<h4>Indepentientes</h4>
-        <p>Reúne desarrollos de menor escala centrados en la autoría, la experimentación y la exploración estética o narrativa fuera de los circuitos industriales.</p>
-      	<h5>Oniric Factor</h5>
-      	<p>Estudio independiente orientado a videojuegos con estética onírica y narrativa experimental.</p>
-      	<div class="d-grid gap-2 d-md-flex justify-content-center">
-    			<a class="nav-link" href="https://www.oniric-factor.com/" target="_blank">
-    				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-    				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-    				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-    				</svg>
-    			</a>
-      	</div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-      	<h4>Artísticos (Game Arts)</h4>
-        <p>Incluye proyectos que entienden al videojuego como medio expresivo, cultural o político, priorizando el concepto y la experiencia por sobre lo comercial.</p>
-      	<h5>AccionDev</h5>
-      	<p>Comunidad argentina de desarrollo de videojuegos que promueve el gaming como activismo cultural entre desarrolladores.</p>
-      	<div class="d-grid gap-2 d-md-flex justify-content-center">
-    			<a class="nav-link" href="https://linktr.ee/AccionDev" target="_blank">
-    				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-    				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-    				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-    				</svg>
-    			</a>
-      	</div>
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <div class="row g-4 justify-content-center"> 
-      <h3>Blockchain Gaming</h3> 
-      <section class="col-12 col-lg-6">
-        <h4>Web3 Gaming</h4>
-        <p>El modelo de <strong>play to earn</strong> o <strong>P2E</strong>, permite a los jugadores obtener recompensas monetarias en forma de <strong>NFT</strong> por cada misión cumplida y nivel superado.</p>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h4>OLA GG</h4>
-        <p>Ola GG es una comunidad Web3 enfocada en gaming play-to-earn y economía virtual, operando como un subDAO de Yield Guild Games para el mercado de habla hispana</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://olagg.io/es/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div> 
-      </section>
-    </div>
-  </article>
-  <article class="container my-5">
-    <div class="row g-4 justify-content-center">
+        	</div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+        	<h4>Indepentientes</h4>
+          <p>Reúne desarrollos de menor escala centrados en la autoría, la experimentación y la exploración estética o narrativa fuera de los circuitos industriales.</p>
+        	<h5>Oniric Factor</h5>
+        	<p>Estudio independiente orientado a videojuegos con estética onírica y narrativa experimental.</p>
+        	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      			<a class="nav-link" href="https://www.oniric-factor.com/" target="_blank">
+      				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+      				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+      				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+      				</svg>
+      			</a>
+        	</div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+        	<h4>Artísticos (Game Arts)</h4>
+          <p>Incluye proyectos que entienden al videojuego como medio expresivo, cultural o político, priorizando el concepto y la experiencia por sobre lo comercial.</p>
+        	<h5>AccionDev</h5>
+        	<p>Comunidad argentina de desarrollo de videojuegos que promueve el gaming como activismo cultural entre desarrolladores.</p>
+        	<div class="d-grid gap-2 d-md-flex justify-content-center">
+      			<a class="nav-link" href="https://linktr.ee/AccionDev" target="_blank">
+      				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+      				  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+      				  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+      				</svg>
+      			</a>
+        	</div>
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
+      <h3>Blockchain Gaming</h3>
+      <p>El modelo de <strong>play to earn</strong> o <strong>P2E</strong>, permite a los jugadores obtener recompensas monetarias en forma de <strong>NFT</strong> por cada misión cumplida y nivel superado.</p> 
+      <div class="row g-4 justify-content-center"> 
+        <section class="col-12 col-lg-6">
+          <h4>Sura Gaming</h4>
+          <p>Sura Gaming es una empresa y ecosistema argentino dedicado al gaming Web3, que combina comunidad, tecnología y economía digital iberoamericana.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://suragaming.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div> 
+        </section>
+        <section class="col-12 col-lg-6">
+          <h4>OLA GG</h4>
+          <p>Ola GG es una comunidad Web3 enfocada en gaming play-to-earn y economía virtual, operando como un subDAO de Yield Guild Games para el mercado de habla hispana</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://olagg.io/es/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div> 
+        </section>
+      </div>
+    </article>
+    <article class="container my-5">
       <h3>Audiojuegos</h3>
       <p>Los audiojuegos son experiencias lúdicas basadas principalmente en el sonido, donde la música, las voces y los efectos reemplazan o complementan lo visual, favoreciendo la accesibilidad y nuevas formas de inmersión sensorial.</p>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Sombras y Sonidos VR</h4>
-        <p>Proyecto artístico argentino que explora narrativas inmersivas mediante realidad virtual y sonido espacial.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.sombrasysonidosvr.com.ar/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Kudewe</h4>
-        <p>Kudewe es un audiojuego narrativo que combina paisajes sonoros inmersivos, relato interactivo y exploración espacial por audio.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://facundosuarez.com/kudewe.html" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="col-12 col-md-6 col-lg-4">
-        <h4>Kudewe: Allkü̈tum</h4>
-        <p>Kudewe: Allkü̈tum es una expansión o continuación del audiojuego Kudewe que profundiza en su universo narrativo sonoro.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://facundosuarez.com/kudewe_allkutum.html" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-	</article>
-  <article class="container my-5">
-  	<h2>Streaming de audio</h2>
-  	<p>Desde el radioteatro hasta la radionovela clásicos, la música es hoy en día el producto sonoro mas popular y masivo, sin embargo también existen otros formatos en la actualidad que han cobrado protagonismo siendo com Spotify, YouTube Music, Apple Music, etc.</p>
-    <div class="row g-4 justify-content-center">  
-      <section class="col-12 col-lg-6">
-        <h3>Audiolibros</h3>
-        <p>Lectura por parte de un locutor acerca de un libro, novela o cualquier formato literario el cual puede ser reproducido oralmente.</p>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h3>Audioficción</h3>
-        <p>La audioficción es un formato narrativo sonoro que construye historias a través de voces, actuación, guión, música y diseño sonoro, sin apoyo visual.</p>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h3>Podcasting</h3>
-        <p>El podcast es un formato de audio digital distribuido por Internet. Surgió a comienzos de los 2000 combinando la sindicación RSS, con archivos descargables o en streaming.</p>
-      </section>
-      <section class="col-12 col-lg-6">
-        <h3>Argentina Podcastera</h3>
-        <p>Plataforma que reúne y difunde podcasts argentinos, organizados por temáticas y regiones.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center">
-          <a class="nav-link" href="https://www.argentinapodcastera.com.ar/sudacasts/argentina/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-              <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-              <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-    </div>
-  </article>
-		  </main>
-		<footer>
-			<div class="card text-center">
-  			<div class="card-body">
-    		<p class="card-text">
-    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
-  			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
-			</svg>
-			2024-2026 MultiMediAr</p>
-    		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
-    		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+      <div class="row g-4 justify-content-center">
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Sombras y Sonidos VR</h4>
+          <p>Proyecto artístico argentino que explora narrativas inmersivas mediante realidad virtual y sonido espacial.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://www.sombrasysonidosvr.com.ar/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Kudewe</h4>
+          <p>Kudewe es un audiojuego narrativo que combina paisajes sonoros inmersivos, relato interactivo y exploración espacial por audio.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://facundosuarez.com/kudewe.html" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="col-12 col-md-6 col-lg-4">
+          <h4>Kudewe: Allkü̈tum</h4>
+          <p>Kudewe: Allkü̈tum es una expansión o continuación del audiojuego Kudewe que profundiza en su universo narrativo sonoro.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="nav-link" href="https://facundosuarez.com/kudewe_allkutum.html" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+  	</article>
+  		  </main>
+  		<footer>
+  			<div class="card text-center">
+    			<div class="card-body">
+      		<p class="card-text">
+      		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+    			<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+  			</svg>
+  			2024-2026 MultiMediAr</p>
+      		<a href="../complementarias/formulario.html" class="btn btn-secondary">Contacto</a>
+      		<a href="../complementarias/contacto.html" class="btn btn-secondary">Desarrollado por</a>
+    			</div>
   			</div>
-			</div>
-		</footer>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
-	<script src="../js/intercambio.js"></script>	
-</body>
-</html>
+  		</footer>
+  	</div>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  	<script src="../js/intercambio.js"></script>	
+  </body>
+  </html>
